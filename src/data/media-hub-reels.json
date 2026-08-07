@@ -1,0 +1,81 @@
+{
+    "chapters": [{
+            "title": "Concerts & Events",
+            "desc": "Live performances, stage energy, crowd moments.",
+            "pattern": "a",
+            "reels": [{
+                    "video": "/media/images/media-hub/posters/video-1.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-01.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-2.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-02.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-3.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-03.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-4.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-04.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-5.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-05.webp"
+                }
+            ]
+        },
+        {
+            "title": "Behind The Scenes",
+            "desc": "Raw moments, production stories, team energy.",
+            "pattern": "b",
+            "reels": [{
+                    "video": "/media/images/media-hub/posters/video-6.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-06.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-7.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-07.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-8.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-08.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-1.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-01.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-2.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-02.webp"
+                }
+            ]
+        },
+        {
+            "title": "Stories & Reels",
+            "desc": "Short-form content, social reels, viral moments.",
+            "pattern": "c",
+            "reels": [{
+                    "video": "/media/images/media-hub/posters/video-3.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-03.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-4.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-04.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-5.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-05.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-6.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-06.webp"
+                },
+                {
+                    "video": "/media/images/media-hub/posters/video-9.mp4",
+                    "poster": "/media/images/media-hub/posters/desktop/concert-07.webp"
+                }
+            ]
+        }
+    ]
+}

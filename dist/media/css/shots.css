@@ -1,0 +1,540 @@
+.shots-arrow-with-pagination .swiper__arrows {
+    display: flex;
+    align-items: center;
+}
+
+.shots-arrow-with-pagination .swiper__arrow {
+    position: static;
+    transform: unset;
+}
+
+.shots-content .arrow-btn {
+    margin: 40px 0;
+}
+
+.section-shots {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ---------- top row ---------- */
+.shots-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.shots-eyebrow {
+    font-size: 12px;
+    letter-spacing: .15em;
+    color: var(--muted);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.shots-counter-top {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+
+.shots-counter-top .active {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.drag-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.drag-hint svg {
+    stroke: var(--accent);
+}
+
+/* ---------- columns ---------- */
+
+.shots-title {
+    font-size: clamp(64px, 9vw, 108px);
+    line-height: .85;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 6px 0 30px;
+    -webkit-text-stroke: 1.5px var(--ink);
+    color: transparent;
+    font-stretch: expanded;
+}
+
+.shots-title span {
+    color: var(--ink);
+    -webkit-text-stroke: 0;
+}
+
+.shots-desc p {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+.shots-desc p.fw-600 {
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    margin: 36px 0;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 13px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.arrow-btn svg {
+    stroke: var(--ink);
+    transition: transform .3s ease;
+}
+
+.arrow-btn:hover svg {
+    transform: translateX(6px);
+}
+
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 22px;
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.explore-btn svg {
+    stroke: #fff;
+}
+
+/* ---------- cylinder coverflow stage ---------- */
+
+
+
+.shots-stage-wrap {
+    position: relative;
+    perspective: 1400px;
+    overflow: hidden;
+}
+
+#news-templates-slider {
+    padding: 0 0 50px;
+    overflow: hidden;
+}
+
+/* optional: edges ko soft fade dena taaki slides achanak cut na dikhein */
+#news-templates-slider {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+
+
+.section-runr-shots .swiper-slide {
+    width: 280px;
+    height: 100%;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .35);
+    border-radius: 20px;
+    border: 3px solid #fff;
+    background: #111;
+}
+
+.section-runr-shots .swiper-slide picture,
+.section-runr-shots .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.section-runr-shots .swiper-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .55) 100%);
+}
+
+.section-runr-shots .slide-meta {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 2;
+    color: #fff;
+}
+
+.section-runr-shots .slide-meta .num {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+}
+
+.section-runr-shots .slide-meta .label {
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .75);
+}
+
+.section-runr-shots .slide-play {
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .3s ease;
+    cursor: pointer;
+}
+
+.section-runr-shots .swiper-slide-active .slide-play {
+    opacity: 1;
+}
+
+.section-runr-shots .swiper-slide-active {
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, .5);
+    z-index: 3;
+}
+
+/* orbit ellipse line under stage */
+.orbit-line {
+    position: absolute;
+    left: 50%;
+    bottom: 46px;
+    transform: translateX(-50%);
+    width: 92%;
+    height: 90px;
+    border: 1px solid rgba(232, 98, 42, .35);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.orbit-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+/* ---------- side nav (prev/next) ---------- */
+.side-nav {
+    position: absolute;
+    right: 0px;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    z-index: 5;
+}
+
+.side-nav .label {
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    writing-mode: vertical-rl;
+}
+
+.side-nav-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.side-nav-circle svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ---------- thumbnail strip ---------- */
+.thumb-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.filter-tag {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--ink);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.filter-tag .top {
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-tag .bottom {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#thumbs-slider {
+    flex: 1;
+    padding: 6px 2px;
+}
+
+#thumbs-slider .swiper-slide {
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: opacity .25s ease, transform .25s ease;
+    border: 2px solid #ddd;
+    padding: 3px;
+}
+
+#thumbs-slider .swiper-slide::after {
+    display: none;
+}
+
+#thumbs-slider .swiper-slide-thumb-active {
+    opacity: 1;
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    transform: translateY(-4px);
+    border: 2px solid #ff5722;
+}
+
+.thumb-index {
+    position: absolute;
+    bottom: 6px;
+    right: 8px;
+    font-size: 9px;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    z-index: 2;
+}
+
+.thumb-more {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+    flex-shrink: 0;
+}
+
+/* ---------- bottom info bar ---------- */
+.info-bar {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 22px 32px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .04);
+}
+
+.info-track {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.info-track .play-mini {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.info-track .title {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.info-track .sub {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.info-stat .label {
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 4px;
+}
+
+.info-stat .value {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.info-desc {
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 320px;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.info-view {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.info-view svg {
+    stroke: var(--accent);
+}
+
+.playall-btn {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+
+.playall-btn svg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+    stroke: var(--ink);
+}
+
+.swiper-slide img {
+    border-radius: 10px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1024px) {
+
+    .is-4-desktop,
+    .is-8-desktop {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .side-nav {
+        display: none;
+    }
+
+    .info-bar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .section-runr-shots .swiper-slide {
+        width: 220px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-runr-shots .swiper-slide {
+        width: 180px;
+    }
+
+    #thumbs-slider .swiper-slide {
+        width: 70px;
+        height: 50px;
+    }
+
+    .thumb-index {
+        font-size: 8px;
+    }
+
+    .shots-stage-wrap {
+        perspective: 900px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-runr-shots .swiper-slide {
+        width: 150px;
+    }
+
+    #thumbs-slider .swiper-slide {
+        width: 56px;
+        height: 40px;
+    }
+}

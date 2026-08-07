@@ -1,0 +1,86 @@
+﻿---
+/*
+  media-hub.astro - Media Hub Page
+  Grid auto-generated from src/data/media-hub-reels.json
+  Just add reels to the JSON — no HTML editing needed.
+*/
+import BaseLayout from '../layouts/BaseLayout.astro';
+import reelsData from '../data/media-hub-reels.json';
+
+const chapters = reelsData.chapters;
+const totalChapters = chapters.length;
+---
+
+<BaseLayout
+  title="Media Hub - runr"
+  page="media-hub"
+  pagename="Media Hub"
+  swiperjs={true}
+  onepagemenu={true}
+>
+
+<link rel="stylesheet" type="text/css" href="/media/css/media-hub-grid.css" slot="head" />
+
+<div class="video-bg">
+    <video autoplay muted loop playsinline>
+        <source src="/media/images/bg-video-white.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section id="section-about-us" class="section section-about-us">
+    <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
+        <div class="move-box"></div>
+        <div class="section-title title-animate">
+            <h1 class="text-xl text-uppercase">Watch Together.<br><span class="theme-text text-uppercase">Share Forever.</span></h1>
+        </div>
+        <div class="theme-content-block js-scroll fade-in-right scrolled">
+            <div class="theme-content-title">
+                <span>Media Hub</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="81" height="9" viewBox="0 0 81 9" fill="none">
+                    <rect y="4" width="80" height="1" fill="#111013"></rect>
+                    <path d="M77 7.96366L80.5 4.48183L77 1" stroke="#111013" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+            <p>We don't just capture moments—we preserve experiences. Every reel we create, every story we film, and every frame we produce is crafted to inspire, engage, and leave a lasting impression.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================
+   MEDIA HUB — Staggered Masonry Video Grid (auto-generated)
+==================================================== -->
+<div class="section media-hub-section theme-padding pt-0">
+    <div class="theme-color-shadow"></div>
+
+    {chapters.map((chapter, chapterIndex) => (
+        <section class="mh-chapter">
+            <div class="mh-chapter-label">
+                <div class="section-title title-animate">
+                    <div class="mh-chapter-num">{String(chapterIndex + 1).padStart(2, '0')} / {String(totalChapters).padStart(2, '0')}</div>
+                    <h2>{chapter.title}</h2>
+                </div>
+             
+            </div>
+            <div class={`mh-grid mh-grid--${chapter.pattern}`}>
+                {chapter.reels.map((reel) => (
+                    <div class="mh-reel card card-video"
+                        data-video={reel.video}
+                        data-poster={reel.poster}
+                        data-type="portrait" data-ratio="9:16" tabindex="0">
+                        <div class="video-poster">
+                            <img src={reel.poster} alt={chapter.title} loading="lazy" />
+                        </div>
+                        <div class="video-container"></div>
+                        <div class="mh-reel-scrim"></div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    ))}
+
+</div><!-- /media-hub-section -->
+
+<script is:inline src="/media/js/media-hub-video-engine.js"></script>
+<script is:inline src="/media/js/media-hub-grid-reveal.js"></script>
+
+</BaseLayout>

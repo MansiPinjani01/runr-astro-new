@@ -1,0 +1,124 @@
+﻿---
+/*
+  BaseLayout.astro - Master Layout
+  ================================
+  Common page structure (replaces inc-head.php + HTML skeleton).
+  
+  Props:
+  - title: Page title for SEO
+  - page: Page ID for HTML id attribute
+  - pagename: Display name
+  - description: SEO description
+  - keywords: SEO keywords
+  - slider: Load Splide CSS
+  - swiperjs: Load Swiper CSS
+  - popup: Load Fancybox CSS
+  - bodyClass: Extra body class (optional)
+*/
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FootScripts from '../components/FootScripts.astro';
+
+interface Props {
+  title?: string;
+  page?: string;
+  pagename?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  slider?: boolean;
+  swiperjs?: boolean;
+  popup?: boolean;
+  counter?: boolean;
+  onepagemenu?: boolean;
+  bodyClass?: string;
+}
+
+const {
+  title = "runr",
+  page = "home",
+  pagename = "Home",
+  description = "runr - Create. Inspire. Influence.",
+  keywords = "runr, digital media, content creation",
+  image = "seo",
+  slider = false,
+  swiperjs = false,
+  popup = false,
+  counter = false,
+  onepagemenu = false,
+  bodyClass = "",
+} = Astro.props;
+
+const version = "1.1.0";
+---
+
+<!DOCTYPE html>
+<html id={page} dir="ltr" lang="en-US">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bulma Custom (merged from PHP style files) -->
+  <link rel="stylesheet" type="text/css" href="/media/css/bulma-custom.css">
+
+  
+  <!-- Conditional: Splide Slider CSS -->
+  {slider && <link rel="stylesheet" type="text/css" href="/media/css/splide-inline.css">}
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" type="text/css" href="/media/css/fancybox-inline.css">
+
+  <!-- Conditional: Swiper CSS -->
+  {swiperjs && <link rel="stylesheet" type="text/css" href="/media/css/swiper-bundle.min.css">}
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" type="text/css" href={`/media/css/all-custom.css?${version}`}>
+  <link rel="stylesheet" type="text/css" href={`/media/css/all-responsive.css?${version}`}>
+
+  <!-- Section-specific CSS -->
+  <link rel="stylesheet" type="text/css" href="/media/css/client-logos-orbit.css">
+  <link rel="stylesheet" type="text/css" href="/media/css/editorial-cta.css">
+  <link rel="stylesheet" type="text/css" href="/media/css/shots.css">
+  <!-- SEO Meta Tags -->
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="keywords" content={keywords}>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-icon-180x180.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="website">
+  <meta property="og:image" content={`/media/images/seo/${image}.jpg`}>
+
+  <!-- Extra head content from pages (slot) -->
+  <slot name="head" />
+</head>
+
+<body class={bodyClass}>
+
+  <Header />
+
+  <!-- Page Content (slot) - Each page's unique content goes here -->
+  <slot />
+
+  <Footer />
+
+  <FootScripts 
+    slider={slider} 
+    swiperjs={swiperjs} 
+    popup={popup} 
+    counter={counter} 
+    onepagemenu={onepagemenu} 
+  />
+
+  <!-- Page-specific scripts (loaded AFTER common libraries) -->
+  <slot name="page-scripts" />
+
+</body>
+</html>

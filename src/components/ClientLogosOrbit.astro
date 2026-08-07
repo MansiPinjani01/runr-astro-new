@@ -1,0 +1,105 @@
+---
+/*
+  ClientLogosOrbit.astro
+  Converted from: include/client-logos-orbit.php
+  Uses Astro loops to generate logo data and orbit slots.
+*/
+
+// Build logo data arrays (same logic as PHP)
+const logoBasePath = '/media/images/home/brand-icone/';
+
+const group1 = Array.from({ length: 23 }, (_, i) => ({
+  src: `${logoBasePath}ind/logo${i + 1}.webp`,
+  alt: `Client G1 #${i + 1} logo`,
+}));
+
+const group2 = Array.from({ length: 23 }, (_, i) => ({
+  src: `${logoBasePath}guj/logo${i + 1}.webp`,
+  alt: `Client G2 #${i + 1} logo`,
+}));
+
+const group3 = Array.from({ length: 253 }, (_, i) => ({
+  src: `${logoBasePath}bvn/logo${i + 1}.webp`,
+  alt: `Client G3 #${i + 1} logo`,
+}));
+
+const logoData = [...group1, ...group2, ...group3];
+const totalLogos = logoData.length;
+
+// Ring configuration (outer: 6, middle: 5, inner: 4 = 15 visible)
+const ringConfig = [
+  { ring: 0, count: 6 },
+  { ring: 1, count: 5 },
+  { ring: 2, count: 4 },
+];
+const visibleCount = ringConfig.reduce((sum, r) => sum + r.count, 0);
+const initialBatch = logoData.slice(0, Math.min(visibleCount, totalLogos));
+
+// Build slot assignments
+interface SlotItem {
+  slotIndex: number;
+  ringIndex: number;
+  logo: { src: string; alt: string };
+}
+const slots: SlotItem[] = [];
+let slotIndex = 0;
+for (const ring of ringConfig) {
+  for (let n = 0; n < ring.count; n++) {
+    if (initialBatch[slotIndex]) {
+      slots.push({ slotIndex, ringIndex: ring.ring, logo: initialBatch[slotIndex] });
+    }
+    slotIndex++;
+  }
+}
+---
+
+<section
+  class="section clo-section theme-padding"
+  id="clients"
+  data-total-logos={totalLogos}
+  data-visible-count={visibleCount}
+  aria-labelledby="clo-heading">
+  <div class="section-title has-text-start title-animate">
+    <h2><span class="theme-text">01 </span> - Brands We've Moved</h2>
+  </div>
+  <div class="clo-inner">
+    <div class="clo-stage" data-clo="stage">
+      <div class="clo-rings" aria-hidden="true">
+        <span class="clo-ring clo-ring--outer" data-clo="ring"></span>
+        <span class="clo-ring clo-ring--mid" data-clo="ring"></span>
+        <span class="clo-ring clo-ring--inner" data-clo="ring"></span>
+      </div>
+
+      <div class="clo-orbit" data-clo="orbit">
+        {slots.map((slot) => (
+          <div
+            class="clo-logo"
+            data-clo="logo"
+            data-slot={slot.slotIndex}
+            data-ring={slot.ringIndex}
+            role="img"
+            aria-label={slot.logo.alt}>
+            <span class="clo-logo__ring" aria-hidden="true"></span>
+            <div class="clo-logo__inner">
+              <img
+                src={slot.logo.src}
+                alt={slot.logo.alt}
+                width="200"
+                height="200"
+                class="clo-logo__img"
+                loading="lazy"
+                draggable="false" />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Fixed centered typography -->
+      <div class="section-title clo-center" id="clo-heading" data-clo="center">
+        <h3 class="text-md">We <br> Move <br> <span class="theme-text">Brands</span></h3>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" id="clo-logo-data" set:html={JSON.stringify(logoData)}></script>
+</section>

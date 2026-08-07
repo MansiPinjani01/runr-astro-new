@@ -1,0 +1,275 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const influencers = [
+  {
+    name: "Pooja Rathod",
+    layer: "layer-1.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-2.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-3.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-5.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-4.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-6.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-7.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-8.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/prachigohel",
+    facebook: "https://www.facebook.com/prachigohel",
+    youtube: "https://www.youtube.com/@prachigohel",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-9.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-8.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+];
+---
+
+<BaseLayout
+  title="Influencers - runr"
+  page="influencers"
+  pagename="Influencers"
+  slider={false}
+  swiperjs={false}
+  counter={false}
+  onepagemenu={true}
+>
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="/media/images/bg-video-white.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <section
+    id="section-influencers"
+    class="section section-influencers theme-padding"
+  >
+    <div class="columns is-multiline is-vcentered">
+      <div
+        class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen js-scroll fade-in-left scrolled"
+      >
+        <div class="section-title title-animate">
+          <h2>Our Tribe</h2>
+          <span class="text-xl text-uppercase"
+            >Influencers Who <span class="theme-text">Inspire</span>
+          </span>
+          <div class="influencers-content mt-4">
+            <p>
+              A dynamic community of creators, storytellers, and trendsetters
+              driving conversations and creating impact across platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen js-scroll fade-in-right scrolled"
+      >
+        <div class="influencers-img">
+          <picture>
+            <img
+              src="/media/images/home/influencers/influncers-img.webp"
+              alt="Influencers Image"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-influencers-grid theme-padding">
+    <div class="columns is-multiline influencers-cols gap-1">
+      {
+        influencers.map((item, index) => (
+          <div
+            class="column is-6-mobile is-4-tablet is-3-desktop influencers-col"
+            data-index={index}
+          >
+            <div class="theme-block">
+              <div class="theme-block-img">
+                <div class="theme-block-element">
+                  <img
+                    loading="lazy"
+                    src={`/media/images/home/influencers/${item.layer}`}
+                    width="370"
+                    height="250"
+                    alt="Element"
+                  />
+                </div>
+                <picture class="influencers-img">
+                  <img
+                    loading="lazy"
+                    src={`/media/images/home/influencers/${item.photo}`}
+                    width="600"
+                    height="400"
+                    alt={item.name}
+                  />
+                </picture>
+              </div>
+              <div class="theme-block-title">
+                <h5>{item.name}</h5>
+              </div>
+              <div class="influencer-social">
+                {item.instagram && (
+                  <a
+                    href={item.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                )}
+                {item.facebook && (
+                  <a
+                    href={item.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                  </a>
+                )}
+                {item.youtube && (
+                  <a
+                    href={item.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                    </svg>
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <Fragment slot="page-scripts">
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".influencers-col");
+
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                const index = parseInt(entry.target.getAttribute("data-index"));
+                setTimeout(function () {
+                  entry.target.classList.add("is-visible");
+                }, index * 100);
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        cards.forEach(function (card) {
+          observer.observe(card);
+        });
+      });
+    </script>
+  </Fragment>
+</BaseLayout>

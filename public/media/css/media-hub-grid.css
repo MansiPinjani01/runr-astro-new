@@ -1,0 +1,412 @@
+/* ====================================================================
+   MEDIA HUB — STAGGERED MASONRY VIDEO GRID
+   From runr-media-hub.html prototype.
+   Chapter-based layout with organic vertical rhythm.
+==================================================================== */
+
+/* ---------- DESIGN TOKENS ---------- */
+.media-hub-section {
+    --mh-ink: #131210;
+    --mh-ink-soft: #26241f;
+    --mh-bone: #f5f2ea;
+    --mh-bone-dim: #ece7db;
+    --mh-paper: #faf8f2;
+    --mh-orange: #ff4a1c;
+    --mh-orange-deep: #c22e08;
+    --mh-orange-soft: #ffd9c9;
+    --mh-line: rgba(19, 18, 16, 0.12);
+    --mh-line-strong: rgba(19, 18, 16, 0.28);
+    --mh-gap: 22px;
+    --mh-radius: 18px;
+    --mh-ease-soft: cubic-bezier(.22, .61, .36, 1);
+    --mh-ease-out: cubic-bezier(.16, .84, .44, 1);
+}
+
+/* ---------- CHAPTER SECTION ---------- */
+.mh-chapter {
+    position: relative;
+    padding: 120px 0 40px;
+}
+
+.mh-chapter:first-child {
+    padding-top: 60px;
+}
+
+/* ---------- ORANGE DECORATIVE CIRCLES ---------- */
+.media-hub-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.media-hub-section::before {
+    content: '';
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 74, 28, 0.25) 0%, rgba(255, 74, 28, 0.08) 40%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    top: 30%;
+    left: -120px;
+}
+
+.media-hub-section::after {
+    content: '';
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 74, 28, 0.25) 0%, rgba(255, 74, 28, 0.08) 40%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    top: 55%;
+    right: -120px;
+}
+
+/* ---------- CHAPTER LABELS ---------- */
+.mh-chapter-label {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-bottom: 26px;
+    margin-bottom: 44px;
+    border-bottom: 1px solid var(--mh-line);
+}
+
+.mh-chapter-label h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(30px, 4.4vw, 64px);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    margin: 0;
+    color: var(--mh-ink);
+}
+
+.mh-chapter-num {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--mh-orange-deep);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.mh-chapter-desc {
+    font-size: 13.5px;
+    color: var(--mh-ink-soft);
+    max-width: 280px;
+    text-align: right;
+    line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+    .mh-chapter-desc {
+        text-align: left;
+    }
+}
+
+/* ---------- THE GRID ---------- */
+.mh-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--mh-gap);
+    align-items: start;
+    width: 100%;
+}
+
+/* ---------- BASE REEL CARD ---------- */
+.mh-grid .mh-reel {
+    position: relative;
+    border-radius: var(--mh-radius);
+    overflow: hidden;
+    aspect-ratio: 9/16;
+    background: var(--mh-ink-soft);
+    will-change: transform, opacity;
+    transform: translate3d(0, 60px, 0) scale(0.94);
+    opacity: 0;
+    border: 1.4px solid transparent;
+    box-shadow: none;
+    isolation: isolate;
+}
+
+/* Revealed state */
+.mh-grid .mh-reel.mh-revealed {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+}
+
+/* ---------- STAGGERED VERTICAL RHYTHM (pattern A) ---------- */
+.mh-grid--a>.mh-reel:nth-child(5n+1) {
+    margin-top: 0;
+}
+
+.mh-grid--a>.mh-reel:nth-child(5n+2) {
+    margin-top: 56px;
+}
+
+.mh-grid--a>.mh-reel:nth-child(5n+3) {
+    margin-top: 18px;
+}
+
+.mh-grid--a>.mh-reel:nth-child(5n+4) {
+    margin-top: 84px;
+}
+
+.mh-grid--a>.mh-reel:nth-child(5n+5) {
+    margin-top: 34px;
+}
+
+/* ---------- STAGGERED VERTICAL RHYTHM (pattern B) ---------- */
+.mh-grid--b>.mh-reel:nth-child(5n+1) {
+    margin-top: 40px;
+}
+
+.mh-grid--b>.mh-reel:nth-child(5n+2) {
+    margin-top: 0;
+}
+
+.mh-grid--b>.mh-reel:nth-child(5n+3) {
+    margin-top: 70px;
+}
+
+.mh-grid--b>.mh-reel:nth-child(5n+4) {
+    margin-top: 22px;
+}
+
+.mh-grid--b>.mh-reel:nth-child(5n+5) {
+    margin-top: 52px;
+}
+
+/* ---------- STAGGERED VERTICAL RHYTHM (pattern C) ---------- */
+.mh-grid--c>.mh-reel:nth-child(5n+1) {
+    margin-top: 64px;
+}
+
+.mh-grid--c>.mh-reel:nth-child(5n+2) {
+    margin-top: 28px;
+}
+
+.mh-grid--c>.mh-reel:nth-child(5n+3) {
+    margin-top: 0;
+}
+
+.mh-grid--c>.mh-reel:nth-child(5n+4) {
+    margin-top: 48px;
+}
+
+.mh-grid--c>.mh-reel:nth-child(5n+5) {
+    margin-top: 14px;
+}
+
+/* ---------- RESPONSIVE: 4 columns ---------- */
+@media (max-width: 1240px) {
+    .mh-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .mh-grid--a>.mh-reel:nth-child(5n+4),
+    .mh-grid--a>.mh-reel:nth-child(5n+5),
+    .mh-grid--b>.mh-reel:nth-child(5n+4),
+    .mh-grid--b>.mh-reel:nth-child(5n+5),
+    .mh-grid--c>.mh-reel:nth-child(5n+4),
+    .mh-grid--c>.mh-reel:nth-child(5n+5) {
+        margin-top: 0;
+    }
+
+    .mh-grid--a>.mh-reel:nth-child(4n+1) {
+        margin-top: 10px;
+    }
+
+    .mh-grid--a>.mh-reel:nth-child(4n+2) {
+        margin-top: 60px;
+    }
+
+    .mh-grid--a>.mh-reel:nth-child(4n+3) {
+        margin-top: 26px;
+    }
+
+    .mh-grid--a>.mh-reel:nth-child(4n+4) {
+        margin-top: 74px;
+    }
+
+    .mh-grid--b>.mh-reel:nth-child(4n+1) {
+        margin-top: 50px;
+    }
+
+    .mh-grid--b>.mh-reel:nth-child(4n+2) {
+        margin-top: 0;
+    }
+
+    .mh-grid--b>.mh-reel:nth-child(4n+3) {
+        margin-top: 64px;
+    }
+
+    .mh-grid--b>.mh-reel:nth-child(4n+4) {
+        margin-top: 20px;
+    }
+
+    .mh-grid--c>.mh-reel:nth-child(4n+1) {
+        margin-top: 20px;
+    }
+
+    .mh-grid--c>.mh-reel:nth-child(4n+2) {
+        margin-top: 64px;
+    }
+
+    .mh-grid--c>.mh-reel:nth-child(4n+3) {
+        margin-top: 0;
+    }
+
+    .mh-grid--c>.mh-reel:nth-child(4n+4) {
+        margin-top: 44px;
+    }
+}
+
+/* ---------- RESPONSIVE: 3 columns ---------- */
+@media (max-width: 900px) {
+    .mh-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mh-grid>.mh-reel {
+        margin-top: 0 !important;
+    }
+
+    .mh-grid>.mh-reel:nth-child(3n+2) {
+        margin-top: 44px !important;
+    }
+
+    .mh-grid>.mh-reel:nth-child(3n+3) {
+        margin-top: 16px !important;
+    }
+}
+
+/* ---------- RESPONSIVE: 2 columns ---------- */
+@media (max-width: 600px) {
+    .media-hub-section {
+        --mh-gap: 14px;
+    }
+
+    .mh-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mh-grid>.mh-reel {
+        margin-top: 0 !important;
+    }
+
+    .mh-grid>.mh-reel:nth-child(2n) {
+        margin-top: 34px !important;
+    }
+
+    .mh-chapter {
+        padding: 60px 0 20px;
+    }
+
+    .mh-chapter-label {
+        margin-bottom: 28px;
+        padding-bottom: 18px;
+    }
+}
+
+/* ---------- POSTER IMAGE ---------- */
+.mh-grid .mh-reel .video-poster {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: inherit;
+    background: linear-gradient(160deg, #2a2822, #151410);
+}
+
+.mh-grid .mh-reel .video-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    transform: scale(1.12);
+    transition: opacity .5s var(--mh-ease-soft), transform 6s var(--mh-ease-soft);
+}
+
+/* Ken Burns when card is in viewport */
+.mh-grid .mh-reel.is-playing .video-poster img {
+    animation: mh-kenburns 14s ease-in-out infinite alternate;
+}
+
+@keyframes mh-kenburns {
+    0% {
+        transform: scale(1.12) translate(0, 0);
+    }
+
+    100% {
+        transform: scale(1.22) translate(-1.4%, -1.6%);
+    }
+}
+
+/* Faster Ken Burns on hover */
+.mh-grid .mh-reel:hover .video-poster img {
+    animation-duration: 6s;
+}
+
+/* ---------- VIDEO CONTAINER ---------- */
+.mh-grid .mh-reel .video-container {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.mh-grid .mh-reel .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* ---------- SCRIM (gradient overlay) ---------- */
+.mh-grid .mh-reel .mh-reel-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(19, 18, 16, 0) 45%, rgba(19, 18, 16, 0.72) 100%);
+    border-radius: inherit;
+}
+
+/* ---------- HOVER — LIFT + ORANGE GLOW BORDER ---------- */
+@media (hover: hover) and (pointer: fine) {
+    .mh-grid .mh-reel {
+        transition: transform .5s var(--mh-ease-out),
+            opacity .8s var(--mh-ease-out),
+            border-color .35s var(--mh-ease-soft),
+            box-shadow .35s var(--mh-ease-soft);
+    }
+
+    .mh-grid .mh-reel:hover {
+        transform: translate3d(0, -6px, 0) scale(1.035);
+        z-index: 5;
+        border-color: var(--mh-orange);
+        box-shadow: 0 24px 50px -18px rgba(255, 74, 28, 0.45);
+        opacity: 1;
+    }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .mh-grid .mh-reel {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .mh-grid .mh-reel .video-poster img {
+        animation: none;
+    }
+}

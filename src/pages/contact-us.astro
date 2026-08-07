@@ -1,0 +1,97 @@
+﻿---
+/*
+  contact-us.astro - Contact Us Page
+  Converted from PHP: index.php
+  All PHP variables replaced with static paths.
+  HTML structure preserved exactly as original.
+*/
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Us - runr"
+  page="contact-us"
+  pagename="Contact Us"
+  onepagemenu={true}
+>
+
+<section id="section-about-us" class="section section-about-us">
+    <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
+      <div class="move-box"></div>
+      <div class="section-title title-animate">
+        <h1 class="text-xl text-uppercase">Your creative <br><span class="theme-text text-uppercase">journey starts here</span></h1>
+      </div>
+      <div class="theme-content-block js-scroll fade-in-right scrolled">
+        <div class="theme-content-title">
+          <span>contact us</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="81" height="9" viewBox="0 0 81 9" fill="none">
+            <rect y="4" width="80" height="1" fill="#111013"></rect>
+            <path d="M77 7.96366L80.5 4.48183L77 1" stroke="#111013" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <p>Have an idea, a story, or a brand waiting to shine? Whether you're looking to collaborate, promote, or simply explore how Runr can amplify your presence ” we're just a message away.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creative Team -->
+
+
+  <!-- Contact  -->
+
+
+  <section id="section-contact-form" class="section section-contact-form">
+    <div class="theme-color-shadow"></div>
+    <div class="container">
+      <div class="contact-form js-scroll fade-up">
+        <div id="sticky-bottom-form" class="sticky-bottom-form clearfix">
+          <div class="sticky-bottom-form-inner">
+            <form class="nobottommargin clearfix" id="contactform-bottom" name="contactform-bottom" onsubmit="validateInquiryForm('inquiry1')&disableButton()" action="/include/inc-leads.php" novalidate="novalidate" method="post">
+              <div class="columns is-multiline is-mobile cols-register">
+                <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register">
+                  <div class="col-form">
+                    <small>First Name</small>
+                    <input type="text" class="sm-form-control fname" name="fname" id="inquiry1-fname" placeholder="Enter Your First Name*" min-length="1" max-length="100" required />
+                    <label class="error-msg1" id="inquiry1formerror-1"></label>
+                  </div>
+                </div>
+                <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register">
+                  <div class="col-form">
+                    <small>Last Name</small>
+                    <input type="text" class="sm-form-control fname" name="lname" id="inquiry1-lname" placeholder="Enter Your Last Name*" min-length="1" max-length="100" required />
+                    <label class="error-msg1" id="inquiry1formerror-2"></label>
+                  </div>
+                </div>
+                <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register">
+                  <div class="col-form">
+                    <small>Email Address</small>
+                    <input type="text" class="sm-form-control email" name="email" id="inquiry1-email" placeholder="Enter Your Email Address*" required>
+                    <label class="error-msg1" id="inquiry1formerror-4"></label>
+                  </div>
+                </div>
+                <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register">
+                  <div class="col-form">
+                    <small>Phone</small>
+                    <input type="text" class="sm-form-control phone numeric custom-phone-control" name="phone" id="inquiry1-phone" maxlength="10" placeholder="Enter Your Phone Number*" pattern="^[6-9]{6,14}$" required>
+                    <label class="error-msg1" id="inquiry1formerror-3"></label>
+                  </div>
+                </div>
+                <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register">
+                  <div class="col-form">
+                    <small>Message</small>
+                    <textarea class="sm-form-control message" rows="4" name="message" id="inquiry1-message" placeholder="Your Message" spellcheck="false"></textarea>
+                  </div>
+                </div>
+              
+                <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-form col-form-btn submit-btn" id="submit">
+                  <button class="theme-btn btn-primary full-width inquiry-submit1 white-btn" type="submit" id="inquiry1-submit" value="Sumbit"><span>Submit</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

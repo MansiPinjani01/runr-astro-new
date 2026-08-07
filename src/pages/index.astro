@@ -1,0 +1,2871 @@
+---
+/*
+  index.astro - Homepage
+  Converted from PHP: index.php
+  All PHP variables replaced with static paths.
+  HTML structure preserved exactly as original.
+*/
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ClientLogosOrbit from "../components/ClientLogosOrbit.astro";
+
+const influencers = [
+  {
+    name: "Pooja Rathod",
+    layer: "layer-1.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-2.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-3.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-5.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-4.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-6.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-7.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-8.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/prachigohel",
+    facebook: "https://www.facebook.com/prachigohel",
+    youtube: "https://www.youtube.com/@prachigohel",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-9.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+  {
+    name: "Pooja Rathod",
+    layer: "layer-8.webp",
+    photo: "influencers-3.webp",
+    instagram: "https://www.instagram.com/shivanimanchekar",
+    facebook: "https://www.facebook.com/shivanimanchekar",
+    youtube: "https://www.youtube.com/@shivanimanchekar",
+  },
+];
+---
+
+<BaseLayout
+  title="runr"
+  page="home"
+  pagename="Home"
+  swiperjs={true}
+  popup={true}
+  onepagemenu={true}
+  bodyClass="is-loading"
+>
+  <div id="loader">
+    <video
+      id="logo-video"
+      src="/media/images/logo-loader.mp4"
+      muted
+      playsinline
+      autoplay
+      preload="auto"></video>
+  </div>
+
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="/media/images/bg-video-white.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div id="homepage">
+    <section
+      id="section-brand-story"
+      class="section section-brand-story white-bg"
+    >
+      <video
+        class="floating-video vid1 js-scroll fade-in-top delay2 scrolled"
+        autoplay=""
+        muted=""
+        loop=""
+        playsinline=""
+      >
+        <source src="/media/images/banner/1.mp4" type="video/mp4" />
+      </video>
+      <video
+        class="floating-video vid2 js-scroll fade-in-top delay4 scrolled"
+        autoplay=""
+        muted=""
+        loop=""
+        playsinline=""
+      >
+        <source src="/media/images/banner/2.mp4" type="video/mp4" />
+      </video>
+      <video
+        class="floating-video vid3 js-scroll fade-in-top delay6 scrolled"
+        autoplay=""
+        muted=""
+        loop=""
+        playsinline=""
+      >
+        <source src="/media/images/banner/3.mp4" type="video/mp4" />
+      </video>
+      <video
+        class="floating-video vid4 js-scroll fade-in-bottom delay8 scrolled"
+        autoplay=""
+        muted=""
+        loop=""
+        playsinline=""
+      >
+        <source src="/media/images/banner/4.mp4" type="video/mp4" />
+      </video>
+      <video
+        class="floating-video vid5 js-scroll fade-in-bottom delay10 scrolled"
+        autoplay=""
+        muted=""
+        loop=""
+        playsinline=""
+      >
+        <source src="/media/images/banner/5.mp4" type="video/mp4" />
+      </video>
+
+      <div class="theme-glitch-block">
+        <div class="theme-glitch-text theme-first-line">
+          <span
+            class="theme-glitch js-scroll fade-in-left scrolled"
+            data-text="Every">Every</span
+          >
+          <span
+            class="theme-glitch fw-700 js-scroll fade-in-right scrolled"
+            data-text="Vision">Vision</span
+          >
+        </div>
+        <div class="theme-glitch-text">
+          <span
+            class="theme-glitch js-scroll fade-in-left scrolled"
+            data-text="Becomes">Becomes</span
+          >
+          <span
+            class="theme-glitch fw-700 js-scroll fade-in-right scrolled"
+            data-text="Reality">Reality</span
+          >
+        </div>
+        <div class="theme-glitch-text theme-third-line">
+          <span
+            class="theme-glitch js-scroll fade-in-left scrolled"
+            data-text="With">With</span
+          >
+          <span
+            class="theme-glitch fw-700 js-scroll fade-in-right scrolled"
+            data-text="runr"
+          >
+            runr</span
+          >
+        </div>
+        <div class="story-subtitle dark">
+          <span class="js-scroll fade-in-bottom delay2 scrolled"
+            >Create. <br /> Inspire. <br /> Influence.</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="section-our-services"
+      class="section section-our-services sticky-section theme-padding pb-0"
+    >
+      <div class="section-title title-animate">
+        <h1 class="theme-point">Our Services</h1>
+      </div>
+      <div class="our-service-wrapper js-scroll fade-in-bottom scrolled">
+        <div class="service-block sticky-block block-1">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>01.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-7-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Reel Production</span>
+                  <span class="black">Reel Production</span>
+                </h3>
+                <p>
+                  Every reel begins with a powerful idea and ends with a story
+                  that inspires action. From scripting and production to
+                  editing, we craft content that captures attention. Built to
+                  engage audiences, strengthen brands, and leave a lasting
+                  impression.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Brand Reels</a>
+                  <a href="javascript:void(0);">Social Media Reels</a>
+                  <a href="javascript:void(0);">Commercial Reels</a>
+                  <a href="javascript:void(0);">Event Reels</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-4-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <img
+                    src="/media/images/home/services/reel-production.webp"
+                    alt="Reel Production"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-block sticky-block block-2">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>02.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-6-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Content Creator</span>
+                  <span class="black">Content Creator</span>
+                </h3>
+                <p>
+                  We create original content that reflects your brand's identity
+                  and vision. From ideas to execution, every piece is designed
+                  to engage and inspire. Content that builds trust, sparks
+                  conversations, and drives growth.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Brand Reels</a>
+                  <a href="javascript:void(0);">Social Media Reels</a>
+                  <a href="javascript:void(0);">Commercial Reels</a>
+                  <a href="javascript:void(0);">Event Reels</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-5-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <img
+                    src="/media/images/home/services/content-creator.webp"
+                    alt="Content Creator"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-block sticky-block block-3">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>03.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-6-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Social Media <br /> Marketing</span>
+                  <span class="black">Social Media <br /> Marketing</span>
+                </h3>
+                <p>
+                  Build a powerful social presence with strategies that deliver
+                  real impact. We manage, optimize, and grow your brand across
+                  every major platform. Turning followers into an active and
+                  loyal community.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Brand Reels</a>
+                  <a href="javascript:void(0);">Social Media Reels</a>
+                  <a href="javascript:void(0);">Commercial Reels</a>
+                  <a href="javascript:void(0);">Event Reels</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-5-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <img
+                    src="/media/images/home/services/social-media.webp"
+                    alt="Social Media Marketing"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-block sticky-block block-4">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>04.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-6-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Collab's with <br />Entrepreneurs</span>
+                  <span class="black">Collab's with <br />Entrepreneurs</span>
+                </h3>
+                <p>
+                  Meaningful collaborations that connect brands with visionary
+                  entrepreneurs. We create partnerships that inspire innovation
+                  and expand your reach. Driving credibility, awareness, and
+                  long-term business value.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Brand Reels</a>
+                  <a href="javascript:void(0);">Social Media Reels</a>
+                  <a href="javascript:void(0);">Commercial Reels</a>
+                  <a href="javascript:void(0);">Event Reels</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-5-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <img
+                    src="/media/images/home/services/collabs.webp"
+                    alt="Social Media Marketing"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-block sticky-block block-5">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>05.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-6-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Influencers & <br />Brand Promotions</span>
+                  <span class="black">Influencers & <br />Brand Promotions</span
+                  >
+                </h3>
+                <p>
+                  Connect your brand with creators who truly influence your
+                  audience. From campaign planning to execution, we manage
+                  impactful collaborations. Authentic promotions that increase
+                  visibility and engagement.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Brand Reels</a>
+                  <a href="javascript:void(0);">Social Media Reels</a>
+                  <a href="javascript:void(0);">Commercial Reels</a>
+                  <a href="javascript:void(0);">Event Reels</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-5-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <img
+                    src="/media/images/home/services/brand.webp"
+                    alt="Social Media Marketing"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-block sticky-block block-6">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>06.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-6-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Podcast Creation <br /> & Management</span>
+                  <span class="black">Podcast Creation <br />& Management</span>
+                </h3>
+                <p>
+                  Launch and grow podcasts with complete end-to-end production
+                  support. From recording and editing to publishing and
+                  promotion, we handle it all. Helping your voice reach the
+                  right audience consistently.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Brand Reels</a>
+                  <a href="javascript:void(0);">Social Media Reels</a>
+                  <a href="javascript:void(0);">Commercial Reels</a>
+                  <a href="javascript:void(0);">Event Reels</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-5-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <img
+                    src="/media/images/home/services/podcast.webp"
+                    alt="Podcast Creation"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-block sticky-block block-7">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>06.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-6-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Lead Generation</span>
+                  <span class="black">Lead Generation</span>
+                </h3>
+                <p>
+                  Generate high-quality leads that convert into meaningful
+                  business opportunities. We combine smart targeting, creative
+                  campaigns, and optimized funnels. Focused on delivering
+                  measurable growth and better conversions.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Brand Reels</a>
+                  <a href="javascript:void(0);">Social Media Reels</a>
+                  <a href="javascript:void(0);">Commercial Reels</a>
+                  <a href="javascript:void(0);">Event Reels</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-5-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <img
+                    src="/media/images/home/services/lead-generation.webp"
+                    alt="Lead Generation"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-block sticky-block block-8">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>06.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-6-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Performance <br /> Marketing</span>
+                  <span class="black">Performance <br /> Marketing</span>
+                </h3>
+                <p>
+                  Data-driven campaigns built to maximize every marketing
+                  investment. We continuously optimize ads using insights,
+                  testing, and performance metrics. Driving scalable growth with
+                  measurable results and higher ROI.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Brand Reels</a>
+                  <a href="javascript:void(0);">Social Media Reels</a>
+                  <a href="javascript:void(0);">Commercial Reels</a>
+                  <a href="javascript:void(0);">Event Reels</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-5-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <img
+                    src="/media/images/home/services/performance-marketing.webp"
+                    alt="Performance Marketing"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Brand Start -->
+
+    <ClientLogosOrbit />
+
+    <section
+      id="section-editorial-cta"
+      class="section-editorial-cta white-bg theme-padding"
+    >
+      <div class="theme-color-shadow"></div>
+
+      <div class="cta-inner">
+        <div class="section-title has-text-start title-animate">
+          <h2><span class="theme-text">02</span> - Your Turn</h2>
+        </div>
+
+        <h2 class="cta-headline">
+          <div class="cta-line-wrap">
+            <span class="cta-line cta-line-1" data-cta="line">Your</span>
+          </div>
+          <div class="cta-line-wrap">
+            <span class="cta-line cta-line-2" data-cta="line">Brand</span>
+          </div>
+          <div class="cta-line-wrap">
+            <span class="cta-line cta-line-3" data-cta="line">is</span>
+          </div>
+          <div class="cta-line-wrap">
+            <span class="cta-line cta-line-4 theme-text" data-cta="line"
+              >Next.</span
+            >
+          </div>
+        </h2>
+
+        <div
+          class="cta-footer js-scroll fade-in-bottom scrolled"
+          data-cta="footer"
+        >
+          <p class="cta-sub">
+            Every brand has a moment<br />when it decides to move.
+          </p>
+          <a
+            href="/contact-us/"
+            class="text-uppercase theme-arrow-btn theme-btn btn-outline mt-0"
+            >Let's Build Your Brand <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M5 12l14 0"></path><path d="M15 16l4 -4"></path><path
+                d="M15 8l4 4"></path></svg
+            ></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Brand End -->
+
+    <section id="section-our-influencers" class="section-our-influencers">
+      <div class="container">
+        <div class="section-title has-text-centered title-animate">
+          <h2>Our</h2>
+          <span class="text-xl theme-text text-uppercase">Influencers</span>
+        </div>
+        <div
+          class="influencers-desc mt-4 has-text-centered js-scroll fade-in-top scrolled"
+        >
+          <h3 class="faces-subtitle mb-2">Voices That Drive Influence.</h3>
+          <p class="mb-2">
+            From storytellers and creators to thought-leaders and trendsetters —
+            our network of influencers isn’t just about reach, it’s about real
+            impact.
+          </p>
+          <p>
+            At Runr, we partner with voices that spark conversations, build
+            trust, and move people. Whether it's fashion, fitness, food, or
+            finance — our creators connect your brand with the right audience,
+            in the most authentic way.
+          </p>
+        </div>
+        <div
+          id="influencers-slider"
+          class="swiper influencers-slider js-scroll fade-in-bottom scrolled"
+        >
+          <div class="swiper-wrapper">
+            {
+              influencers.map((item) => (
+                <div class="swiper-slide">
+                  <div class="theme-block">
+                    <div class="theme-block-img">
+                      <div class="theme-block-element">
+                        <img
+                          loading="lazy"
+                          src={`/media/images/home/influencers/${item.layer}`}
+                          width="370"
+                          height="250"
+                          alt="Element"
+                        />
+                      </div>
+                      <picture class="influencers-img">
+                        <img
+                          loading="lazy"
+                          src={`/media/images/home/influencers/${item.photo}`}
+                          width="600"
+                          height="400"
+                          alt={item.name}
+                        />
+                      </picture>
+                    </div>
+                    <div class="theme-block-title">
+                      <h5>{item.name}</h5>
+                    </div>
+                    <div class="influencer-social">
+                      {item.instagram && (
+                        <a
+                          href={item.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Instagram"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <rect
+                              x="2"
+                              y="2"
+                              width="20"
+                              height="20"
+                              rx="5"
+                              ry="5"
+                            />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                          </svg>
+                        </a>
+                      )}
+                      {item.facebook && (
+                        <a
+                          href={item.facebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Facebook"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                          </svg>
+                        </a>
+                      )}
+                      {item.youtube && (
+                        <a
+                          href={item.youtube}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="YouTube"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-runr-shots" class="section section-runr-shots">
+      <div class="container-">
+        <div class="section-title has-text-centered title-animate">
+          <h2>runr</h2>
+          <span class="text-xl theme-text text-uppercase">Reels</span>
+        </div>
+        <div class="shots-stage js-scroll fade-in-bottom scrolled">
+          <div class="swiper shots-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots1.webp"
+                  alt="Runr Shot 1"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots2.webp"
+                  alt="Runr Shot 2"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots3.webp"
+                  alt="Runr Shot 3"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots4.webp"
+                  alt="Runr Shot 4"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots5.webp"
+                  alt="Runr Shot 5"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots6.webp"
+                  alt="Runr Shot 6"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots7.webp"
+                  alt="Runr Shot 7"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots8.webp"
+                  alt="Runr Shot 8"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots9.webp"
+                  alt="Runr Shot 9"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots10.webp"
+                  alt="Runr Shot 10"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots11.webp"
+                  alt="Runr Shot 11"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots12.webp"
+                  alt="Runr Shot 12"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots13.webp"
+                  alt="Runr Shot 13"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots14.webp"
+                  alt="Runr Shot 14"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots15.webp"
+                  alt="Runr Shot 15"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots16.webp"
+                  alt="Runr Shot 16"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots17.webp"
+                  alt="Runr Shot 17"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots18.webp"
+                  alt="Runr Shot 18"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots19.webp"
+                  alt="Runr Shot 19"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots20.webp"
+                  alt="Runr Shot 20"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots21.webp"
+                  alt="Runr Shot 21"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots22.webp"
+                  alt="Runr Shot 22"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots23.webp"
+                  alt="Runr Shot 23"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots24.webp"
+                  alt="Runr Shot 24"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots25.webp"
+                  alt="Runr Shot 25"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots26.webp"
+                  alt="Runr Shot 26"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots27.webp"
+                  alt="Runr Shot 27"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots28.webp"
+                  alt="Runr Shot 28"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots29.webp"
+                  alt="Runr Shot 29"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots30.webp"
+                  alt="Runr Shot 30"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots31.webp"
+                  alt="Runr Shot 31"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots32.webp"
+                  alt="Runr Shot 32"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots33.webp"
+                  alt="Runr Shot 33"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots34.webp"
+                  alt="Runr Shot 34"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots35.webp"
+                  alt="Runr Shot 35"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots36.webp"
+                  alt="Runr Shot 36"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots37.webp"
+                  alt="Runr Shot 37"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/media/images/home/shots/shots38.webp"
+                  alt="Runr Shot 38"
+                  loading="lazy"
+                />
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="runr-shots"
+                  class="slide-play-overlay"
+                  title="Watch Reel Video"
+                >
+                  <div class="play-circle-btn">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Fixed Sticky Instagram Frame (Static profile, caption, likes over active center card) -->
+          <div class="ig-frame-sticky">
+            <div class="ig-header">
+              <div class="ig-avatar">runr</div>
+              <div class="ig-user-info">
+                <div class="ig-username">
+                  findonrunr
+                  <svg
+                    class="verified-badge"
+                    viewBox="0 0 24 24"
+                    width="14"
+                    height="14"
+                  >
+                    <path
+                      d="M12 2l2.4 2.2 3.2-.6.6 3.2L20.4 9 18.6 12l1.8 3-3.2 1.2-.6 3.2-3.2-.6L12 21l-2.4-2.2-3.2.6-.6-3.2L3 12l1.8-3L3 6l3.2-1.2.6-3.2L10 2.2z"
+                      fill="#3897f0"></path>
+                  </svg>
+                </div>
+                <div class="ig-location">runr house, Bhavnagar</div>
+              </div>
+              <div class="ig-dots">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-dots"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M7 12a2 2 0 1 1 -4 0q 0 -.053 .005 -.102a1.996 1.996 0 0 1 1.995 -1.898a2 2 0 0 1 2 2"
+                  ></path>
+                  <path
+                    d="M14 12a2 2 0 1 1 -4 0q 0 -.053 .005 -.102a1.996 1.996 0 0 1 1.995 -1.898a2 2 0 0 1 2 2"
+                  ></path>
+                  <path
+                    d="M21 12a2 2 0 1 1 -4 0q 0 -.053 .005 -.102a1.996 1.996 0 0 1 1.995 -1.898a2 2 0 0 1 2 2"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="ig-footer">
+              <div class="ig-actions">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="#ed4956"
+                  stroke="none"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  ></path>
+                </svg>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="1.8"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                  ></path>
+                </svg>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="1.8"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M22 2 11 13"></path>
+                  <path d="M22 2 15 22l-4-9-9-4z"></path>
+                </svg>
+                <div class="spacer"></div>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="#111"
+                  stroke="none"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M19 21 12 17 5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ig-likes">6,02,021 Likes</div>
+              <div class="ig-caption">
+                <b>findonrunr</b> I am my favorite <span class="tag"
+                  >#selfietime #runr #like #follow #chill</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-runr-kids" class="section-runr-kids p-0">
+      <div class="runr-kids-wrapper is-relative">
+        <div class="runr-kids-bg-video">
+          <video autoplay="" muted="" loop="" playsinline="">
+            <source src="/media/images/home/runr-kids.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="runr-kids-content-wrapper">
+          <div
+            class="runr-kids-detail has-text-centered is-relative js-scroll fade-up scrolled"
+          >
+            <div class="runr-kids-logo">
+              <picture>
+                <img
+                  src="/media/images/runr-kids/runr-kids-logo.webp"
+                  width="200"
+                  height="165"
+                  alt="Runr Kids Logo"
+                />
+              </picture>
+            </div>
+            <p class="text-xs">
+              Where Little Voices Make Big Moments. A playful vertical by Runr,
+              focused on kid-centric content, habits, and creativity. From fun
+              events to inspiring stories and engaging competitions ” we
+              celebrate childhood in every reel.
+            </p>
+          </div>
+
+          <div
+            class="runr-kids-slider-container is-relative js-scroll fade-up scrolled"
+          >
+            <div id="runr-kids-slider" class="swiper runr-kids-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-yellow">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/book.png"
+                        alt="Educational"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Educational</h3>
+                      <p class="kids-card-desc">Smart learning made fun</p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Educational"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-blue">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/paint.png"
+                        alt="Creative"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Creative</h3>
+                      <p class="kids-card-desc">
+                        Inspire imagination & creativity
+                      </p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Creative"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-pink">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/entertainment.png"
+                        alt="Entertainment"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Entertainment</h3>
+                      <p class="kids-card-desc">Fun videos, stories & more</p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Entertainment"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-purple">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/rroket.png"
+                        alt="Adventure"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Adventure</h3>
+                      <p class="kids-card-desc">Explore, imagine & discover</p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Adventure"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-green">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/toy.png"
+                        alt="Toys Store"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Toys Store</h3>
+                      <p class="kids-card-desc">Amazing toys for happy kids</p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Toys Store"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Repeated set for smooth infinite coverflow loop -->
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-yellow">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/book.png"
+                        alt="Educational"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Educational</h3>
+                      <p class="kids-card-desc">Smart learning made fun</p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Educational"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-blue">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/paint.png"
+                        alt="Creative"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Creative</h3>
+                      <p class="kids-card-desc">
+                        Inspire imagination & creativity
+                      </p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Creative"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-pink">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/entertainment.png"
+                        alt="Entertainment"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Entertainment</h3>
+                      <p class="kids-card-desc">Fun videos, stories & more</p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Entertainment"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-purple">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/rroket.png"
+                        alt="Adventure"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Adventure</h3>
+                      <p class="kids-card-desc">Explore, imagine & discover</p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Adventure"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="kids-category-card kids-card-green">
+                    <div class="kids-card-icon">
+                      <img
+                        src="/media/images/runr-kids/toy.png"
+                        alt="Toys Store"
+                        width="110"
+                        height="110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="kids-card-content">
+                      <h3 class="kids-card-title">Toys Store</h3>
+                      <p class="kids-card-desc">Amazing toys for happy kids</p>
+                    </div>
+                    <a
+                      href="javascript:void(0);"
+                      class="kids-card-arrow"
+                      aria-label="Toys Store"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="runr-kids-btn">
+              <a
+                href="https://instagram.com/runrkids"
+                target="_blank"
+                class="kids-btn yellow-bg is-flex is-align-items-center is-gap-2"
+              >
+                <div class="btn-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
+                    ></path>
+                  </svg>
+                </div>
+                Watch Reels
+              </a>
+              <a
+                href="https://runrkids.in/"
+                target="_blank"
+                class="kids-btn purple-bg is-flex is-align-items-center is-gap-2"
+              >
+                <div class="btn-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304"
+                    ></path>
+                    <path d="M9 11v-5a3 3 0 0 1 6 0v5"></path>
+                  </svg>
+                </div>
+                Shop Toys
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="section-tech-carta" class="section section-tech-carta theme-padding">
+      <div class="columns is-multiline">
+        <div class="column is-12-mobile is-12-tablet is-5-desktop is-5-widescreen">
+          
+        </div>
+          <div class="column is-12-mobile is-12-tablet is-5-desktop is-5-widescreen">
+        </div>
+      </div>
+    </section> -->
+  </div>
+
+  <Fragment slot="page-scripts">
+    <script is:inline src="/media/js/client-logos-orbit.js"></script>
+
+    <script is:inline>
+      // // Loader
+      const SHOW_LOADER = false;
+
+      if (!SHOW_LOADER) {
+        loader.style.display = "none";
+        homepage.style.opacity = "1";
+
+        window.dispatchEvent(new Event("facesInit"));
+      } else {
+        (function () {
+          const loader = document.getElementById("loader");
+          const video = document.getElementById("logo-video");
+          const homepage = document.getElementById("homepage");
+          const body = document.body;
+          let transitioned = false;
+          let fallbackTimer = setTimeout(runTransition, 8000);
+
+          const glitchLines = document.querySelectorAll(
+            "#section-brand-story .theme-glitch-text",
+          );
+          const lineTop = glitchLines[0];
+          const lineMid = glitchLines[1];
+          const lineBottom = glitchLines[2];
+          const subtitle = document.querySelector(
+            "#section-brand-story .story-subtitle",
+          );
+
+          const videosTop = document.querySelectorAll(
+            "#section-brand-story .vid1, #section-brand-story .vid2",
+          );
+          const videoMid = document.querySelectorAll(
+            "#section-brand-story .vid3",
+          );
+          const videosBottom = document.querySelectorAll(
+            "#section-brand-story .vid4, #section-brand-story .vid5",
+          );
+
+          document.documentElement.style.overflow = "hidden";
+
+          const scrollY = window.scrollY || window.pageYOffset;
+          const centerY = scrollY + window.innerHeight / 2;
+
+          gsap.set(loader, {
+            clipPath: "circle(150vmax at 50% 50vh)",
+          });
+          gsap.set(homepage, {
+            clipPath: `circle(0vmax at 50% ${centerY}px)`,
+            scale: 1.06,
+          });
+          gsap.set([lineTop, lineMid, lineBottom], {
+            clipPath: "inset(0 100% 0 0)",
+          });
+          gsap.set(subtitle, {
+            opacity: 0,
+            y: 20,
+          });
+          gsap.set([videosTop, videoMid, videosBottom], {
+            opacity: 0,
+            scale: 0.94,
+          });
+
+          video.addEventListener("ended", runTransition, {
+            once: true,
+          });
+
+          video.play().catch(() => {
+            const resume = () => {
+              video.play();
+              window.removeEventListener("click", resume);
+            };
+            window.addEventListener("click", resume, {
+              once: true,
+            });
+          });
+
+          function runTransition() {
+            if (transitioned) return;
+            transitioned = true;
+            clearTimeout(fallbackTimer);
+
+            body.classList.remove("is-loading");
+            gsap.set(loader, {
+              pointerEvents: "none",
+            });
+
+            const tl = gsap.timeline({
+              onComplete: () => {
+                document.documentElement.style.overflow = "";
+                loader.style.display = "none";
+                gsap.set(homepage, {
+                  clipPath: "none",
+                });
+                // Loader animation done ” initialize everything
+                window.dispatchEvent(new Event("facesInit"));
+                window.dispatchEvent(new Event("runrLoaderComplete"));
+                ScrollTrigger.refresh();
+              },
+            });
+
+            // 1. Logo shrinks into the center point and fades
+            tl.to(
+              video,
+              {
+                scale: 0.5,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.in",
+              },
+              0,
+            );
+
+            // 2. Loader itself closes like a camera aperture, into that same point
+            tl.to(
+              loader,
+              {
+                clipPath: "circle(0vmax at 50% 50vh)",
+                duration: 1.1,
+                ease: "power4.inOut",
+              },
+              0.05,
+            );
+
+            // 3. Homepage opens outward from that exact point ” the "lens
+            // reopening on the new scene" moment that ties both halves together
+            tl.to(
+              homepage,
+              {
+                clipPath: `circle(150vmax at 50% ${centerY}px)`,
+                scale: 1,
+                duration: 1.3,
+                ease: "power4.inOut",
+              },
+              0.75,
+            );
+
+            // 4. Hero wipes in, top to bottom, in sync with the aperture opening
+            tl.to(
+              videosTop,
+              {
+                opacity: 1,
+                scale: 1,
+                duration: 0.9,
+                stagger: 0.08,
+                ease: "expo.out",
+              },
+              1.05,
+            )
+              .to(
+                lineTop,
+                {
+                  clipPath: "inset(0 0% 0 0)",
+                  duration: 0.9,
+                  ease: "power4.inOut",
+                },
+                1.08,
+              )
+
+              .to(
+                videoMid,
+                {
+                  opacity: 1,
+                  scale: 1,
+                  duration: 0.9,
+                  ease: "expo.out",
+                },
+                1.3,
+              )
+              .to(
+                lineMid,
+                {
+                  clipPath: "inset(0 0% 0 0)",
+                  duration: 0.9,
+                  ease: "power4.inOut",
+                },
+                1.33,
+              )
+
+              .to(
+                videosBottom,
+                {
+                  opacity: 1,
+                  scale: 1,
+                  duration: 0.9,
+                  stagger: 0.08,
+                  ease: "expo.out",
+                },
+                1.55,
+              )
+              .to(
+                lineBottom,
+                {
+                  clipPath: "inset(0 0% 0 0)",
+                  duration: 0.9,
+                  ease: "power4.inOut",
+                },
+                1.58,
+              )
+              .to(
+                subtitle,
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.8,
+                  ease: "expo.out",
+                },
+                1.8,
+              );
+          }
+        })();
+      }
+
+      // Service Block Active State & Stacking Cards Effect
+      if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+
+        var serviceBlocks = gsap.utils.toArray(".service-block");
+
+        serviceBlocks.forEach(function (block, index) {
+          var blackText = block.querySelector(".black");
+
+          if (blackText) {
+            gsap.to(blackText, {
+              clipPath: "inset(0 0% 0 0)",
+              ease: "none",
+              scrollTrigger: {
+                trigger: block,
+                start: "top center",
+                end: "bottom center",
+                scrub: true,
+              },
+            });
+          }
+
+          // Card Stacking Scale Effect
+          if (index < serviceBlocks.length - 1) {
+            gsap.to(block, {
+              scale: 0.92,
+              opacity: 0.5,
+              filter: "blur(5px)",
+              ease: "none",
+              scrollTrigger: {
+                trigger: serviceBlocks[index + 1],
+                start: "top bottom-=100",
+                end: "top top+=140",
+                scrub: true,
+              },
+            });
+          }
+        });
+      }
+    </script>
+
+    <script is:inline>
+      var kidsSwiper = new Swiper("#runr-kids-slider", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: true,
+        },
+        keyboard: {
+          enabled: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          992: {
+            slidesPerView: 2,
+            spaceBetween: 18,
+          },
+          1216: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+        },
+      });
+    </script>
+
+    <script is:inline>
+      var influencersSwiper = new Swiper("#influencers-slider", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        loopAdditionalSlides: 2,
+        speed: 800,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 14,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 18,
+           centeredSlides: true,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 100,
+            centeredSlides: true,
+          },
+        },
+      });
+    </script>
+
+    <script is:inline>
+      const shotsSwiper = new Swiper("#section-runr-shots .shots-swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        loop: true,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        coverflowEffect: {
+          rotate: 15,
+          stretch: 0,
+          depth: 120,
+          modifier: 1,
+          slideShadows: false,
+        },
+        breakpoints: {
+          0: {
+            coverflowEffect: {
+              rotate: 10,
+              stretch: 0,
+              depth: 80,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
+          768: {
+            coverflowEffect: {
+              rotate: 15,
+              stretch: 0,
+              depth: 120,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
+        },
+        on: {
+          init() {
+            const self = this;
+            alignIgFrame(self);
+            setTimeout(() => alignIgFrame(self), 50);
+            setTimeout(() => alignIgFrame(self), 250);
+          },
+          resize() {
+            alignIgFrame(this);
+          },
+        },
+      });
+
+      window.addEventListener("resize", () => {
+        if (typeof shotsSwiper !== "undefined" && shotsSwiper) {
+          alignIgFrame(shotsSwiper);
+        }
+      });
+
+      // Align sticky Instagram frame perfectly over active slide
+      function alignIgFrame(swiperInstance) {
+        if (!swiperInstance) return;
+        const igFrame = document.querySelector(
+          "#section-runr-shots .ig-frame-sticky",
+        );
+        const firstSlide = document.querySelector(
+          "#section-runr-shots .shots-swiper .swiper-slide",
+        );
+
+        if (firstSlide && igFrame) {
+          // Only set width to match slide, height auto (determined by content)
+          igFrame.style.width = firstSlide.offsetWidth + "px";
+        }
+      }
+
+      if (typeof Fancybox !== "undefined") {
+        Fancybox.bind('[data-fancybox="runr-shots"]', {
+          Toolbar: {
+            display: ["close"],
+          },
+        });
+      }
+    </script>
+  </Fragment>
+</BaseLayout>
