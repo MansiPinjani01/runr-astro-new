@@ -214,7 +214,7 @@ const influencers = [
       class="section section-our-services sticky-section theme-padding pb-0"
     >
       <div class="section-title title-animate">
-        <h1 class="theme-point">Our Services</h1>
+        <h1 class="theme-point title-xs">Our Services</h1>
       </div>
       <div class="our-service-wrapper js-scroll fade-in-bottom scrolled">
         <div class="service-block sticky-block block-1">
@@ -754,7 +754,7 @@ const influencers = [
 
       <div class="cta-inner">
         <div class="section-title has-text-start title-animate">
-          <h2><span class="theme-text">02</span> - Your Turn</h2>
+          <h2 class="title-xs"><span class="theme-text">02</span> - Your Turn</h2>
         </div>
 
         <h2 class="cta-headline">
@@ -809,8 +809,8 @@ const influencers = [
     <section id="section-our-influencers" class="section-our-influencers">
       <div class="container">
         <div class="section-title has-text-centered title-animate">
-          <h2>Our</h2>
-          <span class="text-xl theme-text text-uppercase">Influencers</span>
+          <span class="sub-title">Our</span>
+          <h2 class="text-xl theme-text text-uppercase">Influencers</h2>
         </div>
         <div
           class="influencers-desc mt-4 has-text-centered js-scroll fade-in-top scrolled"
@@ -950,8 +950,8 @@ const influencers = [
     <section id="section-runr-shots" class="section section-runr-shots">
       <div class="container-">
         <div class="section-title has-text-centered title-animate">
-          <h2>runr</h2>
-          <span class="text-xl theme-text text-uppercase">Reels</span>
+          <span class="sub-title">runr</span>
+          <h2 class="text-xl theme-text text-uppercase">Reels</h2>
         </div>
         <div class="shots-stage js-scroll fade-in-bottom scrolled">
           <div class="swiper shots-swiper">
@@ -2750,36 +2750,49 @@ const influencers = [
     </script>
 
     <script is:inline>
-      var influencersSwiper = new Swiper("#influencers-slider", {
+    var influencersSwiper = new Swiper("#influencers-slider", {
+    slidesPerView: 3,
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,
+    speed: 800,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 14,
+        centeredSlides: false,
+      },
+
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 18,
+        centeredSlides: false,
+      },
+
+      768: {
         slidesPerView: 3,
-        spaceBetween: 24,
-        loop: true,
-        grabCursor: true,
+        spaceBetween: 40, // 768-1215
         centeredSlides: true,
-        loopAdditionalSlides: 2,
-        speed: 800,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 14,
-            centeredSlides: true,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 18,
-           centeredSlides: true,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 100,
-            centeredSlides: true,
-          },
-        },
-      });
+      },
+
+      1216: {
+        slidesPerView: 3,
+        spaceBetween: 50, // 1216-1407
+        centeredSlides: true,
+      },
+
+      1408: {
+        slidesPerView: 3,
+        spaceBetween: 100, // 1408+
+        centeredSlides: true,
+      },
+    }
+  });
     </script>
 
     <script is:inline>

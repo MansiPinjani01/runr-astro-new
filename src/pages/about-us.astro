@@ -79,8 +79,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       >
         <div class="our-vision-block">
           <div class="section-title title-animate">
-            <h2>Our</h2>
-            <span class="text-xl theme-text">Vision</span>
+            <span class="sub-title">Our</span>
+            <h2 class="text-xl theme-text">Vision</h2>
           </div>
           <p>
             To become most dynamic and trusted content and influencer platform ”
@@ -94,8 +94,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       >
         <div class="our-mission-block is-relative">
           <div class="section-title title-animate">
-            <h2>Our</h2>
-            <span class="text-xl theme-text">Mission</span>
+            <span class="sub-title">Our</span>
+            <h2 class="text-xl theme-text">Mission</h2>
           </div>
           <p>
             At Runr, our mission is to empower brands through creative
@@ -542,7 +542,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         var mobileFeed = document.getElementById("mobileFeed");
         var shapeCycle = ["w-tall", "w-square", "w-wide", "w-close"];
         var feedHTML = '<div class="feed-marker">Our Creative Team</div>';
-        members.slice(0, 6).forEach(function (m, i) {
+        members.forEach(function (m, i) {
           var shapeClass = shapeCycle[i % shapeCycle.length];
           var alignClass = i % 2 === 1 ? "align-r" : "";
           feedHTML +=
