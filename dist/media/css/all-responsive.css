@@ -54,6 +54,10 @@
         font-size: 130px;
     }
 
+    .media-hub-title .section-title .text-md {
+        font-size: 72px;
+    }
+
     .section-title .text-md {
         font-size: 70px;
     }
@@ -110,11 +114,6 @@
 
     .theme-glitch-block {
         max-width: fit-content;
-    }
-
-    .story-subtitle {
-        font-size: 20px;
-        letter-spacing: -1px;
     }
 
     .vid1 {
@@ -246,6 +245,38 @@
         height: 140px;
     }
 
+
+    .columns.gap-1 {
+        margin-left: -12px !important;
+        margin-right: -12px !important;
+    }
+
+    .gap-1>.column {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .media-hub-title .section-title .text-md {
+        font-size: 60px;
+    }
+
+    .media-hub-title .theme-content-title span,
+    .media-hub-title .theme-content-block p {
+        font-size: 18px;
+    }
+
+    .testimonials-card {
+        padding: 15px 20px 15px;
+    }
+
+    .testimonial-name span {
+        font-size: 14px;
+    }
+
+    .testimonials-video-body h3 {
+        font-size: 18px;
+    }
+
     .team-section .slot {
         transform: translate(-50%, -50%) scale(0.85);
     }
@@ -277,13 +308,13 @@
         max-width: 38vw;
     }
 
-    .team-section .founder-caption .name {
+    /* .team-section .founder-caption .name {
         font-size: 15px;
-    }
+    } */
 
-    .team-section .founder-caption .role {
+    /* .team-section .founder-caption .role {
         font-size: 12px;
-    }
+    } */
 
     .sub-title {
         font-size: 22px;
@@ -536,9 +567,72 @@
 
 @media screen and (max-width: 1024px) {
 
+    /* Testimonials Grid - Tablet */
+    .testimonials-masonry {
+        column-count: 2;
+        column-gap: 16px;
+    }
+
+    .section-media-hub {
+        padding-top: 40px !important;
+    }
+
+    .testimonials-card:not(.testimonials-video)::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .testimonials-grid-section {
+        padding-top: 0 !important;
+    }
+
+    .testimonials-play-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonials-play-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .testimonials-card {
+        margin-bottom: 16px;
+        padding: 22px 20px 20px;
+        border-radius: 14px;
+    }
+
+
+
+    .testimonials-video-body h3 {
+        font-size: 18px;
+    }
+
+    .testimonials-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-name h3 {
+        font-size: 18px;
+    }
+
+    .testimonial-name span {
+        font-size: 14px;
+    }
+
     .service-title .gray,
     .service-title .black {
         font-size: 50px;
+    }
+
+    .contact-team-col:nth-child(2) {
+        order: 3 !important;
+    }
+
+    .runr-team-img {
+        max-width: fit-content;
+        margin: 0 auto;
     }
 
     .section-contact-team .section-title h2 br {
@@ -957,6 +1051,11 @@
         height: auto;
     }
 
+    .feed-item .name {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
     .center-copy .section-title .text-md br {
         display: none;
     }
@@ -1054,8 +1153,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: grayscale(100%) contrast(1.05);
+        /* filter: grayscale(100%) contrast(1.05); */
         display: block;
+    }
+
+    .team-section .founder-photo-wrap-team img {
+        filter: unset;
     }
 
     .team-section .feed-item .cap {
@@ -1064,16 +1167,9 @@
         flex-direction: column;
     }
 
-    .team-section .feed-item .cap .name {
-        font-weight: 700;
-        font-size: 11px;
-        text-transform: uppercase;
-    }
-
     .team-section .feed-item .cap .role {
-        font-size: 9px;
-        color: #8a8a86;
-        margin-top: 2px;
+        font-size: 13px;
+        line-height: 18px;
     }
 
     .team-section .feed-item.w-tall .frame,
@@ -1095,32 +1191,33 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .media-hub-title .section-title .text-md {
+        font-size: 58px;
+    }
+
+    .mh-view-more-icon {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
     .team-section .mobile-feed {
         gap: 10px;
         padding: 0 16px 40px;
     }
 
-    .team-section .feed-item .cap .name {
-        font-size: 10px;
+    .section-title .text-md {
+        font-size: 42px;
     }
 
-    .team-section .feed-item .cap .role {
-        font-size: 8px;
+    .section-contact-team .section-title h2 {
+        font-size: 36px;
+        line-height: 48px;
     }
 
     .team-section .center-stack {
         padding: 0 16px;
         margin-bottom: 30px;
-    }
-
-    .team-section .founder-photo-wrap-team {
-        width: 90px;
-        height: 112px;
-    }
-
-    .team-section .center-desc {
-        max-width: 260px;
-        font-size: 14px;
     }
 
     .section-founder-hero {
@@ -1408,6 +1505,80 @@
 }
 
 @media screen and (max-width: 575px) {
+
+    /* Testimonials Grid - Mobile */
+    .testimonials-masonry {
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    .media-hub-title .theme-content-title span,
+    .media-hub-title .theme-content-block p {
+        font-size: 16px;
+    }
+
+    .testimonials-grid-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .testimonials-card,
+    .testimonials-card,
+    .testimonials-video-img::before,
+    .testimonials-video-img img {
+        border-radius: 12px;
+    }
+
+    .testimonials-card.testimonials-video {
+        aspect-ratio: 3 / 4;
+    }
+
+    .testimonials-video-body {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+    }
+
+
+    .testimonials-play-btn {
+        width: 38px;
+        height: 38px;
+        top: 14px;
+        right: 14px;
+    }
+
+    .testimonials-play-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .testimonials-person {
+        margin-bottom: 12px;
+    }
+
+    .testimonials-card:not(.testimonials-video)::before {
+        width: 30px;
+        height: 30px;
+        top: 14px;
+        right: 14px;
+    }
+
+    /* Testimonials Grid - Small Mobile */
+    .testimonials-grid-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .testimonials-card {
+        margin-bottom: 12px;
+        padding: 18px 16px 16px;
+    }
+
+    .testimonials-card.testimonials-video {
+        aspect-ratio: 3 / 4;
+    }
+
     .team-section .mobile-feed {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -1425,14 +1596,6 @@
         aspect-ratio: 1/1;
     }
 
-    .team-section .feed-item .cap .name {
-        font-size: 10px;
-    }
-
-    .team-section .feed-item .cap .role {
-        font-size: 8px;
-    }
-
     .team-section .feed-item .cap {
         margin-top: 6px;
     }
@@ -1440,16 +1603,6 @@
     .team-section .center-stack {
         padding: 0 12px;
         margin-bottom: 20px;
-    }
-
-    .team-section .founder-photo-wrap-team {
-        width: 70px;
-        height: 88px;
-    }
-
-    .team-section .center-desc {
-        max-width: 220px;
-        font-size: 13px;
     }
 
     .team-section .feed-marker {
@@ -1926,6 +2079,18 @@
         font-size: 20px;
     }
 
+    .influencers-col {
+        padding: 5px !important;
+    }
+
+    .theme-block-title h5 {
+        font-size: 16px;
+    }
+
+    .theme-block-title {
+        padding: 8px 5px;
+    }
+
     .clo-section .section-title .text-md {
         font-size: 28px;
     }
@@ -1977,6 +2142,14 @@
 @media screen and (max-width: 420px) {
     .modal-title {
         font-size: 16px;
+    }
+
+    .media-hub-title .section-title .text-md {
+        font-size: 44px;
+    }
+
+    .feed-item .name {
+        font-size: 14px;
     }
 
     .menu-nav-link {
@@ -2037,12 +2210,21 @@
     header {
         padding: 15px 30px;
     }
+
+    .theme-block-title h5 {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 360px) {
+
     /* .section-title h1,
     .section-title h2 {
         font-size: 22px;
         line-height: 28px;
     } */
+    .section-contact-team .section-title h2 {
+        font-size: 34px;
+        line-height: 46px;
+    }
 }

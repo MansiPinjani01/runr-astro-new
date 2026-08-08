@@ -4,11 +4,10 @@
   Grid auto-generated from src/data/media-hub-reels.json
   Just add reels to the JSON — no HTML editing needed.
 */
-import BaseLayout from '../layouts/BaseLayout.astro';
-import reelsData from '../data/media-hub-reels-fashion.json';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import reelsData from "../data/media-hub-reels-fashion.json";
 
 const chapters = reelsData.chapters;
-const totalChapters = chapters.length;
 ---
 
 <BaseLayout
@@ -18,69 +17,245 @@ const totalChapters = chapters.length;
   swiperjs={true}
   onepagemenu={true}
 >
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/media/css/media-hub-grid.css"
+    slot="head"
+  />
 
-<link rel="stylesheet" type="text/css" href="/media/css/media-hub-grid.css" slot="head" />
-
-<div class="video-bg">
+  <div class="video-bg">
     <video autoplay muted loop playsinline>
-        <source src="/media/images/bg-video-white.mp4" type="video/mp4">
+      <source src="/media/images/bg-video-white.mp4" type="video/mp4" />
     </video>
-</div>
+  </div>
 
-<section id="section-about-us" class="section section-about-us">
-    <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
-        <div class="move-box"></div>
-        <div class="section-title title-animate">
-            <h1 class="text-xl text-uppercase">Watch Together.<br><span class="theme-text text-uppercase">Share Forever.</span></h1>
-        </div>
-        <div class="theme-content-block js-scroll fade-in-right scrolled">
+  <section
+    id="section-media-hub"
+    class="section section-media-hub theme-padding py-0"
+  >
+    <div class="columns is-multiline is-vcentered">
+      <div
+        class="column is-12-mobile is-12-tablet is-7-desktop is-7-widescreen"
+      >
+        <div class="media-hub-title">
+          <div class="section-title title-animate">
+            <h1 class="text-md text-uppercase">
+              Watch Together.<br /><span class="theme-text text-uppercase"
+                >Share Forever.</span
+              >
+            </h1>
+          </div>
+          <div class="theme-content-block js-scroll fade-in-right scrolled">
             <div class="theme-content-title">
-                <span>Media Hub</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="81" height="9" viewBox="0 0 81 9" fill="none">
-                    <rect y="4" width="80" height="1" fill="#111013"></rect>
-                    <path d="M77 7.96366L80.5 4.48183L77 1" stroke="#111013" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
+              <span>Media Hub</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="81"
+                height="9"
+                viewBox="0 0 81 9"
+                fill="none"
+              >
+                <rect y="4" width="80" height="1" fill="#111013"></rect>
+                <path
+                  d="M77 7.96366L80.5 4.48183L77 1"
+                  stroke="#111013"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
             </div>
-            <p>We don't just capture moments—we preserve experiences. Every reel we create, every story we film, and every frame we produce is crafted to inspire, engage, and leave a lasting impression.</p>
+            <p>
+              We don't just capture moments—we preserve experiences. Every reel
+              we create, every story we film, and every frame we produce is
+              crafted to inspire, engage, and leave a lasting impression.
+            </p>
+          </div>
         </div>
+      </div>
+      <div
+        class="column is-12-mobile is-12-tablet is-5-desktop is-5-widescreen js-scroll fade-in-right scrolled"
+      >
+        <div class="slider-wrap">
+          <div class="hero-slider">
+            <div class="phone-stack" id="phoneStack">
+              <div class="phone-card" data-i="0">
+                <div class="screen">
+                  <picture>
+                    <img
+                      src="/media/images/media-hub/thumb-1.webp"
+                      alt="Reels Thumb"
+                      width="400"
+                      height="715"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="phone-card" data-i="1">
+                <div class="screen">
+                  <picture>
+                    <img
+                      src="/media/images/media-hub/thumb-2.webp"
+                      alt="Reels Thumb"
+                      width="400"
+                      height="715"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="phone-card" data-i="2">
+                <div class="screen">
+                  <picture>
+                    <img
+                      src="/media/images/media-hub/thumb-3.webp"
+                      alt="Reels Thumb"
+                      width="400"
+                      height="715"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="phone-card" data-i="3">
+                <div class="screen">
+                  <picture>
+                    <img
+                      src="/media/images/media-hub/thumb-4.webp"
+                      alt="Reels Thumb"
+                      width="400"
+                      height="715"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="phone-card" data-i="4">
+                <div class="screen">
+                  <picture>
+                    <img
+                      src="/media/images/media-hub/thumb-5.webp"
+                      alt="Reels Thumb"
+                      width="400"
+                      height="715"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ====================================================
+  <!-- ====================================================
    MEDIA HUB — Staggered Masonry Video Grid (auto-generated)
 ==================================================== -->
-<div class="section media-hub-section theme-padding pt-0">
+  <div class="section media-hub-section theme-padding pt-0">
     <div class="theme-color-shadow"></div>
 
-    {chapters.map((chapter, chapterIndex) => (
-        <section class="mh-chapter">
-            <div class="mh-chapter-label">
-                <div class="section-title title-animate">
-                    <div class="mh-chapter-num">{String(chapterIndex + 1).padStart(2, '0')} / {String(totalChapters).padStart(2, '0')}</div>
-                    <h2>{chapter.title}</h2>
+    {
+      chapters.map((chapter, chapterIndex) => (
+        <section class="mh-chapter pb-0">
+          <div class="mh-chapter-label">
+            <div class="section-title title-animate mb-0">
+              <h2>{chapter.title}</h2>
+            </div>
+            <a href={`/media-hub/${chapter.slug}`} class="mh-view-more-btn">
+              <span class="mh-btn-text">View More</span>
+              <span class="mh-view-more-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class={`mh-grid mh-grid--${chapter.pattern}`}>
+            {chapter.reels.map((reel) => (
+              <div
+                class="mh-reel card card-video"
+                data-video={reel.video}
+                data-poster={reel.poster}
+                data-type="portrait"
+                data-ratio="9:16"
+                tabindex="0"
+              >
+                <div class="video-poster">
+                  <img src={reel.poster} alt={chapter.title} loading="lazy" />
                 </div>
-             
-            </div>
-            <div class={`mh-grid mh-grid--${chapter.pattern}`}>
-                {chapter.reels.map((reel) => (
-                    <div class="mh-reel card card-video"
-                        data-video={reel.video}
-                        data-poster={reel.poster}
-                        data-type="portrait" data-ratio="9:16" tabindex="0">
-                        <div class="video-poster">
-                            <img src={reel.poster} alt={chapter.title} loading="lazy" />
-                        </div>
-                        <div class="video-container"></div>
-                        <div class="mh-reel-scrim"></div>
-                    </div>
-                ))}
-            </div>
+                <div class="video-container" />
+                <div class="mh-reel-scrim" />
+              </div>
+            ))}
+          </div>
         </section>
-    ))}
+      ))
+    }
+  </div><!-- /media-hub-section -->
 
-</div><!-- /media-hub-section -->
+  <script is:inline src="/media/js/media-hub-video-engine.js"></script>
+  <script is:inline src="/media/js/media-hub-grid-reveal.js"></script>
 
-<script is:inline src="/media/js/media-hub-video-engine.js"></script>
-<script is:inline src="/media/js/media-hub-grid-reveal.js"></script>
+  <Fragment slot="page-scripts">
+    <script is:inline>
+      (function () {
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        const stack = document.getElementById("phoneStack");
+        if (!stack) return;
+        const cards = Array.from(stack.querySelectorAll(".phone-card"));
+        const n = cards.length;
+        const centerIndex = Math.floor(n / 2);
 
+        function layout(animate) {
+          const w = stack.getBoundingClientRect().width;
+          const spacing = w * 0.155;
+          cards.forEach((card, i) => {
+            const off = i - centerIndex;
+            const x = off * spacing;
+            const scale = Math.max(1 - Math.abs(off) * 0.12, 0.62);
+            const rot = off * 11;
+            const opacity = 1 - Math.abs(off) * 0.28;
+            const z = 10 - Math.abs(off);
+            card.classList.toggle("is-active", off === 0);
+            gsap.to(card, {
+              x,
+              y: Math.abs(off) * 14,
+              scale,
+              rotate: rot,
+              opacity,
+              zIndex: z,
+              duration: animate ? 0.9 : 0,
+              ease: "power3.out",
+            });
+          });
+        }
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            if (reduceMotion) return;
+            gsap.to(card, {
+              scale: "+=0.04",
+              duration: 0.35,
+              ease: "power2.out",
+              overwrite: "auto",
+            });
+          });
+          card.addEventListener("mouseleave", () => layout(true));
+        });
+
+        window.addEventListener("resize", () => layout(false));
+        layout(false);
+      })();
+    </script>
+  </Fragment>
 </BaseLayout>

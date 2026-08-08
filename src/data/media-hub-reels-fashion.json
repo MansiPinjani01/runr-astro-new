@@ -1,56 +1,94 @@
 {
-  "chapters": [
-    {
-      "title": "Summer Collection",
-      "pattern": "a",
-      "reels": [
-        {
-          "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-          "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-          "title": "Fashion Reel 1",
-          "category": "fashion",
-          "duration": "0:30",
-          "ratio": "9:16"
+    "chapters": [{
+            "title": "Property Tours",
+            "slug": "property-tours",
+            "pattern": "a",
+            "reels": [{
+                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
+                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+                    "title": "Fashion Reel 1",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
+                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+                    "title": "Fashion Reel 1",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
+                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+                    "title": "Fashion Reel 1",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
+                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+                    "title": "Fashion Reel 1",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
+                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+                    "title": "Fashion Reel 1",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
         },
         {
-          "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-          "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-          "title": "Fashion Reel 1",
-          "category": "fashion",
-          "duration": "0:30",
-          "ratio": "9:16"
-        },
-        {
-          "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-          "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-          "title": "Fashion Reel 1",
-          "category": "fashion",
-          "duration": "0:30",
-          "ratio": "9:16"
-        },
-        {
-          "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-          "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-          "title": "Fashion Reel 1",
-          "category": "fashion",
-          "duration": "0:30",
-          "ratio": "9:16"
+            "title": "Fashion & Lifestyle",
+            "slug": "fashion",
+            "pattern": "b",
+            "reels": [{
+                    "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
+                    "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+                    "title": "Fashion Reel 2",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
+                    "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
+                    "title": "Fashion Reel 2",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }, {
+                    "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
+                    "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+                    "title": "Fashion Reel 2",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
+                    "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
+                    "title": "Fashion Reel 2",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }, {
+                    "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
+                    "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+                    "title": "Fashion Reel 2",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "title": "Winter Vibes",
-      "pattern": "b",
-      "reels": [
-        {
-          "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-          "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-          "title": "Fashion Reel 2",
-          "category": "fashion",
-          "duration": "0:30",
-          "ratio": "9:16"
-        }
-      ]
-    }
-  ]
+
+    ]
 }

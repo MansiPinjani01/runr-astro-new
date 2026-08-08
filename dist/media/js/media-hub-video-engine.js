@@ -8,17 +8,22 @@
  *  - MAX_ACTIVE limits concurrent connections; eviction only picks cards NOT in viewport.
  *  - Automatically detects YouTube URLs in `data-video`.
  *  - Creates muted, looped, autoplay YouTube iframe backgrounds without controls.
+ *  - Responsive tuning: fewer concurrent videos and different observer margins on mobile.
  */
 
 (function () {
   'use strict';
 
-  var MAX_ACTIVE  = 6;              // allow more simultaneous active cards
-  var ROOT_MARGIN = '100px 0px 100px 0px';  // small pre-load buffer only
+  var isMobile = window.matchMedia('(max-width: 768px)').matches;
+  var MAX_ACTIVE  = isMobile ? 2 : 3;
+  var ROOT_MARGIN = isMobile ? '50px 0px 50px 0px' : '100px 0px 100px 0px';
+  var DEBOUNCE_MS = isMobile ? 350 : 200;
   var THRESHOLD   = 0;
 
   var activeSlots   = [];           // cards currently loaded/playing
   var visibleCards  = new Set();    // cards actually inside viewport right now
+  var debounceTimers = new Map();
+  var fallbackTimers = new Map();
 
   function getYouTubeId(url) {
     if (!url) return null;
@@ -42,13 +47,42 @@
     return v;
   }
 
+  function playVideo(card) {
+      var container = card.querySelector('.video-container');
+      if (!container) return;
+      var iframe = container.querySelector('iframe');
+      if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage(JSON.stringify({event: "command", func: "playVideo", args: []}), "*");
+      }
+      var video = container.querySelector('video');
+      if (video) {
+          video.play().catch(function(){});
+      }
+  }
+
+  function pauseVideo(card) {
+      var container = card.querySelector('.video-container');
+      if (!container) return;
+      var iframe = container.querySelector('iframe');
+      if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage(JSON.stringify({event: "command", func: "pauseVideo", args: []}), "*");
+      }
+      var video = container.querySelector('video');
+      if (video) {
+          video.pause();
+      }
+  }
+
   function loadAndPlay(card) {
     var src       = card.getAttribute('data-video');
     var container = card.querySelector('.video-container');
     if (!src || !container) return;
 
-    // already loaded — nothing to do
-    if (container.hasChildNodes()) return;
+    // already loaded — just play
+    if (container.hasChildNodes()) {
+        playVideo(card);
+        return;
+    }
 
     var ytId = getYouTubeId(src);
 
@@ -56,21 +90,20 @@
       /* ── YouTube iframe background ── */
       var iframe = document.createElement('iframe');
       iframe.src =
-        'https://www.youtube.com/embed/' + ytId +
+        'https://www.youtube-nocookie.com/embed/' + ytId +
         '?autoplay=1&mute=1&loop=1&playlist=' + ytId +
         '&controls=0&showinfo=0&autohide=1&modestbranding=1' +
         '&enablejsapi=1&rel=0&playsinline=1&iv_load_policy=3';
       iframe.allow = 'autoplay; encrypted-media';
       iframe.setAttribute('frameborder', '0');
       iframe.setAttribute('playsinline', '');
-
       container.appendChild(iframe);
 
-      // small delay so iframe src settles before we mark it ready
+      // wait for iframe to buffer before revealing it, hiding the loading UI
       setTimeout(function () {
         iframe.classList.add('mh-vid-ready');
         card.classList.add('mh-video-active');
-      }, 300);
+      }, 2500);
 
     } else {
       /* ── Direct MP4 ── */
@@ -123,6 +156,9 @@
     }
 
     card.classList.remove('mh-video-active');
+    card.removeAttribute('data-yt-playing');
+    var errFallback = card.querySelector('.yt-error-fallback');
+    if (errFallback) errFallback.remove();
   }
 
   /**
@@ -168,10 +204,32 @@
 
       if (entry.isIntersecting) {
         visibleCards.add(card);       // mark as visible FIRST
-        registerActive(card);
-        loadAndPlay(card);            // no-op if already loaded
+
+        if (debounceTimers.has(card)) {
+            clearTimeout(debounceTimers.get(card));
+            debounceTimers.delete(card);
+        }
+
+        var timer = setTimeout(function() {
+            if (visibleCards.has(card)) {
+                registerActive(card);
+                loadAndPlay(card);
+            }
+            debounceTimers.delete(card);
+        }, DEBOUNCE_MS);
+        debounceTimers.set(card, timer);
+
       } else {
         visibleCards.delete(card);    // no longer in viewport
+
+        if (debounceTimers.has(card)) {
+            clearTimeout(debounceTimers.get(card));
+            debounceTimers.delete(card);
+        }
+
+        if (activeSlots.indexOf(card) !== -1) {
+            pauseVideo(card);
+        }
 
         // Only unload if we're over the limit — prefer to keep it cached
         if (activeSlots.length > MAX_ACTIVE) {
@@ -208,6 +266,58 @@
       observer.observe(cards[i]);
     }
   }
+
+  window.addEventListener('message', function(e) {
+      if (e.origin !== 'https://www.youtube.com' && e.origin !== 'https://www.youtube-nocookie.com') return;
+      try {
+          var data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
+          
+          // Force play on ready just in case
+          if (data.event === 'onReady') {
+              e.source.postMessage(JSON.stringify({event: "command", func: "playVideo", args: []}), "*");
+          }
+
+          if (data.event === 'infoDelivery' && data.info) {
+              if (data.info.playerState === 1 || data.info.playerState === 3) {
+                  document.querySelectorAll('.media-hub-section .card-video').forEach(function(card) {
+                      var iframe = card.querySelector('iframe');
+                      if (iframe && iframe.contentWindow === e.source) {
+                          card.setAttribute('data-yt-playing', 'true');
+                      }
+                  });
+              }
+          }
+
+          if (data.event === 'onError' || (data.info && data.info.error)) {
+              document.querySelectorAll('.media-hub-section .card-video').forEach(function(card) {
+                  var iframe = card.querySelector('iframe');
+                  if (iframe && iframe.contentWindow === e.source) {
+                      iframe.style.display = 'none';
+                      var ytId = getYouTubeId(card.getAttribute('data-video'));
+                      if (!card.querySelector('.yt-error-fallback')) {
+                          var fallback = document.createElement('a');
+                          fallback.className = 'yt-error-fallback';
+                          fallback.href = 'https://www.youtube.com/watch?v=' + ytId;
+                          fallback.target = '_blank';
+                          fallback.innerHTML = 'Watch on YouTube';
+                          fallback.style.position = 'absolute';
+                          fallback.style.top = '50%';
+                          fallback.style.left = '50%';
+                          fallback.style.transform = 'translate(-50%, -50%)';
+                          fallback.style.zIndex = '10';
+                          fallback.style.background = 'rgba(0,0,0,0.7)';
+                          fallback.style.color = '#fff';
+                          fallback.style.padding = '8px 16px';
+                          fallback.style.borderRadius = '4px';
+                          fallback.style.textDecoration = 'none';
+                          fallback.style.fontWeight = 'bold';
+                          card.appendChild(fallback);
+                      }
+                  }
+              });
+          }
+      } catch(err) {}
+  });
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

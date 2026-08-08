@@ -109,14 +109,17 @@ const influencers = [
         class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen js-scroll fade-in-left scrolled"
       >
         <div class="section-title title-animate">
-          <h2>Our Tribe</h2>
-          <span class="text-xl text-uppercase"
-            >Influencers Who <span class="theme-text">Inspire</span>
-          </span>
+          <span class="sub-title">Our Tribe</span>
+          <h1 class="text-xl text-uppercase"
+            >Creative <span class="theme-text">Voices</span>
+          </h1>
           <div class="influencers-content mt-4">
             <p>
-              A dynamic community of creators, storytellers, and trendsetters
-              driving conversations and creating impact across platforms.
+             A dynamic community of creators, storytellers, and trendsetters
+              who shape conversations, inspire audiences, and bring fresh ideas
+              to life across digital platforms. Together, they create meaningful
+              connections, spark new perspectives, and influence culture
+              through their creativity, voices, and unique stories.
             </p>
           </div>
         </div>
@@ -136,15 +139,15 @@ const influencers = [
     </div>
   </section>
 
-  <section class="section section-influencers-grid theme-padding">
-    <div class="columns is-multiline influencers-cols gap-1">
+  <section class="section section-influencers-grid theme-padding pt-0">
+    <div class="columns is-mobile is-multiline is-justify-content-center influencers-cols gap-1">
       {
         influencers.map((item, index) => (
           <div
-            class="column is-6-mobile is-4-tablet is-3-desktop influencers-col"
+            class="column is-6-mobile is-4-tablet is-4-desktop is-3-widescreen influencers-col"
             data-index={index}
           >
-            <div class="theme-block">
+            <div class="theme-block pb-0">
               <div class="theme-block-img">
                 <div class="theme-block-element">
                   <img

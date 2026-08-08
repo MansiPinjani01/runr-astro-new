@@ -1,0 +1,158 @@
+---
+/*
+  [category].astro — Dynamic Reels Category Page
+  Parallax scrolling wall with Lenis smooth scroll integration.
+*/
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  const files = import.meta.glob("../../data/reels/*.json", { eager: true });
+  return Object.entries(files).map(([path, mod]: [string, any]) => {
+    const slug = path.split("/").pop()!.replace(".json", "");
+    return {
+      params: { category: slug },
+      props: { data: mod.default || mod },
+    };
+  });
+}
+
+interface ReelItem {
+  video: string;
+  poster: string;
+  title: string;
+}
+
+interface CategoryData {
+  category: string;
+  title: string;
+  description: string;
+  reels: ReelItem[];
+}
+
+const { data } = Astro.props as { data: CategoryData };
+const categoryTitle = data.title;
+const reels = data.reels;
+
+// 5 columns, each gets enough items to fill
+const NUM_COLS = 5;
+const ITEMS_PER_COL = Math.max(8, Math.ceil(reels.length / NUM_COLS) + 2);
+function getColumns(allReels: ReelItem[]) {
+  const cols: ReelItem[][] = Array.from({ length: NUM_COLS }, () => []);
+  for (let c = 0; c < NUM_COLS; c++) {
+    for (let i = 0; i < ITEMS_PER_COL; i++) {
+      cols[c].push(allReels[(c * ITEMS_PER_COL + i) % allReels.length]);
+    }
+  }
+  return cols;
+}
+const columns = getColumns(reels);
+---
+
+<BaseLayout
+  title={`${categoryTitle} — Media Hub | runr`}
+  page="media-hub-category"
+  pagename={categoryTitle}
+  bodyClass="reels-category-page"
+>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/media/css/reels-category.css"
+    slot="head"
+  />
+
+  <section class="rc-parallax-page" id="parallaxPage">
+    <div class="rc-columns-wrap" id="columnsWrap">
+      {
+        columns.map((col, colIdx) => (
+          <div
+            class="rc-col"
+            data-speed={["-420", "260", "-320", "460", "-280"][colIdx]}
+            style={`margin-top: ${["-80px", "60px", "-40px", "80px", "-20px"][colIdx]}`}
+          >
+            {col.map((reel) => (
+              <div class="rc-reel-thumb">
+                <img
+                  src={reel.poster}
+                  alt={reel.title}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="rc-hero-overlay" id="heroOverlay">
+      <h1>{categoryTitle}</h1>
+      <div class="rc-scroll-cue"><span class="rc-line"></span>Scroll</div>
+    </div>
+  </section>
+
+  <Fragment slot="page-scripts">
+    <script is:inline>
+      (function () {
+        function init() {
+          if (
+            typeof gsap === "undefined" ||
+            typeof ScrollTrigger === "undefined"
+          ) {
+            setTimeout(init, 50);
+            return;
+          }
+
+          gsap.registerPlugin(ScrollTrigger);
+
+          // Connect Lenis to ScrollTrigger (if not already connected)
+          if (window.lenis) {
+            window.lenis.on("scroll", ScrollTrigger.update);
+            gsap.ticker.add(function (time) {
+              window.lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+          }
+
+          var page = document.getElementById("parallaxPage");
+          if (!page) return;
+
+          var cols = page.querySelectorAll(".rc-col");
+
+          cols.forEach(function (col) {
+            var speed = parseFloat(col.getAttribute("data-speed")) || 0;
+            gsap.to(col, {
+              y: speed,
+              ease: "none",
+              force3D: true,
+              scrollTrigger: {
+                trigger: page,
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 0.8,
+              },
+            });
+          });
+
+          // Fade hero text
+          gsap.to("#heroOverlay", {
+            opacity: 0,
+            y: -50,
+            ease: "none",
+            scrollTrigger: {
+              trigger: page,
+              start: "top top",
+              end: "25% top",
+              scrub: 0.8,
+            },
+          });
+
+          ScrollTrigger.refresh();
+        }
+
+        // Wait for everything to be ready
+        window.addEventListener("load", init);
+      })();
+    </script>
+  </Fragment>
+</BaseLayout>
