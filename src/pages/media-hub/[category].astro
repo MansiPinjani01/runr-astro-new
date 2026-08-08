@@ -61,7 +61,7 @@ const columns = getColumns(reels);
     slot="head"
   />
 
-  <section class="rc-parallax-page" id="parallaxPage">
+  <section class="rc-parallax-page media-hub-section" id="parallaxPage">
     <div class="rc-columns-wrap" id="columnsWrap">
       {
         columns.map((col, colIdx) => (
@@ -71,13 +71,22 @@ const columns = getColumns(reels);
             style={`margin-top: ${["-80px", "60px", "-40px", "80px", "-20px"][colIdx]}`}
           >
             {col.map((reel) => (
-              <div class="rc-reel-thumb">
-                <img
-                  src={reel.poster}
-                  alt={reel.title}
-                  loading="lazy"
-                  decoding="async"
-                />
+              <div
+                class="rc-reel-thumb card card-video"
+                data-video={reel.video}
+                data-poster={reel.poster}
+                data-type="portrait"
+                data-ratio="9:16"
+              >
+                <div class="video-poster">
+                  <img
+                    src={reel.poster}
+                    alt={reel.title}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="video-container" />
               </div>
             ))}
           </div>
@@ -90,6 +99,8 @@ const columns = getColumns(reels);
       <div class="rc-scroll-cue"><span class="rc-line"></span>Scroll</div>
     </div>
   </section>
+
+  <script is:inline src="/media/js/media-hub-video-engine.js"></script>
 
   <Fragment slot="page-scripts">
     <script is:inline>

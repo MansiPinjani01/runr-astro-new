@@ -482,7 +482,7 @@
     stroke: var(--ink);
 }
 
-.swiper-slide img {
+.section-runr-shots .swiper-slide img {
     border-radius: 10px;
 }
 

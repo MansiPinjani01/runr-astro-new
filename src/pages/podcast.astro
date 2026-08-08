@@ -1,11 +1,11 @@
-﻿---
+---
 /*
   podcast.astro - Podcast Page
   Converted from PHP: index.php
   All PHP variables replaced with static paths.
   HTML structure preserved exactly as original.
 */
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
@@ -15,236 +15,1072 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   swiperjs={true}
   onepagemenu={true}
 >
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="/media/images/bg-video-white.mp4" type="video/mp4" />
+    </video>
+  </div>
 
-<div class="video-bg">
-        <video autoplay muted loop playsinline>
-            <source src="/media/images/bg-video-white.mp4" type="video/mp4">
-        </video>
+  <section id="section-about-us" class="section section-about-us">
+    <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
+      <div class="move-box"></div>
+      <div class="section-title title-animate">
+        <h1 class="text-xl text-uppercase">
+          Every Voice. <br /><span class="theme-text text-uppercase"
+            >Every Story.</span
+          >
+        </h1>
+      </div>
+      <div class="theme-content-block js-scroll fade-in-right scrolled">
+        <div class="theme-content-title">
+          <span>Runr Spotlight</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="81"
+            height="9"
+            viewBox="0 0 81 9"
+            fill="none"
+          >
+            <rect y="4" width="80" height="1" fill="#111013"></rect>
+            <path
+              d="M77 7.96366L80.5 4.48183L77 1"
+              stroke="#111013"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <p>
+          Explore the best moments from Runr Originals, transformed into
+          engaging reels and shorts. Every conversation delivers fresh
+          perspectives, inspiring stories, and content designed to connect with
+          every audience.
+        </p>
+      </div>
     </div>
+  </section>
 
+  <section id="section-studio-img" class="section section-studio-img p-0">
+    <div class="studio-img-block img-reveal-shutter">
+      <picture>
+        <img
+          src="/media/images/home/spotlight/studio.webp"
+          alt="Studio"
+          width="1920"
+          height="1080"
+        />
+      </picture>
+    </div>
+  </section>
 
-    <section id="section-about-us" class="section section-about-us">
-        <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
-            <div class="move-box"></div>
-            <div class="theme-content-title mb-4">
-                <span>Runr Spotlight</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="81" height="9" viewBox="0 0 81 9" fill="none">
-                    <rect y="4" width="80" height="1" fill="#111013"></rect>
-                    <path d="M77 7.96366L80.5 4.48183L77 1" stroke="#111013" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
+  <section
+    id="section-podcast"
+    class="section section-podcast position-sticky-section section1"
+  >
+    <div class="theme-padding js-scroll fade-in-bottom scrolled">
+      <div class="columns is-multiline podcast-cols position-sticky-cols gap-1">
+        <div
+          class="column is-12-mobile is-12-tablet is-4-desktop is-3-widescreen podcast-col"
+        >
+          <div class="podcast-title section-title title-animate">
+            <div class="pillars-title">
+              <span class="text-uppercase fw-700">Podcasts by runr</span>
             </div>
-            <div class="section-title title-animate">
-                <h1 class="text-xl text-uppercase">Every Voice. <br><span class="theme-text text-uppercase">Every Story.</span></h1>
+            <h1>
+              Real <span class="theme-text">Conversations.</span> Bold <span
+                class="theme-text">perspectives.</span
+              > Lasting Impact.
+            </h1>
+          </div>
+          <div class="podcast-desc">
+            <div class="wave-container is-justify-content-start" id="wave">
             </div>
-            <div class="theme-content-block js-scroll fade-in-right scrolled">
-                <p>Explore the best moments from Runr Originals, transformed into engaging reels and shorts. Every conversation delivers fresh perspectives, inspiring stories, and content designed to connect with every audience.</p>
-            </div>
+            <p class="mt-3">
+              Exploring ideas, inspiring change and empowering communities
+              through stories that truly matter.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <section id="section-studio-img" class="section section-studio-img p-0">
-        <div class="studio-img-block img-reveal-shutter">
-            <picture>
-                <img src="/media/images/home/spotlight/studio.webp" alt="Studio" width="1920" height="1080">
-            </picture>
-        </div>
-    </section>
-
-    <section id="section-podcast" class="section section-podcast position-sticky-section">
-        <div class="theme-padding">
-            <div class="columns is-multiline podcast-cols position-sticky-cols gap-1">
-                <div class="column is-12-mobile is-12-tablet is-4-desktop is-3-widescreen podcast-col top-sticky js-scroll fade-in-left scrolled">
-                    <div class="pillars-sidebar">
-                        <div class="pillars-title">
-                            <span class="theme-text">â—</span> <span class="text-uppercase fw-700">Our Pillars</span>
-                        </div>
-                        <div class="pillars-timeline">
-                            <div class="pillar-item">
-                                <div class="pillar-icon">
-                                    <img src="/media/images/home/spotlight/nav-narayani.svg" alt="Nav Narayani" width="40" height="40">
-                                </div>
-                                <div class="pillar-info">
-                                    <h4 class="pillar-name">Nav Narayani</h4>
-                                    <p class="pillar-sub">Digital Network</p>
-                                </div>
-                            </div>
-                            <div class="pillar-item">
-                                <div class="pillar-icon">
-                                    <img src="/media/images/home/spotlight/change-maker.svg" alt="Cherish Mehta" width="40" height="40">
-                                </div>
-                                <div class="pillar-info">
-                                    <h4 class="pillar-name">Cherish Mehta</h4>
-                                    <p class="pillar-sub">Motivational Speaker</p>
-                                </div>
-                            </div>
-                            <div class="pillar-item">
-                                <div class="pillar-icon">
-                                    <img src="/media/images/home/spotlight/safar.svg" alt="Runr Ventures" width="40" height="40">
-                                </div>
-                                <div class="pillar-info">
-                                    <h4 class="pillar-name">Runr Ventures</h4>
-                                    <p class="pillar-sub">Building the Future</p>
-                                </div>
-                            </div>
-                            <div class="pillar-item">
-                                <div class="pillar-icon">
-                                    <img src="/media/images/home/spotlight/swasth.svg" alt="Runr Creative Campus" width="40" height="40">
-                                </div>
-                                <div class="pillar-info">
-                                    <h4 class="pillar-name">Runr Creative Campus</h4>
-                                    <p class="pillar-sub">Learning to Lead</p>
-                                </div>
-                            </div>
-                            <div class="pillar-item">
-                                <div class="pillar-icon">
-                                    <img src="/media/images/home/spotlight/atithi.svg" alt="Runr Foundation" width="40" height="40">
-                                </div>
-                                <div class="pillar-info">
-                                    <h4 class="pillar-name">Runr Foundation</h4>
-                                    <p class="pillar-sub">Impacting Communities</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div
+          class="column is-12-mobile is-12-tablet is-4-desktop is-3-widescreen podcast-col"
+        >
+          <div class="pillars-sidebar">
+            <div class="pillars-title">
+              <span class="text-uppercase fw-700">Our Podcast</span>
+            </div>
+            <div class="pillars-timeline">
+              <a
+                class="pillar-item tab is-active"
+                onclick="openTab(event,'tab1', 'section1')"
+              >
+                <div class="pillar-icon">
+                  <img
+                    src="/media/images/home/spotlight/atithi.svg"
+                    alt="Runr Foundation"
+                    width="40"
+                    height="40"
+                  />
                 </div>
-                <div class="column is-12-mobile is-12-tablet is-8-desktop is-9-widescreen podcast-col js-scroll fade-in-right scrolled">
-                    <div class="podcast-wrapper">
-                        <div class="podcast-detail-wrapper">
-
-                            <div class="podcast-deatil">
-                                <div class="podcast-content">
-                                    <p>We live at the intersection of media, impact and purpose. From high-impact digital properties and original storytelling to community-driven initiatives and creator-led ventures ” every vertical under RUNR is built to inform, entertain and empower.</p>
-                                </div>
-                                <div class="podcast-service-list">
-                                    <h3 class="fw-600 mb-4 theme-text">Explore the pillars of our ecosystem:</h3>
-                                    <a href="javascript:void(0)" class="podcast-service-item">
-                                        <span class="ps-name">NavGujrati ” Informing You, Empowering All</span>
-                                        <span class="ps-arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                <path d="M17 7l-10 10" />
-                                                <path d="M8 7l9 0l0 9" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <a href="javascript:void(0)" class="podcast-service-item">
-                                        <span class="ps-name">Cherish Mehta ” Transforming Lives</span>
-                                        <span class="ps-arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                <path d="M17 7l-10 10" />
-                                                <path d="M8 7l9 0l0 9" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <a href="javascript:void(0)" class="podcast-service-item">
-                                        <span class="ps-name">Runr Ventures ” Building the Future</span>
-                                        <span class="ps-arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                <path d="M17 7l-10 10" />
-                                                <path d="M8 7l9 0l0 9" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <a href="javascript:void(0)" class="podcast-service-item">
-                                        <span class="ps-name">Runr Creative Campus ” Learning to Lead</span>
-                                        <span class="ps-arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                <path d="M17 7l-10 10" />
-                                                <path d="M8 7l9 0l0 9" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <a href="javascript:void(0)" class="podcast-service-item">
-                                        <span class="ps-name">Runr Foundation ” Impacting Communities</span>
-                                        <span class="ps-arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                <path d="M17 7l-10 10" />
-                                                <path d="M8 7l9 0l0 9" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="podcast-mic-video">
-                                <video autoplay="" muted="" loop="" playsinline="">
-                                    <source src="/media/images/home/spotlight/mic-with-wave.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                        <!-- Featured Highlights Slider -->
-                        <div class="podcast-highlights-block">
-                            <div class="highlights-header">
-                                <h4><span class="theme-text">â—</span> Featured Highlights</h4>
-                                <a href="javascript:void(0)" class="view-all-link">View all <span>&rarr;</span></a>
-                            </div>
-                            <div class="swiper podcast-highlights-slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="highlight-card">
-                                            <picture>
-                                                <img src="/media/images/home/spotlight/nav-narayani.webp" alt="Nav Narayani" width="600" height="600">
-                                            </picture>
-                                            <a href="javascript:void(0)" class="highlight-play">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="highlight-card">
-                                            <picture>
-                                                <img src="/media/images/home/spotlight/nav-narayani.webp" alt="Nav Narayani" width="600" height="600">
-                                            </picture>
-                                            <a href="javascript:void(0)" class="highlight-play">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="highlight-card">
-                                            <picture>
-                                                <img src="/media/images/home/spotlight/nav-narayani.webp" alt="Nav Narayani" width="600" height="600">
-                                            </picture>
-                                            <a href="javascript:void(0)" class="highlight-play">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="highlight-card">
-                                            <picture>
-                                                <img src="/media/images/home/spotlight/nav-narayani.webp" alt="Nav Narayani" width="600" height="600">
-                                            </picture>
-                                            <a href="javascript:void(0)" class="highlight-play">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="pillar-info">
+                  <h4 class="pillar-name">Atithi</h4>
+                  <p class="pillar-sub">Impacting Communities</p>
                 </div>
+              </a>
+              <a
+                class="pillar-item tab"
+                onclick="openTab(event,'tab2', 'section1')"
+              >
+                <div class="pillar-icon">
+                  <img
+                    src="/media/images/home/spotlight/nav-narayani.svg"
+                    alt="Nav Narayani"
+                    width="40"
+                    height="40"
+                  />
+                </div>
+                <div class="pillar-info">
+                  <h4 class="pillar-name">Nav Narayani</h4>
+                  <p class="pillar-sub">Digital Network</p>
+                </div>
+              </a>
+              <a
+                class="pillar-item tab"
+                onclick="openTab(event,'tab3', 'section1')"
+              >
+                <div class="pillar-icon">
+                  <img
+                    src="/media/images/home/spotlight/change-maker.svg"
+                    alt="Cherish Mehta"
+                    width="40"
+                    height="40"
+                  />
+                </div>
+                <div class="pillar-info">
+                  <h4 class="pillar-name">Change Makers</h4>
+                  <p class="pillar-sub">Motivational Speaker</p>
+                </div>
+              </a>
+              <a
+                class="pillar-item tab"
+                onclick="openTab(event,'tab4', 'section1')"
+              >
+                <div class="pillar-icon">
+                  <img
+                    src="/media/images/home/spotlight/safar.svg"
+                    alt="Runr Ventures"
+                    width="40"
+                    height="40"
+                  />
+                </div>
+                <div class="pillar-info">
+                  <h4 class="pillar-name">Sahitya Safar</h4>
+                  <p class="pillar-sub">Building the Future</p>
+                </div>
+              </a>
+              <a
+                class="pillar-item tab"
+                onclick="openTab(event,'tab5', 'section1')"
+              >
+                <div class="pillar-icon">
+                  <img
+                    src="/media/images/home/spotlight/swasth.svg"
+                    alt="Runr Creative Campus"
+                    width="40"
+                    height="40"
+                  />
+                </div>
+                <div class="pillar-info">
+                  <h4 class="pillar-name">Swasthya Story</h4>
+                  <p class="pillar-sub">Learning to Lead</p>
+                </div>
+              </a>
             </div>
+          </div>
         </div>
-    </section>
+        <div
+          class="column is-12-mobile is-12-tablet is-4-desktop is-6-widescreen podcast-col"
+        >
+          <div class="tab-content">
+            <div class="content-tab" id="tab1" style="display:block">
+              <div class="podcast-player-block">
+                <div id="nav-narayani-slider" class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="podcast-slide-card">
+                        <div class="podcast-slide-img">
+                          <picture
+                            ><img
+                              src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                              alt="Nav Narayani Episode 1"
+                              width="600"
+                              height="400"
+                            /></picture
+                          >
+                          <a
+                            href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                            data-fancybox="nav-narayani"
+                            class="podcast-slide-play"
+                            title="Play Video"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              ><polygon points="5 3 19 12 5 21 5 3"
+                              ></polygon></svg
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="podcast-slide-card">
+                        <div class="podcast-slide-img">
+                          <picture
+                            ><img
+                              src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                              alt="Nav Narayani Episode 1"
+                              width="600"
+                              height="400"
+                            /></picture
+                          >
+                          <a
+                            href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                            data-fancybox="nav-narayani"
+                            class="podcast-slide-play"
+                            title="Play Video"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              ><polygon points="5 3 19 12 5 21 5 3"
+                              ></polygon></svg
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="podcast-slide-card">
+                        <div class="podcast-slide-img">
+                          <picture
+                            ><img
+                              src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                              alt="Nav Narayani Episode 1"
+                              width="600"
+                              height="400"
+                            /></picture
+                          >
+                          <a
+                            href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                            data-fancybox="nav-narayani"
+                            class="podcast-slide-play"
+                            title="Play Video"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              ><polygon points="5 3 19 12 5 21 5 3"
+                              ></polygon></svg
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper__arrows">
+                    <div
+                      class="swiper__arrow swiper-button-next"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Next slide"
+                      aria-controls="swiper-wrapper-5efe5c323e195f79"
+                      aria-disabled="false"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"
+                        ></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                      </svg>
+                    </div>
+                    <div
+                      class="swiper__arrow swiper-button-prev"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Previous slide"
+                      aria-controls="swiper-wrapper-5efe5c323e195f79"
+                      aria-disabled="false"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"
+                        ></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
 
-<Fragment slot="page-scripts">
-<script is:inline>
-      var podcastSlider = new Swiper('.podcast-highlights-slider', {
-        slidesPerView: 3,
-        spaceBetween: 15,
+                <!-- Podcast Name & Subtitle -->
+                <div class="podcast-slide-info">
+                  <h3>Mehul Vadodariya</h3>
+                  <p>Impacting Communities</p>
+                </div>
+              </div>
+            </div>
+            <div class="content-tab" id="tab2" style="display:none">
+              <p>
+                <b>Tab 2</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Vitae magnam natus ab illum,
+                voluptate id.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Vitae magnam natus ab illum, voluptate id.
+              </p>
+            </div>
+            <div class="content-tab" id="tab3" style="display:none">
+              <p>
+                <b>Tab 3</b>
+                Lorem ipsum dolor, sit amet consectetur adipisicing Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Illo ex quaerat tempore officiis
+                ipsam qui, rerum sequi accusamus quibusdam aut Lorem ipsum dolor,
+                sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Illo ex quaerat tempore officiis ipsam qui, rerum
+                sequi accusamus quibusdam aut.
+              </p>
+            </div>
+            <div class="content-tab" id="tab4" style="display:none">
+              <p>
+                <b>Tab 4</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas
+                dolorem perspiciatis. Nemo quia voluptatum nesciunt, amet quasi accusantium
+                laboriosam.
+              </p>
+            </div>
+            <div class="content-tab" id="tab5" style="display:none">
+              <p>
+                <b>Tab 5</b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat inventore
+                quod at repudiandae. Quisquam dolores corporis tempora voluptatibus
+                adipisci maiores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Episodes Section -->
+  <section id="section-all-episodes" class="section section-all-episodes pt-0">
+    <div class="theme-padding js-scroll fade-in-bottom scrolled">
+      <!-- Header Row -->
+      <div class="all-episodes-header">
+        <div class="all-episodes-title">
+          <span class="ae-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ff5722"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path
+                d="M12 1a3 3 0 0 0 -3 3v8a3 3 0 0 0 6 0v-8a3 3 0 0 0 -3 -3z"
+              ></path><path d="M19 10v2a7 7 0 0 1 -14 0v-2"></path><line
+                x1="12"
+                y1="19"
+                x2="12"
+                y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg
+            >
+          </span>
+          <h2 class="text-uppercase fw-700">All Episodes</h2>
+        </div>
+        <div class="all-episodes-right">
+          <a
+            href="https://www.youtube.com/@findonrunr/podcasts"
+            target="_blank"
+            class="ae-view-all"
+            >View All Episodes
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"><path d="M9 6l6 6l-6 6"></path></svg
+            >
+          </a>
+          <div class="ae-nav-btns">
+            <button class="ae-nav-btn ae-prev-btn" aria-label="Previous">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M15 6l-6 6l6 6"></path>
+              </svg>
+            </button>
+            <button class="ae-nav-btn ae-next-btn" aria-label="Next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 6l6 6l-6 6"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Episodes Slider -->
+      <div class="swiper all-episodes-slider" id="allEpisodesSlider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="ae-episode-card">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                    alt="Episode 1"
+                    width="300"
+                    height="200"
+                  /></picture
+                >
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ae-episode-card">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                    alt="Episode 2"
+                    width="300"
+                    height="200"
+                  /></picture
+                >
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ae-episode-card ae-active">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                    alt="Episode 3"
+                    width="300"
+                    height="200"
+                  /></picture
+                >
+
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ae-episode-card">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                    alt="Episode 4"
+                    width="300"
+                    height="200"
+                  /></picture
+                >
+
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ae-episode-card">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                    alt="Episode 5"
+                    width="300"
+                    height="200"
+                  /></picture
+                >
+
+                <a
+                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ae-episode-card">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                    alt="Episode 6"
+                    width="300"
+                    height="200"
+                  /></picture
+                >
+
+                <a
+                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why You Should Listen -->
+  <section id="section-why-listen" class="section section-why-listen">
+    <div class="theme-color-shadow"></div>
+
+    <div class="theme-padding">
+      <div
+        class="section-title title-animate has-text-centered js-scroll fade-in-top scrolled"
+      >
+        <span class="sub-title">Why You Should Listen</span>
+      </div>
+      <div
+        class="columns is-multiline why-listen-cols js-scroll fade-in-bottom scrolled"
+      >
+        <div
+          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+        >
+          <div class="why-listen-item">
+            <div class="why-listen-icon">
+              <img
+                src="/media/images/home/spotlight/people.webp"
+                alt="Diverse Voices"
+                width="60"
+                height="60"
+              />
+            </div>
+            <h4 class="text-uppercase">Diverse Voices</h4>
+            <p>Conversations that bring different perspectives together.</p>
+          </div>
+        </div>
+        <div
+          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+        >
+          <div class="why-listen-item">
+            <div class="why-listen-icon">
+              <img
+                src="/media/images/home/spotlight/lightbulb.webp"
+                alt="Meaningful Stories"
+                width="60"
+                height="60"
+              />
+            </div>
+            <h4 class="text-uppercase">Meaningful Stories</h4>
+            <p>Real stories that inspire and spark change.</p>
+          </div>
+        </div>
+        <div
+          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+        >
+          <div class="why-listen-item">
+            <div class="why-listen-icon">
+              <img
+                src="/media/images/home/spotlight/mission.webp"
+                alt="Community First"
+                width="60"
+                height="60"
+              />
+            </div>
+            <h4 class="text-uppercase">Community First</h4>
+            <p>Amplifying voices and building stronger communities.</p>
+          </div>
+        </div>
+        <div
+          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+        >
+          <div class="why-listen-item">
+            <div class="why-listen-icon">
+              <img
+                src="/media/images/home/spotlight/bar-chart.webp"
+                alt="Impact Driven"
+                width="60"
+                height="60"
+              />
+            </div>
+            <h4 class="text-uppercase">Impact Driven</h4>
+            <p>Ideas that create action and drive real impact.</p>
+          </div>
+        </div>
+        <div
+          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+        >
+          <div class="why-listen-item">
+            <div class="why-listen-icon">
+              <img
+                src="/media/images/home/spotlight/heart.webp"
+                alt="Made By Runr"
+                width="60"
+                height="60"
+              />
+            </div>
+            <h4 class="text-uppercase">Made By Runr</h4>
+            <p>Curated with passion. Delivered with purpose.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Browse By Series -->
+  <section id="section-browse-series" class="section section-browse-series">
+    <div class="theme-padding">
+      <div class="browse-series-title section-title title-animate">
+        <span class="sub-title">Why You Should Listen</span>
+      </div>
+      <div class="swiper browse-series-slider" id="browseSeriesSlider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="series-card">
+              <div class="series-card-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    alt="Nav Narayani"
+                    width="300"
+                    height="420"
+                  /></picture
+                >
+              </div>
+              <div class="series-card-info has-text-centered">
+                <h4>Nav Narayani</h4>
+                <p>Digital Network</p>
+                <span class="series-arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ff5722"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
+                    ></path><path d="M15 8l4 4"></path></svg
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="series-card">
+              <div class="series-card-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    alt="Cherish Mehta"
+                    width="300"
+                    height="420"
+                  /></picture
+                >
+              </div>
+              <div class="series-card-info has-text-centered">
+                <h4>Change Makers</h4>
+                <p>Motivational Speaker</p>
+                <span class="series-arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ff5722"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
+                    ></path><path d="M15 8l4 4"></path></svg
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="series-card">
+              <div class="series-card-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    alt="Runr Ventures"
+                    width="300"
+                    height="420"
+                  /></picture
+                >
+              </div>
+              <div class="series-card-info has-text-centered">
+                <h4>Sahitya Safar</h4>
+                <p>Building the Future</p>
+                <span class="series-arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ff5722"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
+                    ></path><path d="M15 8l4 4"></path></svg
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="series-card">
+              <div class="series-card-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    alt="Runr Creative Campus"
+                    width="300"
+                    height="420"
+                  /></picture
+                >
+              </div>
+              <div class="series-card-info has-text-centered">
+                <h4>Swasthya Story</h4>
+                <p>Learning to Lead</p>
+                <span class="series-arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ff5722"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
+                    ></path><path d="M15 8l4 4"></path></svg
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="series-card">
+              <div class="series-card-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    alt="Runr Foundation"
+                    width="300"
+                    height="420"
+                  /></picture
+                >
+              </div>
+              <div class="series-card-info has-text-centered">
+                <h4>Atithi</h4>
+                <p>Impacting Communities</p>
+                <span class="series-arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ff5722"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
+                    ></path><path d="M15 8l4 4"></path></svg
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Fragment slot="page-scripts">
+    <script is:inline>
+      // Nav Narayani Podcast Slider
+      var navSlider = new Swiper("#nav-narayani-slider", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        effect: "fade",
+        fadeEffect: { crossFade: true },
         grabCursor: true,
-        breakpoints: {
-          0: { slidesPerView: 1.2, spaceBetween: 10 },
-          768: { slidesPerView: 2, spaceBetween: 12 },
-          1024: { slidesPerView: 3, spaceBetween: 15 }
-        }
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: true,
+        },
+        navigation: {
+          nextEl: "#nav-narayani-slider .swiper-button-next",
+          prevEl: "#nav-narayani-slider .swiper-button-prev",
+        },
       });
-    </script>
-</Fragment>
 
+      // All Episodes Slider
+      var allEpisodesSlider = new Swiper("#allEpisodesSlider", {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".ae-next-btn",
+          prevEl: ".ae-prev-btn",
+        },
+        breakpoints: {
+          0: { slidesPerView: 1.5, spaceBetween: 10 },
+          480: { slidesPerView: 2, spaceBetween: 12 },
+          768: { slidesPerView: 3, spaceBetween: 15 },
+          1024: { slidesPerView: 4, spaceBetween: 18 },
+          1400: { slidesPerView: 5, spaceBetween: 20 },
+        },
+      });
+
+      // Browse By Series Slider
+      var browseSeriesSlider = new Swiper("#browseSeriesSlider", {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: { slidesPerView: 1.5, spaceBetween: 10 },
+          480: { slidesPerView: 2, spaceBetween: 12 },
+          768: { slidesPerView: 3, spaceBetween: 15 },
+          1024: { slidesPerView: 4, spaceBetween: 18 },
+          1400: { slidesPerView: 5, spaceBetween: 20 },
+        },
+      });
+
+      // Fancybox for podcast videos
+      if (typeof Fancybox !== "undefined") {
+        Fancybox.bind('[data-fancybox="nav-narayani"]', {
+          Toolbar: { display: ["close"] },
+          Html: { video: { autoplay: true } },
+        });
+      }
+
+      // Tab Switching Function
+      function openTab(evt, tabName, sectionClass) {
+        var i, x, tablinks;
+        var sections = document.querySelectorAll("." + sectionClass);
+        sections.forEach(function (section) {
+          x = section.querySelectorAll(".content-tab");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = section.querySelectorAll(".tab");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("is-active");
+          }
+          var selectedTab = section.querySelector("#" + tabName);
+          if (selectedTab) {
+            selectedTab.style.display = "block";
+          }
+          evt.currentTarget.classList.add("is-active");
+        });
+      }
+
+      // Podcast Audio Waveform Animation
+      (function () {
+        var wave = document.getElementById("wave");
+        if (!wave) return;
+        var total = 40;
+        var animationFrame;
+        var t = 0;
+        var elements = [];
+
+        for (var i = 0; i < total; i++) {
+          var isDot = i % 6 === 0;
+          var el = document.createElement("div");
+          el.className = isDot ? "wave-dot" : "wave-bar";
+          if (!isDot) {
+            el.style.height = "8px";
+          }
+          wave.appendChild(el);
+          elements.push({ el: el, isDot: isDot });
+        }
+
+        function randomHeight(index) {
+          var centerDist = Math.abs(index - total / 2) / (total / 2);
+          var base = 1 - centerDist * 0.7;
+          var noise = Math.sin(t * 0.15 + index * 0.5) * 0.5 + 0.5;
+          var rand = Math.random() * 0.3;
+          return Math.max(6, base * 70 * (noise * 0.6 + rand + 0.2));
+        }
+
+        var frameCount = 0;
+        function animate() {
+          frameCount++;
+          if (frameCount % 4 === 0) {
+            t++;
+            elements.forEach(function (item, i) {
+              if (!item.isDot) {
+                var h = randomHeight(i);
+                item.el.style.height = h + "px";
+              } else {
+                var scale = 1 + Math.sin(t * 0.1 + i) * 0.3;
+                item.el.style.transform = "scale(" + scale + ")";
+              }
+            });
+          }
+          animationFrame = requestAnimationFrame(animate);
+        }
+
+        animate();
+      })();
+    </script>
+  </Fragment>
 </BaseLayout>
