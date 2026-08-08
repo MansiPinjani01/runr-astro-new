@@ -1,0 +1,8 @@
+# Cloudflare Pages Headers
+# If a Content-Security-Policy is added in the future, ensure these are allowed:
+# frame-src: https://www.youtube-nocookie.com https://www.youtube.com
+# child-src: https://www.youtube-nocookie.com https://www.youtube.com
+# img-src: https://i.ytimg.com
+
+/*
+  X-Content-Type-Options: nosniff

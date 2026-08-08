@@ -273,13 +273,13 @@
         max-width: 38vw;
     }
 
-    .team-section .founder-caption .name {
+    /* .team-section .founder-caption .name {
         font-size: 15px;
-    }
+    } */
 
-    .team-section .founder-caption .role {
+    /* .team-section .founder-caption .role {
         font-size: 12px;
-    }
+    } */
 
     .sub-title {
         font-size: 22px;
@@ -531,12 +531,19 @@
 }
 
 @media screen and (max-width: 1024px) {
-
     .service-title .gray,
     .service-title .black {
         font-size: 50px;
     }
 
+    .contact-team-col:nth-child(2){
+        order: 3 !important;
+    }
+
+    .runr-team-img{
+        max-width: fit-content;
+    margin: 0 auto;
+    }
     .section-contact-team .section-title h2 br {
         display: none;
     }
@@ -953,6 +960,12 @@
         height: auto;
     }
 
+
+    .feed-item .name{
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
     .center-copy .section-title .text-md br {
         display: none;
     }
@@ -1055,7 +1068,7 @@
     }
 
     .team-section .founder-photo-wrap-team img {
-        fi
+        filter:unset;
     }
 
     .team-section .feed-item .cap {
@@ -1064,15 +1077,11 @@
         flex-direction: column;
     }
 
-    .team-section .feed-item .cap .name {
-        font-weight: 700;
-        font-size: 14px;
-        text-transform: uppercase;
-    }
+
 
     .team-section .feed-item .cap .role {
-        font-size: 12px;
-        color: #8a8a86;
+             font-size: 13px;
+        line-height: 18px;
     }
 
     .team-section .feed-item.w-tall .frame,
@@ -1099,6 +1108,14 @@
         padding: 0 16px 40px;
     }
 
+    .section-title .text-md {
+        font-size: 42px;
+    }
+
+    .section-contact-team .section-title h2 {
+        font-size: 36px;
+        line-height: 48px;
+    }
 
     .team-section .center-stack {
         padding: 0 16px;
@@ -1407,11 +1424,6 @@
         aspect-ratio: 1/1;
     }
 
-    .team-section .feed-item .cap .name {
-        font-size: 10px;
-    }
-
-
 
     .team-section .feed-item .cap {
         margin-top: 6px;
@@ -1420,16 +1432,6 @@
     .team-section .center-stack {
         padding: 0 12px;
         margin-bottom: 20px;
-    }
-
-    .team-section .founder-photo-wrap-team {
-        width: 70px;
-        height: 88px;
-    }
-
-    .team-section .center-desc {
-        max-width: 220px;
-        font-size: 13px;
     }
 
     .team-section .feed-marker {
@@ -1959,6 +1961,10 @@
         font-size: 16px;
     }
 
+    .feed-item .name{
+        font-size: 14px;
+    }
+
     .menu-nav-link {
         font-size: 22px;
     }
@@ -2025,4 +2031,8 @@
         font-size: 22px;
         line-height: 28px;
     } */
+         .section-contact-team .section-title h2 {
+        font-size: 34px;
+        line-height: 46px;
+    }
 }

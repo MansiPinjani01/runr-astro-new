@@ -1,0 +1,32 @@
+{
+  "chapters": [
+    {
+      "title": "100m Dash",
+      "pattern": "a",
+      "reels": [
+        {
+          "video": "https://www.youtube.com/watch?v=tPEE9ZwTmy0",
+          "poster": "https://i.ytimg.com/vi/tPEE9ZwTmy0/hqdefault.jpg",
+          "title": "Sprint Highlights 1",
+          "category": "sprint",
+          "duration": "0:30",
+          "ratio": "9:16"
+        }
+      ]
+    },
+    {
+      "title": "Relay Action",
+      "pattern": "b",
+      "reels": [
+        {
+          "video": "https://www.youtube.com/watch?v=2g811Eo7K8U",
+          "poster": "https://i.ytimg.com/vi/2g811Eo7K8U/hqdefault.jpg",
+          "title": "Sprint Highlights 2",
+          "category": "sprint",
+          "duration": "0:30",
+          "ratio": "9:16"
+        }
+      ]
+    }
+  ]
+}

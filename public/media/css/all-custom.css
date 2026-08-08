@@ -3198,6 +3198,7 @@ html.lenis body {
 .theme-btn.btn-primary:hover {
     background: #000;
     color: #fff;
+        border: 1px solid #ffffff4d;
 }
 
 .theme-btn.btn-outline {
@@ -5208,7 +5209,7 @@ html.lenis body {
 }
 
 .team-section .founder-caption .role {
-    font-size: 13px;
+    font-size: 14px;
     color: #8a8a86;
     margin-top: 2px;
 }

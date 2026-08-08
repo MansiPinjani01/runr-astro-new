@@ -370,6 +370,26 @@
     pointer-events: none;
 }
 
+/* ---------- YOUTUBE IFRAME ---------- */
+.mh-grid .mh-reel .video-container iframe {
+    display: block !important;
+    width: 400% !important;
+    height: 200% !important;
+    left: -150% !important;
+    top: -50% !important;
+    max-width: none !important;
+    border: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+    opacity: 0;
+    transition: opacity 0.65s ease;
+    border-radius: inherit !important;
+}
+
+.mh-grid .mh-reel .video-container iframe.mh-vid-ready {
+    opacity: 1 !important;
+}
+
 /* ---------- SCRIM (gradient overlay) ---------- */
 .mh-grid .mh-reel .mh-reel-scrim {
     position: absolute;
