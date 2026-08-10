@@ -2249,7 +2249,8 @@ a,
     color: #1f1f1f30;
 }
 
-html.insomenu-active {
+html.insomenu-active,
+body.insomenu-active {
     overflow: hidden;
 }
 
@@ -2538,6 +2539,7 @@ html.insomenu-active {
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .menu-nav-side::-webkit-scrollbar {
@@ -5557,7 +5559,7 @@ html.lenis body {
 }
 
 .pillar-name {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0;
 }
@@ -7360,7 +7362,6 @@ cu
 
 .all-episodes-slider {
     overflow: hidden;
-    padding-bottom: 35px;
 }
 
 .all-episodes-slider .swiper-wrapper {
@@ -7530,23 +7531,18 @@ cu
 
 .why-listen-item {
     text-align: center;
-    padding: 20px 15px;
 }
 
 .why-listen-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 10px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.why-listen-icon img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
+
 
 .why-listen-item h4 {
     font-size: 20px;

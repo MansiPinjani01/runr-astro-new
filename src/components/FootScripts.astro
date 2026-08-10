@@ -422,10 +422,13 @@ const {
 <script is:inline>
 function menuresponsive() {
   const body = document.body;
+  const html = document.documentElement;
   if (body.classList.contains('insomenu-active')) {
     menuresponsiveclose();
   } else {
     body.classList.add('insomenu-active');
+    html.classList.add('insomenu-active');
+    if (window.lenis) window.lenis.stop();
     // Play video when menu opens
     const vid = document.querySelector('.menu-header-video');
     if (vid) vid.play();
@@ -433,16 +436,21 @@ function menuresponsive() {
 }
 function menuresponsiveclose() {
   const body = document.body;
+  const html = document.documentElement;
   const menu = document.querySelector('.theme-menu');
   if (menu) {
     menu.classList.add('closing');
     // Reset nav items
     setTimeout(function() {
       body.classList.remove('insomenu-active');
+      html.classList.remove('insomenu-active');
       menu.classList.remove('closing');
+      if (window.lenis) window.lenis.start();
     }, 700);
   } else {
     body.classList.remove('insomenu-active');
+    html.classList.remove('insomenu-active');
+    if (window.lenis) window.lenis.start();
   }
 }
 function openForm(type) {

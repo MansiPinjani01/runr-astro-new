@@ -79,7 +79,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="theme-padding js-scroll fade-in-bottom scrolled">
       <div class="columns is-multiline podcast-cols position-sticky-cols gap-1">
         <div
-          class="column is-12-mobile is-12-tablet is-4-desktop is-3-widescreen podcast-col"
+          class="column is-12-mobile is-12-tablet is-12-desktop is-3-widescreen podcast-col"
         >
           <div class="podcast-title section-title title-animate">
             <div class="pillars-title">
@@ -198,7 +198,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div
-          class="column is-12-mobile is-12-tablet is-4-desktop is-6-widescreen podcast-col"
+          class="column is-12-mobile is-12-tablet is-8-desktop is-6-widescreen podcast-col"
         >
           <div class="tab-content">
             <div class="content-tab" id="tab1" style="display:block">
@@ -681,10 +681,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <span class="sub-title">Why You Should Listen</span>
       </div>
       <div
-        class="columns is-multiline why-listen-cols js-scroll fade-in-bottom scrolled"
+        class="columns is-mobile is-multiline why-listen-cols js-scroll fade-in-bottom scrolled"
       >
         <div
-          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+          class="column is-6-mobile is-4-tablet is-4-desktop is-one-fifth-widescreen why-listen-col"
         >
           <div class="why-listen-item">
             <div class="why-listen-icon">
@@ -700,7 +700,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div
-          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+          class="column is-6-mobile is-4-tablet is-4-desktop is-one-fifth-widescreen why-listen-col"
         >
           <div class="why-listen-item">
             <div class="why-listen-icon">
@@ -716,7 +716,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div
-          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+          class="column is-6-mobile is-4-tablet is-4-desktop is-one-fifth-widescreen why-listen-col"
         >
           <div class="why-listen-item">
             <div class="why-listen-icon">
@@ -732,7 +732,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div
-          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+          class="column is-6-mobile is-4-tablet is-4-desktop is-one-fifth-widescreen why-listen-col"
         >
           <div class="why-listen-item">
             <div class="why-listen-icon">
@@ -748,7 +748,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div
-          class="column is-12-mobile is-6-tablet is-one-fifth-desktop why-listen-col"
+          class="column is-6-mobile is-4-tablet is-4-desktop is-one-fifth-widescreen why-listen-col"
         >
           <div class="why-listen-item">
             <div class="why-listen-icon">
@@ -771,7 +771,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section id="section-browse-series" class="section section-browse-series">
     <div class="theme-padding">
       <div class="browse-series-title section-title title-animate">
-        <span class="sub-title">Why You Should Listen</span>
+        <span class="sub-title">Browse by Series</span>
       </div>
       <div class="swiper browse-series-slider" id="browseSeriesSlider">
         <div class="swiper-wrapper">
@@ -969,20 +969,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       var allEpisodesSlider = new Swiper("#allEpisodesSlider", {
         slidesPerView: 5,
         spaceBetween: 20,
-        centeredSlides: true,
+        centeredSlides: false,
         loop: true,
         grabCursor: true,
         navigation: {
           nextEl: ".ae-next-btn",
           prevEl: ".ae-prev-btn",
         },
-        breakpoints: {
-          0: { slidesPerView: 1.5, spaceBetween: 10 },
-          480: { slidesPerView: 2, spaceBetween: 12 },
-          768: { slidesPerView: 3, spaceBetween: 15 },
-          1024: { slidesPerView: 4, spaceBetween: 18 },
-          1400: { slidesPerView: 5, spaceBetween: 20 },
-        },
+   breakpoints: {
+  0: {
+    slidesPerView: 1,
+    spaceBetween: 10
+  },
+  480: {
+    slidesPerView: 1.5,
+    spaceBetween: 12
+  },
+  768: {
+    slidesPerView: 2.5,
+    spaceBetween: 15
+  },
+  1216: {
+    slidesPerView: 4,
+    spaceBetween: 20
+  },
+  1599: {
+    slidesPerView: 5,
+    spaceBetween: 20
+  }
+},
       });
 
       // Browse By Series Slider
