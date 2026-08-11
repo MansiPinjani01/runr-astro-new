@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -11,12 +11,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   counter={true}
   onepagemenu={true}
 >
-  <div class="video-bg">
-    <video autoplay muted loop playsinline>
-      <source src="/media/images/bg-video-white.mp4" type="video/mp4" />
-    </video>
-  </div>
-
   <section id="section-about-us" class="section section-about-us pb-0">
     <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
       <div class="move-box"></div>
@@ -251,6 +245,169 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="mobile-feed" id="mobileFeed"></div>
   </section>
 
+  <!-- Our Story -->
+  <section class="h-wrap section our-story pb-0" id="hwrap">
+    <div class="h-viewport" id="hViewport">
+      <div class="h-eyebrow">
+        <span class="dot" id="eyebrowDot"></span> Our story so far
+      </div>
+      <div class="h-rail" id="hRail"></div>
+      <div class="h-marker" id="hMarker"></div>
+      <div class="h-track" id="hTrack"></div>
+    </div>
+  </section>
+
+  <section id="section-awards" class="section-awards theme-padding">
+    <div class="theme-color-shadow"></div>
+
+    <div class="section-title title-animate">
+      <span class="sub-title">Our Awards & Recognition</span>
+    </div>
+    <div class="op-new js-scroll fade-in-bottom scrolled">
+      <div class="op-new-img-group" aria-hidden="true">
+        <div class="op-new-img-group-track">
+          <div class="op-new-img-group-slide">
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </div>
+          <div class="op-new-img-group-slide">
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </div>
+          <div class="op-new-img-group-slide">
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </div>
+          <div class="op-new-img-group-slide">
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </div>
+          <div class="op-new-img-group-slide">
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="op-highlight" aria-hidden="true"></div>
+
+      <div class="op-new-item">
+        <div class="op-new-title">
+          <h4>2022</h4>
+        </div>
+        <div class="op-new-img">
+          <picture>
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </picture>
+        </div>
+        <div class="op-new-desc">
+          <h3>International Century ERA Award Quality</h3>
+          <span>Switzerland – Geneve</span>
+        </div>
+      </div>
+      <div class="op-new-item">
+        <div class="op-new-title">
+          <h4>2023</h4>
+        </div>
+        <div class="op-new-img">
+          <picture>
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </picture>
+        </div>
+        <div class="op-new-desc">
+          <h3>International Century ERA Award Quality</h3>
+          <span>Switzerland – Geneve</span>
+        </div>
+      </div>
+      <div class="op-new-item">
+        <div class="op-new-title">
+          <h4>2024</h4>
+        </div>
+        <div class="op-new-img">
+          <picture>
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </picture>
+        </div>
+        <div class="op-new-desc">
+          <h3>International Century ERA Award Quality</h3>
+          <span>Switzerland – Geneve</span>
+        </div>
+      </div>
+      <div class="op-new-item">
+        <div class="op-new-title">
+          <h4>2025</h4>
+        </div>
+        <div class="op-new-img">
+          <picture>
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </picture>
+        </div>
+        <div class="op-new-desc">
+          <h3>International Century ERA Award Quality</h3>
+          <span>Switzerland – Geneve</span>
+        </div>
+      </div>
+      <div class="op-new-item">
+        <div class="op-new-title">
+          <h4>2026</h4>
+        </div>
+        <div class="op-new-img">
+          <picture>
+            <img
+              src="/media/images/about-us/awards/award-1.webp"
+              width="280"
+              height="280"
+              alt="Award Image"
+            />
+          </picture>
+        </div>
+        <div class="op-new-desc">
+          <h3>International Century ERA Award Quality</h3>
+          <span>Switzerland – Geneve</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Team -->
 
   <section
@@ -270,10 +427,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       >
         <div class="runr-team-img">
           <picture>
-            <img
-              src="/media/images/about-us/runr-team.webp"
-              alt="Runr Team"
-            />
+            <img src="/media/images/about-us/runr-team.webp" alt="Runr Team" />
           </picture>
         </div>
       </div>
@@ -398,7 +552,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             role: "Creative Crew",
             src: "/media/images/about-us/runr-team/team-img4.webp",
           },
-         {
+          {
             name: "Suhas Kalyan",
             role: "Growth Guru",
             src: "/media/images/about-us/runr-team/team-img3.webp",
@@ -432,12 +586,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         /* 6 slots — 3 left, 3 right — pulled inward to avoid edge cuts */
         var slotPositions = [
-          { cx: 12, cy: 12, dir: "left", w: 190, h: 240 },
-          { cx: 22, cy: 42, dir: "left", w: 180, h: 210 },
-          { cx: 12, cy: 72, dir: "left", w: 175, h: 200 },
-          { cx: 88, cy: 12, dir: "right", w: 190, h: 240 },
-          { cx: 78, cy: 42, dir: "right", w: 180, h: 210 },
-          { cx: 88, cy: 72, dir: "right", w: 175, h: 200 },
+          { cx: 10, cy: 14, dir: "left", w: 190, h: 240 },
+          { cx: 25, cy: 50, dir: "left", w: 180, h: 210 },
+          { cx: 10, cy: 86, dir: "left", w: 175, h: 200 },
+          { cx: 90, cy: 14, dir: "right", w: 190, h: 240 },
+          { cx: 75, cy: 50, dir: "right", w: 180, h: 210 },
+          { cx: 90, cy: 86, dir: "right", w: 175, h: 200 },
         ];
 
         var SLOT_COUNT = slotPositions.length;
@@ -816,6 +970,471 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           });
         }
       })();
+    </script>
+
+    <!-- Timeline Script -->
+    <script is:inline>
+      (function () {
+        if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined")
+          return;
+
+        const milestones = [
+          {
+            year: "2022",
+            kicker: "Foundation for what came next",
+            heading: "Two Friends, One Camera",
+            body: "Runr started as a reels shoot side-hustle between two friends with one camera and zero clients. Every shoot was a pitch for the next one.",
+            images: [
+              {
+                top: "0%",
+                left: "0%",
+                width: "46%",
+                height: "54%",
+                src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600",
+              },
+              {
+                top: "15%",
+                left: "58%",
+                width: "27%",
+                height: "53%",
+                src: "https://images.unsplash.com/photo-1495707902641-75cac588d2e9?w=600",
+              },
+              {
+                top: "62%",
+                left: "22%",
+                width: "34%",
+                height: "38%",
+                src: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=600",
+              },
+            ],
+          },
+          {
+            year: "2023",
+            kicker: "Root of Runr's events arm",
+            heading: "First Navyug Navratri",
+            body: "A small garba night in Bhavnagar sold out in three days. That night proved people didn't just want content from Runr — they wanted experiences.",
+            images: [
+              {
+                top: "0%",
+                left: "0%",
+                width: "46%",
+                height: "54%",
+                src: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600",
+              },
+              {
+                top: "15%",
+                left: "58%",
+                width: "27%",
+                height: "53%",
+                src: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600",
+              },
+              {
+                top: "62%",
+                left: "22%",
+                width: "34%",
+                height: "38%",
+                src: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600",
+              },
+            ],
+          },
+          {
+            year: "2024",
+            kicker: "How the network took shape",
+            heading: "Runr Goes City-Wide",
+            body: "Ahmedabad, Bhavnagar and Runr Go launched within a year of each other. The team stopped being freelancers-with-a-name and became a studio with a bench.",
+            images: [
+              {
+                top: "0%",
+                left: "0%",
+                width: "46%",
+                height: "54%",
+                src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600",
+              },
+              {
+                top: "15%",
+                left: "58%",
+                width: "27%",
+                height: "53%",
+                src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600",
+              },
+              {
+                top: "62%",
+                left: "22%",
+                width: "34%",
+                height: "38%",
+                src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600",
+              },
+            ],
+          },
+          {
+            year: "2025",
+            kicker: "Proof of long-term value and trust",
+            heading: "Expansion",
+            body: "Runr grew through referrals and renewals. Clients kept the crew for years, with many verticals turning from one-off shoots into standing partnerships.",
+            images: [
+              {
+                top: "31%",
+                left: "3%",
+                width: "20%",
+                height: "34%",
+                src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300",
+              },
+              {
+                top: "17%",
+                left: "23%",
+                width: "20%",
+                height: "26%",
+                src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=300",
+              },
+              {
+                top: "0%",
+                left: "54%",
+                width: "27%",
+                height: "36%",
+                src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300",
+              },
+              {
+                top: "31%",
+                left: "78%",
+                width: "20%",
+                height: "27%",
+                src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300",
+              },
+              {
+                top: "57%",
+                left: "39%",
+                width: "24%",
+                height: "36%",
+                src: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300",
+              },
+              {
+                top: "74%",
+                left: "61%",
+                width: "18%",
+                height: "26%",
+                src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300",
+              },
+            ],
+          },
+          {
+            year: "2026",
+            kicker: "Root of Runr's events arm",
+            heading: "First Navyug Navratri",
+            body: "A small garba night in Bhavnagar sold out in three days. That night proved people didn't just want content from Runr — they wanted experiences.",
+            images: [
+              {
+                top: "0%",
+                left: "0%",
+                width: "46%",
+                height: "54%",
+                src: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600",
+              },
+              {
+                top: "15%",
+                left: "58%",
+                width: "27%",
+                height: "53%",
+                src: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600",
+              },
+              {
+                top: "62%",
+                left: "22%",
+                width: "34%",
+                height: "38%",
+                src: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600",
+              },
+            ],
+          },
+          {
+            year: "Today",
+            kicker: "Writing new stories",
+            heading: "In Our Present",
+            body: "Runr was built on a simple belief: creative work shouldn't have to choose between quality and speed. Today, Runr partners with brands, artists and a city that keeps showing up.",
+            images: [
+              {
+                top: "6%",
+                left: "58%",
+                width: "36%",
+                height: "82%",
+                src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600",
+              },
+            ],
+          },
+        ];
+
+        const hTrack = document.getElementById("hTrack");
+        const hMarker = document.getElementById("hMarker");
+        const hRail = document.getElementById("hRail");
+        const eyebrowDot = document.getElementById("eyebrowDot");
+
+        if (!hTrack) return;
+
+        function buildPanel(m) {
+          const panel = document.createElement("div");
+          panel.className = "panel";
+          panel.innerHTML = `
+            <div class="year">${m.year}</div>
+            <div class="col-text">
+              <div class="kicker">${m.kicker}</div>
+              <h2>${m.heading}</h2>
+              <p>${m.body}</p>
+            </div>
+            <div class="col-images">
+              ${m.images.map((im, i) => `<div class="img" style="top:${im.top};left:${im.left};width:${im.width};height:${im.height};background-image:url(${im.src});--r:${i % 2 === 0 ? "-10deg" : "10deg"}"></div>`).join("")}
+            </div>
+          `;
+          return panel;
+        }
+
+        const panelRefs = milestones.map((m) => {
+          const el = buildPanel(m);
+          hTrack.appendChild(el);
+          return {
+            el,
+            year: el.querySelector(".year"),
+            kicker: el.querySelector(".kicker"),
+            heading: el.querySelector("h2"),
+            body: el.querySelector("p"),
+            images: [...el.querySelectorAll(".img")],
+          };
+        });
+
+        const total = milestones.length;
+        let currentST = null;
+
+        function isDesktop() {
+          return window.innerWidth > 700;
+        }
+
+        function setEntranceHidden(p) {
+          gsap.set(p.year, { opacity: 0, x: -50, skewX: -8 });
+          gsap.set(p.kicker, { opacity: 0, y: 22 });
+          gsap.set(p.heading, { opacity: 0, y: 28 });
+          gsap.set(p.body, { opacity: 0, y: 22 });
+          p.images.forEach((imgEl) => imgEl.classList.remove("revealed"));
+        }
+
+        function playPanelContent(p) {
+          const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+          tl.to(p.year, {
+            opacity: 1,
+            x: 0,
+            skewX: 0,
+            duration: 0.8,
+            ease: "expo.out",
+          })
+            .to(p.kicker, { opacity: 1, y: 0, duration: 0.5 }, "-=.5")
+            .to(p.heading, { opacity: 1, y: 0, duration: 0.55 }, "-=.4")
+            .to(p.body, { opacity: 1, y: 0, duration: 0.5 }, "-=.35");
+
+          p.images.forEach((imgEl, idx) => {
+            setTimeout(() => imgEl.classList.add("revealed"), idx * 90 + 150);
+          });
+
+          return tl;
+        }
+
+        function playRailAndMarker() {
+          const tl = gsap.timeline();
+          tl.to(hRail, { scaleX: 1, duration: 0.9, ease: "power2.inOut" })
+            .to(
+              eyebrowDot,
+              { scale: 1, duration: 0.4, ease: "back.out(3)" },
+              "<",
+            )
+            .to(
+              hMarker,
+              { scale: 1, duration: 0.5, ease: "back.out(4)" },
+              "-=.35",
+            )
+            .add(() => {
+              eyebrowDot.classList.add("pulsing");
+              hMarker.classList.add("pulsing");
+            });
+          return tl;
+        }
+
+        function setupDesktop() {
+          gsap.set(hTrack, { xPercent: 0 });
+          gsap.set(eyebrowDot, { scale: 1 });
+          gsap.set(hMarker, { scale: 1 });
+          gsap.set(hRail, { scaleX: 1 });
+          eyebrowDot.classList.add("pulsing");
+          hMarker.classList.add("pulsing");
+
+          // Show first panel content by default (no blank state)
+          panelRefs.forEach((p, i) => {
+            if (i === 0) {
+              gsap.set(p.year, { opacity: 1, x: 0, skewX: 0 });
+              gsap.set(p.kicker, { opacity: 1, y: 0 });
+              gsap.set(p.heading, { opacity: 1, y: 0 });
+              gsap.set(p.body, { opacity: 1, y: 0 });
+              p.images.forEach((imgEl) => imgEl.classList.add("revealed"));
+            } else {
+              setEntranceHidden(p);
+            }
+          });
+
+          let activeIdx = 0;
+
+          currentST = ScrollTrigger.create({
+            trigger: "#hwrap",
+            start: "top top",
+            end: () => "+=" + window.innerWidth * (total - 1),
+            pin: "#hViewport",
+            scrub: 0.6,
+            invalidateOnRefresh: true,
+            onUpdate: (self) => {
+              gsap.set(hTrack, {
+                xPercent: -100 * (total - 1) * self.progress,
+              });
+              hMarker.style.left = `${self.progress * 100}%`;
+
+              const idx = Math.min(
+                total - 1,
+                Math.max(0, Math.round(self.progress * (total - 1))),
+              );
+              if (idx !== activeIdx) {
+                activeIdx = idx;
+                setEntranceHidden(panelRefs[idx]);
+                playPanelContent(panelRefs[idx]);
+              }
+            },
+          });
+        }
+
+        function setupMobile() {
+          gsap.set(hTrack, { xPercent: 0, clearProps: "transform" });
+          gsap.set(hRail, { scaleX: 1 });
+          gsap.set(hMarker, { scale: 1 });
+          eyebrowDot.classList.add("pulsing");
+
+          panelRefs.forEach((p) => {
+            setEntranceHidden(p);
+            ScrollTrigger.create({
+              trigger: p.el,
+              start: "top 78%",
+              once: true,
+              onEnter: () => playPanelContent(p),
+            });
+          });
+        }
+
+        function teardown() {
+          if (currentST) {
+            currentST.kill();
+            currentST = null;
+          }
+          ScrollTrigger.getAll().forEach((t) => {
+            if (
+              t.vars.trigger === "#hwrap" ||
+              (t.vars.trigger &&
+                t.vars.trigger.classList &&
+                t.vars.trigger.classList.contains("panel"))
+            ) {
+              t.kill();
+            }
+          });
+          gsap.set(hTrack, { xPercent: 0, clearProps: "transform" });
+        }
+
+        let lastMode = null;
+        function applyLayout(force) {
+          const mode = isDesktop() ? "desktop" : "mobile";
+          if (!force && mode === lastMode) {
+            ScrollTrigger.refresh();
+            return;
+          }
+          lastMode = mode;
+          teardown();
+          if (mode === "desktop") {
+            setupDesktop();
+          } else {
+            setupMobile();
+          }
+          ScrollTrigger.refresh();
+        }
+
+        applyLayout(true);
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => applyLayout(false), 200);
+        });
+      })();
+    </script>
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        const content = document.querySelector(".op-new");
+        if (!content) return;
+        const media = content.querySelector(".op-new-img-group");
+        const track = content.querySelector(".op-new-img-group-track");
+        const slides = content.querySelectorAll(".op-new-img-group-slide");
+        const highlight = content.querySelector(".op-highlight");
+        const items = content.querySelectorAll(".op-new-item");
+        let activeItem = null;
+        let activeIndex = -1;
+
+        function getSlideHeight() {
+          return slides.length ? slides[0].offsetHeight : 0;
+        }
+
+        function moveHighlight(item) {
+          highlight.style.transform = "translateY(" + item.offsetTop + "px)";
+          highlight.style.height = item.offsetHeight + "px";
+        }
+
+        function moveMedia(item, index) {
+          const top = item.offsetTop;
+          const height = item.offsetHeight;
+          const slideHeight = getSlideHeight();
+          const imgHalfH = media.offsetHeight / 2;
+          const containerH = content.offsetHeight;
+          let centerY = top + height / 2;
+          centerY = Math.max(
+            imgHalfH,
+            Math.min(containerH - imgHalfH, centerY),
+          );
+          media.style.transform =
+            "translate(-50%, " + centerY + "px) translateY(-50%)";
+          track.style.transform = "translateY(-" + index * slideHeight + "px)";
+        }
+
+        function setActiveItem(item, index) {
+          activeItem = item;
+          activeIndex = index;
+          content.classList.add("is-hovering");
+          items.forEach(function (el) {
+            el.classList.toggle("is-active", el === item);
+          });
+          moveHighlight(item);
+          moveMedia(item, index);
+        }
+
+        function resetToFirst() {
+          if (items.length > 0) {
+            setActiveItem(items[0], 0);
+          }
+        }
+
+        items.forEach(function (item, index) {
+          item.addEventListener("mouseenter", function () {
+            setActiveItem(item, index);
+          });
+        });
+
+        content.addEventListener("mouseleave", resetToFirst);
+
+        window.addEventListener("resize", function () {
+          if (activeItem && activeIndex > -1) {
+            moveHighlight(activeItem);
+            moveMedia(activeItem, activeIndex);
+          }
+        });
+
+        // First item active by default on page load
+        resetToFirst();
+      });
     </script>
   </Fragment>
 </BaseLayout>

@@ -15,11 +15,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   swiperjs={true}
   onepagemenu={true}
 >
-  <div class="video-bg">
-    <video autoplay muted loop playsinline>
-      <source src="/media/images/bg-video-white.mp4" type="video/mp4" />
-    </video>
-  </div>
+
 
   <section id="section-about-us" class="section section-about-us">
     <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
@@ -79,30 +75,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="theme-padding js-scroll fade-in-bottom scrolled">
       <div class="columns is-multiline podcast-cols position-sticky-cols gap-1">
         <div
-          class="column is-12-mobile is-12-tablet is-12-desktop is-3-widescreen podcast-col"
-        >
-          <div class="podcast-title section-title title-animate">
-            <div class="pillars-title">
-              <span class="text-uppercase fw-700">Podcasts by runr</span>
-            </div>
-            <h1>
-              Real <span class="theme-text">Conversations.</span> Bold <span
-                class="theme-text">perspectives.</span
-              > Lasting Impact.
-            </h1>
-          </div>
-          <div class="podcast-desc">
-            <div class="wave-container is-justify-content-start" id="wave">
-            </div>
-            <p class="mt-3">
-              Exploring ideas, inspiring change and empowering communities
-              through stories that truly matter.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="column is-12-mobile is-12-tablet is-4-desktop is-3-widescreen podcast-col"
+          class="column is-12-mobile is-12-tablet is-4-desktop is-3-widescreen top-sticky podcast-col"
         >
           <div class="pillars-sidebar">
             <div class="pillars-title">
@@ -198,12 +171,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div
-          class="column is-12-mobile is-12-tablet is-8-desktop is-6-widescreen podcast-col"
+          class="column is-12-mobile is-12-tablet is-8-desktop is-9-widescreen podcast-col"
         >
+          <div class="podcast-title section-title title-animate">
+            <div class="pillars-title">
+              <span class="text-uppercase fw-700">Podcasts by runr</span>
+            </div>
+            <div class="podcast-content">
+              <h1>
+                Real <span class="theme-text">Conversations. <br /></span> Bold <span
+                  class="theme-text">perspectives. <br /></span
+                > Lasting Impact.
+              </h1>
+              <div class="wave-container is-justify-content-start" id="wave">
+              </div>
+            </div>
+          </div>
+          <div class="podcast-desc mb-5">
+            <p>
+              Exploring ideas, inspiring change and empowering communities <br
+              />
+              through stories that truly matter.
+            </p>
+          </div>
           <div class="tab-content">
             <div class="content-tab" id="tab1" style="display:block">
               <div class="podcast-player-block">
-                <div id="nav-narayani-slider" class="swiper">
+                <div id="atithi" class="swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="podcast-slide-card">
@@ -296,57 +290,51 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                       </div>
                     </div>
                   </div>
-                  <div class="swiper__arrows">
-                    <div
-                      class="swiper__arrow swiper-button-next"
-                      tabindex="0"
-                      role="button"
-                      aria-label="Next slide"
-                      aria-controls="swiper-wrapper-5efe5c323e195f79"
-                      aria-disabled="false"
+                </div>
+                <div class="swiper__arrows">
+                  <div
+                    class="swiper__arrow swiper-button-next"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Next slide"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"
-                        ></path>
-                        <path d="M9 6l6 6l-6 6"></path>
-                      </svg>
-                    </div>
-                    <div
-                      class="swiper__arrow swiper-button-prev"
-                      tabindex="0"
-                      role="button"
-                      aria-label="Previous slide"
-                      aria-controls="swiper-wrapper-5efe5c323e195f79"
-                      aria-disabled="false"
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="swiper__arrow swiper-button-prev"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Previous slide"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"
-                        ></path>
-                        <path d="M9 6l6 6l-6 6"></path>
-                      </svg>
-                    </div>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
                   </div>
                 </div>
 
@@ -400,6 +388,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- All Episodes Section -->
+  {
+    /*
   <section id="section-all-episodes" class="section section-all-episodes pt-0">
     <div class="theme-padding js-scroll fade-in-bottom scrolled">
       <!-- Header Row -->
@@ -668,7 +658,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
       </div>
     </div>
-  </section>
+  </section> */
+  }
 
   <!-- Why You Should Listen -->
   <section id="section-why-listen" class="section section-why-listen">
@@ -947,58 +938,80 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <Fragment slot="page-scripts">
     <script is:inline>
-      // Nav Narayani Podcast Slider
-      var navSlider = new Swiper("#nav-narayani-slider", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        effect: "fade",
-        fadeEffect: { crossFade: true },
+      // Atithi Podcast Slider
+      var navSlider = new Swiper("#atithi", {
+        effect: "coverflow",
         grabCursor: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 1.6,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 1.5,
+          slideShadows: false,
+        },
+        keyboard: {
+          enabled: true,
+        },
+        mousewheel: {
+          thresholdDelta: 70,
+        },
+        initialSlide: 0,
+        on: {
+          click(event) {
+            navSlider.slideTo(this.clickedIndex);
+          },
         },
         navigation: {
-          nextEl: "#nav-narayani-slider .swiper-button-next",
-          prevEl: "#nav-narayani-slider .swiper-button-prev",
+          nextEl: ".podcast-player-block .swiper-button-next",
+          prevEl: ".podcast-player-block .swiper-button-prev",
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 1.6,
+          },
+          320: {
+            slidesPerView: 1.3,
+          },
         },
       });
 
-      // All Episodes Slider
-      var allEpisodesSlider = new Swiper("#allEpisodesSlider", {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        centeredSlides: false,
-        loop: true,
-        grabCursor: true,
-        navigation: {
-          nextEl: ".ae-next-btn",
-          prevEl: ".ae-prev-btn",
-        },
-   breakpoints: {
-  0: {
-    slidesPerView: 1,
-    spaceBetween: 10
-  },
-  480: {
-    slidesPerView: 1.5,
-    spaceBetween: 12
-  },
-  768: {
-    slidesPerView: 2.5,
-    spaceBetween: 15
-  },
-  1216: {
-    slidesPerView: 4,
-    spaceBetween: 20
-  },
-  1599: {
-    slidesPerView: 5,
-    spaceBetween: 20
-  }
-},
-      });
+      //       // All Episodes Slider
+      //       var allEpisodesSlider = new Swiper("#allEpisodesSlider", {
+      //         slidesPerView: 5,
+      //         spaceBetween: 20,
+      //         centeredSlides: false,
+      //         loop: true,
+      //         grabCursor: true,
+      //         navigation: {
+      //           nextEl: ".ae-next-btn",
+      //           prevEl: ".ae-prev-btn",
+      //         },
+      //    breakpoints: {
+      //   0: {
+      //     slidesPerView: 1,
+      //     spaceBetween: 10
+      //   },
+      //   480: {
+      //     slidesPerView: 1.5,
+      //     spaceBetween: 12
+      //   },
+      //   768: {
+      //     slidesPerView: 2.5,
+      //     spaceBetween: 15
+      //   },
+      //   1216: {
+      //     slidesPerView: 4,
+      //     spaceBetween: 20
+      //   },
+      //   1599: {
+      //     slidesPerView: 5,
+      //     spaceBetween: 20
+      //   }
+      // },
+      //       });
 
       // Browse By Series Slider
       var browseSeriesSlider = new Swiper("#browseSeriesSlider", {
@@ -1052,7 +1065,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       (function () {
         var wave = document.getElementById("wave");
         if (!wave) return;
-        var total = 40;
+        var total = 80;
         var animationFrame;
         var t = 0;
         var elements = [];

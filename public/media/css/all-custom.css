@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
     font-family: "Inter";
     font-style: normal;
     font-weight: 100 900;
@@ -1972,6 +1972,8 @@ a,
 .theme-block {
     position: relative;
     padding-bottom: 10px;
+    max-width: 315px;
+    margin: 0 auto;
 }
 
 .footer-conten h3 {
@@ -2227,7 +2229,7 @@ a,
 }
 
 .theme-menu ul li {
-    padding: 18px 0;
+    padding: 14px 0;
     z-index: 2;
     /* text-align: center; */
     display: flex;
@@ -2535,7 +2537,7 @@ body.insomenu-active {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    padding: 100px 80px 60px;
+    padding: 70px 80px 60px;
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
@@ -2624,7 +2626,7 @@ body.insomenu-active {
 
 .menu-nav-link {
     font-family: "Outfit", sans-serif;
-    font-size: 52px;
+    font-size: 50px;
     font-weight: 600;
     color: #1f1f1f;
     text-decoration: none;
@@ -2643,8 +2645,8 @@ body.insomenu-active {
 }
 
 .menu-nav-arrow {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 1.5px solid #1f1f1f;
     display: flex;
@@ -4161,7 +4163,7 @@ html.lenis body {
     will-change: transform, opacity;
 }
 
-/* curtain slice ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â image starts slightly zoomed, JS animates it back */
+/* curtain slice ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â image starts slightly zoomed, JS animates it back */
 .img-reveal-slice img {
     transform: scale(1.1);
     transform-origin: center center;
@@ -5048,11 +5050,13 @@ html.lenis body {
 }
 
 /* ============================================================
-   Creative Team — Pinned Scatter Layout (New)
+   Creative Team Ã¢â‚¬â€ Pinned Scatter Layout (New)
    ============================================================ */
 .team-section {
     position: relative;
-    height: 380vh;
+    height: 420vh;
+    margin-bottom: 0;
+    z-index: 2;
 }
 
 .team-section .stage {
@@ -5061,6 +5065,8 @@ html.lenis body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    z-index: 2;
+    background: #fff;
 }
 
 /* .team-section .grid-bg {
@@ -5408,7 +5414,7 @@ html.lenis body {
 .section-podcast .top-sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 120px;
+    top: 200px;
     z-index: 99;
 }
 
@@ -5457,16 +5463,17 @@ html.lenis body {
 .pillars-sidebar {
     background: #fff;
     border-radius: 16px;
-    padding: 20px 28px;
+    padding: 40px 28px;
     position: relative;
     z-index: 5;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: -135px;
 }
 
 .pillars-title {
     font-size: 16px;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -5508,7 +5515,7 @@ html.lenis body {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 12px 0;
+    padding: 15px 0;
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -5523,11 +5530,11 @@ html.lenis body {
     left: -25px;
     top: 50%;
     transform: translateY(-50%);
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background: #ff5722;
     border-radius: 50%;
-    border: 2px solid #1a1714;
+    border: 2px solid #fff;
 }
 
 .pillar-icon {
@@ -5949,7 +5956,7 @@ button,
     transform: translate(-50%, -50%);
 }
 
-/* VIEW cursor — Reels section video hover */
+/* VIEW cursor Ã¢â‚¬â€ Reels section video hover */
 .cursor-ring.is-view {
     width: 50px;
     height: 50px;
@@ -5989,7 +5996,7 @@ button,
 }
 
 /* ================================================================
-   TESTIMONIALS PAGE — Masonry Grid
+   TESTIMONIALS PAGE Ã¢â‚¬â€ Masonry Grid
 ================================================================ */
 
 /* Masonry layout */
@@ -6042,7 +6049,7 @@ button,
     gap: 12px;
 } */
 
-/* Avatar — picture tag with img inside */
+/* Avatar Ã¢â‚¬â€ picture tag with img inside */
 .testimonials-avatar {
     width: 70px;
     height: 70px;
@@ -6121,7 +6128,7 @@ button,
     color: transparent;
 }
 
-/* Orange play button — top right */
+/* Orange play button Ã¢â‚¬â€ top right */
 .testimonials-play-btn {
     position: absolute;
     top: 20px;
@@ -6151,7 +6158,7 @@ button,
     height: 25px;
 }
 
-/* Video card body — bottom */
+/* Video card body Ã¢â‚¬â€ bottom */
 .testimonials-video-body {
     position: absolute;
     left: 22px;
@@ -6241,7 +6248,7 @@ button,
     position: relative;
     z-index: 3;
     margin-top: 0;
-    padding: 10px;
+    padding: 9px;
     background: #fff;
     border-radius: 20px;
     box-shadow: rgb(100 100 111 / 10%) 0px 7px 29px 0px;
@@ -6267,7 +6274,7 @@ button,
     bottom: 0;
     left: 0;
     right: 0;
-    width: 90%;
+    width: 82%;
     z-index: -1;
     filter: saturate(0%);
     object-fit: contain;
@@ -6288,7 +6295,7 @@ button,
 }
 
 .theme-block-title h5 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1;
     font-weight: 600;
     font-style: italic;
@@ -6544,8 +6551,8 @@ button,
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background: #ff5722;
     color: #fff;
@@ -6566,7 +6573,7 @@ button,
 }
 
 /* ================================================================
-   PODCAST HERO SECTION — First Section Design
+   PODCAST HERO SECTION Ã¢â‚¬â€ First Section Design
 ================================================================ */
 .section-podcast-hero {
     background: #fff;
@@ -6579,7 +6586,7 @@ button,
     gap: 0;
 }
 
-/* Left Column — Hero Text */
+/* Left Column Ã¢â‚¬â€ Hero Text */
 .podcast-hero-left {
     display: flex;
     flex-direction: column;
@@ -6668,7 +6675,7 @@ button,
     color: #fff;
 }
 
-/* Middle Column — Pillars Tabs */
+/* Middle Column Ã¢â‚¬â€ Pillars Tabs */
 .podcast-hero-middle {
     padding-top: 20px;
 }
@@ -6780,7 +6787,7 @@ button,
     display: none;
 }
 
-/* Right Column — Now Playing */
+/* Right Column Ã¢â‚¬â€ Now Playing */
 .podcast-hero-right {
     padding-top: 20px;
 }
@@ -6957,7 +6964,7 @@ button,
 }
 
 /* ================================================================
-   PODCAST CATEGORY SLIDER — Tab switching (show/hide)
+   PODCAST CATEGORY SLIDER Ã¢â‚¬â€ Tab switching (show/hide)
 ================================================================ */
 .podcast-category-slider {
     display: none;
@@ -7024,7 +7031,8 @@ button,
     align-items: center;
     justify-content: center;
     gap: 3px;
-    /* height: 75px; */
+    height: 100px;
+    opacity: 0.6;
     /* padding: 10px 0; */
 }
 
@@ -7046,7 +7054,7 @@ button,
 }
 
 /* ================================================================
-   PODCAST SLIDE CARD — Player with Fancybox Video
+   PODCAST SLIDE CARD Ã¢â‚¬â€ Player with Fancybox Video
 ================================================================ */
 .podcast-player-block {
     position: relative;
@@ -7185,7 +7193,8 @@ button,
 /* Podcast info below slider */
 .podcast-slide-info {
     text-align: center;
-    margin-top: 40px;
+    margin-top: -30px;
+    /* Compensate for the 70px padding-bottom on the swiper */
 }
 
 .podcast-slide-info h3 {
@@ -7205,6 +7214,27 @@ button,
 .podcast-slide-img img {
     border-radius: 15px;
     border: 3px solid #ff5722;
+}
+
+/* Hide play button & info on non-active slides */
+#atithi .swiper-slide .podcast-slide-play {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+#atithi .swiper-slide-active .podcast-slide-play {
+    opacity: 1;
+    visibility: visible;
+}
+
+#section-podcast #atithi {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 70px;
+    /* Give space for the play button to not be clipped */
 }
 
 #section-podcast .swiper {
@@ -7233,14 +7263,22 @@ button,
 }
 
 .swiper-button-prev {
-    left: -10px;
+    left: -30px;
 }
 
 .swiper-button-next {
-    right: -12px;
+    right: -30px;
 }
 
-cu
+@media (max-width: 768px) {
+    .swiper-button-prev {
+        left: -10px;
+    }
+
+    .swiper-button-next {
+        right: -10px;
+    }
+}
 
 /* ================================================================
    ALL EPISODES SECTION
@@ -7412,7 +7450,7 @@ cu
     object-fit: contain;
 }
 
-/* Play button — orange only */
+/* Play button Ã¢â‚¬â€ orange only */
 .ae-play-btn {
     position: absolute;
     bottom: 3px;
@@ -7542,8 +7580,6 @@ cu
     justify-content: center;
 }
 
-
-
 .why-listen-item h4 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -7560,7 +7596,6 @@ cu
 /* ================================================================
    BROWSE BY SERIES SECTION
 ================================================================ */
-
 
 .browse-series-title {
     display: flex;
@@ -7638,4 +7673,347 @@ cu
     align-items: center;
     width: 30px;
     height: 30px;
+}
+
+.podcast-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Timeline Section Styles */
+.h-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.h-viewport {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /* background: #fff; */
+}
+
+.h-eyebrow {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ff5a1f;
+    z-index: 8;
+}
+
+.h-eyebrow .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ff5a1f;
+}
+
+.h-eyebrow .dot.pulsing {
+    animation: pulse 2.2s ease-in-out infinite;
+}
+
+.h-rail {
+    position: absolute;
+    top: 46%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e6e6e2;
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+.h-marker {
+    position: absolute;
+    top: 46%;
+    left: 6%;
+    width: 16px;
+    height: 16px;
+    border-radius: 6px;
+    background: #ff5a1f;
+    transform: translate(-6px, -50%) scale(0);
+    z-index: 3;
+}
+
+.h-marker.pulsing {
+    animation: pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 90, 31, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(255, 90, 31, 0);
+    }
+}
+
+.h-track {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    height: 100%;
+    will-change: transform;
+    z-index: 4;
+}
+
+.panel {
+    position: relative;
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: 100%;
+}
+
+.panel .year {
+    position: absolute;
+    top: 9%;
+    left: 6%;
+    font-size: clamp(56px, 9vw, 150px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: #111110;
+    transform-origin: left center;
+    will-change: transform, clip-path;
+}
+
+.panel .col-text {
+    position: absolute;
+    top: 52%;
+    left: 6%;
+    width: min(38%, 460px);
+}
+
+.panel .kicker {
+    color: #ff5722;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    will-change: transform, clip-path;
+}
+
+.panel h2 {
+    font-size: clamp(22px, 2.6vw, 32px);
+    font-weight: 600;
+    margin-bottom: 12px;
+    will-change: transform, clip-path;
+}
+
+.panel p {
+    color: #6f6f6a;
+    font-size: 15px;
+    line-height: 1.6;
+    will-change: transform, clip-path;
+}
+
+.panel .col-images {
+    position: absolute;
+    top: 8%;
+    right: 6%;
+    width: 44%;
+    height: 80%;
+    z-index: 5;
+}
+
+.panel .img {
+    position: absolute;
+    border-radius: 22px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    transform: translateY(36px) scale(0.72) rotate(var(--r, -8deg));
+    transition:
+        opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.panel .img.revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+}
+
+
+
+.op-new {
+    position: relative;
+    overflow: hidden;
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0);
+    isolation: isolate;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.op-new-img-group {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 280px;
+    height: 320px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    overflow: hidden;
+    transform: translate(-50%, 0) translateY(-50%);
+    -moz-transition:
+        opacity 0.35s ease,
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition:
+        opacity 0.35s ease,
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition:
+        opacity 0.35s ease,
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition:
+        opacity 0.35s ease,
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    transition:
+        opacity 0.35s ease,
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.op-new.is-hovering .op-new-img-group {
+    opacity: 1;
+}
+
+.op-new-img-group-track {
+    -moz-transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.op-new-img-group-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.op-new-item:not(:last-child) {
+    border-bottom: 1px solid #cccccc;
+}
+
+.op-new-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.op-new-title {
+    /* flex: 0 0 55%; */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.op-new-img {
+    display: none;
+}
+
+.op-new-logo img {
+    max-height: 100px;
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+}
+
+/* .op-new-desc {
+    flex: 0 0 25%;
+} */
+
+.op-new-title h4 {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.op-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    pointer-events: none;
+    z-index: 0;
+    transform: translateY(0);
+    -moz-transition:
+        transform 0.3s linear,
+        height 0.3s linear,
+        opacity 0.3s linear;
+    -ms-transition:
+        transform 0.3s linear,
+        height 0.3s linear,
+        opacity 0.3s linear;
+    -o-transition:
+        transform 0.3s linear,
+        height 0.3s linear,
+        opacity 0.3s linear;
+    -webkit-transition:
+        transform 0.3s linear,
+        height 0.3s linear,
+        opacity 0.3s linear;
+    transition:
+        transform 0.3s linear,
+        height 0.3s linear,
+        opacity 0.3s linear;
+    opacity: 0;
+}
+
+.op-new.is-hovering .op-highlight {
+    opacity: 1;
+}
+
+.op-new-item.is-active,
+.op-new-item.is-active h4,
+.op-new-item.is-active p,
+.op-new-item.is-active span {
+    color: #fff;
+}
+
+.op-new-item,
+.op-new-item * {
+    transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+
+.op-new-num {
+    display: block;
+    line-height: 1;
+}
+
+.op-new-desc h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.op-new-desc span {
+    font-size: 16px;
 }
