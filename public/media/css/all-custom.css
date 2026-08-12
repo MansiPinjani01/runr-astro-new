@@ -1876,6 +1876,11 @@ a,
     background-color: transparent;
     border: none;
     opacity: 1;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
 
 .swiper__arrow .arrow-bottom .splide__arrows {
@@ -2537,7 +2542,7 @@ body.insomenu-active {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    padding: 70px 80px 60px;
+    padding: 70px 135px 60px 80px;
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
@@ -2603,6 +2608,14 @@ body.insomenu-active {
 
 .insomenu-active .menu-nav-item:nth-child(5) {
     transition-delay: 0.7s;
+}
+
+.insomenu-active .menu-nav-item:nth-child(6) {
+    transition-delay: 0.8s;
+}
+
+.insomenu-active .menu-nav-item:nth-child(7) {
+    transition-delay: 0.9s;
 }
 
 .menu-nav-item:last-child {
@@ -4163,7 +4176,7 @@ html.lenis body {
     will-change: transform, opacity;
 }
 
-/* curtain slice ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â image starts slightly zoomed, JS animates it back */
+/* curtain slice ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â image starts slightly zoomed, JS animates it back */
 .img-reveal-slice img {
     transform: scale(1.1);
     transform-origin: center center;
@@ -5050,7 +5063,7 @@ html.lenis body {
 }
 
 /* ============================================================
-   Creative Team Ã¢â‚¬â€ Pinned Scatter Layout (New)
+   Creative Team ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Pinned Scatter Layout (New)
    ============================================================ */
 .team-section {
     position: relative;
@@ -5956,7 +5969,7 @@ button,
     transform: translate(-50%, -50%);
 }
 
-/* VIEW cursor Ã¢â‚¬â€ Reels section video hover */
+/* VIEW cursor ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Reels section video hover */
 .cursor-ring.is-view {
     width: 50px;
     height: 50px;
@@ -5996,7 +6009,7 @@ button,
 }
 
 /* ================================================================
-   TESTIMONIALS PAGE Ã¢â‚¬â€ Masonry Grid
+   TESTIMONIALS PAGE ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Masonry Grid
 ================================================================ */
 
 /* Masonry layout */
@@ -6049,7 +6062,7 @@ button,
     gap: 12px;
 } */
 
-/* Avatar Ã¢â‚¬â€ picture tag with img inside */
+/* Avatar ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â picture tag with img inside */
 .testimonials-avatar {
     width: 70px;
     height: 70px;
@@ -6128,7 +6141,7 @@ button,
     color: transparent;
 }
 
-/* Orange play button Ã¢â‚¬â€ top right */
+/* Orange play button ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â top right */
 .testimonials-play-btn {
     position: absolute;
     top: 20px;
@@ -6158,7 +6171,7 @@ button,
     height: 25px;
 }
 
-/* Video card body Ã¢â‚¬â€ bottom */
+/* Video card body ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â bottom */
 .testimonials-video-body {
     position: absolute;
     left: 22px;
@@ -6261,7 +6274,7 @@ button,
 .theme-block:hover .theme-block-title h5,
 .swiper-slide.is-visible.is-active .theme-block-title h5,
 #influencers-slider .swiper-slide-active .theme-block-title h5 {
-    color: #fff;
+    color: #ff5722;
     -moz-transition: all 0.3s linear;
     -ms-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
@@ -6363,19 +6376,29 @@ button,
 
 #influencers-slider .swiper-slide-active .theme-block-title,
 .theme-block:hover .theme-block-title {
-    background-color: #ff5722;
+    background-color: transparent;
 }
 
 #influencers-slider .swiper-slide-active .theme-block-title::before,
 #influencers-slider .swiper-slide-active .theme-block-title::after,
 .theme-block:hover .theme-block-title::before,
 .theme-block:hover .theme-block-title::after {
-    background-color: #ff5722;
+    background-color: transparent;
 }
 
 #influencers-slider .swiper-slide-active .theme-block-title h5,
 .theme-block:hover .theme-block-title h5 {
-    color: #fff;
+    color: #ff5722;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(255, 87, 34, 0.3);
+}
+
+.theme-block-title h5 {
+    transition:
+        color 0.3s ease,
+        letter-spacing 0.4s ease,
+        transform 0.3s ease,
+        text-shadow 0.3s ease;
 }
 
 .influencers-slider {
@@ -6573,7 +6596,7 @@ button,
 }
 
 /* ================================================================
-   PODCAST HERO SECTION Ã¢â‚¬â€ First Section Design
+   PODCAST HERO SECTION ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â First Section Design
 ================================================================ */
 .section-podcast-hero {
     background: #fff;
@@ -6586,7 +6609,7 @@ button,
     gap: 0;
 }
 
-/* Left Column Ã¢â‚¬â€ Hero Text */
+/* Left Column ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Hero Text */
 .podcast-hero-left {
     display: flex;
     flex-direction: column;
@@ -6675,7 +6698,7 @@ button,
     color: #fff;
 }
 
-/* Middle Column Ã¢â‚¬â€ Pillars Tabs */
+/* Middle Column ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Pillars Tabs */
 .podcast-hero-middle {
     padding-top: 20px;
 }
@@ -6787,7 +6810,7 @@ button,
     display: none;
 }
 
-/* Right Column Ã¢â‚¬â€ Now Playing */
+/* Right Column ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Now Playing */
 .podcast-hero-right {
     padding-top: 20px;
 }
@@ -6964,7 +6987,7 @@ button,
 }
 
 /* ================================================================
-   PODCAST CATEGORY SLIDER Ã¢â‚¬â€ Tab switching (show/hide)
+   PODCAST CATEGORY SLIDER ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Tab switching (show/hide)
 ================================================================ */
 .podcast-category-slider {
     display: none;
@@ -7054,7 +7077,7 @@ button,
 }
 
 /* ================================================================
-   PODCAST SLIDE CARD Ã¢â‚¬â€ Player with Fancybox Video
+   PODCAST SLIDE CARD ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Player with Fancybox Video
 ================================================================ */
 .podcast-player-block {
     position: relative;
@@ -7099,7 +7122,7 @@ button,
     position: absolute;
     bottom: -32px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -7113,6 +7136,9 @@ button,
         0 0 0 6px rgba(255, 87, 34, 0.2),
         0 0 0 12px rgba(255, 87, 34, 0.1);
     animation: playBtnPulse 2s ease-in-out infinite;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 @keyframes playBtnPulse {
@@ -7138,7 +7164,7 @@ button,
 
 .podcast-slide-play:hover {
     transform: translateX(-50%) scale(1.1);
-    animation: none;
+    animation-play-state: paused;
     box-shadow:
         0 0 0 8px rgba(255, 87, 34, 0.25),
         0 0 0 16px rgba(255, 87, 34, 0.12);
@@ -7217,24 +7243,32 @@ button,
 }
 
 /* Hide play button & info on non-active slides */
-#atithi .swiper-slide .podcast-slide-play {
+.podcast-player-block .swiper-slide .podcast-slide-play {
     opacity: 0;
     visibility: hidden;
+    transform: translateX(-50%) scale(0.8);
     transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
+        opacity 0.4s ease,
+        visibility 0.4s ease,
+        transform 0.4s ease;
 }
 
-#atithi .swiper-slide-active .podcast-slide-play {
+.podcast-player-block .swiper-slide-active .podcast-slide-play {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) scale(1);
 }
 
-#section-podcast #atithi {
+#section-podcast .podcast-player-block .swiper {
     width: 100%;
     overflow: hidden;
     padding-bottom: 70px;
     /* Give space for the play button to not be clipped */
+}
+
+.content-tab {
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 #section-podcast .swiper {
@@ -7283,11 +7317,7 @@ button,
 /* ================================================================
    ALL EPISODES SECTION
 ================================================================ */
-.section-all-episodes {
-    background: #fff;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+
 
 /* Header */
 .all-episodes-header {
@@ -7450,7 +7480,7 @@ button,
     object-fit: contain;
 }
 
-/* Play button Ã¢â‚¬â€ orange only */
+/* Play button ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â orange only */
 .ae-play-btn {
     position: absolute;
     bottom: 3px;
@@ -7697,7 +7727,7 @@ button,
 
 .h-eyebrow {
     position: absolute;
-    top: 6%;
+    top: 0;
     left: 6%;
     display: flex;
     align-items: center;
@@ -7846,7 +7876,31 @@ button,
     transform: translateY(0) scale(1) rotate(0deg);
 }
 
+@media (max-width: 1024px) {
+    .panel .col-images {
+        width: 50%;
+        height: 70%;
+    }
 
+    .panel .img {
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .panel .col-images {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 38vh;
+        margin-top: 20px;
+    }
+
+    .panel .img {
+        border-radius: 12px;
+    }
+}
 
 .op-new {
     position: relative;
@@ -8016,4 +8070,448 @@ button,
 
 .op-new-desc span {
     font-size: 16px;
+}
+
+/* ============ Subscriber Banner Section ============ */
+
+.subscriber-banner {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.subscriber-cols {
+    margin: 0 !important;
+    min-height: 220px;
+}
+
+.subscriber-col-left {}
+
+.subscriber-col-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px !important;
+    z-index: 5;
+}
+
+.subscriber-col-right {
+    position: relative;
+    padding: 100px 30px 100px 50px !important;
+    z-index: 2;
+}
+
+.subscriber-col-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0b0a09;
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+}
+
+.subscriber-right-inner {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    /* width: 100%; */
+}
+
+.subscriber-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ff5722;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.14em;
+    margin-bottom: 15px;
+}
+
+.subscriber-eyebrow svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.subscriber-headline {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.08;
+    color: #171412;
+    letter-spacing: -0.01em;
+}
+
+.subscriber-line {
+    display: block;
+}
+
+.subscriber-accent {
+    color: #ff5722;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.subscriber-rule {
+    width: 34px;
+    height: 2px;
+    background: #ff5722;
+    margin: 14px 0 12px;
+}
+
+.subscriber-sub {
+    color: #5c574f;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.subscriber-sub b {
+    color: #171412;
+    font-weight: 700;
+}
+
+.subscriber-yt {
+    color: #ff5722;
+    font-weight: 800;
+}
+
+/* ============ Center Play Button ============ */
+.subscriber-play-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex: 0 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .subscriber-play-wrap {
+        margin-left: -100px;
+    }
+}
+
+.subscriber-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1.5px dashed #ff5722;
+    opacity: 0.9;
+    animation: subscriberRingSpin 14s linear infinite;
+}
+
+@keyframes subscriberRingSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.subscriber-ring-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ff5722;
+    top: -3px;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.subscriber-play-btn {
+    position: absolute;
+    inset: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #262523, #050505 75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.45),
+        inset 0 0 0 1px rgb(255 255 255 / 30%);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.subscriber-play-btn:hover {
+    transform: scale(1.08);
+}
+
+.subscriber-play-icon {
+    width: 34px;
+    height: 24px;
+    border-radius: 6px;
+    background: #e1261c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(225, 38, 28, 0.5);
+}
+
+.subscriber-play-icon::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 11px solid #fff;
+    margin-left: 3px;
+}
+
+/* ============ Right Side ============ */
+.subscriber-waveform {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.subscriber-waveform span {
+    display: block;
+    width: 2.5px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, #ff7a45, #ff5722);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.subscriber-stats {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    color: #fff;
+    flex-shrink: 0;
+    padding-left: 50px;
+}
+
+.subscriber-stat {
+    text-align: center;
+}
+
+.subscriber-stat svg {
+    opacity: 0.85;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.stat-icon-wrap {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    z-index: 1;
+}
+
+.stat-icon-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -1.5px;
+    border-radius: 50%;
+    padding: 1.5px;
+    background: conic-gradient(from 0deg,
+            rgba(255, 87, 34, 0) 30%,
+            rgba(255, 87, 34, 1) 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    animation: statBorderSpin 2.5s linear infinite;
+}
+
+@keyframes statBorderSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.subscriber-num {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subscriber-lbl {
+    font-size: 16px;
+    color: #9c968c;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+}
+
+.subscriber-divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.subscriber-cta-wrap {
+    flex-shrink: 0;
+}
+
+.subscriber-cta {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 20px;
+    border: 1.5px solid #ff5722;
+    border-radius: 999px;
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: fit-content;
+    margin-top: 30px;
+}
+
+.subscriber-cta:hover {
+    color: #e1261c;
+}
+
+.subscriber-cta-fill {
+    position: absolute;
+    inset: 0;
+    background: #ff5722;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 0.35s ease;
+}
+
+.subscriber-cta:hover .subscriber-cta-fill {
+    transform: scaleX(1);
+}
+
+.subscriber-yt-ic {
+    width: 25px;
+    height: 18px;
+    background: #e1261c;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.subscriber-yt-ic::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 4.5px solid transparent;
+    border-bottom: 4.5px solid transparent;
+    border-left: 7px solid #fff;
+    margin-left: 1.5px;
+}
+
+.subscriber-arrow {
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.subscriber-cta:hover .subscriber-arrow {
+    transform: translateX(4px);
+}
+
+.subscriber-banner .section-title h2 {
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.section-subscriber {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.runr-counter {
+    display: flex;
+    align-items: center;
+}
+
+/* ============ Influencer Title Hover Animation ============ */
+.influencer-name-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.influencer-name-wrap .txt .ch {
+    display: inline-block;
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.theme-block:hover .influencer-name-wrap .txt .ch,
+.influencer-col:hover .influencer-name-wrap .txt .ch,
+#influencers-slider .swiper-slide-active .influencer-name-wrap .txt .ch {
+    color: #ff5722;
+    transform: translateY(-3px);
+}
+
+.theme-block-title::before,
+.theme-block-title::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/home/influencers/sparkles.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(0.3) rotate(-15deg);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.theme-block-title::before {
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    left: 15px;
+}
+
+.theme-block-title::after {
+    width: 16px;
+    height: 16px;
+    bottom: 7px;
+    right: 15px;
+}
+
+.theme-block:hover .theme-block-title::before,
+.influencer-col:hover .theme-block-title::before,
+#influencers-slider .swiper-slide-active .theme-block-title::before {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.05s;
+}
+
+.theme-block:hover .theme-block-title::after,
+.influencer-col:hover .theme-block-title::after,
+#influencers-slider .swiper-slide-active .theme-block-title::after {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.2s;
 }

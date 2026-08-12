@@ -1,0 +1,213 @@
+{
+    "categories": [{
+            "id": "tab1",
+            "name": "Atithi",
+            "subtitle": "Impacting Communities",
+            "host": "Mehul Vadodariya",
+            "fancyboxGroup": "atithi",
+            "slides": [{
+                    "thumb": "/media/images/home/spotlight/atithi/thumb-1.webp",
+                    "youtube": "https://www.youtube.com/watch?v=qhIZ9B9ilzk",
+                    "alt": "Atithi Episode 1"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/atithi/thumb-2.webp",
+                    "youtube": "https://www.youtube.com/watch?v=7kCGi54--n0",
+                    "alt": "Atithi Episode 2"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/atithi/thumb-3.webp",
+                    "youtube": "https://www.youtube.com/watch?v=svzu74_8XNk",
+                    "alt": "Atithi Episode 3"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/atithi/thumb-4.webp",
+                    "youtube": "https://www.youtube.com/watch?v=svzu74_8XNk",
+                    "alt": "Atithi Episode 4"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/atithi/thumb-5.webp",
+                    "youtube": "https://www.youtube.com/watch?v=svzu74_8XNk",
+                    "alt": "Atithi Episode 5"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/atithi/thumb-6.webp",
+                    "youtube": "https://www.youtube.com/watch?v=svzu74_8XNk",
+                    "alt": "Atithi Episode 6"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/atithi/thumb-7.webp",
+                    "youtube": "https://www.youtube.com/watch?v=svzu74_8XNk",
+                    "alt": "Atithi Episode 7"
+                }
+            ]
+        },
+        {
+            "id": "tab2",
+            "name": "Nav Narayani",
+            "subtitle": "Digital Network",
+            "host": "Nav Narayani",
+            "fancyboxGroup": "nav-narayani",
+            "slides": [{
+                    "thumb": "/media/images/home/spotlight/nav-narayani/thumb-1.webp",
+                    "youtube": "https://www.youtube.com/watch?v=Whb_e0VE7Qk",
+                    "alt": "Nav Narayani Episode 1"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/nav-narayani/thumb-2.webp",
+                    "youtube": "https://www.youtube.com/watch?v=yqYa9XLezKk",
+                    "alt": "Nav Narayani Episode 2"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/nav-narayani/thumb-3.webp",
+                    "youtube": "https://www.youtube.com/watch?v=z6vga8GQtUQ",
+                    "alt": "Nav Narayani Episode 3"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/nav-narayani/thumb-4.webp",
+                    "youtube": "https://www.youtube.com/watch?v=d_-b3WeWaWA",
+                    "alt": "Nav Narayani Episode 4"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/nav-narayani/thumb-5.webp",
+                    "youtube": "https://www.youtube.com/watch?v=hOIN69e6ozA",
+                    "alt": "Nav Narayani Episode 5"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/nav-narayani/thumb-6.webp",
+                    "youtube": "https://www.youtube.com/watch?v=YWx9kTkdiHA",
+                    "alt": "Nav Narayani Episode 6"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/nav-narayani/thumb-7.webp",
+                    "youtube": "https://www.youtube.com/watch?v=LPmdL_u3cFY",
+                    "alt": "Nav Narayani Episode 7"
+                }
+            ]
+        },
+        {
+            "id": "tab3",
+            "name": "Change Makers",
+            "subtitle": "Motivational Speaker",
+            "host": "Change Makers",
+            "fancyboxGroup": "change-makers",
+            "slides": [{
+                    "thumb": "/media/images/home/spotlight/change-makers/thumb-1.webp",
+                    "youtube": "https://www.youtube.com/watch?v=EGkjIDKx_ZY",
+                    "alt": "Change Makers Episode 1"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/change-makers/thumb-2.webp",
+                    "youtube": "https://www.youtube.com/watch?v=5PkUwDi6k38",
+                    "alt": "Change Makers Episode 2"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/change-makers/thumb-3.webp",
+                    "youtube": "https://www.youtube.com/watch?v=VAtYX4eeajc",
+                    "alt": "Change Makers Episode 3"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/change-makers/thumb-4.webp",
+                    "youtube": "https://www.youtube.com/watch?v=yo7YLd3I97g",
+                    "alt": "Change Makers Episode 4"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/change-makers/thumb-5.webp",
+                    "youtube": "https://www.youtube.com/watch?v=L7f7aUOIMiU",
+                    "alt": "Change Makers Episode 5"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/change-makers/thumb-6.webp",
+                    "youtube": "https://www.youtube.com/watch?v=ujG_p4o5gKU",
+                    "alt": "Change Makers Episode 6"
+                }
+            ]
+        },
+        {
+            "id": "tab4",
+            "name": "Sahitya Safar",
+            "subtitle": "Building the Future",
+            "host": "Sahitya Safar",
+            "fancyboxGroup": "sahitya-safar",
+            "slides": [{
+                    "thumb": "/media/images/home/spotlight/sahitya-safar/thumb-1.webp",
+                    "youtube": "https://www.youtube.com/watch?v=HX2MDiYAurk",
+                    "alt": "Sahitya Safar Episode 1"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/sahitya-safar/thumb-2.webp",
+                    "youtube": "https://www.youtube.com/watch?v=zT_icv8o9as",
+                    "alt": "Sahitya Safar Episode 2"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/sahitya-safar/thumb-3.webp",
+                    "youtube": "https://www.youtube.com/watch?v=qyaO4dAdSRw",
+                    "alt": "Sahitya Safar Episode 3"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/sahitya-safar/thumb-4.webp",
+                    "youtube": "https://www.youtube.com/watch?v=Bf_MftcWaDc",
+                    "alt": "Sahitya Safar Episode 4"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/sahitya-safar/thumb-5.webp",
+                    "youtube": "https://www.youtube.com/watch?v=7_uILIrfc8A",
+                    "alt": "Sahitya Safar Episode 5"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/sahitya-safar/thumb-6.webp",
+                    "youtube": "https://www.youtube.com/watch?v=7_uILIrfc8A",
+                    "alt": "Sahitya Safar Episode 6"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/sahitya-safar/thumb-7.webp",
+                    "youtube": "https://www.youtube.com/watch?v=HXmPzv4SIHw",
+                    "alt": "Sahitya Safar Episode 7"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/sahitya-safar/thumb-8.webp",
+                    "youtube": "https://www.youtube.com/watch?v=xwfVMEb2mG4",
+                    "alt": "Sahitya Safar Episode 8"
+                }
+            ]
+        },
+        {
+            "id": "tab5",
+            "name": "Swasthya Story",
+            "subtitle": "Learning to Lead",
+            "host": "Swasthya Story",
+            "fancyboxGroup": "swasthya-story",
+            "slides": [{
+                    "thumb": "/media/images/home/spotlight/swasthya-stories/thumb-1.webp",
+                    "youtube": "https://www.youtube.com/watch?v=oFKpuAMzA98",
+                    "alt": "Swasthya Story Episode 1"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/swasthya-stories/thumb-2.webp",
+                    "youtube": "https://www.youtube.com/watch?v=7LwoiLPI0OE",
+                    "alt": "Swasthya Story Episode 2"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/swasthya-stories/thumb-3.webp",
+                    "youtube": "https://www.youtube.com/watch?v=c12gf1YvweM",
+                    "alt": "Swasthya Story Episode 3"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/swasthya-stories/thumb-1.webp",
+                    "youtube": "https://www.youtube.com/watch?v=oFKpuAMzA98",
+                    "alt": "Swasthya Story Episode 1"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/swasthya-stories/thumb-2.webp",
+                    "youtube": "https://www.youtube.com/watch?v=7LwoiLPI0OE",
+                    "alt": "Swasthya Story Episode 2"
+                },
+                {
+                    "thumb": "/media/images/home/spotlight/swasthya-stories/thumb-3.webp",
+                    "youtube": "https://www.youtube.com/watch?v=c12gf1YvweM",
+                    "alt": "Swasthya Story Episode 3"
+                }
+            ]
+        }
+    ]
+}

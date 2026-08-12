@@ -4,42 +4,42 @@
             "slug": "property-tours",
             "pattern": "a",
             "reels": [{
-                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-                    "title": "Fashion Reel 1",
-                    "category": "fashion",
+                    "video": "https://www.youtube.com/watch?v=Pw4xhd0iNKE",
+                    "poster": "https://i.ytimg.com/vi/Pw4xhd0iNKE/hqdefault.jpg",
+                    "title": "Property Tour 1",
+                    "category": "property-tours",
                     "duration": "0:30",
                     "ratio": "9:16"
                 },
                 {
-                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-                    "title": "Fashion Reel 1",
-                    "category": "fashion",
+                    "video": "https://www.youtube.com/watch?v=2kyHSW8do9w",
+                    "poster": "https://i.ytimg.com/vi/2kyHSW8do9w/hqdefault.jpg",
+                    "title": "Property Tour 2",
+                    "category": "property-tours",
                     "duration": "0:30",
                     "ratio": "9:16"
                 },
                 {
-                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-                    "title": "Fashion Reel 1",
-                    "category": "fashion",
+                    "video": "https://www.youtube.com/watch?v=VruLvkea610",
+                    "poster": "https://i.ytimg.com/vi/VruLvkea610/hqdefault.jpg",
+                    "title": "Property Tour 3",
+                    "category": "property-tours",
                     "duration": "0:30",
                     "ratio": "9:16"
                 },
                 {
-                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-                    "title": "Fashion Reel 1",
-                    "category": "fashion",
+                    "video": "https://www.youtube.com/watch?v=Lohz1nN_8Ks",
+                    "poster": "https://i.ytimg.com/vi/Lohz1nN_8Ks/hqdefault.jpg",
+                    "title": "Property Tour 4",
+                    "category": "property-tours",
                     "duration": "0:30",
                     "ratio": "9:16"
                 },
                 {
-                    "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-                    "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-                    "title": "Fashion Reel 1",
-                    "category": "fashion",
+                    "video": "https://www.youtube.com/watch?v=Yds48X61Ajo",
+                    "poster": "https://i.ytimg.com/vi/Yds48X61Ajo/hqdefault.jpg",
+                    "title": "Property Tour 5",
+                    "category": "property-tours",
                     "duration": "0:30",
                     "ratio": "9:16"
                 }
@@ -50,40 +50,180 @@
             "slug": "fashion",
             "pattern": "b",
             "reels": [{
-                    "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-                    "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+                    "video": "https://www.youtube.com/watch?v=IHS4zpijp3M",
+                    "poster": "https://i.ytimg.com/vi/IHS4zpijp3M/hqdefault.jpg",
+                    "title": "Fashion Reel 1",
+                    "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=kQA1lX4Th1w",
+                    "poster": "https://i.ytimg.com/vi/kQA1lX4Th1w/hqdefault.jpg",
                     "title": "Fashion Reel 2",
                     "category": "fashion",
                     "duration": "0:30",
                     "ratio": "9:16"
                 },
                 {
-                    "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-                    "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
-                    "title": "Fashion Reel 2",
-                    "category": "fashion",
-                    "duration": "0:30",
-                    "ratio": "9:16"
-                }, {
-                    "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-                    "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
-                    "title": "Fashion Reel 2",
+                    "video": "https://www.youtube.com/watch?v=MeRYTI8Yt_A",
+                    "poster": "https://i.ytimg.com/vi/MeRYTI8Yt_A/hqdefault.jpg",
+                    "title": "Fashion Reel 3",
                     "category": "fashion",
                     "duration": "0:30",
                     "ratio": "9:16"
                 },
                 {
-                    "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-                    "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
-                    "title": "Fashion Reel 2",
+                    "video": "https://www.youtube.com/watch?v=kV96DlBTo-Y",
+                    "poster": "https://i.ytimg.com/vi/kV96DlBTo-Y/hqdefault.jpg",
+                    "title": "Fashion Reel 4",
                     "category": "fashion",
                     "duration": "0:30",
                     "ratio": "9:16"
-                }, {
-                    "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-                    "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
-                    "title": "Fashion Reel 2",
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=ljdczANl4CQ",
+                    "poster": "https://i.ytimg.com/vi/ljdczANl4CQ/hqdefault.jpg",
+                    "title": "Fashion Reel 5",
                     "category": "fashion",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Jewellers",
+            "slug": "jewellers",
+            "pattern": "a",
+            "reels": [{
+                    "video": "https://www.youtube.com/watch?v=LTWFYDfzFus",
+                    "poster": "https://i.ytimg.com/vi/LTWFYDfzFus/hqdefault.jpg",
+                    "title": "Jewellers Reel 1",
+                    "category": "jewellers",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=7W8oEVxkmzs",
+                    "poster": "https://i.ytimg.com/vi/7W8oEVxkmzs/hqdefault.jpg",
+                    "title": "Jewellers Reel 2",
+                    "category": "jewellers",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=YuZ-Lswx7P0",
+                    "poster": "https://i.ytimg.com/vi/YuZ-Lswx7P0/hqdefault.jpg",
+                    "title": "Jewellers Reel 3",
+                    "category": "jewellers",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=8Wx5jxMD9CA",
+                    "poster": "https://i.ytimg.com/vi/8Wx5jxMD9CA/hqdefault.jpg",
+                    "title": "Jewellers Reel 4",
+                    "category": "jewellers",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=YxytboVDMkc",
+                    "poster": "https://i.ytimg.com/vi/YxytboVDMkc/hqdefault.jpg",
+                    "title": "Jewellers Reel 5",
+                    "category": "jewellers",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Restaurant & Cafe",
+            "slug": "restaurant-cafe",
+            "pattern": "b",
+            "reels": [{
+                    "video": "https://www.youtube.com/watch?v=fSw72A_HaW4",
+                    "poster": "https://i.ytimg.com/vi/fSw72A_HaW4/hqdefault.jpg",
+                    "title": "Restaurant Reel 1",
+                    "category": "restaurant-cafe",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=86mhfiwmhMw",
+                    "poster": "https://i.ytimg.com/vi/86mhfiwmhMw/hqdefault.jpg",
+                    "title": "Restaurant Reel 2",
+                    "category": "restaurant-cafe",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=xFr3xuyL_iw",
+                    "poster": "https://i.ytimg.com/vi/xFr3xuyL_iw/hqdefault.jpg",
+                    "title": "Restaurant Reel 3",
+                    "category": "restaurant-cafe",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=kKPs1hA2Inc",
+                    "poster": "https://i.ytimg.com/vi/kKPs1hA2Inc/hqdefault.jpg",
+                    "title": "Restaurant Reel 4",
+                    "category": "restaurant-cafe",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=bNuZgKymVyU",
+                    "poster": "https://i.ytimg.com/vi/bNuZgKymVyU/hqdefault.jpg",
+                    "title": "Restaurant Reel 5",
+                    "category": "restaurant-cafe",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Education",
+            "slug": "education",
+            "pattern": "a",
+            "reels": [{
+                    "video": "https://www.youtube.com/watch?v=aUIYInf9BMc",
+                    "poster": "https://i.ytimg.com/vi/aUIYInf9BMc/hqdefault.jpg",
+                    "title": "Education Reel 1",
+                    "category": "education",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=eMEKJjJ4nGc",
+                    "poster": "https://i.ytimg.com/vi/eMEKJjJ4nGc/hqdefault.jpg",
+                    "title": "Education Reel 2",
+                    "category": "education",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=L9j08VuYRuk",
+                    "poster": "https://i.ytimg.com/vi/L9j08VuYRuk/hqdefault.jpg",
+                    "title": "Education Reel 3",
+                    "category": "education",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=KxtONCYecdk",
+                    "poster": "https://i.ytimg.com/vi/KxtONCYecdk/hqdefault.jpg",
+                    "title": "Education Reel 4",
+                    "category": "education",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=Hs6ByoanVyY",
+                    "poster": "https://i.ytimg.com/vi/Hs6ByoanVyY/hqdefault.jpg",
+                    "title": "Education Reel 5",
+                    "category": "education",
                     "duration": "0:30",
                     "ratio": "9:16"
                 }

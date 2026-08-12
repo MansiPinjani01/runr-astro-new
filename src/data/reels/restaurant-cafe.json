@@ -1,0 +1,111 @@
+{
+    "category": "restaurant-cafe",
+    "title": "Restaurant & Cafe",
+    "description": "Mouth-watering food stories, cafe vibes and restaurant showcases — reels that make you crave more.",
+    "reels": [{
+            "video": "https://www.youtube.com/watch?v=dPvqhbc8S00",
+            "poster": "https://i.ytimg.com/vi/dPvqhbc8S00/hqdefault.jpg",
+            "title": "Restaurant Reel 1"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=qjwBZgmOFNc",
+            "poster": "https://i.ytimg.com/vi/qjwBZgmOFNc/hqdefault.jpg",
+            "title": "Restaurant Reel 2"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=fSw72A_HaW4",
+            "poster": "https://i.ytimg.com/vi/fSw72A_HaW4/hqdefault.jpg",
+            "title": "Restaurant Reel 3"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=KkCsq9mpVRk",
+            "poster": "https://i.ytimg.com/vi/KkCsq9mpVRk/hqdefault.jpg",
+            "title": "Restaurant Reel 4"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=HYA-PjhGvnc",
+            "poster": "https://i.ytimg.com/vi/HYA-PjhGvnc/hqdefault.jpg",
+            "title": "Restaurant Reel 5"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=86mhfiwmhMw",
+            "poster": "https://i.ytimg.com/vi/86mhfiwmhMw/hqdefault.jpg",
+            "title": "Restaurant Reel 6"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=GajeJhTjO0I",
+            "poster": "https://i.ytimg.com/vi/GajeJhTjO0I/hqdefault.jpg",
+            "title": "Restaurant Reel 7"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=vv-nwiUqG0E",
+            "poster": "https://i.ytimg.com/vi/vv-nwiUqG0E/hqdefault.jpg",
+            "title": "Restaurant Reel 8"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=xFr3xuyL_iw",
+            "poster": "https://i.ytimg.com/vi/xFr3xuyL_iw/hqdefault.jpg",
+            "title": "Restaurant Reel 9"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=5iU015BGJw4",
+            "poster": "https://i.ytimg.com/vi/5iU015BGJw4/hqdefault.jpg",
+            "title": "Restaurant Reel 10"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=9IBN7zDWTRE",
+            "poster": "https://i.ytimg.com/vi/9IBN7zDWTRE/hqdefault.jpg",
+            "title": "Restaurant Reel 11"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=kKPs1hA2Inc",
+            "poster": "https://i.ytimg.com/vi/kKPs1hA2Inc/hqdefault.jpg",
+            "title": "Restaurant Reel 12"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=sqT6Mfi57xE",
+            "poster": "https://i.ytimg.com/vi/sqT6Mfi57xE/hqdefault.jpg",
+            "title": "Restaurant Reel 13"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=OmkNq87N6aA",
+            "poster": "https://i.ytimg.com/vi/OmkNq87N6aA/hqdefault.jpg",
+            "title": "Restaurant Reel 14"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=bNuZgKymVyU",
+            "poster": "https://i.ytimg.com/vi/bNuZgKymVyU/hqdefault.jpg",
+            "title": "Restaurant Reel 15"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=g9W5RDbdVqc",
+            "poster": "https://i.ytimg.com/vi/g9W5RDbdVqc/hqdefault.jpg",
+            "title": "Restaurant Reel 16"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=6c2Zkbe3zRc",
+            "poster": "https://i.ytimg.com/vi/6c2Zkbe3zRc/hqdefault.jpg",
+            "title": "Restaurant Reel 17"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=k1YSbuHrOfo",
+            "poster": "https://i.ytimg.com/vi/k1YSbuHrOfo/hqdefault.jpg",
+            "title": "Restaurant Reel 18"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=apSlKOJMSYA",
+            "poster": "https://i.ytimg.com/vi/apSlKOJMSYA/hqdefault.jpg",
+            "title": "Restaurant Reel 19"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=eGeYV_Di3g8",
+            "poster": "https://i.ytimg.com/vi/eGeYV_Di3g8/hqdefault.jpg",
+            "title": "Restaurant Reel 20"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=Z_q7AQGbn9E",
+            "poster": "https://i.ytimg.com/vi/Z_q7AQGbn9E/hqdefault.jpg",
+            "title": "Restaurant Reel 21"
+        }
+    ]
+}

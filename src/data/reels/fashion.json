@@ -1,131 +1,96 @@
 {
     "category": "fashion",
-    "title": "Fashion Reels",
-    "description": "Style edits, outfit reveals and trend breakdowns — the sharpest fashion reels, updated daily.",
+    "title": "Fashion & Lifestyle",
+    "description": "Style edits, outfit reveals and trend breakdowns — the sharpest fashion and lifestyle reels.",
     "reels": [{
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=E8qytAQbKvI",
+            "poster": "https://i.ytimg.com/vi/E8qytAQbKvI/hqdefault.jpg",
             "title": "Fashion Reel 1"
         },
         {
-            "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-            "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=fiuT_sNgPrc",
+            "poster": "https://i.ytimg.com/vi/fiuT_sNgPrc/hqdefault.jpg",
             "title": "Fashion Reel 2"
         },
         {
-            "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-            "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=IHS4zpijp3M",
+            "poster": "https://i.ytimg.com/vi/IHS4zpijp3M/hqdefault.jpg",
             "title": "Fashion Reel 3"
         },
         {
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=ECtuY7YiZFw",
+            "poster": "https://i.ytimg.com/vi/ECtuY7YiZFw/hqdefault.jpg",
             "title": "Fashion Reel 4"
         },
         {
-            "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-            "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=UcXaXqgD8ME",
+            "poster": "https://i.ytimg.com/vi/UcXaXqgD8ME/hqdefault.jpg",
             "title": "Fashion Reel 5"
         },
         {
-            "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-            "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=kQA1lX4Th1w",
+            "poster": "https://i.ytimg.com/vi/kQA1lX4Th1w/hqdefault.jpg",
             "title": "Fashion Reel 6"
         },
         {
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=-CS_UFc7WOk",
+            "poster": "https://i.ytimg.com/vi/-CS_UFc7WOk/hqdefault.jpg",
             "title": "Fashion Reel 7"
         },
         {
-            "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-            "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=kclBjEltc4I",
+            "poster": "https://i.ytimg.com/vi/kclBjEltc4I/hqdefault.jpg",
             "title": "Fashion Reel 8"
         },
         {
-            "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-            "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=MeRYTI8Yt_A",
+            "poster": "https://i.ytimg.com/vi/MeRYTI8Yt_A/hqdefault.jpg",
             "title": "Fashion Reel 9"
         },
         {
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=iMoZxee_CSo",
+            "poster": "https://i.ytimg.com/vi/iMoZxee_CSo/hqdefault.jpg",
             "title": "Fashion Reel 10"
         },
         {
-            "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-            "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=BBbCMzzle58",
+            "poster": "https://i.ytimg.com/vi/BBbCMzzle58/hqdefault.jpg",
             "title": "Fashion Reel 11"
         },
         {
-            "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-            "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=kV96DlBTo-Y",
+            "poster": "https://i.ytimg.com/vi/kV96DlBTo-Y/hqdefault.jpg",
             "title": "Fashion Reel 12"
         },
         {
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=ZT38BLJPo9Q",
+            "poster": "https://i.ytimg.com/vi/ZT38BLJPo9Q/hqdefault.jpg",
             "title": "Fashion Reel 13"
         },
         {
-            "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-            "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=nnUqrZYD45o",
+            "poster": "https://i.ytimg.com/vi/nnUqrZYD45o/hqdefault.jpg",
             "title": "Fashion Reel 14"
         },
         {
-            "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-            "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=ljdczANl4CQ",
+            "poster": "https://i.ytimg.com/vi/ljdczANl4CQ/hqdefault.jpg",
             "title": "Fashion Reel 15"
         },
         {
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=67lGLH_aBgQ",
+            "poster": "https://i.ytimg.com/vi/67lGLH_aBgQ/hqdefault.jpg",
             "title": "Fashion Reel 16"
         },
         {
-            "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-            "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=U3OpyXU-0N8",
+            "poster": "https://i.ytimg.com/vi/U3OpyXU-0N8/hqdefault.jpg",
             "title": "Fashion Reel 17"
         },
         {
-            "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-            "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
+            "video": "https://www.youtube.com/watch?v=waYhkQbtuzg",
+            "poster": "https://i.ytimg.com/vi/waYhkQbtuzg/hqdefault.jpg",
             "title": "Fashion Reel 18"
-        },
-        {
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-            "title": "Fashion Reel 19"
-        },
-        {
-            "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-            "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
-            "title": "Fashion Reel 20"
-        },
-        {
-            "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-            "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
-            "title": "Fashion Reel 21"
-        },
-        {
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-            "title": "Fashion Reel 22"
-        },
-        {
-            "video": "https://www.youtube.com/watch?v=Yaf7FDfymlc",
-            "poster": "https://i.ytimg.com/vi/Yaf7FDfymlc/hqdefault.jpg",
-            "title": "Fashion Reel 23"
-        },
-        {
-            "video": "https://www.youtube.com/watch?v=1Hm7xjVoMs8",
-            "poster": "https://i.ytimg.com/vi/1Hm7xjVoMs8/hqdefault.jpg",
-            "title": "Fashion Reel 24"
-        },
-        {
-            "video": "https://www.youtube.com/watch?v=z7fQxI01OEY",
-            "poster": "https://i.ytimg.com/vi/z7fQxI01OEY/hqdefault.jpg",
-            "title": "Fashion Reel 25"
         }
     ]
 }

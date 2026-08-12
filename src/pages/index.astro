@@ -841,7 +841,7 @@ Using insights, continuous testing, and performance metrics, we optimize every c
                       </picture>
                     </div>
                     <div class="theme-block-title">
-                      <h5>{item.name}</h5>
+                      <h5><span class="influencer-name-wrap"><span class="txt">{item.name}</span></span></h5>
                     </div>
                     <div class="influencer-social">
                       {item.instagram && (
@@ -2747,8 +2747,8 @@ Using insights, continuous testing, and performance metrics, we optimize every c
     loop: true,
     grabCursor: true,
     speed: 800,
-    autoplay: {
-      delay: 5000,
+   autoplay: {
+     delay: 5000,
       disableOnInteraction: false,
     },
 
@@ -2870,6 +2870,20 @@ Using insights, continuous testing, and performance metrics, we optimize every c
           },
         });
       }
+
+      // Split text for influencer hover animation
+      const elements = document.querySelectorAll('.influencer-name-wrap .txt');
+      elements.forEach(function(el) {
+        const text = el.textContent.trim();
+        el.textContent = '';
+        text.split('').forEach(function (letter, i) {
+          const ch = document.createElement('span');
+          ch.className = 'ch';
+          ch.textContent = letter === ' ' ? '\u00A0' : letter;
+          ch.style.transitionDelay = (i * 0.02) + 's';
+          el.appendChild(ch);
+        });
+      });
     </script>
   </Fragment>
 </BaseLayout>

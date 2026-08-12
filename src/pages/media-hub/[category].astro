@@ -33,6 +33,11 @@ const { data } = Astro.props as { data: CategoryData };
 const categoryTitle = data.title;
 const reels = data.reels;
 
+// Helper: convert YouTube hqdefault to smaller mqdefault (320x180 vs 480x360)
+function getSmallPoster(poster: string): string {
+  return poster.replace("hqdefault.jpg", "mqdefault.jpg");
+}
+
 // 5 columns, each gets enough items to fill
 const NUM_COLS = 5;
 const ITEMS_PER_COL = Math.max(8, Math.ceil(reels.length / NUM_COLS) + 2);
@@ -60,6 +65,13 @@ const columns = getColumns(reels);
     href="/media/css/reels-category.css"
     slot="head"
   />
+  <style slot="head">
+    /* Placeholder bg for lazy images before they load */
+    img.rc-lazy {
+      background: #1a1a1a;
+      min-height: 100%;
+    }
+  </style>
 
   <section class="rc-parallax-page media-hub-section" id="parallaxPage">
     <div class="rc-columns-wrap" id="columnsWrap">
@@ -80,10 +92,12 @@ const columns = getColumns(reels);
               >
                 <div class="video-poster">
                   <img
-                    src={reel.poster}
+                    src=""
+                    data-src={getSmallPoster(reel.poster)}
                     alt={reel.title}
                     loading="lazy"
                     decoding="async"
+                    class="rc-lazy"
                   />
                 </div>
                 <div class="video-container" />
@@ -103,6 +117,36 @@ const columns = getColumns(reels);
   <script is:inline src="/media/js/media-hub-video-engine.js"></script>
 
   <Fragment slot="page-scripts">
+    <!-- Intersection Observer lazy-load for thumbnails -->
+    <script is:inline>
+      (function () {
+        var imgs = document.querySelectorAll("img.rc-lazy");
+        if ("IntersectionObserver" in window) {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  var img = entry.target;
+                  img.src = img.getAttribute("data-src");
+                  img.classList.remove("rc-lazy");
+                  observer.unobserve(img);
+                }
+              });
+            },
+            { rootMargin: "200px 0px" },
+          );
+          imgs.forEach(function (img) {
+            observer.observe(img);
+          });
+        } else {
+          // Fallback: load all immediately
+          imgs.forEach(function (img) {
+            img.src = img.getAttribute("data-src");
+          });
+        }
+      })();
+    </script>
+
     <script is:inline>
       (function () {
         function init() {

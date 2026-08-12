@@ -6,6 +6,9 @@
   HTML structure preserved exactly as original.
 */
 import BaseLayout from "../layouts/BaseLayout.astro";
+import podcastData from "../data/podcast-categories.json";
+
+const categories = podcastData.categories;
 ---
 
 <BaseLayout
@@ -13,10 +16,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   page="podcast"
   pagename="Podcast"
   swiperjs={true}
+  counter={true}
   onepagemenu={true}
 >
-
-
   <section id="section-about-us" class="section section-about-us">
     <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
       <div class="move-box"></div>
@@ -96,7 +98,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </div>
                 <div class="pillar-info">
                   <h4 class="pillar-name">Atithi</h4>
-                  <p class="pillar-sub">Impacting Communities</p>
+                  <p class="pillar-sub">Local Voices</p>
                 </div>
               </a>
               <a
@@ -113,7 +115,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </div>
                 <div class="pillar-info">
                   <h4 class="pillar-name">Nav Narayani</h4>
-                  <p class="pillar-sub">Digital Network</p>
+                  <p class="pillar-sub">Women Empowerment</p>
                 </div>
               </a>
               <a
@@ -130,7 +132,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </div>
                 <div class="pillar-info">
                   <h4 class="pillar-name">Change Makers</h4>
-                  <p class="pillar-sub">Motivational Speaker</p>
+                  <p class="pillar-sub">Life Lessons</p>
                 </div>
               </a>
               <a
@@ -147,7 +149,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </div>
                 <div class="pillar-info">
                   <h4 class="pillar-name">Sahitya Safar</h4>
-                  <p class="pillar-sub">Building the Future</p>
+                  <p class="pillar-sub">Folk Culture</p>
                 </div>
               </a>
               <a
@@ -164,7 +166,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </div>
                 <div class="pillar-info">
                   <h4 class="pillar-name">Swasthya Story</h4>
-                  <p class="pillar-sub">Learning to Lead</p>
+                  <p class="pillar-sub">Wellness Wisdom</p>
                 </div>
               </a>
             </div>
@@ -195,192 +197,103 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </p>
           </div>
           <div class="tab-content">
-            <div class="content-tab" id="tab1" style="display:block">
-              <div class="podcast-player-block">
-                <div id="atithi" class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="podcast-slide-card">
-                        <div class="podcast-slide-img">
-                          <picture
-                            ><img
-                              src="/media/images/home/spotlight/atithi/thumb-1.webp"
-                              alt="Nav Narayani Episode 1"
-                              width="600"
-                              height="400"
-                            /></picture
-                          >
-                          <a
-                            href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
-                            data-fancybox="nav-narayani"
-                            class="podcast-slide-play"
-                            title="Play Video"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="30"
-                              height="30"
-                              viewBox="0 0 24 24"
-                              fill="currentColor"
-                              ><polygon points="5 3 19 12 5 21 5 3"
-                              ></polygon></svg
-                            >
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="podcast-slide-card">
-                        <div class="podcast-slide-img">
-                          <picture
-                            ><img
-                              src="/media/images/home/spotlight/atithi/thumb-1.webp"
-                              alt="Nav Narayani Episode 1"
-                              width="600"
-                              height="400"
-                            /></picture
-                          >
-                          <a
-                            href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
-                            data-fancybox="nav-narayani"
-                            class="podcast-slide-play"
-                            title="Play Video"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="30"
-                              height="30"
-                              viewBox="0 0 24 24"
-                              fill="currentColor"
-                              ><polygon points="5 3 19 12 5 21 5 3"
-                              ></polygon></svg
-                            >
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="podcast-slide-card">
-                        <div class="podcast-slide-img">
-                          <picture
-                            ><img
-                              src="/media/images/home/spotlight/atithi/thumb-1.webp"
-                              alt="Nav Narayani Episode 1"
-                              width="600"
-                              height="400"
-                            /></picture
-                          >
-                          <a
-                            href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
-                            data-fancybox="nav-narayani"
-                            class="podcast-slide-play"
-                            title="Play Video"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="30"
-                              height="30"
-                              viewBox="0 0 24 24"
-                              fill="currentColor"
-                              ><polygon points="5 3 19 12 5 21 5 3"
-                              ></polygon></svg
-                            >
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper__arrows">
-                  <div
-                    class="swiper__arrow swiper-button-next"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Next slide"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+            {
+              categories.map((cat, catIdx) => (
+                <div
+                  class="content-tab"
+                  id={cat.id}
+                  style={catIdx === 0 ? "display:block" : "display:none"}
+                >
+                  <div class="podcast-player-block">
+                    <div
+                      id={catIdx === 0 ? "atithi" : `podcast-slider-${cat.id}`}
+                      class="swiper"
                     >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M9 6l6 6l-6 6"></path>
-                    </svg>
-                  </div>
-                  <div
-                    class="swiper__arrow swiper-button-prev"
-                    tabindex="0"
-                    role="button"
-                    aria-label="Previous slide"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M9 6l6 6l-6 6"></path>
-                    </svg>
+                      <div class="swiper-wrapper">
+                        {cat.slides.map((slide) => (
+                          <div class="swiper-slide">
+                            <div class="podcast-slide-card">
+                              <div class="podcast-slide-img">
+                                <picture>
+                                  <img
+                                    src={slide.thumb}
+                                    alt={slide.alt}
+                                    width="600"
+                                    height="400"
+                                  />
+                                </picture>
+                                <a
+                                  href={slide.youtube}
+                                  data-fancybox={cat.fancyboxGroup}
+                                  class="podcast-slide-play"
+                                  title="Play Video"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                  >
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div class="swiper__arrows">
+                      <div
+                        class="swiper__arrow swiper-button-next"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Next slide"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M9 6l6 6l-6 6" />
+                        </svg>
+                      </div>
+                      <div
+                        class="swiper__arrow swiper-button-prev"
+                        tabindex="0"
+                        role="button"
+                        aria-label="Previous slide"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M9 6l6 6l-6 6" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                <!-- Podcast Name & Subtitle -->
-                <div class="podcast-slide-info">
-                  <h3>Mehul Vadodariya</h3>
-                  <p>Impacting Communities</p>
-                </div>
-              </div>
-            </div>
-            <div class="content-tab" id="tab2" style="display:none">
-              <p>
-                <b>Tab 2</b>
-                Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Vitae magnam natus ab illum,
-                voluptate id.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Vitae magnam natus ab illum, voluptate id.
-              </p>
-            </div>
-            <div class="content-tab" id="tab3" style="display:none">
-              <p>
-                <b>Tab 3</b>
-                Lorem ipsum dolor, sit amet consectetur adipisicing Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Illo ex quaerat tempore officiis
-                ipsam qui, rerum sequi accusamus quibusdam aut Lorem ipsum dolor,
-                sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Illo ex quaerat tempore officiis ipsam qui, rerum
-                sequi accusamus quibusdam aut.
-              </p>
-            </div>
-            <div class="content-tab" id="tab4" style="display:none">
-              <p>
-                <b>Tab 4</b>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptas
-                dolorem perspiciatis. Nemo quia voluptatum nesciunt, amet quasi accusantium
-                laboriosam.
-              </p>
-            </div>
-            <div class="content-tab" id="tab5" style="display:none">
-              <p>
-                <b>Tab 5</b>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat inventore
-                quod at repudiandae. Quisquam dolores corporis tempora voluptatibus
-                adipisci maiores.
-              </p>
-            </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -388,8 +301,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- All Episodes Section -->
-  {
-    /*
+
   <section id="section-all-episodes" class="section section-all-episodes pt-0">
     <div class="theme-padding js-scroll fade-in-bottom scrolled">
       <!-- Header Row -->
@@ -482,10 +394,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <div class="ae-episode-img">
                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
+                    src="/media/images/home/spotlight/all-episod/thumb-small-1.webp"
                     alt="Episode 1"
-                    width="300"
-                    height="200"
+                    width="400"
+                    height="252"
                   /></picture
                 >
                 <a
@@ -509,12 +421,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="swiper-slide">
             <div class="ae-episode-card">
               <div class="ae-episode-img">
-                <picture
+                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
-                    alt="Episode 2"
-                    width="300"
-                    height="200"
+                    src="/media/images/home/spotlight/all-episod/thumb-small-2.webp"
+                    alt="Episode 1"
+                    width="400"
+                    height="252"
                   /></picture
                 >
                 <a
@@ -540,10 +452,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <div class="ae-episode-img">
                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
-                    alt="Episode 3"
-                    width="300"
-                    height="200"
+                    src="/media/images/home/spotlight/all-episod/thumb-small-3.webp"
+                    alt="Episode 1"
+                    width="400"
+                    height="252"
                   /></picture
                 >
 
@@ -568,12 +480,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="swiper-slide">
             <div class="ae-episode-card">
               <div class="ae-episode-img">
-                <picture
+               <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
-                    alt="Episode 4"
-                    width="300"
-                    height="200"
+                    src="/media/images/home/spotlight/all-episod/thumb-small-4.webp"
+                    alt="Episode 1"
+                    width="400"
+                    height="252"
                   /></picture
                 >
 
@@ -598,12 +510,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="swiper-slide">
             <div class="ae-episode-card">
               <div class="ae-episode-img">
-                <picture
+                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
-                    alt="Episode 5"
-                    width="300"
-                    height="200"
+                    src="/media/images/home/spotlight/all-episod/thumb-small-5.webp"
+                    alt="Episode 1"
+                    width="400"
+                    height="252"
                   /></picture
                 >
 
@@ -630,10 +542,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <div class="ae-episode-img">
                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1.webp"
-                    alt="Episode 6"
-                    width="300"
-                    height="200"
+                    src="/media/images/home/spotlight/all-episod/thumb-small-6.webp"
+                    alt="Episode 1"
+                    width="400"
+                    height="252"
                   /></picture
                 >
 
@@ -658,8 +570,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
       </div>
     </div>
-  </section> */
-  }
+  </section>
 
   <!-- Why You Should Listen -->
   <section id="section-why-listen" class="section section-why-listen">
@@ -780,7 +691,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               </div>
               <div class="series-card-info has-text-centered">
                 <h4>Nav Narayani</h4>
-                <p>Digital Network</p>
+                <p>women empowerment</p>
                 <span class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -813,7 +724,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               </div>
               <div class="series-card-info has-text-centered">
                 <h4>Change Makers</h4>
-                <p>Motivational Speaker</p>
+                <p>Life Lessons</p>
                 <span class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -846,7 +757,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               </div>
               <div class="series-card-info has-text-centered">
                 <h4>Sahitya Safar</h4>
-                <p>Building the Future</p>
+                <p>Folk Culture</p>
                 <span class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -879,7 +790,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               </div>
               <div class="series-card-info has-text-centered">
                 <h4>Swasthya Story</h4>
-                <p>Learning to Lead</p>
+                <p>Wellness Wisdom</p>
                 <span class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -912,7 +823,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               </div>
               <div class="series-card-info has-text-centered">
                 <h4>Atithi</h4>
-                <p>Impacting Communities</p>
+                <p>Local Voices</p>
                 <span class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -936,9 +847,188 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
+  <!-- Subscriber Banner Section -->
+  <section
+    id="section-subscriber"
+    class="section section-subscriber white-bg p-0"
+  >
+    <div class="theme-padding pr-0">
+      <div class="subscriber-banner" id="subscriberBanner">
+        <div class="columns is-multiline is-vcentered subscriber-cols">
+          <div
+            class="column is-12-mobile is-12-tablet is-4-desktop is-4-widescreen subscriber-col-left"
+          >
+            <div class="subscriber-eyebrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                ><path
+                  d="M12 2v20M6 6v12M18 6v12M2 10v4M22 10v4"
+                  stroke="#FF5722"
+                  stroke-width="2"
+                  stroke-linecap="round"></path></svg
+              >
+              Runr Podcast
+            </div>
+
+            <div class="section-title">
+              <h2 class="text-md">
+                Conversations that <span class="theme-text">
+                  <br />inspire.</span
+                >
+              </h2>
+            </div>
+            <p>
+              Stories that stay with you.<br /><b
+                >Only on <span class="subscriber-yt">YouTube</span>.</b
+              >
+            </p>
+            <div class="subscriber-cta-wrap">
+              <a
+                href="https://www.youtube.com/@findonrunr?sub_confirmation=1"
+                target="_blank"
+                class="subscriber-cta"
+              >
+                <span class="subscriber-cta-fill"></span>
+                <span class="subscriber-yt-ic"></span> Subscribe on YouTube
+                <span class="subscriber-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="column is-12-mobile is-12-tablet is-7-desktop is-8-widescreen subscriber-col-right"
+          >
+            <div class="runr-counter">
+              <div class="subscriber-play-wrap">
+                <div class="subscriber-ring">
+                  <div class="subscriber-ring-dot"></div>
+                </div>
+                <a
+                  href="https://www.youtube.com/@findonrunr/podcasts"
+                  target="_blank"
+                  class="subscriber-play-btn"
+                  aria-label="Play"
+                >
+                  <div class="subscriber-play-icon"></div>
+                </a>
+              </div>
+              <div class="subscriber-right-inner">
+                <div class="subscriber-waveform" id="subscriberWaveform"></div>
+              </div>
+              <div class="subscriber-stats">
+                <div class="subscriber-stat">
+                  <div class="stat-icon-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      ><path
+                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"></path><circle
+                        cx="9"
+                        cy="7"
+                        r="4"
+                        stroke="#fff"
+                        stroke-width="2"></circle><path
+                        d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"></path></svg
+                    >
+                  </div>
+                  <div class="subscriber-num">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="6.83"
+                      data-purecounter-decimals="2"
+                      data-purecounter-once="true"
+                      class="purecounter">0</span
+                    >K+
+                  </div>
+                  <div class="subscriber-lbl">Subscribers</div>
+                </div>
+                <div class="subscriber-divider"></div>
+                <div class="subscriber-stat">
+                  <div class="stat-icon-wrap">
+                    <svg width="14" height="16" viewBox="0 0 24 24" fill="none"
+                      ><rect
+                        x="9"
+                        y="2"
+                        width="6"
+                        height="12"
+                        rx="3"
+                        stroke="#fff"
+                        stroke-width="2"></rect><path
+                        d="M5 10v1a7 7 0 0 0 14 0v-1M12 18v4"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"></path></svg
+                    >
+                  </div>
+                  <div class="subscriber-num">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="500"
+                      data-purecounter-once="true"
+                      class="purecounter">0</span
+                    >+
+                  </div>
+                  <div class="subscriber-lbl">Episodes</div>
+                </div>
+                <div class="subscriber-divider"></div>
+                <div class="subscriber-stat">
+                  <div class="stat-icon-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      ><rect
+                        x="3"
+                        y="3"
+                        width="7"
+                        height="7"
+                        rx="1.5"
+                        stroke="#fff"
+                        stroke-width="2"></rect><rect
+                        x="14"
+                        y="3"
+                        width="7"
+                        height="7"
+                        rx="1.5"
+                        stroke="#fff"
+                        stroke-width="2"></rect><rect
+                        x="3"
+                        y="14"
+                        width="7"
+                        height="7"
+                        rx="1.5"
+                        stroke="#fff"
+                        stroke-width="2"></rect><rect
+                        x="14"
+                        y="14"
+                        width="7"
+                        height="7"
+                        rx="1.5"
+                        stroke="#fff"
+                        stroke-width="2"></rect></svg
+                    >
+                  </div>
+                  <div class="subscriber-num">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="5"
+                      data-purecounter-once="true"
+                      class="purecounter">0</span
+                    >
+                  </div>
+                  <div class="subscriber-lbl">Categories</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <Fragment slot="page-scripts">
     <script is:inline>
-      // Atithi Podcast Slider
+      // Init Atithi slider (first tab, visible by default)
       var navSlider = new Swiper("#atithi", {
         effect: "coverflow",
         grabCursor: true,
@@ -965,8 +1055,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           },
         },
         navigation: {
-          nextEl: ".podcast-player-block .swiper-button-next",
-          prevEl: ".podcast-player-block .swiper-button-prev",
+          nextEl: "#tab1 .swiper-button-next",
+          prevEl: "#tab1 .swiper-button-prev",
         },
         breakpoints: {
           1024: {
@@ -978,40 +1068,78 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         },
       });
 
-      //       // All Episodes Slider
-      //       var allEpisodesSlider = new Swiper("#allEpisodesSlider", {
-      //         slidesPerView: 5,
-      //         spaceBetween: 20,
-      //         centeredSlides: false,
-      //         loop: true,
-      //         grabCursor: true,
-      //         navigation: {
-      //           nextEl: ".ae-next-btn",
-      //           prevEl: ".ae-prev-btn",
-      //         },
-      //    breakpoints: {
-      //   0: {
-      //     slidesPerView: 1,
-      //     spaceBetween: 10
-      //   },
-      //   480: {
-      //     slidesPerView: 1.5,
-      //     spaceBetween: 12
-      //   },
-      //   768: {
-      //     slidesPerView: 2.5,
-      //     spaceBetween: 15
-      //   },
-      //   1216: {
-      //     slidesPerView: 4,
-      //     spaceBetween: 20
-      //   },
-      //   1599: {
-      //     slidesPerView: 5,
-      //     spaceBetween: 20
-      //   }
-      // },
-      //       });
+      // Init other category sliders when their tab is shown
+      var categorySliders = {};
+      function initCategorySlider(tabId) {
+        if (tabId === "tab1") return; // Atithi already initialized
+        var sliderEl = document.querySelector("#" + tabId + " .swiper");
+        if (!sliderEl || categorySliders[tabId]) return;
+        categorySliders[tabId] = new Swiper(sliderEl, {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          loop: true,
+          slidesPerView: 1.6,
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 150,
+            modifier: 1.5,
+            slideShadows: false,
+          },
+          keyboard: { enabled: true },
+          mousewheel: { thresholdDelta: 70 },
+          initialSlide: 0,
+          on: {
+            click(event) {
+              categorySliders[tabId].slideTo(this.clickedIndex);
+            },
+          },
+          navigation: {
+            nextEl: "#" + tabId + " .swiper-button-next",
+            prevEl: "#" + tabId + " .swiper-button-prev",
+          },
+          breakpoints: {
+            1024: { slidesPerView: 1.6 },
+            320: { slidesPerView: 1.3 },
+          },
+        });
+      }
+
+      // All Episodes Slider
+      var allEpisodesSlider = new Swiper("#allEpisodesSlider", {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        centeredSlides: false,
+        loop: true,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".ae-next-btn",
+          prevEl: ".ae-prev-btn",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 1.5,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 15,
+          },
+          1216: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1599: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+        },
+      });
 
       // Browse By Series Slider
       var browseSeriesSlider = new Swiper("#browseSeriesSlider", {
@@ -1034,7 +1162,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       // Fancybox for podcast videos
       if (typeof Fancybox !== "undefined") {
+        Fancybox.bind('[data-fancybox="atithi"]', {
+          Toolbar: { display: ["close"] },
+          Html: { video: { autoplay: true } },
+        });
         Fancybox.bind('[data-fancybox="nav-narayani"]', {
+          Toolbar: { display: ["close"] },
+          Html: { video: { autoplay: true } },
+        });
+        Fancybox.bind('[data-fancybox="change-makers"]', {
+          Toolbar: { display: ["close"] },
+          Html: { video: { autoplay: true } },
+        });
+        Fancybox.bind('[data-fancybox="sahitya-safar"]', {
+          Toolbar: { display: ["close"] },
+          Html: { video: { autoplay: true } },
+        });
+        Fancybox.bind('[data-fancybox="swasthya-story"]', {
           Toolbar: { display: ["close"] },
           Html: { video: { autoplay: true } },
         });
@@ -1047,6 +1191,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         sections.forEach(function (section) {
           x = section.querySelectorAll(".content-tab");
           for (i = 0; i < x.length; i++) {
+            x[i].style.opacity = "0";
             x[i].style.display = "none";
           }
           tablinks = section.querySelectorAll(".tab");
@@ -1056,9 +1201,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           var selectedTab = section.querySelector("#" + tabName);
           if (selectedTab) {
             selectedTab.style.display = "block";
+            setTimeout(function () {
+              selectedTab.style.opacity = "1";
+            }, 20);
           }
           evt.currentTarget.classList.add("is-active");
         });
+        // Init the podcast slider for this tab if not already done
+        if (typeof initCategorySlider === "function") {
+          setTimeout(function () {
+            initCategorySlider(tabName);
+          }, 100);
+        }
       }
 
       // Podcast Audio Waveform Animation
@@ -1108,6 +1262,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         }
 
         animate();
+      })();
+
+      // Subscriber Waveform Animation
+      (function () {
+        var wf = document.getElementById("subscriberWaveform");
+        if (!wf) return;
+        var heights = [
+          8, 14, 22, 34, 44, 30, 18, 26, 40, 44, 28, 16, 10, 20, 32, 44, 26, 14,
+          8, 18, 30, 38, 22, 12,
+        ];
+        heights.forEach(function (h) {
+          var bar = document.createElement("span");
+          bar.style.height = h + "px";
+          wf.appendChild(bar);
+        });
+
+        var t = 0;
+        function animateWave() {
+          t++;
+          if (t % 4 === 0) {
+            var bars = wf.querySelectorAll("span");
+            bars.forEach(function (bar, i) {
+              var scale = 0.3 + Math.random() * 0.7;
+              bar.style.transform = "scaleY(" + scale + ")";
+            });
+          }
+          requestAnimationFrame(animateWave);
+        }
+        animateWave();
       })();
     </script>
   </Fragment>
