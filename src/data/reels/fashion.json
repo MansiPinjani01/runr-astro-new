@@ -2,7 +2,8 @@
     "category": "fashion",
     "title": "Fashion & Lifestyle",
     "description": "Style edits, outfit reveals and trend breakdowns — the sharpest fashion and lifestyle reels.",
-    "reels": [{
+    "reels": [
+        {
             "video": "https://www.youtube.com/watch?v=E8qytAQbKvI",
             "poster": "https://i.ytimg.com/vi/E8qytAQbKvI/hqdefault.jpg",
             "title": "Fashion Reel 1"

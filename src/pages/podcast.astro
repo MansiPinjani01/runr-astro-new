@@ -79,6 +79,29 @@ const categories = podcastData.categories;
         <div
           class="column is-12-mobile is-12-tablet is-4-desktop is-3-widescreen top-sticky podcast-col"
         >
+        <div class="is-hidden-desktop">
+        <div class="podcast-title section-title title-animate">
+            <div class="pillars-title">
+              <span class="text-uppercase fw-700">Podcasts by runr</span>
+            </div>
+            <div class="podcast-content">
+              <h1>
+                Real <span class="theme-text">Conversations. <br /></span> Bold <span
+                  class="theme-text">perspectives. <br /></span
+                > Lasting Impact.
+              </h1>
+              <div class="wave-container is-justify-content-start" id="wave">
+              </div>
+            </div>
+          </div>
+          <div class="podcast-desc mb-5">
+            <p>
+              Exploring ideas, inspiring change and empowering communities <br
+              />
+              through stories that truly matter.
+            </p>
+          </div>
+        </div>
           <div class="pillars-sidebar">
             <div class="pillars-title">
               <span class="text-uppercase fw-700">Our Podcast</span>
@@ -175,7 +198,7 @@ const categories = podcastData.categories;
         <div
           class="column is-12-mobile is-12-tablet is-8-desktop is-9-widescreen podcast-col"
         >
-          <div class="podcast-title section-title title-animate">
+          <div class="podcast-title section-title title-animate is-hidden-mobile">
             <div class="pillars-title">
               <span class="text-uppercase fw-700">Podcasts by runr</span>
             </div>
@@ -189,7 +212,7 @@ const categories = podcastData.categories;
               </div>
             </div>
           </div>
-          <div class="podcast-desc mb-5">
+          <div class="podcast-desc mb-5 is-hidden-mobile">
             <p>
               Exploring ideas, inspiring change and empowering communities <br
               />
@@ -305,7 +328,7 @@ const categories = podcastData.categories;
   <section id="section-all-episodes" class="section section-all-episodes pt-0">
     <div class="theme-padding js-scroll fade-in-bottom scrolled">
       <!-- Header Row -->
-      <div class="all-episodes-header">
+      <div class="all-episodes-header js-scroll fade-in-top scrolled">
         <div class="all-episodes-title">
           <span class="ae-icon">
             <svg
@@ -387,7 +410,7 @@ const categories = podcastData.categories;
       </div>
 
       <!-- Episodes Slider -->
-      <div class="swiper all-episodes-slider" id="allEpisodesSlider">
+      <div class="swiper all-episodes-slider js-scroll fade-in-bottom scrolled" id="allEpisodesSlider">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="ae-episode-card">
@@ -401,7 +424,7 @@ const categories = podcastData.categories;
                   /></picture
                 >
                 <a
-                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  href="https://www.youtube.com/watch?v=ykjZNQCkErk"
                   data-fancybox="all-episodes"
                   class="ae-play-btn"
                   title="Play"
@@ -421,7 +444,7 @@ const categories = podcastData.categories;
           <div class="swiper-slide">
             <div class="ae-episode-card">
               <div class="ae-episode-img">
-                 <picture
+                <picture
                   ><img
                     src="/media/images/home/spotlight/all-episod/thumb-small-2.webp"
                     alt="Episode 1"
@@ -430,7 +453,7 @@ const categories = podcastData.categories;
                   /></picture
                 >
                 <a
-                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  href="https://www.youtube.com/watch?v=06TpuueO6po"
                   data-fancybox="all-episodes"
                   class="ae-play-btn"
                   title="Play"
@@ -460,7 +483,7 @@ const categories = podcastData.categories;
                 >
 
                 <a
-                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  href="https://www.youtube.com/watch?v=sDnSP1HjhSM"
                   data-fancybox="all-episodes"
                   class="ae-play-btn"
                   title="Play"
@@ -480,7 +503,7 @@ const categories = podcastData.categories;
           <div class="swiper-slide">
             <div class="ae-episode-card">
               <div class="ae-episode-img">
-               <picture
+                <picture
                   ><img
                     src="/media/images/home/spotlight/all-episod/thumb-small-4.webp"
                     alt="Episode 1"
@@ -490,7 +513,7 @@ const categories = podcastData.categories;
                 >
 
                 <a
-                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  href="https://www.youtube.com/watch?v=PbxCujYw_mQ"
                   data-fancybox="all-episodes"
                   class="ae-play-btn"
                   title="Play"
@@ -510,7 +533,7 @@ const categories = podcastData.categories;
           <div class="swiper-slide">
             <div class="ae-episode-card">
               <div class="ae-episode-img">
-                 <picture
+                <picture
                   ><img
                     src="/media/images/home/spotlight/all-episod/thumb-small-5.webp"
                     alt="Episode 1"
@@ -520,7 +543,7 @@ const categories = podcastData.categories;
                 >
 
                 <a
-                  href="https://www.youtube.com/watch?v=0EbNORs3Wgw"
+                  href="https://www.youtube.com/watch?v=Z-yebkelLdk"
                   data-fancybox="all-episodes"
                   class="ae-play-btn"
                   title="Play"
@@ -550,7 +573,97 @@ const categories = podcastData.categories;
                 >
 
                 <a
-                  href="https://www.youtube.com/watch?v=Bn-Eg0AYNvY"
+                  href="https://www.youtube.com/watch?v=X-zUGwY80H0"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ae-episode-card">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/all-episod/thumb-small-7.webp"
+                    alt="Episode 1"
+                    width="400"
+                    height="252"
+                  /></picture
+                >
+
+                <a
+                  href="https://www.youtube.com/watch?v=BOePfe7jPro"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ae-episode-card">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/all-episod/thumb-small-8.webp"
+                    alt="Episode 1"
+                    width="400"
+                    height="252"
+                  /></picture
+                >
+
+                <a
+                  href="https://www.youtube.com/watch?v=69dDfT8Z_FM"
+                  data-fancybox="all-episodes"
+                  class="ae-play-btn"
+                  title="Play"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    ><polygon points="5 3 19 12 5 21 5 3"></polygon></svg
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ae-episode-card">
+              <div class="ae-episode-img">
+                <picture
+                  ><img
+                    src="/media/images/home/spotlight/all-episod/thumb-small-9.webp"
+                    alt="Episode 1"
+                    width="400"
+                    height="252"
+                  /></picture
+                >
+
+                <a
+                  href="https://www.youtube.com/watch?v=VNZkcLpFymo"
                   data-fancybox="all-episodes"
                   class="ae-play-btn"
                   title="Play"
@@ -673,16 +786,16 @@ const categories = podcastData.categories;
   <section id="section-browse-series" class="section section-browse-series">
     <div class="theme-padding">
       <div class="browse-series-title section-title title-animate">
-        <span class="sub-title">Browse by Series</span>
+        <span class="sub-title">Runr Podcasts</span>
       </div>
-      <div class="swiper browse-series-slider" id="browseSeriesSlider">
+      <div class="swiper browse-series-slider js-scroll fade-in-bottom scrolled" id="browseSeriesSlider">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="series-card">
               <div class="series-card-img">
                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    src="/media/images/home/spotlight/runr-podcasts/nav-narayani.webp"
                     alt="Nav Narayani"
                     width="300"
                     height="420"
@@ -692,7 +805,7 @@ const categories = podcastData.categories;
               <div class="series-card-info has-text-centered">
                 <h4>Nav Narayani</h4>
                 <p>women empowerment</p>
-                <span class="series-arrow">
+                <a href="https://www.instagram.com/runr.podcast" target="_blank" rel="noopener" class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -706,7 +819,7 @@ const categories = podcastData.categories;
                     ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
                     ></path><path d="M15 8l4 4"></path></svg
                   >
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -715,7 +828,7 @@ const categories = podcastData.categories;
               <div class="series-card-img">
                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    src="/media/images/home/spotlight/runr-podcasts/change-maker.webp"
                     alt="Cherish Mehta"
                     width="300"
                     height="420"
@@ -725,7 +838,7 @@ const categories = podcastData.categories;
               <div class="series-card-info has-text-centered">
                 <h4>Change Makers</h4>
                 <p>Life Lessons</p>
-                <span class="series-arrow">
+                <a href="https://www.instagram.com/runr.podcast" target="_blank" rel="noopener" class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -739,7 +852,7 @@ const categories = podcastData.categories;
                     ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
                     ></path><path d="M15 8l4 4"></path></svg
                   >
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -748,7 +861,7 @@ const categories = podcastData.categories;
               <div class="series-card-img">
                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    src="/media/images/home/spotlight/runr-podcasts/sathiya-safar.webp"
                     alt="Runr Ventures"
                     width="300"
                     height="420"
@@ -758,7 +871,7 @@ const categories = podcastData.categories;
               <div class="series-card-info has-text-centered">
                 <h4>Sahitya Safar</h4>
                 <p>Folk Culture</p>
-                <span class="series-arrow">
+                <a href="https://www.instagram.com/runr.podcast" target="_blank" rel="noopener" class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -772,7 +885,7 @@ const categories = podcastData.categories;
                     ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
                     ></path><path d="M15 8l4 4"></path></svg
                   >
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -781,7 +894,7 @@ const categories = podcastData.categories;
               <div class="series-card-img">
                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    src="/media/images/home/spotlight/runr-podcasts/stories.webp"
                     alt="Runr Creative Campus"
                     width="300"
                     height="420"
@@ -791,7 +904,7 @@ const categories = podcastData.categories;
               <div class="series-card-info has-text-centered">
                 <h4>Swasthya Story</h4>
                 <p>Wellness Wisdom</p>
-                <span class="series-arrow">
+                <a href="https://www.instagram.com/runr.podcast" target="_blank" rel="noopener" class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -805,7 +918,7 @@ const categories = podcastData.categories;
                     ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
                     ></path><path d="M15 8l4 4"></path></svg
                   >
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -814,7 +927,7 @@ const categories = podcastData.categories;
               <div class="series-card-img">
                 <picture
                   ><img
-                    src="/media/images/home/spotlight/atithi/thumb-1-vertical.webp"
+                    src="/media/images/home/spotlight/runr-podcasts/atithi.webp"
                     alt="Runr Foundation"
                     width="300"
                     height="420"
@@ -824,7 +937,7 @@ const categories = podcastData.categories;
               <div class="series-card-info has-text-centered">
                 <h4>Atithi</h4>
                 <p>Local Voices</p>
-                <span class="series-arrow">
+                <a href="https://www.instagram.com/runr.podcast" target="_blank" rel="noopener" class="series-arrow">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -838,7 +951,7 @@ const categories = podcastData.categories;
                     ><path d="M5 12l14 0"></path><path d="M15 16l4 -4"
                     ></path><path d="M15 8l4 4"></path></svg
                   >
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -895,9 +1008,10 @@ const categories = podcastData.categories;
           </div>
 
           <div
-            class="column is-12-mobile is-12-tablet is-7-desktop is-8-widescreen subscriber-col-right"
+            class="column is-12-mobile is-12-tablet is-8-desktop is-8-widescreen subscriber-col-right"
           >
             <div class="runr-counter">
+            <div class="youtube-paly-btn">
               <div class="subscriber-play-wrap">
                 <div class="subscriber-ring">
                   <div class="subscriber-ring-dot"></div>
@@ -913,6 +1027,7 @@ const categories = podcastData.categories;
               </div>
               <div class="subscriber-right-inner">
                 <div class="subscriber-waveform" id="subscriberWaveform"></div>
+              </div>
               </div>
               <div class="subscriber-stats">
                 <div class="subscriber-stat">
@@ -1016,7 +1131,7 @@ const categories = podcastData.categories;
                       class="purecounter">0</span
                     >
                   </div>
-                  <div class="subscriber-lbl">Categories</div>
+                  <div class="subscriber-lbl">IPs</div>
                 </div>
               </div>
             </div>
@@ -1062,8 +1177,11 @@ const categories = podcastData.categories;
           1024: {
             slidesPerView: 1.6,
           },
-          320: {
+          575: {
             slidesPerView: 1.3,
+          },
+          320: {
+            slidesPerView: 1,
           },
         },
       });
@@ -1101,7 +1219,8 @@ const categories = podcastData.categories;
           },
           breakpoints: {
             1024: { slidesPerView: 1.6 },
-            320: { slidesPerView: 1.3 },
+            575: { slidesPerView: 1.3 },
+            320: { slidesPerView: 1 },
           },
         });
       }
@@ -1191,7 +1310,6 @@ const categories = podcastData.categories;
         sections.forEach(function (section) {
           x = section.querySelectorAll(".content-tab");
           for (i = 0; i < x.length; i++) {
-            x[i].style.opacity = "0";
             x[i].style.display = "none";
           }
           tablinks = section.querySelectorAll(".tab");
@@ -1201,9 +1319,6 @@ const categories = podcastData.categories;
           var selectedTab = section.querySelector("#" + tabName);
           if (selectedTab) {
             selectedTab.style.display = "block";
-            setTimeout(function () {
-              selectedTab.style.opacity = "1";
-            }, 20);
           }
           evt.currentTarget.classList.add("is-active");
         });
@@ -1217,23 +1332,27 @@ const categories = podcastData.categories;
 
       // Podcast Audio Waveform Animation
       (function () {
-        var wave = document.getElementById("wave");
-        if (!wave) return;
-        var total = 80;
+        var waveContainers = document.querySelectorAll("#wave");
+        if (!waveContainers.length) return;
+        var total = 40;
         var animationFrame;
         var t = 0;
-        var elements = [];
+        var allElements = [];
 
-        for (var i = 0; i < total; i++) {
-          var isDot = i % 6 === 0;
-          var el = document.createElement("div");
-          el.className = isDot ? "wave-dot" : "wave-bar";
-          if (!isDot) {
-            el.style.height = "8px";
+        waveContainers.forEach(function(wave) {
+          var elements = [];
+          for (var i = 0; i < total; i++) {
+            var isDot = i % 6 === 0;
+            var el = document.createElement("div");
+            el.className = isDot ? "wave-dot" : "wave-bar";
+            if (!isDot) {
+              el.style.height = "8px";
+            }
+            wave.appendChild(el);
+            elements.push({ el: el, isDot: isDot });
           }
-          wave.appendChild(el);
-          elements.push({ el: el, isDot: isDot });
-        }
+          allElements.push(elements);
+        });
 
         function randomHeight(index) {
           var centerDist = Math.abs(index - total / 2) / (total / 2);
@@ -1248,14 +1367,16 @@ const categories = podcastData.categories;
           frameCount++;
           if (frameCount % 4 === 0) {
             t++;
-            elements.forEach(function (item, i) {
-              if (!item.isDot) {
-                var h = randomHeight(i);
-                item.el.style.height = h + "px";
-              } else {
-                var scale = 1 + Math.sin(t * 0.1 + i) * 0.3;
-                item.el.style.transform = "scale(" + scale + ")";
-              }
+            allElements.forEach(function(elements) {
+              elements.forEach(function (item, i) {
+                if (!item.isDot) {
+                  var h = randomHeight(i);
+                  item.el.style.height = h + "px";
+                } else {
+                  var scale = 1 + Math.sin(t * 0.1 + i) * 0.3;
+                  item.el.style.transform = "scale(" + scale + ")";
+                }
+              });
             });
           }
           animationFrame = requestAnimationFrame(animate);
@@ -1294,4 +1415,5 @@ const categories = podcastData.categories;
       })();
     </script>
   </Fragment>
+
 </BaseLayout>

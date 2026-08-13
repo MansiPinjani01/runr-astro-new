@@ -1,33 +1,30 @@
----
-/*
-  Header.astro - Site Header Component
-  Converted from: inc-header.php
-  
-  Changes:
-  1. $siteurl → "/" (root path)
-  2. $imagesurl → "/media/images/"
-  3. $sitename → "runr"
-  4. PHP captcha/CRM notice removed (not needed for static site)
-  5. PHP commented-out code removed
-  6. Form action changed (no PHP backend) - form preserved for future use
-  7. Hidden fields with PHP $_GET removed (static site)
-*/
----
-
 <header id="header" class="liquidGlass-wrapper">
-  <div class="columns is-vcentered is-mobile is-gapless header-wrapper liquidGlass-text">
+  <div
+    class="columns is-vcentered is-mobile is-gapless header-wrapper liquidGlass-text"
+  >
     <div class="column col-header">
       <div class="theme-logo">
         <a href="/">
           <picture>
-            <img src="/media/images/logo.svg" alt="runr Logo" width="200" height="61" />
+            <img
+              src="/media/images/logo.svg"
+              alt="runr Logo"
+              width="200"
+              height="61"
+            />
           </picture>
         </a>
       </div>
     </div>
     <div class="column col-header">
       <div class="theme-menu-wrapper">
-        <div id="menu-trigger" class="menu-trigger insomenu-bars" onclick="menuresponsive()"> <span></span> </div>
+        <div
+          id="menu-trigger"
+          class="menu-trigger insomenu-bars"
+          onclick="menuresponsive()"
+        >
+          <span></span>
+        </div>
         <nav class="theme-menu">
           <div class="menu-split-layout">
             <!-- Left Side: Video -->
@@ -40,11 +37,19 @@
                   <img src="/media/images/logo.svg" alt="RUNR" />
                 </div>
                 <div class="menu-video-tags">
-                    <span class="tag-item tag-top-right">Create<br/>Together</span>
-                    <span class="tag-item tag-left">Stories<br/>That Move</span>
-                    <span class="tag-item tag-center">Experiences<br/>That Stay</span>
-                    <span class="tag-item tag-right">Impact<br/>That Lasts</span>
-                    <span class="tag-item tag-bottom-left">One Ecosystem.<br/>Many Ventures.<br/><em>Infinite Impact.</em></span>
+                  <span class="tag-item tag-top-right"
+                    >Create<br />Together</span
+                  >
+                  <span class="tag-item tag-left">Stories<br />That Move</span>
+                  <span class="tag-item tag-center"
+                    >Experiences<br />That Stay</span
+                  >
+                  <span class="tag-item tag-right">Impact<br />That Lasts</span>
+                  <span class="tag-item tag-bottom-left"
+                    >One Ecosystem.<br />Many Ventures.<br /><em
+                      >Infinite Impact.</em
+                    ></span
+                  >
                 </div>
               </div>
             </div>
@@ -54,72 +59,221 @@
                 <li class="menu-nav-item">
                   <span class="menu-nav-number">01</span>
                   <span class="menu-nav-line"></span>
-                  <a class="menu-nav-link active" href="/" onclick="menuresponsiveclose()">Home</a>
+                  <a
+                    class="menu-nav-link active"
+                    href="/"
+                    onclick="menuresponsiveclose()">Home</a
+                  >
                   <a class="menu-nav-arrow" href="/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                        points="12 5 19 12 12 19"></polyline></svg
+                    >
                   </a>
                 </li>
                 <li class="menu-nav-item">
                   <span class="menu-nav-number">02</span>
                   <span class="menu-nav-line"></span>
-                  <a class="menu-nav-link" href="/about-us/" onclick="menuresponsiveclose()">About Us</a>
+                  <a
+                    class="menu-nav-link"
+                    href="/about-us/"
+                    onclick="menuresponsiveclose()">About Us</a
+                  >
                   <a class="menu-nav-arrow" href="/about-us/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                        points="12 5 19 12 12 19"></polyline></svg
+                    >
                   </a>
                 </li>
 
                 <li class="menu-nav-item">
                   <span class="menu-nav-number">03</span>
                   <span class="menu-nav-line"></span>
-                  <a class="menu-nav-link" href="/media-hub/" onclick="menuresponsiveclose()">Media Hub</a>
+                  <a
+                    class="menu-nav-link"
+                    href="/media-hub/"
+                    onclick="menuresponsiveclose()">Media Hub</a
+                  >
                   <a class="menu-nav-arrow" href="/media-hub/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                        points="12 5 19 12 12 19"></polyline></svg
+                    >
                   </a>
                 </li>
-                  <li class="menu-nav-item">
+                <li class="menu-nav-item">
                   <span class="menu-nav-number">04</span>
                   <span class="menu-nav-line"></span>
-                  <a class="menu-nav-link" href="/podcast/" onclick="menuresponsiveclose()">Podcast</a>
+                  <a
+                    class="menu-nav-link"
+                    href="/podcast/"
+                    onclick="menuresponsiveclose()">Podcast</a
+                  >
                   <a class="menu-nav-arrow" href="/podcast/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                        points="12 5 19 12 12 19"></polyline></svg
+                    >
                   </a>
                 </li>
-                         <li class="menu-nav-item">
+                <li class="menu-nav-item">
                   <span class="menu-nav-number">05</span>
                   <span class="menu-nav-line"></span>
-                  <a class="menu-nav-link" href="/influencers/" onclick="menuresponsiveclose()">Influencers</a>
+                  <a
+                    class="menu-nav-link"
+                    href="/influencers/"
+                    onclick="menuresponsiveclose()">Influencers</a
+                  >
                   <a class="menu-nav-arrow" href="/influencers/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                        points="12 5 19 12 12 19"></polyline></svg
+                    >
                   </a>
                 </li>
                 <li class="menu-nav-item">
                   <span class="menu-nav-number">06</span>
                   <span class="menu-nav-line"></span>
-                  <a class="menu-nav-link" href="/testimonials/" onclick="menuresponsiveclose()">Testimonials</a>
+                  <a
+                    class="menu-nav-link"
+                    href="/testimonials/"
+                    onclick="menuresponsiveclose()">Testimonials</a
+                  >
                   <a class="menu-nav-arrow" href="/testimonials/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                        points="12 5 19 12 12 19"></polyline></svg
+                    >
                   </a>
                 </li>
                 <li class="menu-nav-item">
                   <span class="menu-nav-number">07</span>
                   <span class="menu-nav-line"></span>
-                  <a class="menu-nav-link" href="/contact-us/" onclick="menuresponsiveclose()">Contact Us</a>
+                  <a
+                    class="menu-nav-link"
+                    href="/contact-us/"
+                    onclick="menuresponsiveclose()">Contact Us</a
+                  >
                   <a class="menu-nav-arrow" href="/contact-us/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                        points="12 5 19 12 12 19"></polyline></svg
+                    >
                   </a>
                 </li>
               </ul>
               <div class="menu-nav-footer">
                 <span>Follow Runr</span>
                 <div class="menu-nav-socials">
-                  <a href="https://www.instagram.com/findonrunr/" target="_blank" rel="noopener" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <a
+                    href="https://www.instagram.com/findonrunr/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Instagram"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><rect x="2" y="2" width="20" height="20" rx="5" ry="5"
+                      ></rect><path
+                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                      ></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"
+                      ></line></svg
+                    >
                   </a>
-                  <a href="https://www.youtube.com/@findonrunr" target="_blank" rel="noopener" aria-label="YouTube">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                  </a>
-                  <a href="https://www.linkedin.com/company/runr" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <a
+                    href="https://www.youtube.com/@findonrunr"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="YouTube"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><path
+                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                      ></path><polygon
+                        points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                      ></polygon></svg
+                    >
                   </a>
                 </div>
               </div>
@@ -136,49 +290,126 @@
   <div class="theme-modal-background"></div>
   <div class="theme-modal-card">
     <button class="close" aria-label="close" onclick="closeForm()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-x"
+      >
         <line x1="18" y1="6" x2="6" y2="18"></line>
         <line x1="6" y1="6" x2="18" y2="18"></line>
       </svg>
     </button>
     <div class="theme-modal-card-body">
-      <form class="nobottommargin" id="inquiry" name="scontactform" action="#" method="post" novalidate autocomplete="off">
+      <form
+        class="nobottommargin"
+        id="inquiry"
+        name="scontactform"
+        action="#"
+        method="post"
+        novalidate
+        autocomplete="off"
+      >
         <h3 id="leadmodaltitle" class="modal-title">Enquire Now</h3>
         <div class="columns is-multiline is-mobile is-vcentered row-register">
-          <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register">
+          <div
+            class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
+          >
             <div class="col-form">
-              <input type="text" class="sm-form-control fname" name="fname" id="inquiry-fname" placeholder="First Name*" min-length="1" max-length="100" required />
-              <label class="error-msg1 fnameerror" id="inquiryformerror-1"></label>
+              <input
+                type="text"
+                class="sm-form-control fname"
+                name="fname"
+                id="inquiry-fname"
+                placeholder="First Name*"
+                min-length="1"
+                max-length="100"
+                required
+              />
+              <label class="error-msg1 fnameerror" id="inquiryformerror-1"
+              ></label>
             </div>
           </div>
-          <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register">
+          <div
+            class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
+          >
             <div class="col-form">
-              <input type="text" class="sm-form-control lname" name="lname" id="inquiry-lname" placeholder="Last Name*" min-length="1" max-length="100" required />
+              <input
+                type="text"
+                class="sm-form-control lname"
+                name="lname"
+                id="inquiry-lname"
+                placeholder="Last Name*"
+                min-length="1"
+                max-length="100"
+                required
+              />
               <label class="error-msg1" id="inquiryformerror-2"></label>
             </div>
           </div>
-          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen col-register">
+          <div
+            class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen col-register"
+          >
             <div class="col-form">
-              <input type="text" class="sm-form-control phone numeric custom-phone-control" name="phone" id="inquiry-phone" maxlength="10" placeholder="Mobile Number*" pattern="^[6-9]{6,14}$" required>
+              <input
+                type="text"
+                class="sm-form-control phone numeric custom-phone-control"
+                name="phone"
+                id="inquiry-phone"
+                maxlength="10"
+                placeholder="Mobile Number*"
+                pattern="^[6-9]{6,14}$"
+                required
+              />
               <label class="error-msg1" id="inquiryformerror-3"></label>
             </div>
           </div>
-          <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen col-register">
+          <div
+            class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen col-register"
+          >
             <div class="col-form">
-              <input type="text" class="sm-form-control email" name="email" id="inquiry-email" placeholder="Email Address*" required>
+              <input
+                type="text"
+                class="sm-form-control email"
+                name="email"
+                id="inquiry-email"
+                placeholder="Email Address*"
+                required
+              />
               <label class="error-msg1" id="inquiryformerror-4"></label>
             </div>
           </div>
-          <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register">
+          <div
+            class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register"
+          >
             <div class="col-form">
               <small>Message</small>
-              <input type="text" class="sm-form-control tenants message text-dark" name="message" id="inquiry2-message" placeholder="Message">
+              <input
+                type="text"
+                class="sm-form-control tenants message text-dark"
+                name="message"
+                id="inquiry2-message"
+                placeholder="Message"
+              />
               <label class="error-msg1" id="inquiry2formerror-12"></label>
             </div>
           </div>
           <input type="hidden" name="formtype" id="formtype" value="enquire" />
-          <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register">
-            <button class="arrow-btn full-width inquiry-submit white-btn" type="submit" id="inquiry-submit" value="Submit"><span>Submit</span></button>
+          <div
+            class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register"
+          >
+            <button
+              class="arrow-btn full-width inquiry-submit white-btn"
+              type="submit"
+              id="inquiry-submit"
+              value="Submit"><span>Submit</span></button
+            >
           </div>
         </div>
       </form>
@@ -186,12 +417,239 @@
   </div>
 </div>
 
-  <div class="video-bg">
-    <video autoplay muted loop playsinline>
-      <source src="/media/images/bg-video-white.mp4" type="video/mp4" />
-    </video>
-  </div>
+<!-- Contact Sidebar -->
+<div
+  class="contact-sidebar-overlay"
+  id="contactSidebarOverlay"
+  onclick="closeContactSidebar()"
+>
+</div>
+<aside class="contact-sidebar" id="contactSidebar" data-lenis-prevent>
+  <div class="contact-sidebar-inner">
+    <!-- Header -->
+    <div class="contact-sidebar-header">
+      <div class="sidebar-logo">
+        <img src="/media/images/logo.svg" alt="RUNR" width="100" height="30" />
+      </div>
+      <button
+        class="sidebar-close-btn"
+        onclick="closeContactSidebar()"
+        aria-label="Close sidebar"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
 
+    <!-- Content -->
+    <div class="contact-sidebar-body">
+      <!-- Vertical Text -->
+      <div class="sidebar-vertical-text">
+        <span>Let's</span>
+        <span class="theme-text">Connect</span>
+      </div>
+
+      <!-- Intro -->
+      <div class="sidebar-intro">
+        <h2>
+          We're excited to hear about<br />your <span class="theme-text"
+            >idea.</span
+          >
+        </h2>
+        <div class="sidebar-intro-line"></div>
+      </div>
+
+      <!-- Form -->
+      <form
+        class="sidebar-form"
+        id="sidebarContactForm"
+        novalidate
+        autocomplete="off"
+      >
+        <div class="sidebar-form-group">
+          <label class="sidebar-form-label">Your Name</label>
+          <input
+            type="text"
+            class="sidebar-form-input"
+            name="fname"
+            id="sidebar-fname"
+            placeholder="Enter your name"
+            required
+          />
+          <span class="sidebar-form-error" id="sidebar-error-fname"></span>
+        </div>
+
+        <div class="sidebar-form-group">
+          <label class="sidebar-form-label">Email Address</label>
+          <input
+            type="email"
+            class="sidebar-form-input"
+            name="email"
+            id="sidebar-email"
+            placeholder="Enter your email"
+            required
+          />
+          <span class="sidebar-form-error" id="sidebar-error-email"></span>
+        </div>
+
+        <div class="sidebar-form-group">
+          <label class="sidebar-form-label">Mobile Number</label>
+          <input
+            type="tel"
+            class="sidebar-form-input"
+            name="phone"
+            id="sidebar-phone"
+            placeholder="Enter your mobile number"
+            maxlength="10"
+            required
+          />
+          <span class="sidebar-form-error" id="sidebar-error-phone"></span>
+        </div>
+
+        <div class="sidebar-form-group">
+          <label class="sidebar-form-label">What Are You Looking For?</label>
+          <input type="hidden" name="service" id="sidebar-service" required />
+          <div class="sidebar-custom-select" id="sidebarCustomSelect">
+            <div
+              class="sidebar-custom-select-trigger"
+              id="sidebarSelectTrigger"
+            >
+              <span>Choose an option</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><polyline points="6 9 12 15 18 9"></polyline></svg
+              >
+            </div>
+            <div class="sidebar-custom-select-options">
+              <div class="sidebar-custom-select-option is-disabled">
+                Choose an option
+              </div>
+              <div
+                class="sidebar-custom-select-option"
+                data-value="Reel Production"
+              >
+                Reel Production
+              </div>
+              <div
+                class="sidebar-custom-select-option"
+                data-value="Brand Collaboration"
+              >
+                Brand Collaboration
+              </div>
+              <div
+                class="sidebar-custom-select-option"
+                data-value="Influencer Marketing"
+              >
+                Influencer Marketing
+              </div>
+              <div
+                class="sidebar-custom-select-option"
+                data-value="Event Coverage"
+              >
+                Event Coverage
+              </div>
+              <div class="sidebar-custom-select-option" data-value="Podcast">
+                Podcast
+              </div>
+              <div class="sidebar-custom-select-option" data-value="Other">
+                Other
+              </div>
+            </div>
+          </div>
+          <span class="sidebar-form-error" id="sidebar-error-service"></span>
+        </div>
+
+        <div class="sidebar-form-group">
+          <label class="sidebar-form-label">Tell Us About It</label>
+          <textarea
+            class="sidebar-form-input sidebar-form-textarea"
+            name="message"
+            id="sidebar-message"
+            placeholder="Type your message here..."
+            rows="3"></textarea>
+        </div>
+
+        <div class="sidebar-form-submit">
+          <button
+            type="submit"
+            class="sidebar-submit-orbital"
+            id="sidebarSubmitBtn"
+          >
+            <span class="orbital-ring orbital-ring--inner"></span>
+            <span class="orbital-ring orbital-ring--outer"></span>
+            <!-- <span class="orbital-dot"></span> -->
+            <span class="orbital-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                  points="12 5 19 12 12 19"></polyline></svg
+              >
+            </span>
+            <span class="orbital-text-ring">
+              <svg viewBox="0 0 120 120" width="120" height="120">
+                <defs>
+                  <path
+                    id="sidebarCirclePath"
+                    d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                  ></path>
+                </defs>
+                <text
+                  font-size="11"
+                  letter-spacing="4"
+                  font-weight="700"
+                  fill="#111"
+                >
+                  <textPath href="#sidebarCirclePath">· SEND MESSAGE ·</textPath
+                  >
+                </text>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="contact-sidebar-footer">
+      <span class="sidebar-footer-line"></span>
+      <span class="sidebar-footer-text">Let's Work Together</span>
+    </div>
+  </div>
+</aside>
+
+<div class="video-bg">
+  <video autoplay muted loop playsinline>
+    <source src="/media/images/bg-video-white.mp4" type="video/mp4" />
+  </video>
+</div>
 
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>

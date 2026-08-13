@@ -24,8 +24,6 @@ const chapters = reelsData.chapters;
     slot="head"
   />
 
-
-
   <section
     id="section-media-hub"
     class="section section-media-hub theme-padding py-0"
@@ -154,25 +152,27 @@ const chapters = reelsData.chapters;
             <div class="section-title title-animate mb-0">
               <h2>{chapter.title}</h2>
             </div>
-            <a href={`/media-hub/${chapter.slug}`} class="mh-view-more-btn">
-              <span class="mh-btn-text">View More</span>
-              <span class="mh-view-more-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
-              </span>
-            </a>
+            {!chapter.noViewMore && (
+              <a href={`/media-hub/${chapter.slug}`} class="mh-view-more-btn">
+                <span class="mh-btn-text">View More</span>
+                <span class="mh-view-more-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </span>
+              </a>
+            )}
           </div>
           <div class={`mh-grid mh-grid--${chapter.pattern}`}>
             {chapter.reels.map((reel) => (

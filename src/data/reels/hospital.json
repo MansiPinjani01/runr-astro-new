@@ -1,0 +1,92 @@
+{
+    "category": "hospital",
+    "title": "Healthcare",
+    "description": "Healthcare stories, hospital tours and medical brand reels — powerful visuals for the health industry.",
+    "reels": [
+        {
+            "video": "https://www.youtube.com/watch?v=Rq9OCRXyLEI",
+            "poster": "https://i.ytimg.com/vi/Rq9OCRXyLEI/hqdefault.jpg",
+            "title": "Hospital Reel 1"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=hEb4j2TM0Yg",
+            "poster": "https://i.ytimg.com/vi/hEb4j2TM0Yg/hqdefault.jpg",
+            "title": "Hospital Reel 2"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=90b_almkCks",
+            "poster": "https://i.ytimg.com/vi/90b_almkCks/hqdefault.jpg",
+            "title": "Hospital Reel 3"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=5LVyMoI4p00",
+            "poster": "https://i.ytimg.com/vi/5LVyMoI4p00/hqdefault.jpg",
+            "title": "Hospital Reel 4"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=J3q2DxGHGHE",
+            "poster": "https://i.ytimg.com/vi/J3q2DxGHGHE/hqdefault.jpg",
+            "title": "Hospital Reel 5"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=TcvYCu6Z2dE",
+            "poster": "https://i.ytimg.com/vi/TcvYCu6Z2dE/hqdefault.jpg",
+            "title": "Hospital Reel 6"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=UmmikgF-8p4",
+            "poster": "https://i.ytimg.com/vi/UmmikgF-8p4/hqdefault.jpg",
+            "title": "Hospital Reel 7"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=s-_wTcSH-NI",
+            "poster": "https://i.ytimg.com/vi/s-_wTcSH-NI/hqdefault.jpg",
+            "title": "Hospital Reel 8"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=4znQ5MLx_QU",
+            "poster": "https://i.ytimg.com/vi/4znQ5MLx_QU/hqdefault.jpg",
+            "title": "Hospital Reel 9"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=BfOyNWjyr_c",
+            "poster": "https://i.ytimg.com/vi/BfOyNWjyr_c/hqdefault.jpg",
+            "title": "Hospital Reel 10"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=86CGpHftjsA",
+            "poster": "https://i.ytimg.com/vi/86CGpHftjsA/hqdefault.jpg",
+            "title": "Hospital Reel 11"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=0a_StDZoKZY",
+            "poster": "https://i.ytimg.com/vi/0a_StDZoKZY/hqdefault.jpg",
+            "title": "Hospital Reel 12"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=i6FYgE0FMZM",
+            "poster": "https://i.ytimg.com/vi/i6FYgE0FMZM/hqdefault.jpg",
+            "title": "Hospital Reel 13"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=-2RBOL4zMPg",
+            "poster": "https://i.ytimg.com/vi/-2RBOL4zMPg/hqdefault.jpg",
+            "title": "Hospital Reel 14"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=w7ovqY9VBqI",
+            "poster": "https://i.ytimg.com/vi/w7ovqY9VBqI/hqdefault.jpg",
+            "title": "Hospital Reel 15"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=do5ZlFyIgN4",
+            "poster": "https://i.ytimg.com/vi/do5ZlFyIgN4/hqdefault.jpg",
+            "title": "Hospital Reel 16"
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=kIaBT2Qimcw",
+            "poster": "https://i.ytimg.com/vi/kIaBT2Qimcw/hqdefault.jpg",
+            "title": "Hospital Reel 17"
+        }
+    ]
+}

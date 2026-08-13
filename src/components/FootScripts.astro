@@ -459,6 +459,198 @@ function openForm(type) {
 function closeForm() {
   document.getElementById('register-modal').classList.remove('is-active');
 }
+
+/* Contact Sidebar */
+function openContactSidebar() {
+  document.getElementById('contactSidebar').classList.add('is-active');
+  document.getElementById('contactSidebarOverlay').classList.add('is-active');
+  document.body.style.overflow = 'hidden';
+  if (window.lenis) window.lenis.stop();
+}
+function closeContactSidebar() {
+  document.getElementById('contactSidebar').classList.remove('is-active');
+  document.getElementById('contactSidebarOverlay').classList.remove('is-active');
+  document.body.style.overflow = '';
+  if (window.lenis) window.lenis.start();
+}
+
+/* Sidebar Form Validation */
+(function() {
+  var form = document.getElementById('sidebarContactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var valid = true;
+
+    // Name
+    var fname = document.getElementById('sidebar-fname');
+    var fnameErr = document.getElementById('sidebar-error-fname');
+    if (!fname.value.trim()) {
+      fnameErr.textContent = 'Please enter your name';
+      fname.style.borderBottomColor = '#e53935';
+      valid = false;
+    } else {
+      fnameErr.textContent = '';
+      fname.style.borderBottomColor = '';
+    }
+
+    // Email
+    var email = document.getElementById('sidebar-email');
+    var emailErr = document.getElementById('sidebar-error-email');
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim()) {
+      emailErr.textContent = 'Please enter your email';
+      email.style.borderBottomColor = '#e53935';
+      valid = false;
+    } else if (!emailRegex.test(email.value.trim())) {
+      emailErr.textContent = 'Please enter a valid email';
+      email.style.borderBottomColor = '#e53935';
+      valid = false;
+    } else {
+      emailErr.textContent = '';
+      email.style.borderBottomColor = '';
+    }
+
+    // Phone
+    var phone = document.getElementById('sidebar-phone');
+    var phoneErr = document.getElementById('sidebar-error-phone');
+    var phoneRegex = /^[6-9]\d{9}$/;
+    if (!phone.value.trim()) {
+      phoneErr.textContent = 'Please enter your mobile number';
+      phone.style.borderBottomColor = '#e53935';
+      valid = false;
+    } else if (!phoneRegex.test(phone.value.trim())) {
+      phoneErr.textContent = 'Please enter a valid 10-digit mobile number';
+      phone.style.borderBottomColor = '#e53935';
+      valid = false;
+    } else {
+      phoneErr.textContent = '';
+      phone.style.borderBottomColor = '';
+    }
+
+    // Service
+    var service = document.getElementById('sidebar-service');
+    var serviceErr = document.getElementById('sidebar-error-service');
+    var selectTriggerEl = document.getElementById('sidebarSelectTrigger');
+    if (!service.value) {
+      serviceErr.textContent = 'Please select an option';
+      if (selectTriggerEl) selectTriggerEl.style.borderBottomColor = '#e53935';
+      valid = false;
+    } else {
+      serviceErr.textContent = '';
+      if (selectTriggerEl) selectTriggerEl.style.borderBottomColor = '';
+    }
+
+    if (valid) {
+      // Prevent default - just don't let page reload
+      // When API is ready, uncomment the thank you block below and add API call
+
+      /* === UNCOMMENT WHEN API IS READY ===
+      var btn = document.getElementById('sidebarSubmitBtn');
+      btn.disabled = true;
+      btn.style.opacity = '0.6';
+      btn.style.pointerEvents = 'none';
+
+      // API call here, then on success:
+      setTimeout(function() {
+        form.reset();
+        btn.disabled = false;
+        btn.style.opacity = '';
+        btn.style.pointerEvents = '';
+        // Show success
+        var body = document.querySelector('.contact-sidebar-body');
+        var successMsg = document.createElement('div');
+        successMsg.className = 'sidebar-success-msg';
+        successMsg.innerHTML = '<h3 style="color:#ff5722;font-size:20px;margin-bottom:10px;">Thank you!</h3><p style="font-size:14px;color:#666;">We\'ll get back to you soon.</p>';
+        successMsg.style.cssText = 'text-align:center;padding:40px 0;';
+        body.style.display = 'none';
+        body.parentNode.insertBefore(successMsg, body.nextSibling);
+        setTimeout(function() {
+          closeContactSidebar();
+          setTimeout(function() {
+            if (successMsg.parentNode) successMsg.parentNode.removeChild(successMsg);
+            body.style.display = '';
+          }, 500);
+        }, 2500);
+      }, 1000);
+      === END UNCOMMENT === */
+    }
+  });
+
+  // Clear errors on input
+  ['sidebar-fname', 'sidebar-email', 'sidebar-phone', 'sidebar-service'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('input', function() {
+        var errEl = document.getElementById('sidebar-error-' + id.replace('sidebar-', ''));
+        if (errEl) errEl.textContent = '';
+        el.style.borderBottomColor = '';
+      });
+      el.addEventListener('change', function() {
+        var errEl = document.getElementById('sidebar-error-' + id.replace('sidebar-', ''));
+        if (errEl) errEl.textContent = '';
+        el.style.borderBottomColor = '';
+      });
+    }
+  });
+
+  // Allow only numbers in phone field
+  var phoneInput = document.getElementById('sidebar-phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function() {
+      this.value = this.value.replace(/[^0-9]/g, '');
+    });
+  }
+
+  // Custom Select Dropdown
+  var customSelect = document.getElementById('sidebarCustomSelect');
+  var selectTrigger = document.getElementById('sidebarSelectTrigger');
+  var hiddenInput = document.getElementById('sidebar-service');
+
+  if (customSelect && selectTrigger) {
+    selectTrigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      customSelect.classList.toggle('is-open');
+    });
+
+    var options = customSelect.querySelectorAll('.sidebar-custom-select-option[data-value]');
+    options.forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        var val = this.getAttribute('data-value');
+        hiddenInput.value = val;
+        selectTrigger.querySelector('span').textContent = val;
+        selectTrigger.classList.add('has-value');
+        // Remove previous selection
+        customSelect.querySelectorAll('.sidebar-custom-select-option').forEach(function(o) {
+          o.classList.remove('is-selected');
+        });
+        this.classList.add('is-selected');
+        customSelect.classList.remove('is-open');
+        // Clear error
+        var errEl = document.getElementById('sidebar-error-service');
+        if (errEl) errEl.textContent = '';
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('is-open');
+      }
+    });
+  }
+
+  // ESC key to close
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      var sidebar = document.getElementById('contactSidebar');
+      if (sidebar && sidebar.classList.contains('is-active')) {
+        closeContactSidebar();
+      }
+    }
+  });
+})();
 </script>
 
 <!-- Custom Cursor -->

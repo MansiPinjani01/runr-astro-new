@@ -1,8 +1,9 @@
 {
     "category": "restaurant-cafe",
-    "title": "Restaurant & Cafe",
+    "title": "Food & Hospitality",
     "description": "Mouth-watering food stories, cafe vibes and restaurant showcases — reels that make you crave more.",
-    "reels": [{
+    "reels": [
+        {
             "video": "https://www.youtube.com/watch?v=dPvqhbc8S00",
             "poster": "https://i.ytimg.com/vi/dPvqhbc8S00/hqdefault.jpg",
             "title": "Restaurant Reel 1"

@@ -1,8 +1,9 @@
 {
     "category": "education",
-    "title": "Education",
+    "title": "Education & Learning",
     "description": "Campus tours, coaching institutes and educational brand stories — reels that inspire learning.",
-    "reels": [{
+    "reels": [
+        {
             "video": "https://www.youtube.com/watch?v=z6x4FI-oaYA",
             "poster": "https://i.ytimg.com/vi/z6x4FI-oaYA/hqdefault.jpg",
             "title": "Education Reel 1"

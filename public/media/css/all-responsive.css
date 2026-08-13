@@ -66,6 +66,11 @@
         font-size: 130px;
     }
 
+    .op-new-img-group {
+        width: 240px;
+        height: 290px;
+    }
+
     .menu-nav-side {
         padding: 70px 58px 60px 80px;
     }
@@ -186,6 +191,43 @@
 }
 
 @media screen and (max-width: 1408px) {
+    .subscriber-headline {
+        font-size: 28px;
+    }
+
+    .subscriber-num {
+        font-size: 38px;
+    }
+
+    .subscriber-banner .section-title h2 br {
+        display: none;
+    }
+
+    .service-item p {
+        font-size: 16px;
+    }
+
+    .service-block {
+        top: 80px;
+    }
+
+    .subscriber-col-left {
+        padding: 30px 15px 30px 32px !important;
+    }
+
+    .subscriber-right-inner {
+        gap: 16px;
+    }
+
+    .subscriber-stats {
+        gap: 16px;
+    }
+
+    .subscriber-cta {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
     .foooter-menu-social {
         gap: 60px;
     }
@@ -272,7 +314,7 @@
 
     .service-title .gray,
     .service-title .black {
-        font-size: 60px;
+        font-size: 52px;
     }
 
     body {
@@ -318,6 +360,71 @@
 }
 
 @media screen and (max-width: 1216px) {
+    .subscriber-cols {
+        min-height: 200px;
+    }
+
+    .sidebar-logo img {
+        height: 20px;
+    }
+
+    .sidebar-vertical-text {
+        font-size: 34px;
+
+    }
+
+    .sidebar-intro h2 {
+        font-size: 26px;
+    }
+
+    .op-new-title h4 {
+        font-size: 40px;
+    }
+
+    .op-new-item {
+        padding: 15px;
+    }
+
+    .op-new-img-group {
+        width: 200px;
+        height: 250px;
+        left: 35%;
+    }
+
+    .op-new-desc h3 {
+        font-size: 18px;
+    }
+
+    .op-new-desc span {
+        font-size: 14px;
+    }
+
+
+    .subscriber-headline {
+        font-size: 26px;
+    }
+
+    /* .subscriber-waveform {
+        display: none;
+    } */
+
+    .subscriber-right-inner {
+        gap: 14px;
+    }
+
+    .subscriber-stats {
+        gap: 14px;
+    }
+
+    /* .subscriber-num {
+        font-size: 14px;
+    } */
+
+    .subscriber-play-wrap {
+        width: 100px;
+        height: 100px;
+    }
+
     .podcast-slide-logo {
         width: 60px;
         height: 60px;
@@ -705,6 +812,173 @@
 }
 
 @media screen and (max-width: 1024px) {
+
+    .header-connect-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+        margin-right: 15px;
+    }
+
+
+    .op-new {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #cccccc;
+        border-right: 0;
+    }
+
+    .is-hidden-mobile {
+        display: none !important;
+    }
+
+    .op-new-title h4 {
+        font-size: 24px;
+    }
+
+    .op-new-img-group,
+    .op-new-num {
+        display: none !important;
+    }
+
+    .op-new-item {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        padding: 20px;
+        width: 33.33%;
+        flex: 0 0 auto;
+        border-bottom: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+    }
+
+    .op-new-logo,
+    .op-new-title,
+    .op-new-desc {
+        flex: 0 0 100%;
+    }
+
+    .op-new-img {
+        display: block;
+        max-width: 230px;
+        order: 2;
+    }
+
+    .op-new-logo {
+        order: 1;
+    }
+
+    .op-new-desc {
+        order: 4;
+    }
+
+
+    .op-highlight {
+        display: none;
+    }
+
+    .op-new-item.is-active,
+    .op-new-item.is-active h4,
+    .op-new-item.is-active p,
+    .op-new-item.is-active span {
+        color: #000;
+    }
+
+    .op-new-desc h3 {
+        font-size: 16px;
+    }
+
+    .wave-container {
+        gap: 1.5px;
+        height: 60px;
+        opacity: 0.2;
+    }
+
+    .wave-container .wave-bar {
+        width: 2px;
+    }
+
+    .wave-container .wave-dot {
+        width: 3px;
+        height: 3px;
+    }
+
+    .subscriber-cols {
+        min-height: auto;
+    }
+
+    .pillars-sidebar {
+        margin-top: unset;
+    }
+
+    .section-podcast .top-sticky {
+        top: unset;
+        position: relative;
+    }
+
+
+    .subscriber-headline {
+        font-size: 24px;
+    }
+
+    .subscriber-col-left {
+        padding: 30px !important;
+    }
+
+    .subscriber-col-right {
+        padding: 30px !important;
+    }
+
+    .subscriber-col-right {
+        clip-path: none;
+        /* padding: 24px !important;
+        border-radius: 0 0 16px 16px; */
+    }
+
+    .subscriber-col-right::before {
+        clip-path: unset;
+    }
+
+    .subscriber-right-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .section-subscriber .theme-padding {
+        padding-left: 0 !important;
+    }
+
+    .subscriber-stats {
+        gap: 12px;
+        padding: 0 30px;
+    }
+
+    .subscriber-num {
+        font-size: 30px;
+    }
+
+    /* .subscriber-lbl {
+        font-size: 9px;
+    } */
+
+    .subscriber-cta {
+        padding: 9px 14px;
+    }
+
+    .wave-container {
+        gap: 1.5px;
+        height: 60px;
+    }
+
+    .wave-container .wave-bar {
+        width: 2px;
+    }
+
+    .wave-container .wave-dot {
+        width: 3px;
+        height: 3px;
+    }
+
     .series-card-info h4 {
         font-size: 20px;
     }
@@ -1439,6 +1713,7 @@
         object-fit: cover;
         /* filter: grayscale(100%) contrast(1.05); */
         display: block;
+        object-position: top;
     }
 
     .team-section .founder-photo-wrap-team img {
@@ -1475,6 +1750,231 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header-connect-btn {
+        padding: 7px 14px;
+        font-size: 11px;
+        margin-right: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .header-connect-btn span {
+        display: none;
+    }
+
+    .header-connect-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .contact-sidebar {
+        width: 100%;
+    }
+
+    .contact-sidebar-inner {
+        padding: 24px 20px 20px;
+    }
+
+    .contact-sidebar-body {
+        padding-left: 70px;
+    }
+
+    .contact-sidebar-header {
+        margin-bottom: 40px;
+    }
+
+    .sidebar-vertical-text {
+        font-size: 28px;
+        height: 100%;
+    }
+
+    .sidebar-intro h2 {
+        font-size: 22px;
+    }
+
+    .sidebar-submit-orbital {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sidebar-submit-orbital .orbital-circle {
+        width: 46px;
+        height: 46px;
+    }
+
+    .sidebar-submit-orbital .orbital-circle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .sidebar-submit-orbital .orbital-ring--inner {
+        width: 66px;
+        height: 66px;
+    }
+
+    .sidebar-submit-orbital .orbital-ring--outer {
+        width: 84px;
+        height: 84px;
+    }
+
+    .sidebar-submit-orbital .orbital-text-ring {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sidebar-submit-orbital .orbital-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .h-viewport {
+        height: auto;
+        overflow: visible;
+    }
+
+    .sidebar-logo img {
+        height: 16px;
+    }
+
+    .op-new-item {
+        width: 50%;
+    }
+
+    .subscriber-stats {
+        padding: 0;
+    }
+
+    .runr-counter {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #section-podcast .podcast-player-block .swiper {
+        padding-bottom: 30px;
+    }
+
+    .h-track {
+        position: relative;
+        flex-direction: column;
+        height: auto;
+        transform: none !important;
+    }
+
+    .panel {
+        flex: none;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 10px 5% 10px;
+    }
+
+    .h-eyebrow {
+        top: 24px;
+        left: 5%;
+    }
+
+    .h-rail {
+        display: none;
+    }
+
+    .h-marker {
+        display: none;
+    }
+
+    .panel .year {
+        position: static;
+        font-size: clamp(40px, 15vw, 64px);
+        margin-bottom: 24px;
+    }
+
+    .panel .col-text {
+        position: static;
+        width: auto;
+        margin-bottom: 24px;
+    }
+
+    .panel .col-images {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 44vh;
+    }
+
+    .section-subscriber {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .subscriber-col-left {
+        text-align: center;
+        align-items: center;
+        padding: 30px 30px 60px !important;
+    }
+
+    .youtube-paly-btn {
+        display: flex;
+        margin-top: -80px;
+    }
+
+    .subscriber-eyebrow {
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .subscriber-lbl {
+        font-size: 14px;
+    }
+
+    .subscriber-num {
+        font-size: 24px;
+    }
+
+    .stat-icon-wrap {
+        width: 50px;
+        height: 50px;
+    }
+
+    .subscriber-headline {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .subscriber-rule {
+        margin: 12px auto 10px;
+    }
+
+    .subscriber-sub {
+        text-align: center;
+    }
+
+    .subscriber-col-center {
+        padding: 10px 20px !important;
+    }
+
+    .subscriber-play-wrap {
+        width: 90px;
+        height: 90px;
+    }
+
+    .subscriber-col-right {
+        clip-path: none;
+    }
+
+    .subscriber-right-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .subscriber-stats {
+        gap: 18px;
+    }
+
+    .subscriber-cta {
+        padding: 11px 20px;
+        margin: 0 auto;
+    }
+
     .section-browse-series {
         padding-top: 30px;
         padding-bottom: 40px;
@@ -2015,13 +2515,39 @@
         letter-spacing: 1.5px;
     }
 
+
+    .mh-view-more-icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .op-new-item {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .op-new-title h4 {
+        font-size: 20px;
+    }
+
+    .op-new-desc h3 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .swiper__arrow {
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+    }
+
     .theme-menu ul li {
         padding: 18px 0;
     }
 
-    .swiper__arrow {
+    /* .swiper__arrow {
         top: calc(50% + 30px);
-    }
+    } */
 
     .pillars-timeline {
         gap: 10px;
@@ -2734,6 +3260,96 @@
 }
 
 @media screen and (max-width: 480px) {
+    .contact-sidebar-inner {
+        padding: 20px 16px 16px;
+    }
+
+    .contact-sidebar-body {
+        padding-left: 50px;
+    }
+
+
+    .sidebar-intro {
+        margin-bottom: 25px;
+    }
+
+    .sidebar-intro h2 {
+        font-size: 20px;
+    }
+
+    .sidebar-form {
+        gap: 12px;
+    }
+
+    .sidebar-form-label {
+        font-size: 12px;
+    }
+
+    .sidebar-form-input {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .sidebar-submit-orbital {
+        width: 90px;
+        height: 90px;
+    }
+
+    .sidebar-submit-orbital .orbital-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sidebar-submit-orbital .orbital-ring--inner {
+        width: 58px;
+        height: 58px;
+    }
+
+    .sidebar-submit-orbital .orbital-ring--outer {
+        width: 74px;
+        height: 74px;
+    }
+
+    .sidebar-submit-orbital .orbital-text-ring {
+        width: 90px;
+        height: 90px;
+    }
+
+    .sidebar-submit-orbital .orbital-text-ring svg text {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .contact-sidebar-footer {
+        margin-top: 25px;
+    }
+
+    .subscriber-headline {
+        font-size: 22px;
+    }
+
+    .subscriber-stats {
+        gap: 14px;
+    }
+
+    .subscriber-stat svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .subscriber-banner .section-title h2 {
+        font-size: 30px;
+    }
+
+    .subscriber-num {
+        font-size: 20px;
+    }
+
+    .subscriber-cta {
+        padding: 10px 16px;
+        font-size: 11.5px;
+    }
+
     .modal-title {
         font-size: 20px;
     }
@@ -2772,6 +3388,7 @@
         text-align: center;
         justify-content: center;
         width: 100%;
+        max-width: fit-content;
     }
 
     .theme-glitch {
@@ -2805,6 +3422,13 @@
 @media screen and (max-width: 420px) {
     .podcast-hero-heading h1 {
         font-size: 22px;
+    }
+
+    .op-new-item {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .podcast-tab-list .tab {
@@ -2920,250 +3544,5 @@
     .section-contact-team .section-title h2 {
         font-size: 34px;
         line-height: 46px;
-    }
-}
-
-/* Timeline Section Responsive */
-@media (max-width: 700px) {
-    .h-viewport {
-        height: auto;
-        overflow: visible;
-    }
-
-    .h-track {
-        position: relative;
-        flex-direction: column;
-        height: auto;
-        transform: none !important;
-    }
-
-    .panel {
-        flex: none;
-        width: 100%;
-        height: auto;
-        min-height: 100vh;
-        padding: 90px 5% 60px;
-    }
-
-    .h-eyebrow {
-        top: 24px;
-        left: 5%;
-    }
-
-    .h-rail {
-        display: none;
-    }
-
-    .h-marker {
-        display: none;
-    }
-
-    .panel .year {
-        position: static;
-        font-size: clamp(40px, 15vw, 64px);
-        margin-bottom: 24px;
-    }
-
-    .panel .col-text {
-        position: static;
-        width: auto;
-        margin-bottom: 24px;
-    }
-
-    .panel .col-images {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: 100%;
-        height: 44vh;
-    }
-}
-
-/* ============ Subscriber Banner Responsive ============ */
-@media screen and (max-width: 1408px) {
-    .subscriber-headline {
-        font-size: 28px;
-    }
-
-    .subscriber-col-left {
-        padding: 30px 15px 30px 32px !important;
-    }
-
-    .subscriber-right-inner {
-        gap: 16px;
-    }
-
-    .subscriber-stats {
-        gap: 16px;
-    }
-
-    .subscriber-cta {
-        padding: 10px 16px;
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 1216px) {
-    .subscriber-cols {
-        min-height: 200px;
-    }
-
-    .subscriber-headline {
-        font-size: 26px;
-    }
-
-    .subscriber-waveform {
-        display: none;
-    }
-
-    .subscriber-right-inner {
-        gap: 14px;
-    }
-
-    .subscriber-stats {
-        gap: 14px;
-    }
-
-    .subscriber-num {
-        font-size: 14px;
-    }
-
-    .subscriber-play-wrap {
-        width: 100px;
-        height: 100px;
-    }
-
-    .subscriber-col-right {
-        padding: 20px 20px 20px 40px !important;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .subscriber-cols {
-        min-height: auto;
-    }
-
-    .subscriber-banner {
-        border-radius: 16px;
-    }
-
-    .subscriber-headline {
-        font-size: 24px;
-    }
-
-    .subscriber-col-left {
-        padding: 24px 20px 24px 24px !important;
-    }
-
-    .subscriber-col-right {
-        clip-path: none;
-        padding: 24px !important;
-        border-radius: 0 0 16px 16px;
-    }
-
-    .subscriber-right-inner {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .subscriber-stats {
-        gap: 12px;
-    }
-
-    .subscriber-num {
-        font-size: 13px;
-    }
-
-    .subscriber-lbl {
-        font-size: 9px;
-    }
-
-    .subscriber-cta {
-        padding: 9px 14px;
-        font-size: 11px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .section-subscriber {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .subscriber-col-left {
-        text-align: center;
-        align-items: center;
-        padding: 26px 24px 20px !important;
-    }
-
-    .subscriber-eyebrow {
-        justify-content: center;
-    }
-
-    .subscriber-headline {
-        font-size: 26px;
-        text-align: center;
-    }
-
-    .subscriber-rule {
-        margin: 12px auto 10px;
-    }
-
-    .subscriber-sub {
-        text-align: center;
-    }
-
-    .subscriber-col-center {
-        padding: 10px 20px !important;
-    }
-
-    .subscriber-play-wrap {
-        width: 90px;
-        height: 90px;
-    }
-
-    .subscriber-col-right {
-        clip-path: none;
-        padding: 22px 24px 26px !important;
-    }
-
-    .subscriber-right-inner {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .subscriber-stats {
-        gap: 18px;
-    }
-
-    .subscriber-cta {
-        padding: 11px 20px;
-        font-size: 12.5px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .subscriber-headline {
-        font-size: 22px;
-    }
-
-    .subscriber-stats {
-        gap: 14px;
-    }
-
-    .subscriber-stat svg {
-        width: 14px;
-        height: 14px;
-    }
-
-    .subscriber-num {
-        font-size: 13px;
-    }
-
-    .subscriber-cta {
-        padding: 10px 16px;
-        font-size: 11.5px;
     }
 }

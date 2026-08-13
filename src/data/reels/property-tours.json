@@ -1,8 +1,9 @@
 {
     "category": "property-tours",
-    "title": "Property Tours",
+    "title": "Real Estate & Property",
     "description": "Stunning property walkthroughs, real estate showcases and luxury home tours — cinematic reels that sell.",
-    "reels": [{
+    "reels": [
+        {
             "video": "https://www.youtube.com/watch?v=zn_7eGSY_Ek",
             "poster": "https://i.ytimg.com/vi/zn_7eGSY_Ek/hqdefault.jpg",
             "title": "Property Tour 1"

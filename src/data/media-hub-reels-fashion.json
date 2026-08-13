@@ -1,9 +1,11 @@
 {
-    "chapters": [{
-            "title": "Property Tours",
+    "chapters": [
+        {
+            "title": "Real Estate & Property",
             "slug": "property-tours",
             "pattern": "a",
-            "reels": [{
+            "reels": [
+                {
                     "video": "https://www.youtube.com/watch?v=Pw4xhd0iNKE",
                     "poster": "https://i.ytimg.com/vi/Pw4xhd0iNKE/hqdefault.jpg",
                     "title": "Property Tour 1",
@@ -49,7 +51,8 @@
             "title": "Fashion & Lifestyle",
             "slug": "fashion",
             "pattern": "b",
-            "reels": [{
+            "reels": [
+                {
                     "video": "https://www.youtube.com/watch?v=IHS4zpijp3M",
                     "poster": "https://i.ytimg.com/vi/IHS4zpijp3M/hqdefault.jpg",
                     "title": "Fashion Reel 1",
@@ -92,10 +95,11 @@
             ]
         },
         {
-            "title": "Jewellers",
+            "title": "Jewellery & Luxury",
             "slug": "jewellers",
             "pattern": "a",
-            "reels": [{
+            "reels": [
+                {
                     "video": "https://www.youtube.com/watch?v=LTWFYDfzFus",
                     "poster": "https://i.ytimg.com/vi/LTWFYDfzFus/hqdefault.jpg",
                     "title": "Jewellers Reel 1",
@@ -138,10 +142,11 @@
             ]
         },
         {
-            "title": "Restaurant & Cafe",
+            "title": "Food & Hospitality",
             "slug": "restaurant-cafe",
             "pattern": "b",
-            "reels": [{
+            "reels": [
+                {
                     "video": "https://www.youtube.com/watch?v=fSw72A_HaW4",
                     "poster": "https://i.ytimg.com/vi/fSw72A_HaW4/hqdefault.jpg",
                     "title": "Restaurant Reel 1",
@@ -184,10 +189,11 @@
             ]
         },
         {
-            "title": "Education",
+            "title": "Education & Learning",
             "slug": "education",
             "pattern": "a",
-            "reels": [{
+            "reels": [
+                {
                     "video": "https://www.youtube.com/watch?v=aUIYInf9BMc",
                     "poster": "https://i.ytimg.com/vi/aUIYInf9BMc/hqdefault.jpg",
                     "title": "Education Reel 1",
@@ -228,7 +234,337 @@
                     "ratio": "9:16"
                 }
             ]
+        },
+        {
+            "title": "Healthcare",
+            "slug": "hospital",
+            "pattern": "b",
+            "reels": [
+                {
+                    "video": "https://www.youtube.com/watch?v=hEb4j2TM0Yg",
+                    "poster": "https://i.ytimg.com/vi/hEb4j2TM0Yg/hqdefault.jpg",
+                    "title": "Hospital Reel 1",
+                    "category": "hospital",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=J3q2DxGHGHE",
+                    "poster": "https://i.ytimg.com/vi/J3q2DxGHGHE/hqdefault.jpg",
+                    "title": "Hospital Reel 2",
+                    "category": "hospital",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=UmmikgF-8p4",
+                    "poster": "https://i.ytimg.com/vi/UmmikgF-8p4/hqdefault.jpg",
+                    "title": "Hospital Reel 3",
+                    "category": "hospital",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=4znQ5MLx_QU",
+                    "poster": "https://i.ytimg.com/vi/4znQ5MLx_QU/hqdefault.jpg",
+                    "title": "Hospital Reel 4",
+                    "category": "hospital",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=86CGpHftjsA",
+                    "poster": "https://i.ytimg.com/vi/86CGpHftjsA/hqdefault.jpg",
+                    "title": "Hospital Reel 5",
+                    "category": "hospital",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Events & Experiences",
+            "slug": "events",
+            "pattern": "a",
+            "reels": [
+                {
+                    "video": "https://www.youtube.com/watch?v=MeJGpOkrD0s",
+                    "poster": "https://i.ytimg.com/vi/MeJGpOkrD0s/hqdefault.jpg",
+                    "title": "Events Reel 1",
+                    "category": "events",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=eBT1UpMjIpY",
+                    "poster": "https://i.ytimg.com/vi/eBT1UpMjIpY/hqdefault.jpg",
+                    "title": "Events Reel 2",
+                    "category": "events",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=Tdi7lEQOGMg",
+                    "poster": "https://i.ytimg.com/vi/Tdi7lEQOGMg/hqdefault.jpg",
+                    "title": "Events Reel 3",
+                    "category": "events",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=RGjuT2cPQNQ",
+                    "poster": "https://i.ytimg.com/vi/RGjuT2cPQNQ/hqdefault.jpg",
+                    "title": "Events Reel 4",
+                    "category": "events",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=kU5JTa7PmG4",
+                    "poster": "https://i.ytimg.com/vi/kU5JTa7PmG4/hqdefault.jpg",
+                    "title": "Events Reel 5",
+                    "category": "events",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Early Education",
+            "slug": "pre-school",
+            "pattern": "b",
+            "reels": [
+                {
+                    "video": "https://www.youtube.com/watch?v=LnaTmPh5xD4",
+                    "poster": "https://i.ytimg.com/vi/LnaTmPh5xD4/hqdefault.jpg",
+                    "title": "Pre School Reel 1",
+                    "category": "pre-school",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=jGCjCKW3xeI",
+                    "poster": "https://i.ytimg.com/vi/jGCjCKW3xeI/hqdefault.jpg",
+                    "title": "Pre School Reel 2",
+                    "category": "pre-school",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=FB9o1we7oro",
+                    "poster": "https://i.ytimg.com/vi/FB9o1we7oro/hqdefault.jpg",
+                    "title": "Pre School Reel 3",
+                    "category": "pre-school",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=ZO-2hutn1rk",
+                    "poster": "https://i.ytimg.com/vi/ZO-2hutn1rk/hqdefault.jpg",
+                    "title": "Pre School Reel 4",
+                    "category": "pre-school",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=o_PVxmBShBs",
+                    "poster": "https://i.ytimg.com/vi/o_PVxmBShBs/hqdefault.jpg",
+                    "title": "Pre School Reel 5",
+                    "category": "pre-school",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Interior & Décor",
+            "slug": "decor-style",
+            "pattern": "a",
+            "reels": [
+                {
+                    "video": "https://www.youtube.com/watch?v=Q1sr1xAUoLo",
+                    "poster": "https://i.ytimg.com/vi/Q1sr1xAUoLo/hqdefault.jpg",
+                    "title": "Decor & Style Reel 1",
+                    "category": "decor-style",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=xvuJ59O1iIA",
+                    "poster": "https://i.ytimg.com/vi/xvuJ59O1iIA/hqdefault.jpg",
+                    "title": "Decor & Style Reel 2",
+                    "category": "decor-style",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=EHDRU79B7HY",
+                    "poster": "https://i.ytimg.com/vi/EHDRU79B7HY/hqdefault.jpg",
+                    "title": "Decor & Style Reel 3",
+                    "category": "decor-style",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=FA7f1OAHAik",
+                    "poster": "https://i.ytimg.com/vi/FA7f1OAHAik/hqdefault.jpg",
+                    "title": "Decor & Style Reel 4",
+                    "category": "decor-style",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=iPBRK2FkVrw",
+                    "poster": "https://i.ytimg.com/vi/iPBRK2FkVrw/hqdefault.jpg",
+                    "title": "Decor & Style Reel 5",
+                    "category": "decor-style",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Food & Confectionery",
+            "slug": "sweets-desserts",
+            "pattern": "b",
+            "reels": [
+                {
+                    "video": "https://www.youtube.com/watch?v=QTLhWZxKAlk",
+                    "poster": "https://i.ytimg.com/vi/QTLhWZxKAlk/hqdefault.jpg",
+                    "title": "Sweets & Desserts Reel 1",
+                    "category": "sweets-desserts",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=Tjg8A-MNW5I",
+                    "poster": "https://i.ytimg.com/vi/Tjg8A-MNW5I/hqdefault.jpg",
+                    "title": "Sweets & Desserts Reel 2",
+                    "category": "sweets-desserts",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=_zkNdGXumUM",
+                    "poster": "https://i.ytimg.com/vi/_zkNdGXumUM/hqdefault.jpg",
+                    "title": "Sweets & Desserts Reel 3",
+                    "category": "sweets-desserts",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=r1vpeGeRuHY",
+                    "poster": "https://i.ytimg.com/vi/r1vpeGeRuHY/hqdefault.jpg",
+                    "title": "Sweets & Desserts Reel 4",
+                    "category": "sweets-desserts",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=swelmSQl9gs",
+                    "poster": "https://i.ytimg.com/vi/swelmSQl9gs/hqdefault.jpg",
+                    "title": "Sweets & Desserts Reel 5",
+                    "category": "sweets-desserts",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Manufacturing & Industry",
+            "slug": "manufacturing",
+            "pattern": "a",
+            "noViewMore": true,
+            "reels": [
+                {
+                    "video": "https://www.youtube.com/watch?v=sD2rZFse2RE",
+                    "poster": "https://i.ytimg.com/vi/sD2rZFse2RE/hqdefault.jpg",
+                    "title": "Manufacturing Reel 1",
+                    "category": "manufacturing",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=ToxvvyxlPRA",
+                    "poster": "https://i.ytimg.com/vi/ToxvvyxlPRA/hqdefault.jpg",
+                    "title": "Manufacturing Reel 2",
+                    "category": "manufacturing",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=8yHPo6KDEa4",
+                    "poster": "https://i.ytimg.com/vi/8yHPo6KDEa4/hqdefault.jpg",
+                    "title": "Manufacturing Reel 3",
+                    "category": "manufacturing",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=45sfA9sb_p8",
+                    "poster": "https://i.ytimg.com/vi/45sfA9sb_p8/hqdefault.jpg",
+                    "title": "Manufacturing Reel 4",
+                    "category": "manufacturing",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=FkunxTC52lY",
+                    "poster": "https://i.ytimg.com/vi/FkunxTC52lY/hqdefault.jpg",
+                    "title": "Manufacturing Reel 5",
+                    "category": "manufacturing",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
+        },
+        {
+            "title": "Social Impact & Nonprofit",
+            "slug": "social-impact",
+            "pattern": "b",
+            "noViewMore": true,
+            "reels": [
+                {
+                    "video": "https://www.youtube.com/watch?v=eExNxALrzNo",
+                    "poster": "https://i.ytimg.com/vi/eExNxALrzNo/hqdefault.jpg",
+                    "title": "Social Impact Reel 1",
+                    "category": "social-impact",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=UiIaMGBAhHQ",
+                    "poster": "https://i.ytimg.com/vi/UiIaMGBAhHQ/hqdefault.jpg",
+                    "title": "Social Impact Reel 2",
+                    "category": "social-impact",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=Cey_dbbgNGc",
+                    "poster": "https://i.ytimg.com/vi/Cey_dbbgNGc/hqdefault.jpg",
+                    "title": "Social Impact Reel 3",
+                    "category": "social-impact",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=5ScFe9r2tUA",
+                    "poster": "https://i.ytimg.com/vi/5ScFe9r2tUA/hqdefault.jpg",
+                    "title": "Social Impact Reel 4",
+                    "category": "social-impact",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                },
+                {
+                    "video": "https://www.youtube.com/watch?v=AJ6HQjWujDg",
+                    "poster": "https://i.ytimg.com/vi/AJ6HQjWujDg/hqdefault.jpg",
+                    "title": "Social Impact Reel 5",
+                    "category": "social-impact",
+                    "duration": "0:30",
+                    "ratio": "9:16"
+                }
+            ]
         }
-
     ]
 }
