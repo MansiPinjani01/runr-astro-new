@@ -12,7 +12,11 @@ export default defineConfig({
     // Only use the Cloudflare adapter for production builds.
     // The workerd runtime crashes on Windows during local dev.
     ...(isDevMode ? {} : {
-        adapter: cloudflare()
+        adapter: cloudflare({
+            platformProxy: {
+                enabled: true
+            }
+        })
     }),
     devToolbar: {
         enabled: false

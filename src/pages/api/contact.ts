@@ -26,12 +26,6 @@ function getEnvVar(name: string, locals: any): string | undefined {
     if (val) return val;
   } catch (e) {}
 
-  // Method 3: import.meta.env (Astro default)
-  try {
-    const metaEnv = (import.meta as any).env;
-    if (metaEnv && metaEnv[name]) return metaEnv[name];
-  } catch (e) {}
-
   return undefined;
 }
 
