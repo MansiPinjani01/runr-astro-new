@@ -6,7 +6,6 @@
  */
 
 import type { APIRoute } from "astro";
-import { env } from "cloudflare:workers";
 import { buildEmailHtml, buildEmailSubject } from "../../lib/email-template";
 
 export const prerender = false;
@@ -43,12 +42,12 @@ export const POST: APIRoute = async (context) => {
       );
     }
 
-    // Get env variables from Cloudflare Workers env
-    const RESEND_API_KEY = (env as any).RESEND_API_KEY;
-    const EMAIL_TO = (env as any).EMAIL_TO;
-    const EMAIL_CC_1 = (env as any).EMAIL_CC_1;
-    const EMAIL_CC_2 = (env as any).EMAIL_CC_2;
-    const EMAIL_FROM = (env as any).EMAIL_FROM;
+    // Get env variables - direct values for testing
+    const RESEND_API_KEY = "re_2KjaQo1X_KKw1FqvPuoGjaHvKLYzbLLf9";
+    const EMAIL_TO = "mansi.pinjani@insomniacs.in";
+    const EMAIL_CC_1 = "kinal@insomniacs.in";
+    const EMAIL_CC_2 = "rutik@insomniacs.in";
+    const EMAIL_FROM = "onboarding@resend.dev";
 
     if (!RESEND_API_KEY || !EMAIL_TO || !EMAIL_FROM) {
       return new Response(
