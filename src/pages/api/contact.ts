@@ -3,9 +3,6 @@
  * 
  * Receives form data from both Sidebar and Contact Us page,
  * sends a professional HTML email via Resend API.
- * 
- * Environment variables required:
- *   RESEND_API_KEY, EMAIL_TO, EMAIL_CC_1, EMAIL_CC_2, EMAIL_FROM
  */
 
 import type { APIRoute } from "astro";
@@ -13,25 +10,9 @@ import { buildEmailHtml, buildEmailSubject } from "../../lib/email-template";
 
 export const prerender = false;
 
-function getEnvVar(name: string, locals: any): string | undefined {
-  // Method 1: Cloudflare runtime env (locals.runtime.env)
+export const POST: APIRoute = async (context) => {
   try {
-    const val = locals?.runtime?.env?.[name];
-    if (val) return val;
-  } catch (e) {}
-
-  // Method 2: process.env (Cloudflare Workers Node.js compat + Node adapters)
-  try {
-    const val = (globalThis as any).process?.env?.[name];
-    if (val) return val;
-  } catch (e) {}
-
-  return undefined;
-}
-
-export const POST: APIRoute = async ({ request, locals }) => {
-  try {
-    const body = await request.json();
+    const body = await context.request.json();
 
     // Validate required fields
     const { name, email, phone, service, message, source } = body;
@@ -61,24 +42,32 @@ export const POST: APIRoute = async ({ request, locals }) => {
       );
     }
 
-    // Get env variables
-    const RESEND_API_KEY = getEnvVar("RESEND_API_KEY", locals);
-    const EMAIL_TO = getEnvVar("EMAIL_TO", locals);
-    const EMAIL_CC_1 = getEnvVar("EMAIL_CC_1", locals);
-    const EMAIL_CC_2 = getEnvVar("EMAIL_CC_2", locals);
-    const EMAIL_FROM = getEnvVar("EMAIL_FROM", locals);
+    // Get env variables from Cloudflare bindings via Astro locals
+    const { locals } = context;
+    const runtime = (locals as any).runtime;
+    const env = runtime?.env;
+
+    // Hardcoded fallback for Cloudflare deployment (env access issue workaround)
+    const RESEND_API_KEY = env?.RESEND_API_KEY || process.env.RESEND_API_KEY;
+    const EMAIL_TO = env?.EMAIL_TO || process.env.EMAIL_TO;
+    const EMAIL_CC_1 = env?.EMAIL_CC_1 || process.env.EMAIL_CC_1;
+    const EMAIL_CC_2 = env?.EMAIL_CC_2 || process.env.EMAIL_CC_2;
+    const EMAIL_FROM = env?.EMAIL_FROM || process.env.EMAIL_FROM;
 
     if (!RESEND_API_KEY || !EMAIL_TO || !EMAIL_FROM) {
-      console.error("Missing email configuration environment variables. Got:", {
-        hasKey: !!RESEND_API_KEY,
-        hasTo: !!EMAIL_TO,
-        hasFrom: !!EMAIL_FROM,
-        localsKeys: Object.keys(locals || {}),
-        runtimeKeys: Object.keys((locals as any)?.runtime || {}),
-        runtimeEnvKeys: Object.keys((locals as any)?.runtime?.env || {}),
-      });
       return new Response(
-        JSON.stringify({ success: false, error: "Server configuration error" }),
+        JSON.stringify({ 
+          success: false, 
+          error: "Server configuration error",
+          debug: {
+            hasRuntime: !!runtime,
+            hasEnv: !!env,
+            envKeys: env ? Object.keys(env).filter(k => k.startsWith('EMAIL') || k.startsWith('RESEND')) : [],
+            hasKey: !!RESEND_API_KEY,
+            hasTo: !!EMAIL_TO,
+            hasFrom: !!EMAIL_FROM,
+          }
+        }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
@@ -120,9 +109,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
 
     if (!resendResponse.ok) {
       const errorData = await resendResponse.text();
-      console.error("Resend API error:", errorData);
       return new Response(
-        JSON.stringify({ success: false, error: "Failed to send email" }),
+        JSON.stringify({ success: false, error: "Failed to send email", detail: errorData }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
@@ -131,10 +119,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
       JSON.stringify({ success: true }),
       { status: 200, headers: { "Content-Type": "application/json" } }
     );
-  } catch (err) {
-    console.error("Contact API error:", err);
+  } catch (err: any) {
     return new Response(
-      JSON.stringify({ success: false, error: "Internal server error" }),
+      JSON.stringify({ success: false, error: "Internal server error", detail: err?.message || String(err) }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
