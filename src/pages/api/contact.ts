@@ -6,6 +6,7 @@
  */
 
 import type { APIRoute } from "astro";
+import { env } from "cloudflare:workers";
 import { buildEmailHtml, buildEmailSubject } from "../../lib/email-template";
 
 export const prerender = false;
@@ -42,17 +43,12 @@ export const POST: APIRoute = async (context) => {
       );
     }
 
-    // Get env variables from Cloudflare bindings via Astro locals
-    const { locals } = context;
-    const runtime = (locals as any).runtime;
-    const env = runtime?.env;
-
-    // Hardcoded fallback for Cloudflare deployment (env access issue workaround)
-    const RESEND_API_KEY = env?.RESEND_API_KEY || process.env.RESEND_API_KEY;
-    const EMAIL_TO = env?.EMAIL_TO || process.env.EMAIL_TO;
-    const EMAIL_CC_1 = env?.EMAIL_CC_1 || process.env.EMAIL_CC_1;
-    const EMAIL_CC_2 = env?.EMAIL_CC_2 || process.env.EMAIL_CC_2;
-    const EMAIL_FROM = env?.EMAIL_FROM || process.env.EMAIL_FROM;
+    // Get env variables from Cloudflare Workers env
+    const RESEND_API_KEY = (env as any).RESEND_API_KEY;
+    const EMAIL_TO = (env as any).EMAIL_TO;
+    const EMAIL_CC_1 = (env as any).EMAIL_CC_1;
+    const EMAIL_CC_2 = (env as any).EMAIL_CC_2;
+    const EMAIL_FROM = (env as any).EMAIL_FROM;
 
     if (!RESEND_API_KEY || !EMAIL_TO || !EMAIL_FROM) {
       return new Response(
@@ -60,9 +56,7 @@ export const POST: APIRoute = async (context) => {
           success: false, 
           error: "Server configuration error",
           debug: {
-            hasRuntime: !!runtime,
-            hasEnv: !!env,
-            envKeys: env ? Object.keys(env).filter(k => k.startsWith('EMAIL') || k.startsWith('RESEND')) : [],
+            hasKey: !!RESEND_API_KEY,
             hasKey: !!RESEND_API_KEY,
             hasTo: !!EMAIL_TO,
             hasFrom: !!EMAIL_FROM,
