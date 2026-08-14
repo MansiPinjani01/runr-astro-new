@@ -6278,6 +6278,18 @@ button,
     position: relative;
 }
 
+.section-influencers:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(270deg, #666666 0%, #ffffff 72.11%);
+    border-image-slice: 1;
+    height: 1px;
+    bottom: 0;
+}
+
 .theme-block:hover .theme-block-title h5,
 .swiper-slide.is-visible.is-active .theme-block-title h5,
 #influencers-slider .swiper-slide-active .theme-block-title h5 {
@@ -7918,8 +7930,9 @@ button,
     position: absolute;
     top: 0;
     left: 35%;
-    width: 280px;
-    height: 320px;
+    aspect-ratio: 1 / 1;
+    width: 250px;
+    height: 330px;
     z-index: 3;
     pointer-events: none;
     opacity: 0;
@@ -9075,7 +9088,9 @@ button,
     content: "";
     height: 130px;
     width: 100%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 19.23%, #ffffff61 88.94%);
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0) 19.23%,
+            #ffffff61 88.94%);
     z-index: 1;
     transform: rotate(90deg);
     left: -335px;
@@ -9088,7 +9103,9 @@ button,
     content: "";
     height: 130px;
     width: 100%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 19.23%, #ffffff4a 88.94%);
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0) 19.23%,
+            #ffffff4a 88.94%);
     z-index: 1;
     transform: rotate(-90deg);
     right: -350px;
