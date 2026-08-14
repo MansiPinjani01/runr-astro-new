@@ -45,8 +45,8 @@ export const POST: APIRoute = async (context) => {
     // Get env variables - direct values for testing
     const RESEND_API_KEY = "re_QPfDdmVZ_LiBtYRcu9FuecE7Gpnaac97v";
     const EMAIL_TO = "mansi.pinjani@insomniacs.in";
-    const EMAIL_CC_1 = "kinal@insomniacs.in";
-    const EMAIL_CC_2 = "rutik@insomniacs.in";
+    const EMAIL_CC_1 = "";
+    const EMAIL_CC_2 = "";
     const EMAIL_FROM = "onboarding@resend.dev";
 
     if (!RESEND_API_KEY || !EMAIL_TO || !EMAIL_FROM) {
