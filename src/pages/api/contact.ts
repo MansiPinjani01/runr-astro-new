@@ -13,6 +13,28 @@ import { buildEmailHtml, buildEmailSubject } from "../../lib/email-template";
 
 export const prerender = false;
 
+function getEnvVar(name: string, locals: any): string | undefined {
+  // Method 1: Cloudflare runtime env (locals.runtime.env)
+  try {
+    const val = locals?.runtime?.env?.[name];
+    if (val) return val;
+  } catch (e) {}
+
+  // Method 2: process.env (Cloudflare Workers Node.js compat + Node adapters)
+  try {
+    const val = (globalThis as any).process?.env?.[name];
+    if (val) return val;
+  } catch (e) {}
+
+  // Method 3: import.meta.env (Astro default)
+  try {
+    const metaEnv = (import.meta as any).env;
+    if (metaEnv && metaEnv[name]) return metaEnv[name];
+  } catch (e) {}
+
+  return undefined;
+}
+
 export const POST: APIRoute = async ({ request, locals }) => {
   try {
     const body = await request.json();
@@ -45,18 +67,22 @@ export const POST: APIRoute = async ({ request, locals }) => {
       );
     }
 
-    // Get env variables - try Cloudflare runtime first, then import.meta.env
-    const runtime = (locals as any)?.runtime;
-    const env = runtime?.env || {};
-    
-    const RESEND_API_KEY = env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
-    const EMAIL_TO = env.EMAIL_TO || import.meta.env.EMAIL_TO;
-    const EMAIL_CC_1 = env.EMAIL_CC_1 || import.meta.env.EMAIL_CC_1;
-    const EMAIL_CC_2 = env.EMAIL_CC_2 || import.meta.env.EMAIL_CC_2;
-    const EMAIL_FROM = env.EMAIL_FROM || import.meta.env.EMAIL_FROM;
+    // Get env variables
+    const RESEND_API_KEY = getEnvVar("RESEND_API_KEY", locals);
+    const EMAIL_TO = getEnvVar("EMAIL_TO", locals);
+    const EMAIL_CC_1 = getEnvVar("EMAIL_CC_1", locals);
+    const EMAIL_CC_2 = getEnvVar("EMAIL_CC_2", locals);
+    const EMAIL_FROM = getEnvVar("EMAIL_FROM", locals);
 
     if (!RESEND_API_KEY || !EMAIL_TO || !EMAIL_FROM) {
-      console.error("Missing email configuration environment variables");
+      console.error("Missing email configuration environment variables. Got:", {
+        hasKey: !!RESEND_API_KEY,
+        hasTo: !!EMAIL_TO,
+        hasFrom: !!EMAIL_FROM,
+        localsKeys: Object.keys(locals || {}),
+        runtimeKeys: Object.keys((locals as any)?.runtime || {}),
+        runtimeEnvKeys: Object.keys((locals as any)?.runtime?.env || {}),
+      });
       return new Response(
         JSON.stringify({ success: false, error: "Server configuration error" }),
         { status: 500, headers: { "Content-Type": "application/json" } }
