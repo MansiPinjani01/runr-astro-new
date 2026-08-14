@@ -864,6 +864,95 @@ label.error {
     width: inherit;
 }
 
+/* Contact Page - Custom Select */
+.contact-custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.contact-custom-select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: 1px solid #ffffff30;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000b7;
+    background-color: #1f1f1f0d;
+    line-height: 19px;
+    transition: border-color 0.3s;
+}
+
+.contact-custom-select-trigger:hover,
+.contact-custom-select.is-open .contact-custom-select-trigger {
+    border-color: #ffffff30;
+}
+
+.contact-custom-select.has-value .contact-custom-select-trigger span {
+    color: #000;
+}
+
+.contact-custom-select-trigger svg {
+    transition: transform 0.3s;
+    height: 20px;
+    width: 20px;
+}
+
+.contact-custom-select.is-open .contact-custom-select-trigger svg {
+    transform: rotate(180deg);
+}
+
+.contact-custom-select-options {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.3s,
+        opacity 0.3s;
+}
+
+.contact-custom-select.is-open .contact-custom-select-options {
+    max-height: 300px;
+    opacity: 1;
+    overflow-y: auto;
+}
+
+.contact-custom-select-option {
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contact-custom-select-option:hover {
+    background: #f5f5f5;
+}
+
+.contact-custom-select-option.is-disabled {
+    color: #999;
+    pointer-events: none;
+}
+
+/* Contact Page - Form Error */
+.contact-form-error {
+    display: block;
+    font-size: 12px;
+    color: #ff5722;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
 .form-control {
     border-radius: 0;
 }
@@ -2751,12 +2840,55 @@ body.insomenu-active {
     will-change: transform;
 }
 
-#loader video {
-    width: 220px;
+.loader-logo {
+    width: min(80vw, 633px);
+}
+
+.loader-logo svg {
+    width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;
-    pointer-events: none;
+    overflow: visible;
+}
+
+.logo-outline {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 1;
+}
+
+.logo-fill {
+    fill: #fff;
+    opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .loader-logo {
+        width: min(70vw, 450px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .loader-logo {
+        width: min(75vw, 350px);
+    }
+
+    .logo-outline {
+        stroke-width: 1.8;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .loader-logo {
+        width: min(80vw, 280px);
+    }
+
+    .logo-outline {
+        stroke-width: 2;
+    }
 }
 
 /* body.is-loading {
@@ -8847,7 +8979,7 @@ button,
 
 .sidebar-custom-select-trigger:hover,
 .sidebar-custom-select.is-open .sidebar-custom-select-trigger {
-    border-bottom-color: #ff5722;
+    border-bottom-color: inherit;
 }
 
 .sidebar-custom-select-trigger svg {

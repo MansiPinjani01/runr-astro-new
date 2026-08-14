@@ -1,0 +1,90 @@
+---
+/*
+  thank-you.astro - Thank You Page (after form submission)
+  No header, no footer. Auto-redirect to home after 7 seconds.
+*/
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - RUNR</title>
+    <meta http-equiv="refresh" content="7;url=/" />
+    <link rel="icon" href="/media/favicon/favicon.ico" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #000;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+        overflow: hidden;
+      }
+
+      .thankyou-logo img {
+        width: 160px;
+        height: auto;
+        display: block;
+      }
+
+      .thankyou-message {
+        text-align: center;
+        max-width: 400px;
+        padding: 0 20px;
+      }
+
+      .thankyou-message h1 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #ff5722;
+      }
+
+      .thankyou-message p {
+        font-size: 16px;
+        color: #ffffffcc;
+        line-height: 1.6;
+      }
+
+      @media screen and (max-width: 480px) {
+        .thankyou-logo img {
+          width: 120px;
+        }
+
+        .thankyou-message h1 {
+          font-size: 22px;
+        }
+
+        .thankyou-message p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thankyou-logo">
+      <img src="/media/images/white-logo.svg" alt="RUNR" />
+    </div>
+    <div class="thankyou-message">
+      <h1>Thank You!</h1>
+      <p>We've received your message and will get back to you soon.</p>
+    </div>
+
+    <script is:inline>
+      setTimeout(function () {
+        window.location.href = "/";
+      }, 7000);
+    </script>
+  </body>
+</html>

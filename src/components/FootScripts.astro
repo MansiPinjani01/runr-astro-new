@@ -543,38 +543,48 @@ function closeContactSidebar() {
     }
 
     if (valid) {
-      // Prevent default - just don't let page reload
-      // When API is ready, uncomment the thank you block below and add API call
-
-      /* === UNCOMMENT WHEN API IS READY ===
       var btn = document.getElementById('sidebarSubmitBtn');
       btn.disabled = true;
       btn.style.opacity = '0.6';
       btn.style.pointerEvents = 'none';
 
-      // API call here, then on success:
-      setTimeout(function() {
-        form.reset();
+      var formData = {
+        name: document.getElementById('sidebar-fname').value.trim(),
+        email: document.getElementById('sidebar-email').value.trim(),
+        phone: document.getElementById('sidebar-phone').value.trim(),
+        service: document.getElementById('sidebar-service').value,
+        message: document.getElementById('sidebar-message').value.trim(),
+        source: 'Sidebar'
+      };
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
         btn.disabled = false;
         btn.style.opacity = '';
         btn.style.pointerEvents = '';
-        // Show success
-        var body = document.querySelector('.contact-sidebar-body');
-        var successMsg = document.createElement('div');
-        successMsg.className = 'sidebar-success-msg';
-        successMsg.innerHTML = '<h3 style="color:#ff5722;font-size:20px;margin-bottom:10px;">Thank you!</h3><p style="font-size:14px;color:#666;">We\'ll get back to you soon.</p>';
-        successMsg.style.cssText = 'text-align:center;padding:40px 0;';
-        body.style.display = 'none';
-        body.parentNode.insertBefore(successMsg, body.nextSibling);
-        setTimeout(function() {
+        if (data.success) {
+          form.reset();
+          var triggerSpan = document.querySelector('#sidebarSelectTrigger span');
+          if (triggerSpan) triggerSpan.textContent = 'Choose an option';
+          var selectEl = document.getElementById('sidebarCustomSelect');
+          if (selectEl) selectEl.classList.remove('has-value');
           closeContactSidebar();
-          setTimeout(function() {
-            if (successMsg.parentNode) successMsg.parentNode.removeChild(successMsg);
-            body.style.display = '';
-          }, 500);
-        }, 2500);
-      }, 1000);
-      === END UNCOMMENT === */
+          window.location.href = '/thank-you';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      })
+      .catch(function() {
+        btn.disabled = false;
+        btn.style.opacity = '';
+        btn.style.pointerEvents = '';
+        alert('Something went wrong. Please try again.');
+      });
     }
   });
 

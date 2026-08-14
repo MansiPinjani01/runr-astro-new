@@ -14,13 +14,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   pagename="Contact Us"
   onepagemenu={true}
 >
-  <section id="section-about-us" class="section section-about-us theme-padding ">
+  <section id="section-about-us" class="section section-about-us theme-padding">
     <div class="about-us-wrapper js-scroll fade-in-left scrolled">
       <div class="move-box"></div>
       <div class="section-title title-animate">
         <h1 class="text-xl text-uppercase">
           Your creative <br /><span class="theme-text text-uppercase"
-            >journey starts here</span>
+            >journey starts here</span
+          >
         </h1>
       </div>
     </div>
@@ -49,129 +50,340 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </p>
     </div>
   </section>
-  
-<section id="section-contact-form" class="section section-contact-form">
-  <div class="theme-color-shadow"></div>
-  <div class="container">
-    <div class="contact-form js-scroll fade-up">
-      <div id="sticky-bottom-form" class="sticky-bottom-form clearfix">
-        <div class="sticky-bottom-form-inner">
-          <form
-            class="nobottommargin clearfix"
-            id="contactform-bottom"
-            name="contactform-bottom"
-            onsubmit="validateInquiryForm('inquiry1')&disableButton()"
-            action=""
-            novalidate="novalidate"
-            method="post"
-          >
-            <div class="columns is-multiline is-mobile cols-register">
-              <div
-                class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
-              >
-                <div class="col-form">
-                  <small>First Name</small>
-                  <input
-                    type="text"
-                    class="sm-form-control fname"
-                    name="fname"
-                    id="inquiry1-fname"
-                    placeholder="Enter Your First Name*"
-                    min-length="1"
-                    max-length="100"
-                    required
-                  />
-                  <label class="error-msg1" id="inquiry1formerror-1"></label>
-                </div>
-              </div>
-              <div
-                class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
-              >
-                <div class="col-form">
-                  <small>Last Name</small>
-                  <input
-                    type="text"
-                    class="sm-form-control fname"
-                    name="lname"
-                    id="inquiry1-lname"
-                    placeholder="Enter Your Last Name*"
-                    min-length="1"
-                    max-length="100"
-                    required
-                  />
-                  <label class="error-msg1" id="inquiry1formerror-2"></label>
-                </div>
-              </div>
-              <div
-                class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
-              >
-                <div class="col-form">
-                  <small>Email Address</small>
-                  <input
-                    type="text"
-                    class="sm-form-control email"
-                    name="email"
-                    id="inquiry1-email"
-                    placeholder="Enter Your Email Address*"
-                    required
-                  />
-                  <label class="error-msg1" id="inquiry1formerror-4"></label>
-                </div>
-              </div>
-              <div
-                class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
-              >
-                <div class="col-form">
-                  <small>Phone</small>
-                  <input
-                    type="text"
-                    class="sm-form-control phone numeric custom-phone-control"
-                    name="phone"
-                    id="inquiry1-phone"
-                    maxlength="10"
-                    placeholder="Enter Your Phone Number*"
-                    pattern="^[6-9]{6,14}$"
-                    required
-                  />
-                  <label class="error-msg1" id="inquiry1formerror-3"></label>
-                </div>
-              </div>
-              <div
-                class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register"
-              >
-                <div class="col-form">
-                  <small>Message</small>
-                  <textarea
-                    class="sm-form-control message"
-                    rows="4"
-                    name="message"
-                    id="inquiry1-message"
-                    placeholder="Your Message"
-                    spellcheck="false"></textarea>
-                </div>
-              </div>
 
-              <div
-                class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-form col-form-btn submit-btn"
-                id="submit"
-              >
-                <button
-                  class="theme-btn btn-primary full-width inquiry-submit1 white-btn"
-                  type="submit"
-                  id="inquiry1-submit"
-                  value="Sumbit"><span>Submit</span></button
+  <section id="section-contact-form" class="section section-contact-form">
+    <div class="theme-color-shadow"></div>
+    <div class="container">
+      <div class="contact-form js-scroll fade-up">
+        <div id="sticky-bottom-form" class="sticky-bottom-form clearfix">
+          <div class="sticky-bottom-form-inner">
+            <form
+              class="nobottommargin clearfix"
+              id="contactform-bottom"
+              name="contactform-bottom"
+              novalidate="novalidate"
+              method="post"
+              autocomplete="off"
+            >
+              <div class="columns is-multiline is-mobile cols-register">
+                <div
+                  class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
                 >
+                  <div class="col-form">
+                    <small>Your Name</small>
+                    <input
+                      type="text"
+                      class="sm-form-control"
+                      name="fname"
+                      id="contact-fname"
+                      placeholder="Enter your name"
+                      required
+                    />
+                    <span class="contact-form-error" id="contact-error-fname"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
+                >
+                  <div class="col-form">
+                    <small>Email Address</small>
+                    <input
+                      type="email"
+                      class="sm-form-control"
+                      name="email"
+                      id="contact-email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                    <span class="contact-form-error" id="contact-error-email"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
+                >
+                  <div class="col-form">
+                    <small>Mobile Number</small>
+                    <input
+                      type="tel"
+                      class="sm-form-control"
+                      name="phone"
+                      id="contact-phone"
+                      placeholder="Enter your mobile number"
+                      maxlength="10"
+                      required
+                    />
+                    <span class="contact-form-error" id="contact-error-phone"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen col-register"
+                >
+                  <div class="col-form">
+                    <small>What Are You Looking For?</small>
+                    <input type="hidden" name="service" id="contact-service" />
+                    <div class="contact-custom-select" id="contactCustomSelect">
+                      <div
+                        class="contact-custom-select-trigger"
+                        id="contactSelectTrigger"
+                      >
+                        <span>Choose an option</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          ><path d="M6 9l6 6 6-6"></path></svg
+                        >
+                      </div>
+                      <div class="contact-custom-select-options">
+                        <div class="contact-custom-select-option is-disabled">
+                          Choose an option
+                        </div>
+                        <div
+                          class="contact-custom-select-option"
+                          data-value="Reel Production"
+                        >
+                          Reel Production
+                        </div>
+                        <div
+                          class="contact-custom-select-option"
+                          data-value="Brand Collaboration"
+                        >
+                          Brand Collaboration
+                        </div>
+                        <div
+                          class="contact-custom-select-option"
+                          data-value="Influencer Marketing"
+                        >
+                          Influencer Marketing
+                        </div>
+                        <div
+                          class="contact-custom-select-option"
+                          data-value="Event Coverage"
+                        >
+                          Event Coverage
+                        </div>
+                        <div
+                          class="contact-custom-select-option"
+                          data-value="Podcast"
+                        >
+                          Podcast
+                        </div>
+                        <div
+                          class="contact-custom-select-option"
+                          data-value="Other"
+                        >
+                          Other
+                        </div>
+                      </div>
+                    </div>
+                    <span class="contact-form-error" id="contact-error-service"
+                    ></span>
+                  </div>
+                </div>
+                <div
+                  class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-register"
+                >
+                  <div class="col-form">
+                    <small>Tell Us About It</small>
+                    <textarea
+                      class="sm-form-control"
+                      rows="4"
+                      name="message"
+                      id="contact-message"
+                      placeholder="Type your message here..."
+                      spellcheck="false"></textarea>
+                  </div>
+                </div>
+
+                <div
+                  class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen col-form col-form-btn submit-btn"
+                  id="submit"
+                >
+                  <button
+                    class="theme-btn btn-primary full-width white-btn"
+                    type="submit"
+                    id="contact-submit"
+                    value="Submit"><span>Submit</span></button
+                  >
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </BaseLayout>
 
-<!-- Creative Team -->
+<script is:inline>
+  /* Contact Page - Custom Select */
+  (function () {
+    var select = document.getElementById("contactCustomSelect");
+    if (!select) return;
+    var trigger = document.getElementById("contactSelectTrigger");
+    var options = select.querySelectorAll(
+      ".contact-custom-select-option:not(.is-disabled)",
+    );
+    var hiddenInput = document.getElementById("contact-service");
 
-<!-- Contact  -->
+    trigger.addEventListener("click", function () {
+      select.classList.toggle("is-open");
+    });
 
+    options.forEach(function (opt) {
+      opt.addEventListener("click", function () {
+        var val = opt.getAttribute("data-value");
+        trigger.querySelector("span").textContent = val;
+        hiddenInput.value = val;
+        select.classList.remove("is-open");
+        select.classList.add("has-value");
+        // Clear error
+        var err = document.getElementById("contact-error-service");
+        if (err) err.textContent = "";
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!select.contains(e.target)) {
+        select.classList.remove("is-open");
+      }
+    });
+  })();
+
+  /* Contact Page - Form Validation */
+  (function () {
+    var form = document.getElementById("contactform-bottom");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var valid = true;
+
+      // Name
+      var fname = document.getElementById("contact-fname");
+      var fnameErr = document.getElementById("contact-error-fname");
+      if (!fname.value.trim()) {
+        fnameErr.textContent = "Please enter your name";
+        valid = false;
+      } else if (fname.value.trim().length < 2) {
+        fnameErr.textContent = "Name must be at least 2 characters";
+        valid = false;
+      } else {
+        fnameErr.textContent = "";
+      }
+
+      // Email
+      var email = document.getElementById("contact-email");
+      var emailErr = document.getElementById("contact-error-email");
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim()) {
+        emailErr.textContent = "Please enter your email";
+        valid = false;
+      } else if (!emailRegex.test(email.value.trim())) {
+        emailErr.textContent = "Please enter a valid email";
+        valid = false;
+      } else {
+        emailErr.textContent = "";
+      }
+
+      // Phone
+      var phone = document.getElementById("contact-phone");
+      var phoneErr = document.getElementById("contact-error-phone");
+      var phoneRegex = /^[6-9]\d{9}$/;
+      if (!phone.value.trim()) {
+        phoneErr.textContent = "Please enter your mobile number";
+        valid = false;
+      } else if (!phoneRegex.test(phone.value.trim())) {
+        phoneErr.textContent = "Please enter a valid 10-digit mobile number";
+        valid = false;
+      } else {
+        phoneErr.textContent = "";
+      }
+
+      // Service
+      var service = document.getElementById("contact-service");
+      var serviceErr = document.getElementById("contact-error-service");
+      if (!service.value) {
+        serviceErr.textContent = "Please select an option";
+        valid = false;
+      } else {
+        serviceErr.textContent = "";
+      }
+
+      if (!valid) return;
+
+      // Submit form via API
+      var btn = document.getElementById("contact-submit");
+      btn.disabled = true;
+      btn.style.opacity = "0.6";
+      btn.style.pointerEvents = "none";
+
+      var formData = {
+        name: fname.value.trim(),
+        email: email.value.trim(),
+        phone: phone.value.trim(),
+        service: service.value,
+        message: document.getElementById("contact-message").value.trim(),
+        source: "Contact Page",
+      };
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (data) {
+          btn.disabled = false;
+          btn.style.opacity = "";
+          btn.style.pointerEvents = "";
+          if (data.success) {
+            form.reset();
+            document
+              .getElementById("contactSelectTrigger")
+              .querySelector("span").textContent = "Choose an option";
+            document
+              .getElementById("contactCustomSelect")
+              .classList.remove("has-value");
+            window.location.href = "/thank-you";
+          } else {
+            alert("Something went wrong. Please try again.");
+          }
+        })
+        .catch(function () {
+          btn.disabled = false;
+          btn.style.opacity = "";
+          btn.style.pointerEvents = "";
+          alert("Something went wrong. Please try again.");
+        });
+    });
+
+    // Clear errors on input
+    var inputs = form.querySelectorAll("input, textarea");
+    inputs.forEach(function (input) {
+      input.addEventListener("input", function () {
+        var errEl = document.getElementById("contact-error-" + input.name);
+        if (errEl) errEl.textContent = "";
+      });
+    });
+
+    // Phone - only allow numbers
+    var phoneInput = document.getElementById("contact-phone");
+    if (phoneInput) {
+      phoneInput.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "");
+      });
+    }
+  })();
+</script>

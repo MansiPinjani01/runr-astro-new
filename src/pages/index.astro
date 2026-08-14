@@ -50,7 +50,7 @@ const influencers = [
     youtube: "https://www.youtube.com/@shivanimanchekar",
   },
 
-   {
+  {
     name: "Urvashi Ramanuj",
     layer: "layer-8.webp",
     photo: "urvashi-ramanuj.webp",
@@ -98,15 +98,6 @@ const influencers = [
     facebook: "https://www.facebook.com/shivanimanchekar",
     youtube: "https://www.youtube.com/@shivanimanchekar",
   },
-    {
-    name: "Twisha Maniar",
-    layer: "layer-8.webp",
-    photo: "twisha-maniar.webp",
-    instagram: "https://www.instagram.com/shivanimanchekar",
-    facebook: "https://www.facebook.com/shivanimanchekar",
-    youtube: "https://www.youtube.com/@shivanimanchekar",
-  },
-  
 ];
 ---
 
@@ -120,13 +111,52 @@ const influencers = [
   bodyClass="is-loading"
 >
   <div id="loader">
-    <video
-      id="logo-video"
-      src="/media/images/logo-loader.mp4"
-      muted
-      playsinline
-      autoplay
-      preload="auto"></video>
+    <div class="loader-logo">
+      <svg
+        id="runrLogo"
+        viewBox="0 0 632.65 112.04"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- OUTLINE -->
+        <g class="outline-group">
+          <path
+            class="logo-outline"
+            d="M138.36,0H55.61C38.05,0,20.76,14.33,16.89,31.85L0,112.04h23.09L39.98,31.85c1.07-4.9,5.76-8.76,10.69-8.76h82.76L138.36,0Z"
+          ></path>
+          <path
+            class="logo-outline"
+            d="M300.38,0l-17.09,80.19c-1.07,4.9-5.76,8.76-10.69,8.76h-112.08c-4.9,0-7.9-3.83-6.83-8.76L170.78,0h-23.09l-17.12,80.19c-3.63,17.52,7.7,31.85,25.22,31.85h112.11c17.52,0,34.85-14.33,38.48-31.85L323.47,0h-23.09Z"
+          ></path>
+          <path
+            class="logo-outline"
+            d="M477.06,0h-143.93l-23.72,112.04h23.09l18.82-88.96h120.84c4.9,0,7.9,3.83,6.83,8.76l-16.89,80.19h23.09l16.89-80.19C505.95,14.33,494.58,0,477.06,0Z"
+          ></path>
+          <path
+            class="logo-outline"
+            d="M549.89,0C532.33,0,515.04,14.33,511.18,31.85l-16.89,80.19h23.09l16.89-80.19c1.07-4.9,5.76-8.76,10.69-8.76h82.76L632.65,0h-82.76Z"
+          ></path>
+        </g>
+        <!-- SOLID LOGO -->
+        <g class="fill-group">
+          <path
+            class="logo-fill"
+            d="M138.36,0H55.61C38.05,0,20.76,14.33,16.89,31.85L0,112.04h23.09L39.98,31.85c1.07-4.9,5.76-8.76,10.69-8.76h82.76L138.36,0Z"
+          ></path>
+          <path
+            class="logo-fill"
+            d="M300.38,0l-17.09,80.19c-1.07,4.9-5.76,8.76-10.69,8.76h-112.08c-4.9,0-7.9-3.83-6.83-8.76L170.78,0h-23.09l-17.12,80.19c-3.63,17.52,7.7,31.85,25.22,31.85h112.11c17.52,0,34.85-14.33,38.48-31.85L323.47,0h-23.09Z"
+          ></path>
+          <path
+            class="logo-fill"
+            d="M477.06,0h-143.93l-23.72,112.04h23.09l18.82-88.96h120.84c4.9,0,7.9,3.83,6.83,8.76l-16.89,80.19h23.09l16.89-80.19C505.95,14.33,494.58,0,477.06,0Z"
+          ></path>
+          <path
+            class="logo-fill"
+            d="M549.89,0C532.33,0,515.04,14.33,511.18,31.85l-16.89,80.19h23.09l16.89-80.19c1.07-4.9,5.76-8.76,10.69-8.76h82.76L632.65,0h-82.76Z"
+          ></path>
+        </g>
+      </svg>
+    </div>
   </div>
 
   <div id="homepage">
@@ -2709,7 +2739,7 @@ const influencers = [
       } else {
         (function () {
           const loader = document.getElementById("loader");
-          const video = document.getElementById("logo-video");
+          const loaderLogo = document.querySelector(".loader-logo");
           const homepage = document.getElementById("homepage");
           const body = document.body;
           let transitioned = false;
@@ -2759,19 +2789,52 @@ const influencers = [
             scale: 0.94,
           });
 
-          video.addEventListener("ended", runTransition, {
-            once: true,
-          });
+          // SVG Logo Animation
+          const outlinePaths = document.querySelectorAll(".logo-outline");
+          const fillPaths = document.querySelectorAll(".logo-fill");
 
-          video.play().catch(() => {
-            const resume = () => {
-              video.play();
-              window.removeEventListener("click", resume);
-            };
-            window.addEventListener("click", resume, {
-              once: true,
+          outlinePaths.forEach((path) => {
+            const length = path.getTotalLength();
+            gsap.set(path, {
+              strokeDasharray: length,
+              strokeDashoffset: length,
             });
           });
+
+          const logoTl = gsap.timeline({
+            defaults: { ease: "power2.inOut" },
+            onComplete: runTransition,
+          });
+
+          // 1. Draw outline
+          logoTl.to(outlinePaths, {
+            strokeDashoffset: 0,
+            duration: 2.4,
+            stagger: { each: 0.28 },
+            ease: "power2.inOut",
+          });
+
+          // 2. Small cinematic pause
+          logoTl.to({}, { duration: 0.18 });
+
+          // 3. Solid fill appears
+          logoTl.to(fillPaths, {
+            opacity: 1,
+            duration: 0.75,
+            stagger: { each: 0.08 },
+            ease: "power2.out",
+          });
+
+          // 4. Outline fades away
+          logoTl.to(
+            outlinePaths,
+            {
+              opacity: 0,
+              duration: 0.45,
+              ease: "power2.out",
+            },
+            "-=0.35",
+          );
 
           function runTransition() {
             if (transitioned) return;
@@ -2799,7 +2862,7 @@ const influencers = [
 
             // 1. Logo shrinks into the center point and fades
             tl.to(
-              video,
+              loaderLogo,
               {
                 scale: 0.5,
                 opacity: 0,
