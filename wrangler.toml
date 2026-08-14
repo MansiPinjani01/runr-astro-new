@@ -1,0 +1,9 @@
+name = "runr"
+compatibility_date = "2024-09-23"
+
+[vars]
+RESEND_API_KEY = "re_2KjaQo1X_KKw1FqvPuoGjaHvKLYzbLLf9"
+EMAIL_TO = "mansi.pinjani@insomniacs.in"
+EMAIL_CC_1 = "kinal@insomniacs.in"
+EMAIL_CC_2 = "rutik@insomniacs.in"
+EMAIL_FROM = "onboarding@resend.dev"
