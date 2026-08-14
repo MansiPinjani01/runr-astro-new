@@ -11,6 +11,7 @@ export default defineConfig({
     // Only use the Cloudflare adapter for production builds.
     // The workerd runtime crashes on Windows during local dev.
     ...(isDevMode ? {} : {
+        output: 'server',
         adapter: cloudflare()
     }),
     devToolbar: {
