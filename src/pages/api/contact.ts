@@ -11,7 +11,7 @@
 import type { APIRoute } from "astro";
 import { buildEmailHtml, buildEmailSubject } from "../../lib/email-template";
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   try {
     const body = await request.json();
 
@@ -43,12 +43,15 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    // Get env variables
-    const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
-    const EMAIL_TO = import.meta.env.EMAIL_TO;
-    const EMAIL_CC_1 = import.meta.env.EMAIL_CC_1;
-    const EMAIL_CC_2 = import.meta.env.EMAIL_CC_2;
-    const EMAIL_FROM = import.meta.env.EMAIL_FROM;
+    // Get env variables - try Cloudflare runtime first, then import.meta.env
+    const runtime = (locals as any)?.runtime;
+    const env = runtime?.env || {};
+    
+    const RESEND_API_KEY = env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
+    const EMAIL_TO = env.EMAIL_TO || import.meta.env.EMAIL_TO;
+    const EMAIL_CC_1 = env.EMAIL_CC_1 || import.meta.env.EMAIL_CC_1;
+    const EMAIL_CC_2 = env.EMAIL_CC_2 || import.meta.env.EMAIL_CC_2;
+    const EMAIL_FROM = env.EMAIL_FROM || import.meta.env.EMAIL_FROM;
 
     if (!RESEND_API_KEY || !EMAIL_TO || !EMAIL_FROM) {
       console.error("Missing email configuration environment variables");
