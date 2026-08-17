@@ -1,4 +1,4 @@
----
+﻿---
 /*
   index.astro - Homepage
   Converted from PHP: index.php
@@ -275,9 +275,9 @@ const influencers = [
                   story designed to inspire action. From scripting and
                   production to seamless editing, we craft every detail with
                   purpose. Our content is built to capture attention, engage
-                  audiences, and communicate your brand’s story effectively. The
-                  result is impactful content that strengthens brands, builds
-                  connections, and leaves a lasting impression.
+                  audiences, and communicate your brand’s story effectively.
+                  The result is impactful content that strengthens brands,
+                  builds connections, and leaves a lasting impression.
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -929,9 +929,9 @@ const influencers = [
         >
           <h3 class="faces-subtitle mb-2">Voices That Drive Influence.</h3>
           <p class="mb-2">
-            From storytellers and creators to thought-leaders and trendsetters —
-            our network of influencers isn’t just about reach, it’s about real
-            impact.
+            From storytellers and creators to thought-leaders and trendsetters
+            — our network of influencers isn't just about reach, it's
+            about real impact.
           </p>
           <p>
             At Runr, we partner with voices that spark conversations, build
@@ -2135,7 +2135,7 @@ const influencers = [
             <p class="text-xs">
               Where Little Voices Make Big Moments. A playful vertical by Runr,
               focused on kid-centric content, habits, and creativity. From fun
-              events to inspiring stories and engaging competitions ” we
+              events to inspiring stories and engaging competitions â€ we
               celebrate childhood in every reel.
             </p>
           </div>
@@ -2587,123 +2587,226 @@ const influencers = [
       </div>
     </section>
 
-    <section
-      id="section-music"
-      class="section section-music theme-padding white-bg"
-    >
-      <div class="section-title title-animate has-text-centered">
-        <span class="sub-title">runr</span>
-        <h2 class="text-xl theme-text">Music</h2>
+    <section id="section-music" class="section section-music white-bg">
+      <div class="section-title has-text-centered title-animate">
+        <span class="sub-title">Runr</span>
+        <h2 class="text-xl theme-text text-uppercase">Music</h2>
       </div>
-      <div
-        class="music-title title-block has-text-centered js-scroll fade-in-top scrolled"
-      >
-        <p>Welcome to the musical heartbeat of Runr.</p>
-        <p>
-          Through Runr Label, we create and promote original music while
-          supporting artists with music production, video creation, and
-          strategic marketing — turning raw, real, and remarkable talent into
-          music that resonates.
-        </p>
-      </div>
-      <div class="columns is-multiline is-vcentered">
-        <div
-          class="column is-12-mobile is-12-tablet is-12-desktop is-2-widescreen p-0"
-        >
-          <div class="music-desk">
-            <video class="desk" autoplay="" muted="" loop="" playsinline="">
-              <source
-                src="/media/images/home/music/vinaly-disk.mp4"
-                type="video/mp4"
+      <div class="music-container">
+        <div class="columns is-multiline is-vcentered m-0">
+          <!-- Left Disk Column -->
+          <div class="column p-0">
+            <div class="music-disk-bg">
+              <img
+                src="/media/images/home/music/disk.webp"
+                alt="Vinyl Disk"
+                id="music-disk"
               />
-            </video>
+            </div>
           </div>
-        </div>
-        <div
-          class="column is-12-mobile is-12-tablet is-7-desktop is-6-widescreen"
-        >
-          <div class="music-slider-wrapper">
-            <div class="swiper music-swiper js-scroll fade-in-bottom scrolled">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="music-block">
-                    <picture>
+
+          <div class="column">
+            <div class="music-slider-wrapper">
+              <div class="swiper music-swiper">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide"
+                    data-audio="/media/images/home/music/ambe-maat-angne-padharya.mp3"
+                    data-title="Ambe Maat Angne Padharya"
+                    data-singer="Dr. Bhavna Mehta"
+                  >
+                    <div class="music-card">
                       <img
                         src="/media/images/home/music/music-1.webp"
-                        width="310"
-                        height="310"
-                        alt="Music Image"
+                        alt="Ambe Maat Angne Padharya"
                       />
-                    </picture>
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="music-block">
-                    <picture>
+                  <div
+                    class="swiper-slide"
+                    data-audio="/media/images/home/music/kaan-kunvar-nu-bhavenu.mp3"
+                    data-title="Kaan Kunwar nu Bhavenu"
+                    data-singer="Atharva & Sanjay Joshi"
+                  >
+                    <div class="music-card">
                       <img
                         src="/media/images/home/music/music-3.webp"
-                        width="310"
-                        height="310"
-                        alt="Music Image"
+                        alt="Kaan Kunwar nu Bhavenu"
                       />
-                    </picture>
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="music-block">
-                    <picture>
+                  <div
+                    class="swiper-slide"
+                    data-audio="/media/images/home/music/ambe-maat-angne-padharya.mp3"
+                    data-title="Ambe Maat Angne Padharya"
+                    data-singer="Dr. Bhavna Mehta"
+                  >
+                    <div class="music-card">
                       <img
                         src="/media/images/home/music/music-1.webp"
-                        width="310"
-                        height="310"
-                        alt="Music Image"
+                        alt="Ambe Maat Angne Padharya"
                       />
-                    </picture>
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="music-block">
-                    <picture>
+                  <div
+                    class="swiper-slide"
+                    data-audio="/media/images/home/music/kaan-kunvar-nu-bhavenu.mp3"
+                    data-title="Kaan Kunwar nu Bhavenu"
+                    data-singer="Atharva & Sanjay Joshi"
+                  >
+                    <div class="music-card">
                       <img
                         src="/media/images/home/music/music-3.webp"
-                        width="310"
-                        height="310"
-                        alt="Music Image"
+                        alt="Kaan Kunwar nu Bhavenu"
                       />
-                    </picture>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination music-swiper-pagination"></div>
             </div>
           </div>
-        </div>
-        <div
-          class="column is-12-mobile is-12-tablet is-5-desktop is-4-widescreen js-scroll fade-in-right scrolled"
-        >
-          <div class="music-app">
-            <div class="music-app-title mb-3">
-              <h3>Check out our play list</h3>
+
+          <div class="column">
+            <div class="music-player-wrapper">
+              <div class="custom-music-player">
+                <div class="player-info">
+                  <h3 id="player-title">Ambe Maat Angne Padharya</h3>
+                  <p id="player-singer">Dr. Bhavna Mehta</p>
+                </div>
+
+                <div class="player-controls">
+                  <button class="ctrl-btn prev-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                      ></path><path d="M20 5v14l-12 -7z"></path><line
+                        x1="4"
+                        y1="5"
+                        x2="4"
+                        y2="19"
+                        stroke="currentColor"
+                        stroke-width="2"></line></svg
+                    >
+                  </button>
+                  <button class="ctrl-btn play-pause-btn" id="main-play-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="36"
+                      height="36"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      id="play-icon"
+                      ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                      ></path><path d="M7 4v16l13 -8z"></path></svg
+                    >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="36"
+                      height="36"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      id="pause-icon"
+                      style="display:none;"
+                      ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                      ></path><rect x="6" y="5" width="4" height="14" rx="1"
+                      ></rect><rect x="14" y="5" width="4" height="14" rx="1"
+                      ></rect></svg
+                    >
+                  </button>
+                  <button class="ctrl-btn next-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                      ></path><path d="M4 5v14l12 -7z"></path><line
+                        x1="20"
+                        y1="5"
+                        x2="20"
+                        y2="19"
+                        stroke="currentColor"
+                        stroke-width="2"></line></svg
+                    >
+                  </button>
+                </div>
+
+                <div class="player-progress">
+                  <span id="current-time">00:00</span>
+                  <div class="progress-bar-container" id="progress-container">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                  </div>
+                  <span id="duration">00:00</span>
+                </div>
+              </div>
             </div>
-            <iframe
-              style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/5nhdinvxPvzXlXrpKrCk2z?utm_source=generator"
-              width="100%"
-              height="352"
-              frameborder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"></iframe>
           </div>
         </div>
       </div>
+
+      <div class="music-footer">
+        <!-- <div class="footer-left">
+          <p>REAL VOICES.<br/>REAL MUSIC.</p>
+        </div> -->
+
+        <div class="footer-center">
+          <span class="vocalists-title">OUR VOCALISTS</span>
+          <div class="vocalists-list">
+            <div class="vocalist-item">
+              <div class="vocalist-img">
+                <img
+                  src="/media/images/home/music/dr-bhavna.png"
+                  alt="Dr. Bhavna Mehta"
+                />
+              </div>
+              <span>Dr. Bhavna Mehta</span>
+            </div>
+            <div class="vocalist-item">
+              <div class="vocalist-img">
+                <img
+                  src="/media/images/home/music/atharva.png"
+                  alt="Atharva Joshi"
+                />
+              </div>
+              <span>Atharva Joshi</span>
+            </div>
+            <div class="vocalist-item">
+              <div class="vocalist-img">
+                <img
+                  src="/media/images/home/music/vatsal.png"
+                  alt="Vatsal Joshi"
+                />
+              </div>
+              <span>Vatsal Joshi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <p>
+            CREATE <span class="sep">|</span> PRODUCE <span class="sep">|</span> LAUNCH
+          </p>
+        </div>
+      </div>
+
+      <audio id="runr-audio" preload="metadata">
+        <source
+          src="/media/images/home/music/ambe-maat-angne-padharya.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
     </section>
   </div>
 
   <Fragment slot="page-scripts">
     <script is:inline src="/media/js/client-logos-orbit.js"></script>
 
-    <!-- Music Swiper Init -->
+    <!-- Music Swiper Init & Player Logic -->
     <script is:inline>
       (function () {
         if (typeof Swiper === "undefined") return;
@@ -2711,19 +2814,193 @@ const influencers = [
           slidesPerView: 2,
           spaceBetween: 20,
           loop: true,
+          loopAdditionalSlides: 2,
+
           autoplay: {
             delay: 3000,
             disableOnInteraction: false,
           },
-          pagination: {
-            el: ".music-swiper-pagination",
-            clickable: true,
-          },
+
+          pagination: false,
+
           breakpoints: {
-            0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
+            1216: {
+              slidesPerView: 1,
+            },
+            1408: {
+              slidesPerView: 2,
+            },
           },
         });
+
+        // Player Logic
+        const audio = document.getElementById("runr-audio");
+        const playBtn = document.getElementById("main-play-btn");
+        const topPlayBtn = document.getElementById("top-play-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        const playIcon = document.getElementById("play-icon");
+        const pauseIcon = document.getElementById("pause-icon");
+        const diskImg = document.getElementById("music-disk");
+
+        const currentTimeEl = document.getElementById("current-time");
+        const durationEl = document.getElementById("duration");
+        const progressContainer = document.getElementById("progress-container");
+        const progressFill = document.getElementById("progress-fill");
+
+        const playerTitle = document.getElementById("player-title");
+        const playerSinger = document.getElementById("player-singer");
+
+        const slides = document.querySelectorAll(
+          ".swiper-slide[data-audio]:not(.swiper-slide-duplicate)",
+        );
+        let playlist = [];
+        let currentTrackIndex = 0;
+
+        if (slides) {
+          slides.forEach((slide, index) => {
+            playlist.push({
+              src: slide.getAttribute("data-audio"),
+              title: slide.getAttribute("data-title"),
+              singer: slide.getAttribute("data-singer"),
+              originalSlide: slide,
+            });
+            // Update click event to use playlist index
+            slide.addEventListener("click", () => {
+              playTrack(index);
+            });
+          });
+        }
+
+        // Add events to duplicated slides so they also work
+        const allSlides = document.querySelectorAll(
+          ".swiper-slide[data-audio]",
+        );
+        allSlides.forEach((slide) => {
+          if (slide.classList.contains("swiper-slide-duplicate")) {
+            slide.addEventListener("click", () => {
+              const src = slide.getAttribute("data-audio");
+              const index = playlist.findIndex((track) => track.src === src);
+              if (index !== -1) playTrack(index);
+            });
+          }
+        });
+
+        function playTrack(index) {
+          if (index < 0 || index >= playlist.length) return;
+          const track = playlist[index];
+
+          if (track.title && playerTitle) playerTitle.textContent = track.title;
+          if (track.singer && playerSinger)
+            playerSinger.textContent = track.singer;
+
+          currentTrackIndex = index;
+
+          if (track.src && track.src !== "") {
+            const currentSrc = new URL(audio.src, window.location.href).href;
+            const newSrc = new URL(track.src, window.location.href).href;
+
+            if (currentSrc !== newSrc) {
+              audio.src = track.src;
+              audio.play();
+            } else {
+              togglePlay();
+            }
+          } else {
+            audio.pause();
+            alert("This song is not available yet.");
+          }
+        }
+
+        function playNext() {
+          if (playlist.length === 0) return;
+          let nextIndex = (currentTrackIndex + 1) % playlist.length;
+          playTrack(nextIndex);
+        }
+
+        function playPrev() {
+          if (playlist.length === 0) return;
+          let prevIndex =
+            (currentTrackIndex - 1 + playlist.length) % playlist.length;
+          playTrack(prevIndex);
+        }
+
+        if (nextBtn) nextBtn.addEventListener("click", playNext);
+        if (prevBtn) prevBtn.addEventListener("click", playPrev);
+
+        function togglePlay() {
+          if (audio.paused) {
+            if (
+              audio.src &&
+              audio.src !== window.location.href &&
+              audio.src !== ""
+            ) {
+              audio.play();
+            } else if (playlist.length > 0) {
+              playTrack(0);
+            }
+          } else {
+            audio.pause();
+          }
+        }
+
+        if (playBtn) playBtn.addEventListener("click", togglePlay);
+        if (topPlayBtn) topPlayBtn.addEventListener("click", togglePlay);
+
+        function updatePlayState() {
+          if (audio.paused) {
+            if (playIcon) playIcon.style.display = "block";
+            if (pauseIcon) pauseIcon.style.display = "none";
+            if (diskImg) diskImg.classList.remove("playing");
+          } else {
+            if (playIcon) playIcon.style.display = "none";
+            if (pauseIcon) pauseIcon.style.display = "block";
+            if (diskImg) diskImg.classList.add("playing");
+          }
+        }
+
+        if (audio) {
+          audio.addEventListener("play", updatePlayState);
+          audio.addEventListener("pause", updatePlayState);
+          audio.addEventListener("ended", () => {
+            playNext(); // Auto play next when ended
+          });
+
+          audio.addEventListener("timeupdate", () => {
+            const currentTime = audio.currentTime;
+            const duration = audio.duration || 0;
+            if (duration) {
+              const progressPercent = (currentTime / duration) * 100;
+              if (progressFill)
+                progressFill.style.width = progressPercent + "%";
+              if (currentTimeEl)
+                currentTimeEl.textContent = formatTime(currentTime);
+              if (durationEl) durationEl.textContent = formatTime(duration);
+            }
+          });
+
+          audio.addEventListener("loadedmetadata", () => {
+            if (durationEl) durationEl.textContent = formatTime(audio.duration);
+          });
+        }
+
+        if (progressContainer) {
+          progressContainer.addEventListener("click", (e) => {
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            if (duration) {
+              audio.currentTime = (clickX / width) * duration;
+            }
+          });
+        }
+
+        function formatTime(seconds) {
+          if (isNaN(seconds)) return "00:00";
+          const min = Math.floor(seconds / 60);
+          const sec = Math.floor(seconds % 60);
+          return `${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}`;
+        }
       })();
     </script>
 
@@ -2853,7 +3130,7 @@ const influencers = [
                 gsap.set(homepage, {
                   clipPath: "none",
                 });
-                // Loader animation done ” initialize everything
+                // Loader animation done â€ initialize everything
                 window.dispatchEvent(new Event("facesInit"));
                 window.dispatchEvent(new Event("runrLoaderComplete"));
                 ScrollTrigger.refresh();
@@ -2883,7 +3160,7 @@ const influencers = [
               0.05,
             );
 
-            // 3. Homepage opens outward from that exact point ” the "lens
+            // 3. Homepage opens outward from that exact point â€ the "lens
             // reopening on the new scene" moment that ties both halves together
             tl.to(
               homepage,

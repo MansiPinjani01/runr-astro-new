@@ -5,13 +5,16 @@
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+export const prerender = true;
+
 export function getStaticPaths() {
   const files = import.meta.glob("../../data/reels/*.json", { eager: true });
   return Object.entries(files).map(([path, mod]: [string, any]) => {
     const slug = path.split("/").pop()!.replace(".json", "");
+    const data = mod.default || mod;
     return {
       params: { category: slug },
-      props: { data: mod.default || mod },
+      props: { data },
     };
   });
 }

@@ -670,6 +670,9 @@ function closeContactSidebar() {
   var ring = document.querySelector('.cursor-ring');
   if (!dot || !ring) return;
 
+  // Check if gsap is available
+  if (typeof gsap === 'undefined' || !gsap.quickTo) return;
+
   var dotX = gsap.quickTo(dot, "x", { duration: 0.08, ease: "power3" });
   var dotY = gsap.quickTo(dot, "y", { duration: 0.08, ease: "power3" });
   var ringX = gsap.quickTo(ring, "x", { duration: 0.35, ease: "power3" });

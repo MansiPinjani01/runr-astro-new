@@ -41,19 +41,12 @@ export function buildEmailHtml(data: EmailData): string {
           <!-- Header -->
           <tr>
             <td style="background:#111;padding:30px 40px;text-align:center;">
-              <h1 style="margin:0;color:#ff5722;font-size:24px;font-weight:700;letter-spacing:2px;">RUNR</h1>
-              <p style="margin:8px 0 0;color:#ffffffaa;font-size:12px;text-transform:uppercase;letter-spacing:1px;">New Enquiry Received</p>
+              <img src="https://runr.themidnight.workers.dev/media/images/white-logo.svg" alt="RUNR" width="140" style="display:inline-block;" />
+              
             </td>
           </tr>
 
-          <!-- Source Badge -->
-          <tr>
-            <td style="padding:24px 40px 0;">
-              <span style="display:inline-block;background:#ff57221a;color:#ff5722;font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;text-transform:uppercase;">
-                ${data.source}
-              </span>
-            </td>
-          </tr>
+          
 
           <!-- Details -->
           <tr>
@@ -68,7 +61,7 @@ export function buildEmailHtml(data: EmailData): string {
                 <tr>
                   <td style="padding:12px 0;border-bottom:1px solid #f0f0f0;">
                     <span style="display:block;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Email</span>
-                    <a href="mailto:${escapeHtml(data.email)}" style="font-size:16px;color:#ff5722;text-decoration:none;font-weight:500;">${escapeHtml(data.email)}</a>
+                    <a href="mailto:${escapeHtml(data.email)}" style="font-size:16px;color:#111;text-decoration:none;font-weight:500;">${escapeHtml(data.email)}</a>
                   </td>
                 </tr>
                 <tr>
@@ -104,7 +97,9 @@ export function buildEmailHtml(data: EmailData): string {
           <!-- Footer -->
           <tr>
             <td style="background:#fafafa;padding:20px 40px;text-align:center;border-top:1px solid #f0f0f0;">
-              <p style="margin:0;font-size:12px;color:#999;">RUNR &mdash; Create Together. Grow Forever.</p>
+              <p style="margin:0 0 12px;font-size:12px;color:#999;">RUNR &mdash; Create Together. Grow Forever.</p><table cellpadding="0" cellspacing="0" style="margin:10px auto 0;"><tr><td style="padding:0 8px;"><a href="https://www.instagram.com/runr.in/"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="22" height="22" /></a></td><td style="padding:0 8px;"><a href="https://www.youtube.com/@runr_in"><img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube" width="22" height="22" /></a></td></tr></table>
+              <a href="https://www.instagram.com/runr.in/" style="display:inline-block;margin:0 8px;text-decoration:none;"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" height="24" style="display:inline-block;" /></a>
+              <a href="https://www.youtube.com/@runr_in" style="display:inline-block;margin:0 8px;text-decoration:none;"><img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube" width="24" height="24" style="display:inline-block;" /></a>
             </td>
           </tr>
 

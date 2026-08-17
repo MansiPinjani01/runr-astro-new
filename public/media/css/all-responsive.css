@@ -66,9 +66,18 @@
         font-size: 130px;
     }
 
+    .player-info h3 {
+        font-size: 18px;
+    }
+
+    .player-progress {
+        max-width: 150px;
+    }
+
     .op-new-img-group {
         width: 240px;
         height: 290px;
+        left: 30%;
     }
 
     .menu-nav-side {
@@ -193,6 +202,35 @@
 @media screen and (max-width: 1408px) {
     .subscriber-headline {
         font-size: 28px;
+    }
+
+    .op-new-title h4 {
+        font-size: 40px;
+    }
+
+    .op-new-desc h3 {
+        font-size: 18px;
+    }
+
+    .op-new-img-group {
+        left: 22%;
+        width: 200px;
+        height: 230px;
+    }
+
+    .music-container .column:nth-child(2) {
+        flex: 0 0 45%;
+        width: 45%;
+    }
+
+    .music-container .column:last-child {
+        flex: 0 0 30%;
+        width: 30%;
+    }
+
+    .music-slider-wrapper .swiper-slide {
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     .subscriber-num {
@@ -364,13 +402,35 @@
         min-height: 200px;
     }
 
+    .op-new-desc {
+        max-width: 645px;
+        flex: 0 0 645px;
+    }
+
+    .play-pause-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .custom-music-player {
+        width: 100%;
+        height: 100%;
+    }
+
+    .vocalists-list {
+        justify-content: start;
+    }
+
+    .vocalists-title {
+        text-align: start;
+    }
+
     .sidebar-logo img {
         height: 20px;
     }
 
     .sidebar-vertical-text {
         font-size: 34px;
-
     }
 
     .sidebar-intro h2 {
@@ -378,27 +438,24 @@
     }
 
     .op-new-title h4 {
-        font-size: 40px;
+        font-size: 34px;
     }
 
     .op-new-item {
         padding: 15px;
     }
 
-    .op-new-img-group {
-        width: 200px;
-        height: 250px;
-        left: 35%;
-    }
+
 
     .op-new-desc h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .op-new-desc span {
         font-size: 14px;
+        line-height: 20px;
+        display: block;
     }
-
 
     .subscriber-headline {
         font-size: 26px;
@@ -525,6 +582,14 @@
 
     .team-section .slot {
         transform: translate(-50%, -50%) scale(0.85);
+    }
+
+    .team-section .portrait-stack {
+        height: calc(100% - 35px);
+    }
+
+    .team-section .frame-layer img {
+        object-position: top center;
     }
 
     .section-title .text-md {
@@ -812,13 +877,31 @@
 }
 
 @media screen and (max-width: 1024px) {
-
     .header-connect-btn {
         padding: 8px 16px;
         font-size: 12px;
         margin-right: 15px;
     }
 
+    .music-container .column:nth-child(2) {
+        flex: 0 0 60%;
+        width: 60%;
+    }
+
+    .music-container .column:last-child {
+        flex: 0 0 40%;
+        width: 40%;
+    }
+
+    .music-disk-bg {
+        top: 10%;
+        transform: unset;
+    }
+
+    .music-container .column:nth-child(1) {
+        flex: 0 0 100%;
+        width: 100%;
+    }
 
     .op-new {
         display: flex;
@@ -833,6 +916,7 @@
 
     .op-new-title h4 {
         font-size: 24px;
+        margin-bottom: 15px;
     }
 
     .op-new-img-group,
@@ -841,8 +925,7 @@
     }
 
     .op-new-item {
-        flex-wrap: wrap;
-        align-items: center;
+        display: block;
         gap: 16px;
         padding: 20px;
         width: 33.33%;
@@ -861,6 +944,7 @@
         display: block;
         max-width: 230px;
         order: 2;
+        margin-bottom: 10px;
     }
 
     .op-new-logo {
@@ -870,7 +954,6 @@
     .op-new-desc {
         order: 4;
     }
-
 
     .op-highlight {
         display: none;
@@ -884,7 +967,7 @@
     }
 
     .op-new-desc h3 {
-        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     .wave-container {
@@ -914,7 +997,6 @@
         top: unset;
         position: relative;
     }
-
 
     .subscriber-headline {
         font-size: 24px;
@@ -1679,7 +1761,7 @@
         gap: 12px;
         grid-column: 1 / -1;
         margin-bottom: 4px;
-        font-size: 10px;
+        font-size: 12px;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: #8a8a86;
@@ -1755,6 +1837,53 @@
         font-size: 11px;
         margin-right: 10px;
         letter-spacing: 0.5px;
+    }
+
+    .player-progress {
+        max-width: 200px;
+    }
+
+    .music-container .column:nth-child(2) {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .music-container .column:last-child {
+        flex: 0 0 100%;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .music-player-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .footer-right {
+        position: relative;
+        top: unset;
+        right: unset;
+        transform: unset;
+        text-align: center;
+        max-width: fit-content;
+        margin: 20px auto 0;
+    }
+
+    .vocalists-list {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .vocalists-title {
+        text-align: center;
+    }
+
+    .music-container .columns {
+        display: flex;
+        justify-content: center;
     }
 
     .header-connect-btn span {
@@ -2515,7 +2644,6 @@
         letter-spacing: 1.5px;
     }
 
-
     .mh-view-more-icon {
         width: 28px !important;
         height: 28px !important;
@@ -2774,10 +2902,7 @@
         margin-bottom: 20px;
     }
 
-    .team-section .feed-marker {
-        margin-bottom: 2px;
-        font-size: 9px;
-    }
+
 
     .menu-item {
         line-height: 30px;
@@ -3268,7 +3393,6 @@
         padding-left: 50px;
     }
 
-
     .sidebar-intro {
         margin-bottom: 25px;
     }
@@ -3544,5 +3668,14 @@
     .section-contact-team .section-title h2 {
         font-size: 34px;
         line-height: 46px;
+    }
+
+    .footer-left p,
+    .footer-right p {
+        letter-spacing: 0;
+    }
+
+    .footer-right .sep {
+        margin: 0 6px;
     }
 }
