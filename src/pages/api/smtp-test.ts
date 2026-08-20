@@ -25,9 +25,14 @@ export const GET: APIRoute = async () => {
       host: SMTP_HOST,
       port: SMTP_PORT,
       secure: false,
+      name: "micrositeidpl.in",
       auth: {
+        type: "login",
         user: SMTP_USER,
         pass: SMTP_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false,
       },
     });
 

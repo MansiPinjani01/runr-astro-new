@@ -85,10 +85,15 @@ export const POST: APIRoute = async (context) => {
     const transporter = createTransport({
       host: SMTP_HOST,
       port: SMTP_PORT,
-      secure: SMTP_PORT === 465, // true for 465, false for 587 (STARTTLS)
+      secure: SMTP_PORT === 465,
+      name: "micrositeidpl.in",
       auth: {
+        type: "login",
         user: SMTP_USER,
         pass: SMTP_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false,
       },
     });
 
