@@ -402,6 +402,21 @@
         min-height: 200px;
     }
 
+    .list-point li {
+        font-size: 16px;
+        padding-left: 16px;
+    }
+
+    .cms-item h1,
+    .cms-item h2 {
+        font-size: 26px;
+
+    }
+
+    .cms-item h3 {
+        font-size: 20px;
+    }
+
     .op-new-desc {
         max-width: 645px;
         flex: 0 0 645px;
@@ -1032,7 +1047,7 @@
 
     .subscriber-stats {
         gap: 12px;
-        padding: 0 30px;
+        padding-left: 30px;
     }
 
     .subscriber-num {
@@ -1837,6 +1852,11 @@
         font-size: 11px;
         margin-right: 10px;
         letter-spacing: 0.5px;
+    }
+
+    .cms-item h1,
+    .cms-item h2 {
+        font-size: 22px;
     }
 
     .player-progress {
@@ -3134,7 +3154,7 @@
     }
 
     .section-cms h3 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .tab-list.spotlight-tab .tab {
@@ -3184,7 +3204,7 @@
     }
 
     p {
-        margin-bottom: 8px;
+        margin-bottom: 12px;
     }
 
     .footer-slider-content h3 {

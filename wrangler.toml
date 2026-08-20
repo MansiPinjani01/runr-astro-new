@@ -1,9 +1,13 @@
 name = "runr"
 compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
 
 [vars]
-RESEND_API_KEY = "re_2KjaQo1X_KKw1FqvPuoGjaHvKLYzbLLf9"
+SMTP_HOST = "send.smtp.com"
+SMTP_PORT = "587"
+SMTP_USER = "noreply@micrositeidpl.in"
+SMTP_PASS = "634'=DTmWW80$"
 EMAIL_TO = "mansi.pinjani@insomniacs.in"
-EMAIL_CC_1 = "kinal@insomniacs.in"
-EMAIL_CC_2 = "rutik@insomniacs.in"
-EMAIL_FROM = "onboarding@resend.dev"
+EMAIL_CC_1 = "rutik@insomniacs.in"
+EMAIL_CC_2 = "kinal@insomniacs.in"
+EMAIL_FROM = "noreply@micrositeidpl.in"

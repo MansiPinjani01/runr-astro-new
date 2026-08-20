@@ -1,11 +1,12 @@
 /**
  * API Endpoint: POST /api/contact
- * 
+ *
  * Receives form data from both Sidebar and Contact Us page,
- * sends a professional HTML email via Resend API.
+ * sends a professional HTML email via SMTP (Nodemailer).
  */
 
 import type { APIRoute } from "astro";
+import { createTransport } from "nodemailer";
 import { buildEmailHtml, buildEmailSubject } from "../../lib/email-template";
 
 export const prerender = false;
@@ -42,30 +43,27 @@ export const POST: APIRoute = async (context) => {
       );
     }
 
-    // Get env variables - direct values for testing
-    const RESEND_API_KEY = "re_QPfDdmVZ_LiBtYRcu9FuecE7Gpnaac97v";
-    const EMAIL_TO = "mansi.pinjani@insomniacs.in";
-    const EMAIL_CC_1 = "";
-    const EMAIL_CC_2 = "";
-    const EMAIL_FROM = "onboarding@resend.dev";
+    // Read SMTP config from environment variables
+    const SMTP_HOST = import.meta.env.SMTP_HOST;
+    const SMTP_PORT = parseInt(import.meta.env.SMTP_PORT || "587", 10);
+    const SMTP_USER = import.meta.env.SMTP_USER;
+    const SMTP_PASS = import.meta.env.SMTP_PASS;
+    const EMAIL_TO = import.meta.env.EMAIL_TO;
+    const EMAIL_CC_1 = import.meta.env.EMAIL_CC_1 || "";
+    const EMAIL_CC_2 = import.meta.env.EMAIL_CC_2 || "";
+    const EMAIL_FROM = import.meta.env.EMAIL_FROM;
 
-    if (!RESEND_API_KEY || !EMAIL_TO || !EMAIL_FROM) {
+    if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS || !EMAIL_TO || !EMAIL_FROM) {
       return new Response(
-        JSON.stringify({ 
-          success: false, 
-          error: "Server configuration error",
-          debug: {
-            hasKey: !!RESEND_API_KEY,
-            hasKey: !!RESEND_API_KEY,
-            hasTo: !!EMAIL_TO,
-            hasFrom: !!EMAIL_FROM,
-          }
+        JSON.stringify({
+          success: false,
+          error: "Server configuration error: missing SMTP env variables",
         }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    // Build email
+    // Build email content
     const emailData = {
       name: name.trim(),
       email: email.trim(),
@@ -83,30 +81,26 @@ export const POST: APIRoute = async (context) => {
     if (EMAIL_CC_1) cc.push(EMAIL_CC_1);
     if (EMAIL_CC_2) cc.push(EMAIL_CC_2);
 
-    // Send via Resend API
-    const resendResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
+    // Create Nodemailer SMTP transporter
+    const transporter = createTransport({
+      host: SMTP_HOST,
+      port: SMTP_PORT,
+      secure: SMTP_PORT === 465, // true for 465, false for 587 (STARTTLS)
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
       },
-      body: JSON.stringify({
-        from: EMAIL_FROM,
-        to: [EMAIL_TO],
-        cc: cc.length > 0 ? cc : undefined,
-        subject: subject,
-        html: htmlContent,
-        reply_to: email.trim(),
-      }),
     });
 
-    if (!resendResponse.ok) {
-      const errorData = await resendResponse.text();
-      return new Response(
-        JSON.stringify({ success: false, error: "Failed to send email", detail: errorData }),
-        { status: 500, headers: { "Content-Type": "application/json" } }
-      );
-    }
+    // Send email
+    await transporter.sendMail({
+      from: `"RUNR" <${EMAIL_FROM}>`,
+      to: EMAIL_TO,
+      cc: cc.length > 0 ? cc.join(", ") : undefined,
+      replyTo: email.trim(),
+      subject: subject,
+      html: htmlContent,
+    });
 
     return new Response(
       JSON.stringify({ success: true }),
@@ -114,7 +108,11 @@ export const POST: APIRoute = async (context) => {
     );
   } catch (err: any) {
     return new Response(
-      JSON.stringify({ success: false, error: "Internal server error", detail: err?.message || String(err) }),
+      JSON.stringify({
+        success: false,
+        error: "Failed to send email",
+        detail: err?.message || String(err),
+      }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }

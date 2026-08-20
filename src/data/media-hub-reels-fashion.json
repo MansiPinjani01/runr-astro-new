@@ -1,11 +1,9 @@
 {
-    "chapters": [
-        {
+    "chapters": [{
             "title": "Real Estate & Property",
             "slug": "property-tours",
             "pattern": "a",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=Pw4xhd0iNKE",
                     "poster": "https://i.ytimg.com/vi/Pw4xhd0iNKE/hqdefault.jpg",
                     "title": "Property Tour 1",
@@ -51,8 +49,7 @@
             "title": "Fashion & Lifestyle",
             "slug": "fashion",
             "pattern": "b",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=IHS4zpijp3M",
                     "poster": "https://i.ytimg.com/vi/IHS4zpijp3M/hqdefault.jpg",
                     "title": "Fashion Reel 1",
@@ -98,8 +95,7 @@
             "title": "Jewellery & Luxury",
             "slug": "jewellers",
             "pattern": "a",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=LTWFYDfzFus",
                     "poster": "https://i.ytimg.com/vi/LTWFYDfzFus/hqdefault.jpg",
                     "title": "Jewellers Reel 1",
@@ -145,8 +141,7 @@
             "title": "Food & Hospitality",
             "slug": "restaurant-cafe",
             "pattern": "b",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=fSw72A_HaW4",
                     "poster": "https://i.ytimg.com/vi/fSw72A_HaW4/hqdefault.jpg",
                     "title": "Restaurant Reel 1",
@@ -192,8 +187,7 @@
             "title": "Education & Learning",
             "slug": "education",
             "pattern": "a",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=aUIYInf9BMc",
                     "poster": "https://i.ytimg.com/vi/aUIYInf9BMc/hqdefault.jpg",
                     "title": "Education Reel 1",
@@ -239,8 +233,7 @@
             "title": "Healthcare",
             "slug": "hospital",
             "pattern": "b",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=hEb4j2TM0Yg",
                     "poster": "https://i.ytimg.com/vi/hEb4j2TM0Yg/hqdefault.jpg",
                     "title": "Hospital Reel 1",
@@ -286,8 +279,7 @@
             "title": "Events & Experiences",
             "slug": "events",
             "pattern": "a",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=MeJGpOkrD0s",
                     "poster": "https://i.ytimg.com/vi/MeJGpOkrD0s/hqdefault.jpg",
                     "title": "Events Reel 1",
@@ -333,8 +325,7 @@
             "title": "Early Education",
             "slug": "pre-school",
             "pattern": "b",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=LnaTmPh5xD4",
                     "poster": "https://i.ytimg.com/vi/LnaTmPh5xD4/hqdefault.jpg",
                     "title": "Pre School Reel 1",
@@ -380,8 +371,7 @@
             "title": "Interior & Décor",
             "slug": "decor-style",
             "pattern": "a",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=Q1sr1xAUoLo",
                     "poster": "https://i.ytimg.com/vi/Q1sr1xAUoLo/hqdefault.jpg",
                     "title": "Decor & Style Reel 1",
@@ -427,8 +417,7 @@
             "title": "Food & Confectionery",
             "slug": "sweets-desserts",
             "pattern": "b",
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=QTLhWZxKAlk",
                     "poster": "https://i.ytimg.com/vi/QTLhWZxKAlk/hqdefault.jpg",
                     "title": "Sweets & Desserts Reel 1",
@@ -475,8 +464,7 @@
             "slug": "manufacturing",
             "pattern": "a",
             "noViewMore": true,
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=sD2rZFse2RE",
                     "poster": "https://i.ytimg.com/vi/sD2rZFse2RE/hqdefault.jpg",
                     "title": "Manufacturing Reel 1",
@@ -519,12 +507,11 @@
             ]
         },
         {
-            "title": "Social Impact & Nonprofit",
+            "title": "Social Impact",
             "slug": "social-impact",
             "pattern": "b",
             "noViewMore": true,
-            "reels": [
-                {
+            "reels": [{
                     "video": "https://www.youtube.com/watch?v=eExNxALrzNo",
                     "poster": "https://i.ytimg.com/vi/eExNxALrzNo/hqdefault.jpg",
                     "title": "Social Impact Reel 1",
