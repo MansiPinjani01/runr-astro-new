@@ -2,7 +2,7 @@ name = "runr"
 compatibility_date = "2024-09-23"
 
 [vars]
-RESEND_API_KEY = "re_2KjaQo1X_KKw1FqvPuoGjaHvKLYzbLLf9"
+RESEND_API_KEY = "re_QPfDdmVZ_LiBtYRcu9FuecE7Gpnaac97v"
 EMAIL_TO = "mansi.pinjani@insomniacs.in"
 EMAIL_CC_1 = "kinal@insomniacs.in"
 EMAIL_CC_2 = "rutik@insomniacs.in"
