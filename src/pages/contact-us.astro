@@ -1,4 +1,4 @@
-﻿---
+---
 /*
   contact-us.astro - Contact Us Page
   Converted from PHP: index.php
@@ -9,11 +9,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="Contact Us - runr"
+  title="Contact Runr — Let's Talk Strategy, Content & Collaborations"
+  description="Get in touch with Runr for marketing strategy consulting, content, influencer marketing, or podcasts. Based in Bhavnagar, working with brands across India."
+  keywords="contact creative consulting agency Bhavnagar, marketing agency contact India, influencer marketing agency contact"
+  canonical="https://www.runr.in/contact-us/"
   page="contact-us"
   pagename="Contact Us"
   onepagemenu={true}
 >
+  <script type="application/ld+json" slot="head" is:inline>{`
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Runr",
+      "url": "https://www.runr.in/contact-us/",
+      "telephone": "+91-88775-55255",
+      "email": "info@runr.in",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "401, 4th Floor, Trishul One, Sir P. Pattani Road, Ghogha Circle",
+        "addressLocality": "Bhavnagar",
+        "addressRegion": "Gujarat",
+        "postalCode": "364001",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["IN"],
+      "priceRange": "$$"
+    }
+  `}</script>
+
   <section id="section-about-us" class="section section-about-us theme-padding">
     <div class="about-us-wrapper js-scroll fade-in-left scrolled">
       <div class="move-box"></div>
@@ -45,8 +69,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
       <p>
         Have an idea, a story, or a brand waiting to shine? Whether you're
-        looking to collaborate, promote, or simply explore how Runr can amplify
-        your presence ” we're just a message away.
+        figuring out a strategy, looking to collaborate, or just want an honest
+        opinion on where to start — we're just a message away. You don't need a
+        polished brief to reach out; half-formed ideas are usually where the good
+        conversations begin.
       </p>
     </div>
   </section>
@@ -149,6 +175,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         </div>
                         <div
                           class="contact-custom-select-option"
+                          data-value="Marketing Strategy Consulting"
+                        >
+                          Marketing Strategy Consulting
+                        </div>
+                        <div
+                          class="contact-custom-select-option"
                           data-value="Reel Production"
                         >
                           Reel Production
@@ -199,7 +231,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                       rows="4"
                       name="message"
                       id="contact-message"
-                      placeholder="Type your message here..."
+                      placeholder="The more you tell us, the better we can help — even a rough idea is a great place to start."
                       spellcheck="false"></textarea>
                   </div>
                 </div>

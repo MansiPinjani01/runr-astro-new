@@ -29,22 +29,37 @@ interface CategoryData {
   category: string;
   title: string;
   description: string;
+  keywords?: string;
+  metaDescription?: string;
   reels: ReelItem[];
 }
 
 const { data } = Astro.props as { data: CategoryData };
+const categorySlug = Astro.params.category;
 const categoryTitle = data.title;
 const reels = data.reels;
 
+const metaTitle = `${categoryTitle} Video Content & Reel Production | Runr`;
+const metaDescription =
+  data.metaDescription ||
+  `Explore Runr's strategy-led ${categoryTitle.toLowerCase()} reels, video content, and brand campaigns. Built for engagement and growth.`;
+const metaKeywords =
+  data.keywords ||
+  `${categoryTitle.toLowerCase()} video content, ${categoryTitle.toLowerCase()} reel production, ${categoryTitle.toLowerCase()} marketing strategy`;
+const canonicalUrl = `https://www.runr.in/media-hub/${categorySlug}/`;
+
 // Helper: convert YouTube hqdefault to smaller mqdefault (320x180 vs 480x360)
 function getSmallPoster(poster: string): string {
-  return poster.replace("hqdefault.jpg", "mqdefault.jpg");
+  if (poster && poster.includes("hqdefault")) {
+    return poster.replace("hqdefault", "mqdefault");
+  }
+  return poster;
 }
 
-// 5 columns, each gets enough items to fill
-const NUM_COLS = 5;
-const ITEMS_PER_COL = Math.max(8, Math.ceil(reels.length / NUM_COLS) + 2);
+// Prepare columns: 5 columns for desktop grid
 function getColumns(allReels: ReelItem[]) {
+  const NUM_COLS = 5;
+  const ITEMS_PER_COL = Math.max(3, Math.ceil(allReels.length / NUM_COLS));
   const cols: ReelItem[][] = Array.from({ length: NUM_COLS }, () => []);
   for (let c = 0; c < NUM_COLS; c++) {
     for (let i = 0; i < ITEMS_PER_COL; i++) {
@@ -57,7 +72,10 @@ const columns = getColumns(reels);
 ---
 
 <BaseLayout
-  title={`${categoryTitle} — Media Hub | runr`}
+  title={metaTitle}
+  description={metaDescription}
+  keywords={metaKeywords}
+  canonical={canonicalUrl}
   page="media-hub-category"
   pagename={categoryTitle}
   bodyClass="reels-category-page"

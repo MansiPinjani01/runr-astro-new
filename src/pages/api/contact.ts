@@ -2,10 +2,11 @@
  * API Endpoint: POST /api/contact
  * 
  * Receives form data from both Sidebar and Contact Us page,
- * sends a professional HTML email via Resend API.
+ * sends a professional HTML email via Nodemailer (SMTP).
  */
 
 import type { APIRoute } from "astro";
+import nodemailer from "nodemailer";
 import { buildEmailHtml, buildEmailSubject } from "../../lib/email-template";
 
 export const prerender = false;
@@ -42,24 +43,18 @@ export const POST: APIRoute = async (context) => {
       );
     }
 
-    // Get env variables
-    const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
-    const EMAIL_TO = import.meta.env.EMAIL_TO;
-    const EMAIL_CC_1 = import.meta.env.EMAIL_CC_1 || "";
-    const EMAIL_CC_2 = import.meta.env.EMAIL_CC_2 || "";
-    const EMAIL_FROM = import.meta.env.EMAIL_FROM;
+    // SMTP Credentials & Env variables
+    const SMTP_HOST = import.meta.env.SMTP_HOST || "send.smtp.com";
+    const SMTP_PORT = Number(import.meta.env.SMTP_PORT) || 587;
+    const SMTP_USER = import.meta.env.SMTP_USER || "noreply@micrositeidpl.in";
+    const SMTP_PASS = import.meta.env.SMTP_PASS || "634'=DTmWW80";
 
-    if (!RESEND_API_KEY || !EMAIL_TO || !EMAIL_FROM) {
-      return new Response(
-        JSON.stringify({ 
-          success: false, 
-          error: "Server configuration error",
-        }),
-        { status: 500, headers: { "Content-Type": "application/json" } }
-      );
-    }
+    const EMAIL_TO = import.meta.env.EMAIL_TO || "mansi.pinjani@insomniacs.in";
+    const EMAIL_CC_1 = import.meta.env.EMAIL_CC_1 || "kinal@insomniacs.in";
+    const EMAIL_CC_2 = import.meta.env.EMAIL_CC_2 || "rutik@insomniacs.in";
+    const EMAIL_FROM = import.meta.env.EMAIL_FROM || `RUNR <${SMTP_USER}>`;
 
-    // Build email
+    // Build email template content
     const emailData = {
       name: name.trim(),
       email: email.trim(),
@@ -73,42 +68,44 @@ export const POST: APIRoute = async (context) => {
     const subject = buildEmailSubject(emailData);
 
     // Build CC list
-    const cc: string[] = [];
-    if (EMAIL_CC_1) cc.push(EMAIL_CC_1);
-    if (EMAIL_CC_2) cc.push(EMAIL_CC_2);
+    const ccList: string[] = [];
+    if (EMAIL_CC_1) ccList.push(EMAIL_CC_1);
+    if (EMAIL_CC_2) ccList.push(EMAIL_CC_2);
 
-    // Send via Resend API
-    const resendResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
+    // Create Nodemailer Transporter
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: SMTP_PORT,
+      secure: SMTP_PORT === 465, // false for 587 (TLS/STARTTLS)
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
       },
-      body: JSON.stringify({
-        from: EMAIL_FROM,
-        to: [EMAIL_TO],
-        cc: cc.length > 0 ? cc : undefined,
-        subject: subject,
-        html: htmlContent,
-        reply_to: email.trim(),
-      }),
+      tls: {
+        rejectUnauthorized: false
+      }
     });
 
-    if (!resendResponse.ok) {
-      const errorData = await resendResponse.text();
-      return new Response(
-        JSON.stringify({ success: false, error: "Failed to send email", detail: errorData }),
-        { status: 500, headers: { "Content-Type": "application/json" } }
-      );
-    }
+    // Send email via Nodemailer
+    const info = await transporter.sendMail({
+      from: EMAIL_FROM,
+      to: EMAIL_TO,
+      cc: ccList.length > 0 ? ccList : undefined,
+      replyTo: email.trim(),
+      subject: subject,
+      html: htmlContent,
+    });
+
+    console.log("Email sent successfully:", info.messageId);
 
     return new Response(
-      JSON.stringify({ success: true }),
+      JSON.stringify({ success: true, messageId: info.messageId }),
       { status: 200, headers: { "Content-Type": "application/json" } }
     );
   } catch (err: any) {
+    console.error("Nodemailer error:", err);
     return new Response(
-      JSON.stringify({ success: false, error: "Internal server error", detail: err?.message || String(err) }),
+      JSON.stringify({ success: false, error: "Failed to send email", detail: err?.message || String(err) }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }

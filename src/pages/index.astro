@@ -1,10 +1,4 @@
-﻿---
-/*
-  index.astro - Homepage
-  Converted from PHP: index.php
-  All PHP variables replaced with static paths.
-  HTML structure preserved exactly as original.
-*/
+---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ClientLogosOrbit from "../components/ClientLogosOrbit.astro";
 
@@ -111,7 +105,10 @@ const influencers = [
 ---
 
 <BaseLayout
-  title="runr"
+  title="Runr — Marketing Strategy Consulting & Creative Studio | India"
+  description="Runr blends human-led marketing strategy with content, influencer, and brand execution. Not another AI content mill — real consulting for real growth. Let's talk."
+  keywords="marketing strategy consulting, creative consulting studio India, content creation agency, influencer marketing agency, brand strategy consultant"
+  canonical="https://www.runr.in/"
   page="home"
   pagename="Home"
   swiperjs={true}
@@ -119,6 +116,14 @@ const influencers = [
   onepagemenu={true}
   bodyClass="is-loading"
 >
+  <script type="application/ld+json" slot="head" is:inline>{`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Runr",
+      "url": "https://www.runr.in/"
+    }
+  `}</script>
   <div id="loader">
     <div class="loader-logo">
       <svg
@@ -265,9 +270,80 @@ const influencers = [
       class="section section-our-services sticky-section theme-padding pb-0"
     >
       <div class="section-title title-animate">
-        <h1 class="theme-point title-xs">Our Services</h1>
+        <h2 class="theme-point title-xs">Our Services</h2>
       </div>
       <div class="our-service-wrapper js-scroll fade-in-bottom scrolled">
+        <div class="service-block sticky-block block-0">
+          <div class="columns is-multiline">
+            <div class="column is-12-mobile is-12-tablet is-1-desktop">
+              <span>00.</span>
+            </div>
+            <div class="column is-12-mobile is-12-tablet is-7-desktop">
+              <div class="service-item">
+                <h3 class="service-title">
+                  <span class="gray">Marketing Strategy <br /> Consulting</span>
+                  <span class="black">Marketing Strategy <br /> Consulting</span>
+                </h3>
+                <p>
+                  Before there's a single reel or campaign, there's a decision
+                  about who you're talking to and why they should care. We work
+                  directly with founders and marketing teams to build that
+                  clarity — brand positioning, audience strategy, campaign
+                  planning, and marketing direction that every other service
+                  exists to execute.
+                </p>
+                <a href="#section-reel" class="learn-more-btn">
+                  <img
+                    src="/media/images/btn-element.webp"
+                    alt=""
+                    class="btn-element"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M17 7l-10 10"></path>
+                    <path d="M8 7l9 0l0 9"></path>
+                  </svg>
+                </a>
+                <div class="inner-service">
+                  <a href="javascript:void(0);">Clarity</a>
+                  <a href="javascript:void(0);">Positioning</a>
+                  <a href="javascript:void(0);">Direction</a>
+                  <a href="javascript:void(0);">Accountability</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-4-desktop">
+              <div class="service-img img-reveal">
+                <picture
+                  class="reveal-overlay img-creative-hover img-reveal-shutter"
+                >
+                  <source
+                    media="(max-width:1024px)"
+                    srcset="/media/images/home/services/marketing-xl.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/media/images/home/services/marketing-sm.webp"
+                    alt="Marketing Strategy Consulting"
+                    width="465"
+                    height="580"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="service-block sticky-block block-1">
           <div class="columns is-multiline">
             <div class="column is-12-mobile is-12-tablet is-1-desktop">
@@ -280,13 +356,7 @@ const influencers = [
                   <span class="black">Reel Production</span>
                 </h3>
                 <p>
-                  Every reel begins with a powerful idea and evolves into a
-                  story designed to inspire action. From scripting and
-                  production to seamless editing, we craft every detail with
-                  purpose. Our content is built to capture attention, engage
-                  audiences, and communicate your brand’s story effectively.
-                  The result is impactful content that strengthens brands,
-                  builds connections, and leaves a lasting impression.
+                  A reel is easy to make and hard to make well. We start by asking what it needs to achieve — awareness, trust, a sale — and script, shoot, and edit backward from that answer. 
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -352,13 +422,7 @@ const influencers = [
                   <span class="black">Content Creator</span>
                 </h3>
                 <p>
-                  Every reel starts with a powerful idea and transforms into a
-                  story that inspires action. From scripting and production to
-                  seamless editing, we craft every detail with purpose. Our
-                  content is designed to capture attention, engage audiences,
-                  and strengthen brand identity. With creativity and strategy at
-                  its core, we create content that builds connections and leaves
-                  a lasting impression.
+                  Content that works isn't the content that's easiest to produce — it's the content built around a real understanding of your audience. 
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -426,12 +490,7 @@ const influencers = [
                   <span class="black">Social Media <br /> Marketing</span>
                 </h3>
                 <p>
-                  Build a powerful social presence with strategies designed to
-                  deliver real impact. We manage, optimize, and grow your brand
-                  across every major social media platform. From engaging
-                  content to strategic growth, we turn your online presence into
-                  a meaningful connection.Our goal is simple: turn followers
-                  into an active, engaged, and loyal community.
+                  Growing a social presence isn't about posting more; it's about posting with intent. We manage and grow your presence across platforms with a strategy built around your specific business goals.
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -498,14 +557,7 @@ const influencers = [
                   <span class="black">Collab's with <br />Entrepreneurs</span>
                 </h3>
                 <p>
-                  We create meaningful collaborations that connect brands with
-                  visionary entrepreneurs and influential voices.By building
-                  strategic partnerships, we inspire innovation and open doors
-                  to new opportunities.Our approach helps brands expand their
-                  reach while strengthening credibility and market
-                  presence.Together, we create collaborations that drive
-                  awareness, build lasting relationships, and deliver long-term
-                  business value.
+                 Some of the best growth comes from the right partnership, not the biggest campaign. We identify and build collaborations between brands and entrepreneurs whose audience and values genuinely align. 
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -573,13 +625,7 @@ const influencers = [
                   >
                 </h3>
                 <p>
-                  Connect your brand with creators who genuinely influence your
-                  target audience. From campaign planning and creator selection
-                  to seamless execution, we manage every step with precision.Our
-                  collaborations are built around authentic storytelling that
-                  feels natural and resonates with audiences.The result is
-                  meaningful promotions that increase brand visibility, drive
-                  engagement, and create lasting impact.
+                 Influencer marketing only works when the fit is real. We handle creator selection, campaign planning, and execution with one filter above all others: would this creator's audience actually trust this brand?
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -647,13 +693,7 @@ const influencers = [
                   <span class="black">Podcast Creation <br />& Management</span>
                 </h3>
                 <p>
-                  Launch and grow your podcast with complete end-to-end
-                  production support. From recording and editing to publishing
-                  and promotion, we manage every stage with precision. We help
-                  shape your ideas into engaging, high-quality episodes that
-                  connect with your audience. With consistent strategy and
-                  execution, we help your voice reach the right audience and
-                  build lasting impact.
+                  A podcast is a long-term relationship with an audience, not a content format. We support the full journey — recording, editing, publishing, and promotion. 
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -680,10 +720,10 @@ const influencers = [
                 </a>
 
                 <div class="inner-service">
-                  <a href="javascript:void(0);">Brand Reels</a>
-                  <a href="javascript:void(0);">Social Media Reels</a>
-                  <a href="javascript:void(0);">Commercial Reels</a>
-                  <a href="javascript:void(0);">Event Reels</a>
+                  <a href="javascript:void(0);">Consistency</a>
+                  <a href="javascript:void(0);">Craft</a>
+                  <a href="javascript:void(0);">Voice</a>
+                  <a href="javascript:void(0);">Growth</a>
                 </div>
               </div>
             </div>
@@ -721,13 +761,7 @@ const influencers = [
                   <span class="black">Lead Generation</span>
                 </h3>
                 <p>
-                  Generate high-quality leads that turn into meaningful business
-                  opportunities. We combine smart targeting, creative campaigns,
-                  and optimized funnels to reach the right audience.Every
-                  strategy is designed to attract, engage, and convert potential
-                  customers effectively.With a focus on measurable growth, we
-                  help businesses improve conversions and achieve lasting
-                  results.
+                  Attention is not the goal — qualified interest is. We build targeted campaigns and funnels designed around your actual sales process. 
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -754,8 +788,8 @@ const influencers = [
                 </a>
 
                 <div class="inner-service">
-                  <a href="javascript:void(0);">Optimization</a>
-                  <a href="javascript:void(0);">Performance</a>
+                  <a href="javascript:void(0);">Targeting</a>
+                  <a href="javascript:void(0);">Conversion</a>
                   <a href="javascript:void(0);">Growth</a>
                   <a href="javascript:void(0);">ROI</a>
                 </div>
@@ -795,13 +829,7 @@ const influencers = [
                   <span class="black">Performance <br /> Marketing</span>
                 </h3>
                 <p>
-                  We build data-driven campaigns designed to maximize every
-                  marketing investment. Using insights, continuous testing, and
-                  performance metrics, we optimize every campaign for better
-                  results.Our approach combines strategy and creativity to
-                  improve performance and drive sustainable growth.With
-                  measurable outcomes and smarter spending, we help brands
-                  achieve higher ROI and scalable success.
+                We treat every rupee of ad spend as a hypothesis to be tested, not a bet.
                 </p>
                 <a href="#section-reel" class="learn-more-btn">
                   <img
@@ -828,10 +856,10 @@ const influencers = [
                 </a>
 
                 <div class="inner-service">
-                  <a href="javascript:void(0);">Performance</a>
-                  <a href="javascript:void(0);">Conversion</a>
+                  <a href="javascript:void(0);">Testing</a>
+                  <a href="javascript:void(0);">Optimization</a>
                   <a href="javascript:void(0);">ROI</a>
-                  <a href="javascript:void(0);">Growth</a>
+                  <a href="javascript:void(0);">Transparency</a>
                 </div>
               </div>
             </div>
@@ -2141,12 +2169,13 @@ const influencers = [
                 />
               </picture>
             </div>
-            <p class="text-xs">
+           {/* <p class="text-xs">
               Where Little Voices Make Big Moments. A playful vertical by Runr,
               focused on kid-centric content, habits, and creativity. From fun
               events to inspiring stories and engaging competitions â€ we
               celebrate childhood in every reel.
-            </p>
+            </p>*/}
+            <p class="text-xs">Runr Kids is our answer to a simple question: what would content for children look like if it were made by people who actually thought about the child watching it, not just the algorithm serving it? </p>
           </div>
 
           <div

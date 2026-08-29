@@ -3,7 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="About Us - runr"
+  title="About Runr — Human-Led Creative Consulting, Est. Bhavnagar 2022"
+  description="From two friends and one camera to a marketing strategy and creative consulting studio — the story, team, and mission behind Runr."
+  keywords="creative consulting studio Bhavnagar, Runr founder, Runr team, marketing strategy consulting agency story"
+  canonical="https://www.runr.in/about-us/"
   page="about-us"
   pagename="About Us"
   slider={true}
@@ -11,6 +14,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   counter={true}
   onepagemenu={true}
 >
+  <script type="application/ld+json" slot="head" is:inline>{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sagar Goswami",
+      "jobTitle": "Co-Founder & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Runr"
+      }
+    }
+  `}</script>
   <section id="section-about-us" class="section section-about-us pb-0">
     <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
       <div class="move-box"></div>
@@ -40,10 +55,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </svg>
         </div>
         <p>
-          We don't just follow trends we create them. Every story we craft,
-          every video we produce, and every campaign we launch is designed to
-          give brands a stronger voice, lasting impact, and a moment that truly
-          stands out.
+          We don't just follow trends — we help brands decide which ones are actually worth following. Every story we craft, every video we produce, and every campaign we launch starts with a question most agencies skip: will this actually move your business forward, or just your feed? That question is what turns content into a stronger voice, a lasting impression, and a moment that genuinely stands out.
         </p>
       </div>
     </div>
@@ -77,12 +89,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <h2 class="text-xl theme-text">Vision</h2>
           </div>
           <p>
-            To become a trusted and leading content ecosystem where brands,
-            creators, and communities come together to create ideas that
-            inspire, engage, and make a lasting impact. We envision a future
-            where creativity and meaningful storytelling help brands build
-            stronger connections with people, while giving creators the platform
-            and opportunities to turn their ideas into powerful experiences.
+            To be the trusted strategic partner brands, creators, and communities turn to before they turn to a camera — a place where ideas are shaped by real human understanding first, and executed with craft second. We envision a future where creativity and honest strategy help brands build real connections with people, while giving creators the platform and partnerships to turn their ideas into lasting work — not just content that disappears in a scroll.
           </p>
         </div>
       </div>
@@ -95,13 +102,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <h2 class="text-xl theme-text">Mission</h2>
           </div>
           <p>
-            Our mission is to help brands and creators connect with audiences
-            through meaningful, creative, and engaging content. From digital
-            storytelling and influencer marketing to podcasts, music, kids’
-            content, and regional experiences, we bring ideas to life with
-            purpose. We focus on creating content that feels authentic, reaches
-            the right audience, builds lasting relationships, and delivers real
-            value for both brands and communities.
+            Our mission is to help brands and creators connect with audiences through strategy that's honest and content that earns attention rather than demands it. From marketing consulting and digital storytelling to influencer marketing, podcasts, music, kids' content, and regional experiences — we bring ideas to life with purpose. We're less interested in producing more content and more interested in producing the right content: work that feels authentic, reaches the right audience, and delivers real value for both the brand and the community around it.
           </p>
         </div>
       </div>
@@ -232,9 +233,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </h2>
           </div>
           <p class="center-desc">
-            Behind every great idea is a team that dares to think differently.
-            We bring diverse minds, skills, and perspectives together to create
-            what’s next.
+           Behind every idea is a team that thinks about <br> the business first and the aesthetics second.
           </p>
         </div>
       </div>
@@ -531,7 +530,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         class="column is-12-mobile is-12-tablet is-4-desktop is-4-widescreen contact-team-col"
       >
         <div class="section-title dark title-animate">
-          <h2>Redy to Create <br /> Something <br />Extraordinary</h2>
+          <h2>Ready to Create <br /> Something <br />Extraordinary</h2>
         </div>
       </div>
       <div
@@ -547,7 +546,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         class="column is-12-mobile is-12-tablet is-3-desktop is-3-widescreen contact-team-col"
       >
         <div class="team-contact-desc dark">
-          <p>Let's build Something Iconic Togather</p>
+          <p>iconic together — starting with a conversation, not a proposal.</p>
           <a href="/contact-us/" class="theme-arrow-btn theme-btn btn-primary"
             >Let's Connect
             <svg
@@ -1132,7 +1131,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             year: "2022",
             kicker: "Foundation for what came next",
             heading: "Two Friends, One Camera",
-            body: "Runr started as a reels shoot side-hustle between two friends with one camera and zero clients. Every shoot was a pitch for the next one.",
+            body: "Runr started as a reels side-hustle between two friends with one camera and zero clients. Every shoot was a pitch for the next one.",
             images: [
               {
                 top: "3%",
@@ -1183,7 +1182,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             year: "2024",
             kicker: "How the network took shape",
             heading: "Runr Goes City-Wide",
-            body: "Ahmedabad, Bhavnagar and Runr Go launched within a year of each other. The team stopped being freelancers-with-a-name and became a studio with a bench.",
+            body: "Ahmedabad, Bhavnagar, and Runr Go launched within a year of each other. The team stopped being freelancers-with-a-name and became a studio with a bench. ",
             images: [
               {
                 top: "3%",
@@ -1212,7 +1211,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             year: "2025",
             kicker: "Proof of long-term value and trust",
             heading: "Expansion",
-            body: "Runr grew through referrals and renewals. Clients kept the crew for years, with many verticals turning from one-off shoots into standing partnerships.",
+            body: "Runr grew through referrals and renewals. Clients kept the crew for years, with many relationships turning from one-off shoots into standing partnerships.",
             images: [
               {
                 top: "31%",
@@ -1261,8 +1260,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           {
             year: "2026",
             kicker: "Root of Runr's events arm",
-            heading: "First Navyug Navratri",
-            body: "A small garba night in Bhavnagar sold out in three days. That night proved people didn't just want content from Runr — they wanted experiences.",
+            heading: "Strategy Takes the Lead",
+            body: "Runr evolves from a content and events studio into a full creative consulting practice — helping brands figure out what to say and why before we ever pick up a camera.",
             images: [
               {
                 top: "3%",
@@ -1291,7 +1290,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             year: "Today",
             kicker: "Writing new stories",
             heading: "In Our Present",
-            body: "Runr was built on a simple belief: creative work shouldn't have to choose between quality and speed. Today, Runr partners with brands, artists and a city that keeps showing up.",
+            body: "Runr was built on a simple belief: creative work shouldn't have to choose between quality and speed, or between strategy and craft. Today, we partner with brands, entrepreneurs, and a city that keeps showing up — bringing human judgement to work that increasingly needs it.",
             images: [
               {
                 top: "15%",

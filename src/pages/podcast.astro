@@ -12,13 +12,28 @@ const categories = podcastData.categories;
 ---
 
 <BaseLayout
-  title="Podcast - runr"
+  title="Runr Podcasts — Real Conversations on Voices, Culture & Wellness"
+  description="Runr Podcasts brings five original shows — from women's stories to folk culture and wellness — real conversations, bold perspectives, made by Runr."
+  keywords="podcast production company India, original podcast network India, women empowerment podcast, folk culture podcast"
+  canonical="https://www.runr.in/podcast/"
   page="podcast"
   pagename="Podcast"
   swiperjs={true}
   counter={true}
   onepagemenu={true}
 >
+  <script type="application/ld+json" slot="head" is:inline>{`
+    {
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "name": "Nav Narayani",
+      "description": "Conversations with women who are building, leading, and changing what's possible — produced by Runr.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Runr"
+      }
+    }
+  `}</script>
   <section id="section-about-us" class="section section-about-us">
     <div class="theme-padding about-us-wrapper js-scroll fade-in-left scrolled">
       <div class="move-box"></div>
@@ -48,10 +63,7 @@ const categories = podcastData.categories;
           </svg>
         </div>
         <p>
-          Explore the best moments from Runr Originals, transformed into
-          engaging reels and shorts. Every conversation delivers fresh
-          perspectives, inspiring stories, and content designed to connect with
-          every audience.
+         Explore the best moments from Runr Originals, turned into reels and shorts worth sharing. Every conversation here is unscripted on purpose — real people, real perspectives, the kind of content that's genuinely hard to fake with a template or a script generator.
         </p>
       </div>
     </div>
@@ -727,7 +739,7 @@ const categories = podcastData.categories;
               />
             </div>
             <h4 class="text-uppercase">Meaningful Stories</h4>
-            <p>Real stories that inspire and spark change.</p>
+            <p>Real stories that inspire and spark change, told at the length they deserve.</p>
           </div>
         </div>
         <div
@@ -743,7 +755,7 @@ const categories = podcastData.categories;
               />
             </div>
             <h4 class="text-uppercase">Community First</h4>
-            <p>Amplifying voices and building stronger communities.</p>
+            <p>Built to amplify voices from the community, not to amplify Runr.</p>
           </div>
         </div>
         <div
@@ -759,7 +771,7 @@ const categories = podcastData.categories;
               />
             </div>
             <h4 class="text-uppercase">Impact Driven</h4>
-            <p>Ideas that create action and drive real impact.</p>
+            <p>Ideas meant to create action, not just engagement metrics.</p>
           </div>
         </div>
         <div
@@ -775,7 +787,7 @@ const categories = podcastData.categories;
               />
             </div>
             <h4 class="text-uppercase">Made By Runr</h4>
-            <p>Curated with passion. Delivered with purpose.</p>
+            <p> Curated with passion, delivered with purpose.</p>
           </div>
         </div>
       </div>

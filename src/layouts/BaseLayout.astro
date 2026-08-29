@@ -1,4 +1,4 @@
-﻿---
+---
 /*
   BaseLayout.astro - Master Layout
   ================================
@@ -27,6 +27,8 @@ interface Props {
   description?: string;
   keywords?: string;
   image?: string;
+  canonical?: string;
+  noindex?: boolean;
   slider?: boolean;
   swiperjs?: boolean;
   popup?: boolean;
@@ -42,6 +44,8 @@ const {
   description = "runr - Create. Inspire. Influence.",
   keywords = "runr, digital media, content creation",
   image = "seo",
+  canonical,
+  noindex = false,
   slider = false,
   swiperjs = false,
   popup = false,
@@ -51,6 +55,7 @@ const {
 } = Astro.props;
 
 const version = "1.1.0";
+const canonicalUrl = canonical || `https://www.runr.in${Astro.url.pathname === '/' ? '/' : Astro.url.pathname + '/'}`;
 ---
 
 <!DOCTYPE html>
@@ -59,6 +64,8 @@ const version = "1.1.0";
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+  <link rel="canonical" href={canonicalUrl} />
 
   <!-- Bulma Custom (merged from PHP style files) -->
   <link rel="stylesheet" type="text/css" href="/media/css/bulma-custom.css">
@@ -95,6 +102,35 @@ const version = "1.1.0";
   <meta property="og:description" content={description}>
   <meta property="og:type" content="website">
   <meta property="og:image" content={`/media/images/seo/${image}.jpg`}>
+
+  <!-- Sitewide Organization Schema -->
+  <script type="application/ld+json" is:inline>{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Runr",
+      "url": "https://www.runr.in/",
+      "logo": "https://www.runr.in/assets/runr-logo.png",
+      "description": "Runr is a human-led creative consulting studio offering marketing strategy consulting, content creation, influencer marketing, podcast production, and branding for brands and entrepreneurs across India.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "401, 4th Floor, Trishul One, Sir P. Pattani Road, Ghogha Circle",
+        "addressLocality": "Bhavnagar",
+        "addressRegion": "Gujarat",
+        "postalCode": "364001",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-88775-55255",
+        "contactType": "customer service",
+        "email": "info@runr.in"
+      },
+      "sameAs": [
+        "https://www.instagram.com/findonrunr"
+      ]
+    }
+  `}</script>
 
   <!-- Extra head content from pages (slot) -->
   <slot name="head" />

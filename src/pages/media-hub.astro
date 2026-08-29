@@ -11,12 +11,34 @@ const chapters = reelsData.chapters;
 ---
 
 <BaseLayout
-  title="Media Hub - runr"
+  title="Media Hub — Runr's Work Across Industries | Real Estate to Retail"
+  description="Explore Runr's portfolio by industry — real estate, fashion, jewellery, healthcare, education, and more. See how strategy-led content changes by sector."
+  keywords="creative content portfolio India, real estate video production, influencer content by industry, brand content agency India"
+  canonical="https://www.runr.in/media-hub/"
   page="media-hub"
   pagename="Media Hub"
   swiperjs={true}
   onepagemenu={true}
 >
+  <script type="application/ld+json" slot="head" is:inline>{`
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Runr Media Hub — Portfolio by Industry",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Real Estate & Property", "url": "https://www.runr.in/media-hub/property-tours/" },
+        { "@type": "ListItem", "position": 2, "name": "Fashion & Lifestyle", "url": "https://www.runr.in/media-hub/fashion/" },
+        { "@type": "ListItem", "position": 3, "name": "Jewellery & Luxury", "url": "https://www.runr.in/media-hub/jewellers/" },
+        { "@type": "ListItem", "position": 4, "name": "Food & Hospitality", "url": "https://www.runr.in/media-hub/restaurant-cafe/" },
+        { "@type": "ListItem", "position": 5, "name": "Education & Learning", "url": "https://www.runr.in/media-hub/education/" },
+        { "@type": "ListItem", "position": 6, "name": "Healthcare", "url": "https://www.runr.in/media-hub/hospital/" },
+        { "@type": "ListItem", "position": 7, "name": "Events & Experiences", "url": "https://www.runr.in/media-hub/events/" },
+        { "@type": "ListItem", "position": 8, "name": "Early Education", "url": "https://www.runr.in/media-hub/pre-school/" },
+        { "@type": "ListItem", "position": 9, "name": "Interior & Decor", "url": "https://www.runr.in/media-hub/decor-style/" },
+        { "@type": "ListItem", "position": 10, "name": "Food & Confectionery", "url": "https://www.runr.in/media-hub/sweets-desserts/" }
+      ]
+    }
+  `}</script>
   <link
     rel="stylesheet"
     type="text/css"
@@ -26,7 +48,7 @@ const chapters = reelsData.chapters;
 
   <section
     id="section-media-hub"
-    class="section section-media-hub theme-padding py-0"
+    class="section section-media-hub theme-padding pt-0"
   >
     <div class="columns is-multiline is-vcentered">
       <div
@@ -59,9 +81,7 @@ const chapters = reelsData.chapters;
               </svg>
             </div>
             <p>
-              We don't just capture moments—we preserve experiences. Every reel
-              we create, every story we film, and every frame we produce is
-              crafted to inspire, engage, and leave a lasting impression.
+              We don't just capture moments — we solve a different problem for every industry we work in. A jewellery brand needs its content to feel aspirational; a healthcare brand needs it to feel trustworthy; a real estate brand needs it to feel credible before it feels beautiful. Every reel, story, and frame here was built around that distinction first. Browse by industry to see how our thinking changes with the business.
             </p>
           </div>
         </div>
@@ -145,9 +165,14 @@ const chapters = reelsData.chapters;
   <div class="section media-hub-section theme-padding pt-0">
     <div class="theme-color-shadow"></div>
 
+    <div class="section-title mb-0">
+      <h2 class="theme-point title-xs">No two industries sell trust the same way. Here's how that difference shows up in our work.</h2>
+    </div>
+
     {
       chapters.map((chapter, chapterIndex) => (
-        <section class="mh-chapter pb-0">
+        <section class="mh-chapter pb-0 pb-0 pt-6">
+        
           <div class="mh-chapter-label">
             <div class="section-title title-animate mb-0">
               <h2>{chapter.title}</h2>
