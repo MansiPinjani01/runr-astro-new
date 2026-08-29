@@ -1,6 +1,6 @@
-﻿window.addEventListener('load', function() {
+﻿window.addEventListener('load', function () {
     try {
-        (function() {
+        (function () {
             'use strict';
 
             var section = document.querySelector('.clo-section');
@@ -28,27 +28,27 @@
             var totalLogos = allLogos.length || slots.length;
 
             var RING_CONFIG = [{
-                    ring: 0,
-                    count: 6,
-                    radiusVar: '--clo-radius-outer',
-                    angleOffset: -90
-                },
-                {
-                    ring: 1,
-                    count: 5,
-                    radiusVar: '--clo-radius-mid',
-                    angleOffset: -90 + 28
-                },
-                {
-                    ring: 2,
-                    count: 4,
-                    radiusVar: '--clo-radius-inner',
-                    angleOffset: -90 + 45
-                }
+                ring: 0,
+                count: 6,
+                radiusVar: '--clo-radius-outer',
+                angleOffset: -90
+            },
+            {
+                ring: 1,
+                count: 5,
+                radiusVar: '--clo-radius-mid',
+                angleOffset: -90 + 28
+            },
+            {
+                ring: 2,
+                count: 4,
+                radiusVar: '--clo-radius-inner',
+                angleOffset: -90 + 45
+            }
             ];
 
             var SLOT_TABLE = [];
-            RING_CONFIG.forEach(function(cfg) {
+            RING_CONFIG.forEach(function (cfg) {
                 var step = 360 / cfg.count;
                 for (var i = 0; i < cfg.count; i++) {
                     SLOT_TABLE.push({
@@ -65,7 +65,7 @@
             // narrow screens (one from each ring, not all from one ring).
             var COMPACT_HIDE_SLOT_INDICES = [1, 4, 8, 11, 13];
 
-            slots.forEach(function(slot, i) {
+            slots.forEach(function (slot, i) {
                 if (COMPACT_HIDE_SLOT_INDICES.indexOf(i) !== -1) {
                     slot.setAttribute('data-compact-hide', 'true');
                 }
@@ -91,7 +91,7 @@
             var currentOrbitAngle = 0;
 
             function computePositions() {
-                return SLOT_TABLE.map(function(def) {
+                return SLOT_TABLE.map(function (def) {
                     var radius = getRingRadius(def.ring);
                     var rad = (def.angle * Math.PI) / 180;
                     return {
@@ -113,7 +113,7 @@
 
             function layoutSlots() {
                 var positions = computePositions();
-                slots.forEach(function(slot, i) {
+                slots.forEach(function (slot, i) {
                     applySlotTransform(slot, positions[i]);
                 });
             }
@@ -121,9 +121,9 @@
             layoutSlots();
 
             var resizeTimer;
-            window.addEventListener('resize', function() {
+            window.addEventListener('resize', function () {
                 clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
+                resizeTimer = setTimeout(function () {
                     syncCompactMode();
                     layoutSlots(); // same ring/angle assignments, just re-measured radii
                     if (hasGSAP && window.ScrollTrigger) ScrollTrigger.refresh();
@@ -135,21 +135,21 @@
             // ------------------------------------------------------------
             if (!hasGSAP) {
                 label.style.opacity = 1;
-                centerLines.forEach(function(l) {
+                centerLines.forEach(function (l) {
                     l.style.opacity = 1;
                     l.style.transform = 'none';
                 });
-                slots.forEach(function(s) {
+                slots.forEach(function (s) {
                     s.style.opacity = 1;
                 });
-                rings.forEach(function(r) {
+                rings.forEach(function (r) {
                     r.style.transform = 'scale(1)';
                 });
                 return;
             }
 
             // ------------------------------------------------------------
-            // ENTRANCE TIMELINE — label -> center lines -> rings -> logos
+            // ENTRANCE TIMELINE - label -> center lines -> rings -> logos
             // ------------------------------------------------------------
             if (reduceMotion) {
                 gsap.set(label, {
@@ -206,7 +206,7 @@
             }
 
             if (!reduceMotion) {
-                var MAX_ROTATION = 150; // degrees across the full scroll pass — slow, cinematic
+                var MAX_ROTATION = 150; // degrees across the full scroll pass - slow, cinematic
 
                 try {
                     ScrollTrigger.create({
@@ -214,10 +214,10 @@
                         start: 'top bottom',
                         end: 'bottom top',
                         scrub: 1.1,
-                        onUpdate: function(self) {
+                        onUpdate: function (self) {
                             currentOrbitAngle = self.progress * MAX_ROTATION;
                             orbitLayer.style.transform = 'rotate(' + currentOrbitAngle + 'deg)';
-                            slots.forEach(function(slot) {
+                            slots.forEach(function (slot) {
                                 var x = parseFloat(slot.dataset.x);
                                 var y = parseFloat(slot.dataset.y);
                                 if (isNaN(x) || isNaN(y)) return;
@@ -249,22 +249,22 @@
                     if (totalLogos <= VISIBLE_COUNT) return; // nothing new to cycle to
 
                     var nextBatch = getBatch(batchCursor);
-                    var innerEls = slots.map(function(s) {
+                    var innerEls = slots.map(function (s) {
                         return s.querySelector('.clo-logo__inner');
                     });
-                    var imgEls = slots.map(function(s) {
+                    var imgEls = slots.map(function (s) {
                         return s.querySelector('.clo-logo__img');
                     });
 
                     var outTl = gsap.timeline({
-                        onComplete: function() {
-                            slots.forEach(function(slot, i) {
+                        onComplete: function () {
+                            slots.forEach(function (slot, i) {
                                 var logoData = nextBatch[i];
                                 if (!logoData) return;
                                 imgEls[i].src = logoData.src;
                                 imgEls[i].alt = logoData.alt;
                                 slot.setAttribute('aria-label', logoData.alt);
-                                // NOTE: no position change here — slot stays on its ring/angle.
+                                // NOTE: no position change here - slot stays on its ring/angle.
                             });
 
                             gsap.to(slots, {
@@ -342,18 +342,18 @@
                 // ------------------------------------------------------------
                 // HOVER MICRO-INTERACTION
                 // ------------------------------------------------------------
-                slots.forEach(function(slot) {
+                slots.forEach(function (slot) {
                     var inner = slot.querySelector('.clo-logo__inner');
                     slot.setAttribute('tabindex', '0');
 
-                    var hoverIn = function() {
+                    var hoverIn = function () {
                         gsap.to(inner, {
                             scale: 1.14,
                             duration: 0.45,
                             ease: 'power3.out'
                         });
                     };
-                    var hoverOut = function() {
+                    var hoverOut = function () {
                         gsap.to(inner, {
                             scale: 1,
                             duration: 0.45,

@@ -1,5 +1,5 @@
 /**
- * RUNR — YouTube Video Data Generator
+ * RUNR - YouTube Video Data Generator
  * ===================================
  * Reads from src/data/youtube-source.json and generates category-specific JSON files.
  * Output: src/data/media-hub-reels-<category>.json
@@ -18,7 +18,7 @@ const OUTPUT_DIR = join(ROOT, 'src', 'data');
 async function fetchDuration(videoId) {
     const apiKey = process.env.YOUTUBE_API_KEY;
     if (!apiKey) return '0:30'; // fallback
-    
+
     try {
         const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&part=contentDetails&key=${apiKey}`);
         const data = await res.json();

@@ -1,5 +1,5 @@
 /**
- * Media Hub — Grid Reveal + Idle Float Animation
+ * Media Hub - Grid Reveal + Idle Float Animation
  * From runr-media-hub.html prototype.
  *
  * 1) Reveal-on-scroll: fades/slides each .mh-reel card in as it enters viewport
@@ -7,7 +7,7 @@
  * 3) Ken Burns: adds "is-playing" class when card is near viewport for CSS animation
  * 4) Chapter label parallax
  */
-(function() {
+(function () {
     'use strict';
 
     function initGridReveal() {
@@ -22,8 +22,8 @@
         if (!cards.length) return;
 
         /* -------- 1. REVEAL ON SCROLL -------- */
-        var revealObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
                 if (entry.isIntersecting && !entry.target.classList.contains('mh-revealed')) {
                     var card = entry.target;
                     var siblings = Array.prototype.slice.call(card.parentElement.children);
@@ -37,7 +37,7 @@
                         duration: 0.9,
                         delay: delay,
                         ease: 'power3.out',
-                        onComplete: function() {
+                        onComplete: function () {
                             // Release inline transform so CSS hover rules can take over
                             card.style.transform = '';
                         }
@@ -52,12 +52,12 @@
             threshold: 0.08
         });
 
-        cards.forEach(function(card) {
+        cards.forEach(function (card) {
             revealObserver.observe(card);
         });
 
         /* -------- 2. IDLE FLOAT (subtle vertical bobbing) -------- */
-        cards.forEach(function(card) {
+        cards.forEach(function (card) {
             var dur = 5 + Math.random() * 4;
             var dist = 4 + Math.random() * 4;
             var dly = Math.random() * 3;
@@ -76,9 +76,9 @@
             }
         });
 
-        /* -------- 3. KEN BURNS — play/pause by proximity -------- */
-        var mediaObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
+        /* -------- 3. KEN BURNS - play/pause by proximity -------- */
+        var mediaObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-playing');
                 } else {
@@ -90,13 +90,13 @@
             threshold: 0.01
         });
 
-        cards.forEach(function(card) {
+        cards.forEach(function (card) {
             mediaObserver.observe(card);
         });
 
         /* -------- 4. CHAPTER LABEL PARALLAX -------- */
         var labels = document.querySelectorAll('.mh-chapter-label h2');
-        labels.forEach(function(h) {
+        labels.forEach(function (h) {
             gsap.fromTo(h, {
                 yPercent: 18,
                 opacity: 0.4

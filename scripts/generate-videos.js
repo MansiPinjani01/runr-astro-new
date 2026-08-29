@@ -64,7 +64,7 @@ function getRatio(videoAbsPath) {
       return w >= h ? '16:9' : '9:16';
     }
   } catch (e) {
-    // ffprobe not available or failed — default to portrait
+    // ffprobe not available or failed - default to portrait
   }
   return '9:16';
 }

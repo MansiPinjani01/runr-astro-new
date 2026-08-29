@@ -1,5 +1,5 @@
 /**
- * Media Hub — Smooth Scroll Animation Engine v2.1
+ * Media Hub - Smooth Scroll Animation Engine v2.1
  * Focus: Buttery-smooth transitions, subtle elegance
  * - Soft fade-ups with longer easing
  * - Gentle parallax (no harsh snapping)
@@ -10,13 +10,13 @@
  * - Viewport spotlight
  */
 
-(function() {
+(function () {
     'use strict';
 
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     /* -----------------------------------------------------------
-       1. KINETIC TYPOGRAPHY — CHAR SPLIT (no 3D, just slide)
+       1. KINETIC TYPOGRAPHY - CHAR SPLIT (no 3D, just slide)
     ----------------------------------------------------------- */
     function splitHeadingIntoChars(el) {
         if (el.dataset.mhSplitDone) return;
@@ -28,7 +28,7 @@
                 if (!text.trim()) return document.createTextNode(text);
                 var frag = document.createDocumentFragment();
                 var words = text.split(/(\s+)/);
-                words.forEach(function(w) {
+                words.forEach(function (w) {
                     if (!w.trim()) {
                         frag.appendChild(document.createTextNode(w));
                     } else {
@@ -53,7 +53,7 @@
                 return frag;
             } else if (node.nodeType === Node.ELEMENT_NODE) {
                 var clone = node.cloneNode(false);
-                Array.prototype.slice.call(node.childNodes).forEach(function(child) {
+                Array.prototype.slice.call(node.childNodes).forEach(function (child) {
                     var processed = processNode(child);
                     if (processed) clone.appendChild(processed);
                 });
@@ -63,7 +63,7 @@
         }
 
         var newFrag = document.createDocumentFragment();
-        Array.prototype.slice.call(el.childNodes).forEach(function(child) {
+        Array.prototype.slice.call(el.childNodes).forEach(function (child) {
             newFrag.appendChild(processNode(child));
         });
         el.innerHTML = '';
@@ -101,7 +101,7 @@
     }
 
     /* -----------------------------------------------------------
-       3. ALL GSAP ANIMATIONS — smooth & elegant
+       3. ALL GSAP ANIMATIONS - smooth & elegant
     ----------------------------------------------------------- */
     function initGSAPScrollAnimations() {
         if (reduced) {
@@ -116,7 +116,7 @@
         gsap.registerPlugin(ScrollTrigger);
         initScrollProgress();
 
-        /* ── 3a. HERO ROW — gentle fade-up stagger ── */
+        /* ── 3a. HERO ROW - gentle fade-up stagger ── */
         var heroRow = document.querySelector('.media-hub-section .row-hero');
         var heroCards = heroRow ? heroRow.querySelectorAll('.card') : [];
         if (heroCards.length) {
@@ -143,11 +143,11 @@
             });
         }
 
-        /* ── 3b. ROWS 2–7 — smooth alternating slide ── */
+        /* ── 3b. ROWS 2–7 - smooth alternating slide ── */
         var rows = document.querySelectorAll(
             '.media-hub-section .editorial-row:not(.row-hero):not(.row-8)'
         );
-        rows.forEach(function(row, idx) {
+        rows.forEach(function (row, idx) {
             var cards = Array.prototype.slice.call(row.querySelectorAll('.card'));
             if (!cards.length) return;
 
@@ -193,9 +193,9 @@
             });
         });
 
-        /* ── 3c. TYPOGRAPHY — smooth char slide-up ── */
+        /* ── 3c. TYPOGRAPHY - smooth char slide-up ── */
         document.querySelectorAll('.media-hub-section .hero-heading, .media-hub-section .typo-title')
-            .forEach(function(heading) {
+            .forEach(function (heading) {
                 var chars = heading.querySelectorAll('.char-inner');
                 if (!chars.length) return;
 
@@ -216,7 +216,7 @@
                 });
             });
 
-        /* ── 3d. HERO TEXT CARD — clip-path wipe reveal ── */
+        /* ── 3d. HERO TEXT CARD - clip-path wipe reveal ── */
         var heroText = document.querySelector('.media-hub-section .hero-text-card');
         if (heroText) {
             gsap.fromTo(heroText, {
@@ -273,9 +273,9 @@
             }
         }
 
-        /* ── 3e. LOGO / ICON CARDS — smooth scale with gentle float ── */
+        /* ── 3e. LOGO / ICON CARDS - smooth scale with gentle float ── */
         document.querySelectorAll('.media-hub-section .card-logo-dark, .media-hub-section .card-icon-light')
-            .forEach(function(card) {
+            .forEach(function (card) {
                 gsap.fromTo(card, {
                     opacity: 0,
                     scale: 0.75,
@@ -303,8 +303,8 @@
                 });
             });
 
-        /* ── 3f. NUMBER COUNTER — smooth count ── */
-        document.querySelectorAll('.media-hub-section .typo-top-num').forEach(function(numEl) {
+        /* ── 3f. NUMBER COUNTER - smooth count ── */
+        document.querySelectorAll('.media-hub-section .typo-top-num').forEach(function (numEl) {
             var target = parseInt(numEl.textContent, 10);
             if (isNaN(target)) return;
             numEl.dataset.target = target;
@@ -314,7 +314,7 @@
                 trigger: numEl,
                 start: 'top 88%',
                 once: true,
-                onEnter: function() {
+                onEnter: function () {
                     gsap.fromTo(numEl, {
                         opacity: 0,
                         y: 8
@@ -331,7 +331,7 @@
                         val: target,
                         duration: 1.8,
                         ease: 'power1.out',
-                        onUpdate: function() {
+                        onUpdate: function () {
                             var v = Math.round(obj.val);
                             numEl.textContent = (v < 10 ? '0' : '') + v;
                         }
@@ -340,8 +340,8 @@
             });
         });
 
-        /* ── 3g. PARALLAX — subtle smooth poster shift ── */
-        document.querySelectorAll('.media-hub-section .card-video').forEach(function(card) {
+        /* ── 3g. PARALLAX - subtle smooth poster shift ── */
+        document.querySelectorAll('.media-hub-section .card-video').forEach(function (card) {
             var img = card.querySelector('.video-poster img');
             if (!img) return;
 
@@ -357,7 +357,7 @@
             });
         });
 
-        /* ── 3h. ROW 8 RIBBON — smooth horizontal cascade ── */
+        /* ── 3h. ROW 8 RIBBON - smooth horizontal cascade ── */
         var row8 = document.querySelector('.media-hub-section .row-8');
         if (row8) {
             var ribbonCards = Array.prototype.slice.call(row8.querySelectorAll('.card'));
@@ -380,36 +380,36 @@
             });
         }
 
-        /* ── 3i. VIEWPORT SPOTLIGHT — focused/unfocused ── */
-        document.querySelectorAll('.media-hub-section .card-video').forEach(function(card) {
+        /* ── 3i. VIEWPORT SPOTLIGHT - focused/unfocused ── */
+        document.querySelectorAll('.media-hub-section .card-video').forEach(function (card) {
             ScrollTrigger.create({
                 trigger: card,
                 start: 'top 62%',
                 end: 'bottom 38%',
-                onEnter: function() {
+                onEnter: function () {
                     card.classList.add('mh-focused', 'mh-glow-enter');
                     card.classList.remove('mh-unfocused');
                 },
-                onLeave: function() {
+                onLeave: function () {
                     card.classList.remove('mh-focused', 'mh-glow-enter');
                     card.classList.add('mh-unfocused');
                 },
-                onEnterBack: function() {
+                onEnterBack: function () {
                     card.classList.add('mh-focused', 'mh-glow-enter');
                     card.classList.remove('mh-unfocused');
                 },
-                onLeaveBack: function() {
+                onLeaveBack: function () {
                     card.classList.remove('mh-focused', 'mh-glow-enter');
                     card.classList.add('mh-unfocused');
                 }
             });
         });
 
-        /* ── 3j. SECTION-ABOUT-US — smooth entrance ── */
+        /* ── 3j. SECTION-ABOUT-US - smooth entrance ── */
         var aboutSection = document.querySelector('#section-about-us');
         if (aboutSection) {
             var fadeEls = aboutSection.querySelectorAll('.js-scroll');
-            fadeEls.forEach(function(el, i) {
+            fadeEls.forEach(function (el, i) {
                 el.classList.remove('scrolled');
                 gsap.fromTo(el, {
                     opacity: 0,
@@ -429,8 +429,8 @@
             });
         }
 
-        /* ── 3k. CTA BUTTONS — gentle fade-in ── */
-        document.querySelectorAll('.media-hub-section .card-typo .theme-arrow-btn').forEach(function(btn) {
+        /* ── 3k. CTA BUTTONS - gentle fade-in ── */
+        document.querySelectorAll('.media-hub-section .card-typo .theme-arrow-btn').forEach(function (btn) {
             gsap.fromTo(btn, {
                 opacity: 0,
                 y: 8
@@ -452,15 +452,15 @@
     }
 
     /* -----------------------------------------------------------
-       FALLBACK — IntersectionObserver
+       FALLBACK - IntersectionObserver
     ----------------------------------------------------------- */
     function initIntersectionObserverFallback() {
-        document.querySelectorAll('.media-hub-section .editorial-row').forEach(function(row) {
-            var obs = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
+        document.querySelectorAll('.media-hub-section .editorial-row').forEach(function (row) {
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
                     if (!entry.isIntersecting) return;
-                    row.querySelectorAll('.card').forEach(function(c, i) {
-                        setTimeout(function() {
+                    row.querySelectorAll('.card').forEach(function (c, i) {
+                        setTimeout(function () {
                             c.style.opacity = '1';
                             c.style.transform = 'none';
                             c.style.filter = 'none';
@@ -485,8 +485,8 @@
         );
         if (!svgCards.length) return;
 
-        svgCards.forEach(function(card) {
-            card.querySelectorAll('path, circle, rect, polyline, line, polygon').forEach(function(path) {
+        svgCards.forEach(function (card) {
+            card.querySelectorAll('path, circle, rect, polyline, line, polygon').forEach(function (path) {
                 var len = 0;
                 try {
                     len = path.getTotalLength();
@@ -499,11 +499,11 @@
             });
         });
 
-        var svgObs = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
+        var svgObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
                 if (!entry.isIntersecting) return;
-                entry.target.querySelectorAll('.mh-svg-path').forEach(function(path, i) {
-                    setTimeout(function() {
+                entry.target.querySelectorAll('.mh-svg-path').forEach(function (path, i) {
+                    setTimeout(function () {
                         path.classList.add('mh-svg-drawn');
                     }, 150 + i * 120);
                 });
@@ -513,7 +513,7 @@
             threshold: 0.15
         });
 
-        svgCards.forEach(function(card) {
+        svgCards.forEach(function (card) {
             svgObs.observe(card);
         });
     }
@@ -531,7 +531,7 @@
         var rafId = null,
             pending = null;
 
-        section.addEventListener('mousemove', function(e) {
+        section.addEventListener('mousemove', function (e) {
             var target = e.target.closest('.card-video');
             if (!target) {
                 if (section._tiltCard) {
@@ -545,7 +545,7 @@
                 e: e
             };
             if (!rafId) {
-                rafId = requestAnimationFrame(function() {
+                rafId = requestAnimationFrame(function () {
                     if (pending) applyTilt(pending.card, pending.e);
                     pending = null;
                     rafId = null;
@@ -555,7 +555,7 @@
             passive: true
         });
 
-        section.addEventListener('mouseleave', function() {
+        section.addEventListener('mouseleave', function () {
             if (section._tiltCard) {
                 resetTilt(section._tiltCard);
                 section._tiltCard = null;
@@ -571,7 +571,7 @@
             var sheenX = Math.round(xPct * 100);
             var sheenY = Math.round(yPct * 100);
 
-            // Very subtle tilt — smooth feel
+            // Very subtle tilt - smooth feel
             var rotY = (xPct - 0.5) * 4;
             var rotX = (0.5 - yPct) * 3;
 
@@ -591,7 +591,7 @@
     }
 
     /* -----------------------------------------------------------
-       6. MAGNETIC HOVER — gentle pull toward cursor
+       6. MAGNETIC HOVER - gentle pull toward cursor
     ----------------------------------------------------------- */
     function initMagneticHover() {
         if (reduced) return;
@@ -601,10 +601,10 @@
         var logoCards = document.querySelectorAll('.media-hub-section .card-logo-dark, .media-hub-section .card-icon-light');
         var allMagnetic = Array.prototype.slice.call(typoCards).concat(Array.prototype.slice.call(logoCards));
 
-        allMagnetic.forEach(function(card) {
+        allMagnetic.forEach(function (card) {
             card.classList.add('mh-magnetic');
 
-            card.addEventListener('mousemove', function(e) {
+            card.addEventListener('mousemove', function (e) {
                 var rect = card.getBoundingClientRect();
                 var cx = rect.left + rect.width / 2;
                 var cy = rect.top + rect.height / 2;
@@ -615,7 +615,7 @@
                 passive: true
             });
 
-            card.addEventListener('mouseleave', function() {
+            card.addEventListener('mouseleave', function () {
                 card.style.transform = '';
             }, {
                 passive: true

@@ -2,7 +2,7 @@
 /*
   media-hub.astro - Media Hub Page
   Grid auto-generated from src/data/media-hub-reels.json
-  Just add reels to the JSON — no HTML editing needed.
+  Just add reels to the JSON - no HTML editing needed.
 */
 import BaseLayout from "../layouts/BaseLayout.astro";
 import reelsData from "../data/media-hub-reels-fashion.json";
@@ -11,8 +11,8 @@ const chapters = reelsData.chapters;
 ---
 
 <BaseLayout
-  title="Media Hub — Runr's Work Across Industries | Real Estate to Retail"
-  description="Explore Runr's portfolio by industry — real estate, fashion, jewellery, healthcare, education, and more. See how strategy-led content changes by sector."
+  title="Media Hub - Runr's Work Across Industries | Real Estate to Retail"
+  description="Explore Runr's portfolio by industry - real estate, fashion, jewellery, healthcare, education, and more. See how strategy-led content changes by sector."
   keywords="creative content portfolio India, real estate video production, influencer content by industry, brand content agency India"
   canonical="https://www.runr.in/media-hub/"
   page="media-hub"
@@ -24,7 +24,7 @@ const chapters = reelsData.chapters;
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Runr Media Hub — Portfolio by Industry",
+      "name": "Runr Media Hub - Portfolio by Industry",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Real Estate & Property", "url": "https://www.runr.in/media-hub/property-tours/" },
         { "@type": "ListItem", "position": 2, "name": "Fashion & Lifestyle", "url": "https://www.runr.in/media-hub/fashion/" },
@@ -81,7 +81,7 @@ const chapters = reelsData.chapters;
               </svg>
             </div>
             <p>
-              We don't just capture moments — we solve a different problem for every industry we work in. A jewellery brand needs its content to feel aspirational; a healthcare brand needs it to feel trustworthy; a real estate brand needs it to feel credible before it feels beautiful. Every reel, story, and frame here was built around that distinction first. Browse by industry to see how our thinking changes with the business.
+              We don't just capture moments - we solve a different problem for every industry we work in. A jewellery brand needs its content to feel aspirational; a healthcare brand needs it to feel trustworthy; a real estate brand needs it to feel credible before it feels beautiful. Every reel, story, and frame here was built around that distinction first. Browse by industry to see how our thinking changes with the business.
             </p>
           </div>
         </div>
@@ -160,7 +160,7 @@ const chapters = reelsData.chapters;
   </section>
 
   <!-- ====================================================
-   MEDIA HUB — Staggered Masonry Video Grid (auto-generated)
+   MEDIA HUB - Staggered Masonry Video Grid (auto-generated)
 ==================================================== -->
   <div class="section media-hub-section theme-padding pt-0">
     <div class="theme-color-shadow"></div>
@@ -221,6 +221,63 @@ const chapters = reelsData.chapters;
       ))
     }
   </div><!-- /media-hub-section -->
+
+  <!-- Contact Team Section -->
+  <section
+    id="section-contact-team"
+    class="section-contact-team pb-0 black-bg theme-padding"
+  >
+    <div class="columns is-mobile is-multiline is-vcentered contact-team-cols gap-1">
+      <div
+        class="column is-12-mobile is-12-tablet is-3-desktop is-3-widescreen contact-team-col"
+      >
+        <div class="section-title dark title-animate">
+          <h2>Don't See Your Industry Here?</h2>
+        </div>
+      </div>
+      <div
+        class="column is-12-mobile is-12-tablet is-5-desktop is-5-widescreen contact-team-col"
+      >
+        <div class="runr-team-img">
+          <picture>
+            <img src="/media/images/about-us/runr-team.webp" alt="Runr Team" />
+          </picture>
+        </div>
+      </div>
+      <div
+        class="column is-12-mobile is-12-tablet is-4-desktop is-4-widescreen contact-team-col"
+      >
+        <div class="team-contact-desc dark">
+          <p>That's usually the most interesting conversation, not a dealbreaker. Every sector we haven't worked in yet is one we're genuinely excited to think through with you.</p>
+          <button
+            type="button"
+            onclick="openContactSidebar()"
+            class="theme-arrow-btn theme-btn btn-primary"
+            style="cursor: pointer; border: none;"
+          >
+           Start That Conversation
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M5 12l14 0"></path>
+              <path d="M15 16l4 -4"></path>
+              <path d="M15 8l4 4"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script is:inline src="/media/js/media-hub-video-engine.js"></script>
   <script is:inline src="/media/js/media-hub-grid-reveal.js"></script>

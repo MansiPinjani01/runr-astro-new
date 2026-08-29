@@ -1,30 +1,30 @@
 .media-hub-section {
-    --mh-orange: #ff6a00;
-    --mh-black: #0d0d0d;
-    --mh-white: #ffffff;
-    --mh-card-bg-light: #f5f5f7;
-    --mh-card-bg-dark: #0d0d0d;
-    --mh-text-secondary: #555555;
-    --mh-radius: 18px;
-    --mh-gap: 16px;
+  --mh-orange: #ff6a00;
+  --mh-black: #0d0d0d;
+  --mh-white: #ffffff;
+  --mh-card-bg-light: #f5f5f7;
+  --mh-card-bg-dark: #0d0d0d;
+  --mh-text-secondary: #555555;
+  --mh-radius: 18px;
+  --mh-gap: 16px;
 }
 
 .media-hub-section video,
 .media-hub-section .card-video video {
-    height: 100% !important;
-    max-width: none !important;
-    width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  width: 100% !important;
 }
 
 /* Kill the site-wide section padding inside our grid */
 .media-hub-section section.editorial-row,
 .media-hub-section .editorial-row {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* ----------------------------------------------------
@@ -32,191 +32,193 @@
 ---------------------------------------------------- */
 
 .media-hub-section .pinned-story-wrapper {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .media-hub-section .main-wrapper {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-    box-sizing: border-box !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  box-sizing: border-box !important;
 }
 
 /* ----------------------------------------------------
    EDITORIAL ROW & CARD BASE
 ---------------------------------------------------- */
 .media-hub-section .editorial-row {
-    position: relative;
-    display: flex !important;
-    align-items: stretch !important;
-    gap: 20px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    will-change: transform, opacity, filter;
+  position: relative;
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  will-change: transform, opacity, filter;
 }
 
 .media-hub-section .card {
-    box-sizing: border-box !important;
-    flex-shrink: 1 !important;
-    min-width: 0 !important;
-    border-radius: var(--mh-radius, 18px) !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-    position: relative !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    max-width: none !important;
-    color: inherit !important;
-    background-color: transparent !important;
-    /* stretch to fill row height */
-    align-self: stretch !important;
-    min-height: 0 !important;
-    transition:
-        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-        opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-        filter 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    will-change: transform, opacity, filter;
-    box-shadow: none !important;
+  box-sizing: border-box !important;
+  flex-shrink: 1 !important;
+  min-width: 0 !important;
+  border-radius: var(--mh-radius, 18px) !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  position: relative !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  max-width: none !important;
+  color: inherit !important;
+  background-color: transparent !important;
+  /* stretch to fill row height */
+  align-self: stretch !important;
+  min-height: 0 !important;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform, opacity, filter;
+  box-shadow: none !important;
 }
 
 .media-hub-section .card::before {
-    content: "";
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    right: -70px;
-    bottom: -70px;
-    border-radius: 50%;
-    background: radial-gradient(circle,
-            #ff6a00 0%,
-            rgba(255, 106, 0, 0.65) 35%,
-            rgba(255, 106, 0, 0.15) 70%,
-            transparent 100%);
-    filter: blur(60px);
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  right: -70px;
+  bottom: -70px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #ff6a00 0%,
+    rgba(255, 106, 0, 0.65) 35%,
+    rgba(255, 106, 0, 0.15) 70%,
+    transparent 100%
+  );
+  filter: blur(60px);
 }
 
 /* Inactive card */
 .media-hub-section .card.is-inactive {
-    opacity: 0.45;
-    transform: scale(0.96);
-    filter: blur(5px) brightness(70%);
+  opacity: 0.45;
+  transform: scale(0.96);
+  filter: blur(5px) brightness(70%);
 }
 
 /* Active card */
 .media-hub-section .card.is-active {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0px) brightness(100%);
-    box-shadow: none !important;
-    z-index: 5;
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px) brightness(100%);
+  box-shadow: none !important;
+  z-index: 5;
 }
 
-/* Desktop hover — inner zoom inside perfectly rounded border-radius mask */
+/* Desktop hover - inner zoom inside perfectly rounded border-radius mask */
 @media (hover: hover) and (pointer: fine) {
-    .media-hub-section .card:hover {
-        filter: brightness(103%) !important;
-        opacity: 1 !important;
-        box-shadow: none !important;
-        cursor: pointer;
-        z-index: 20 !important;
-    }
+  .media-hub-section .card:hover {
+    filter: brightness(103%) !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    z-index: 20 !important;
+  }
 
-    .media-hub-section .card:hover .video-poster img,
-    .media-hub-section .card:hover video.v-ready {
-        transform: scale(1.05) !important;
-        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
+  .media-hub-section .card:hover .video-poster img,
+  .media-hub-section .card:hover video.v-ready {
+    transform: scale(1.05) !important;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
 }
 
 /* ----------------------------------------------------
    VIDEO CARDS
 ---------------------------------------------------- */
 .media-hub-section .card-video {
-    background-color: #0d0d0d !important;
-    background-size: cover !important;
-    background-position: center !important;
-    position: relative !important;
+  background-color: #0d0d0d !important;
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative !important;
 }
 
 .media-hub-section .card-video video {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: none !important;
-    object-fit: cover;
-    position: absolute !important;
-    inset: 0;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.7s ease;
-    will-change: opacity;
-    background: transparent;
-    border-radius: inherit !important;
-    overflow: hidden !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover;
+  position: absolute !important;
+  inset: 0;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  will-change: opacity;
+  background: transparent;
+  border-radius: inherit !important;
+  overflow: hidden !important;
 }
 
 /* Hide native controls */
 .media-hub-section .card-video video::-webkit-media-controls {
-    display: none !important;
+  display: none !important;
 }
 
 .media-hub-section .card-video video::-webkit-media-controls-enclosure {
-    display: none !important;
+  display: none !important;
 }
 
 .media-hub-section .card-video video::-webkit-media-controls-panel {
-    display: none !important;
+  display: none !important;
 }
 
-/* Video ready state — crossfade from poster */
+/* Video ready state - crossfade from poster */
 .media-hub-section .card-video video.v-ready {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Ken Burns on active */
 .media-hub-section .card.is-active .card-video video.v-ready {
-    transform: scale(1.02);
-    transition:
-        opacity 0.7s ease,
-        transform 8s ease-out;
+  transform: scale(1.02);
+  transition:
+    opacity 0.7s ease,
+    transform 8s ease-out;
 }
 
 /* ----------------------------------------------------
    TYPOGRAPHY CARDS
 ---------------------------------------------------- */
 .media-hub-section .card-typo {
-    background-color: var(--mh-card-bg-light) !important;
-    padding: 28px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+  background-color: var(--mh-card-bg-light) !important;
+  padding: 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  border: 1px solid rgba(0, 0, 0, 0.04) !important;
 }
 
 .media-hub-section .typo-top-num {
-    font-size: 12px;
-    font-weight: 800;
-    color: var(--mh-orange);
-    letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--mh-orange);
+  letter-spacing: 1px;
 }
 
 .media-hub-section .typo-title {
-    font-family: var(--mh-font-display) !important;
-    font-weight: 800 !important;
-    font-size: 40px !important;
-    line-height: 1 !important;
-    letter-spacing: -0.5px !important;
-    text-transform: uppercase !important;
-    color: var(--mh-black) !important;
-    perspective: 800px;
-    margin: 0 !important;
-    padding: 0 !important;
+  font-family: var(--mh-font-display) !important;
+  font-weight: 800 !important;
+  font-size: 40px !important;
+  line-height: 1 !important;
+  letter-spacing: -0.5px !important;
+  text-transform: uppercase !important;
+  color: var(--mh-black) !important;
+  perspective: 800px;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Override site's h2/h3 reset inside media-hub
@@ -230,515 +232,515 @@
 } */
 
 .media-hub-section .highlight-orange {
-    color: var(--mh-orange);
+  color: var(--mh-orange);
 }
 
 .media-hub-section .word {
-    display: inline-block;
-    white-space: nowrap;
-    perspective: 800px;
-    vertical-align: top;
+  display: inline-block;
+  white-space: nowrap;
+  perspective: 800px;
+  vertical-align: top;
 }
 
 .media-hub-section .char {
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: top;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
 }
 
 .media-hub-section .char-inner {
-    display: inline-block;
-    will-change: transform, opacity, filter;
-    transform-origin: 50% 100%;
+  display: inline-block;
+  will-change: transform, opacity, filter;
+  transform-origin: 50% 100%;
 }
 
 .media-hub-section .typo-arrow-btn {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--mh-black);
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mh-black);
+  text-decoration: none;
 }
 
 .media-hub-section .typo-arrow-btn.bottom-left {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 /* ----------------------------------------------------
    LOGO & ICON CARDS
 ---------------------------------------------------- */
 .media-hub-section .card-logo-dark {
-    background-color: var(--mh-card-bg-dark) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 24px !important;
+  background-color: var(--mh-card-bg-dark) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
 }
 
 .media-hub-section .card-logo-dark svg {
-    transition: transform 0.6s ease;
-    will-change: transform, opacity;
+  transition: transform 0.6s ease;
+  will-change: transform, opacity;
 }
 
 .media-hub-section .card-icon-light {
-    background-color: var(--mh-card-bg-light) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 24px !important;
-    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+  background-color: var(--mh-card-bg-light) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
+  border: 1px solid rgba(0, 0, 0, 0.04) !important;
 }
 
 /* ----------------------------------------------------
    HERO ROW
 ---------------------------------------------------- */
 .media-hub-section .row-hero {
-    height: 480px !important;
+  height: 480px !important;
 }
 
 .media-hub-section .hero-text-card {
-    flex: 1.25 !important;
-    background-color: var(--mh-card-bg-light) !important;
-    padding: 30px 20px;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    border: none !important;
-    box-shadow: none !important;
+  flex: 1.25 !important;
+  background-color: var(--mh-card-bg-light) !important;
+  padding: 30px 20px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .media-hub-section .hero-tag {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: var(--mh-orange);
-    text-transform: uppercase;
-    margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--mh-orange);
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .media-hub-section .hero-heading {
-    font-family: var(--mh-font-display) !important;
-    font-size: 48px !important;
-    font-weight: 900 !important;
-    line-height: 0.92 !important;
-    letter-spacing: -1px !important;
-    text-transform: uppercase !important;
-    color: var(--mh-black) !important;
-    margin: 0 0 20px 0 !important;
-    padding: 0 !important;
-    perspective: 800px;
+  font-family: var(--mh-font-display) !important;
+  font-size: 48px !important;
+  font-weight: 900 !important;
+  line-height: 0.92 !important;
+  letter-spacing: -1px !important;
+  text-transform: uppercase !important;
+  color: var(--mh-black) !important;
+  margin: 0 0 20px 0 !important;
+  padding: 0 !important;
+  perspective: 800px;
 }
 
 .media-hub-section .hero-desc {
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: var(--mh-text-secondary);
-    margin-bottom: 24px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--mh-text-secondary);
+  margin-bottom: 24px;
 }
 
 .media-hub-section .hero-cta {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: var(--mh-black);
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--mh-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .media-hub-section .hero-reel-1 {
-    flex: 0.85;
+  flex: 0.85;
 }
 
 .media-hub-section .hero-podcast {
-    flex: 1.6;
+  flex: 1.6;
 }
 
 .media-hub-section .hero-reel-2 {
-    flex: 0.8;
+  flex: 0.8;
 }
 
 /* ----------------------------------------------------
    ROW 2
 ---------------------------------------------------- */
 .media-hub-section .row-2 {
-    height: 100% !important;
+  height: 100% !important;
 }
 
 .media-hub-section .row-2 .col-logo {
-    flex: 1;
+  flex: 1;
 }
 
 .media-hub-section .row-2 .col-typo {
-    flex: 2.1;
+  flex: 2.1;
 }
 
 .media-hub-section .row-2 .col-icon {
-    flex: 0.9;
+  flex: 0.9;
 }
 
 /* ----------------------------------------------------
    ROW 3
 ---------------------------------------------------- */
 .media-hub-section .row-3 {
-    height: 310px !important;
+  height: 310px !important;
 }
 
 .media-hub-section .row-3 .col-podcast {
-    flex: 1.5;
+  flex: 1.5;
 }
 
 .media-hub-section .row-3 .col-reel-1 {
-    flex: 1;
+  flex: 1;
 }
 
 .media-hub-section .row-3 .col-reel-2 {
-    flex: 1;
+  flex: 1;
 }
 
 /* ----------------------------------------------------
    ROW 4
 ---------------------------------------------------- */
 .media-hub-section .row-4 {
-    height: 310px !important;
+  height: 310px !important;
 }
 
 .media-hub-section .row-4 .col-typo {
-    flex: 1;
+  flex: 1;
 }
 
 .media-hub-section .row-4 .col-reel {
-    flex: 1;
+  flex: 1;
 }
 
 .media-hub-section .row-4 .col-podcast {
-    flex: 1.5;
+  flex: 1.5;
 }
 
 /* ----------------------------------------------------
    ROW 5
 ---------------------------------------------------- */
 .media-hub-section .row-5 {
-    height: 270px !important;
+  height: 270px !important;
 }
 
 .media-hub-section .row-5 .col-logo {
-    flex: 0.65;
+  flex: 0.65;
 }
 
 .media-hub-section .row-5 .col-ocean {
-    flex: 1.25;
+  flex: 1.25;
 }
 
 .media-hub-section .row-5 .col-reel {
-    flex: 0.8;
+  flex: 0.8;
 }
 
 .media-hub-section .row-5 .col-typo {
-    flex: 1.1;
+  flex: 1.1;
 }
 
 /* ----------------------------------------------------
    ROW 6
 ---------------------------------------------------- */
 .media-hub-section .row-6 {
-    height: 290px !important;
+  height: 290px !important;
 }
 
 .media-hub-section .row-6 .col-reel-1 {
-    flex: 0.6;
+  flex: 0.6;
 }
 
 .media-hub-section .row-6 .col-typo {
-    flex: 0.95;
+  flex: 0.95;
 }
 
 .media-hub-section .row-6 .col-podcast {
-    flex: 1.5;
+  flex: 1.5;
 }
 
 .media-hub-section .row-6 .col-reel-2 {
-    flex: 0.6;
+  flex: 0.6;
 }
 
 /* ----------------------------------------------------
    ROW 7
 ---------------------------------------------------- */
 .media-hub-section .row-7 {
-    height: 310px !important;
+  height: 310px !important;
 }
 
 .media-hub-section .row-7 .col-wide-feature {
-    flex: 1.8;
+  flex: 1.8;
 }
 
 .media-hub-section .row-7 .col-typo {
-    flex: 1;
+  flex: 1;
 }
 
 .media-hub-section .row-7 .col-logo {
-    flex: 0.65;
+  flex: 0.65;
 }
 
 /* ----------------------------------------------------
    ROW 8 (Ribbon Grid)
 ---------------------------------------------------- */
 .media-hub-section .row-8 {
-    height: 150px !important;
-    display: flex !important;
-    gap: var(--mh-gap);
+  height: 150px !important;
+  display: flex !important;
+  gap: var(--mh-gap);
 }
 
 .media-hub-section .row-8 .card-video {
-    flex: 1;
-    height: 100% !important;
+  flex: 1;
+  height: 100% !important;
 }
 
 /* ----------------------------------------------------
    INTRO GRID OVERLAY
 ---------------------------------------------------- */
 .mh-intro-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    pointer-events: none;
-    background: #ffffff;
-    display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: #ffffff;
+  display: none;
 }
 
 body.mh-intro-playing {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 body.mh-intro-playing .media-hub-section .pinned-story-wrapper {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .mh-intro-clone {
-    position: fixed !important;
-    border-radius: 14px;
-    overflow: hidden;
-    background-color: #f0f0f0;
-    background-size: cover;
-    background-position: center;
-    will-change: transform, opacity;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  position: fixed !important;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform, opacity;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 /* ----------------------------------------------------
    RESPONSIVE
 ---------------------------------------------------- */
 @media (max-width: 1100px) {
-    .media-hub-section .hero-heading {
-        font-size: 38px;
-    }
+  .media-hub-section .hero-heading {
+    font-size: 38px;
+  }
 
-    .media-hub-section .typo-title {
-        font-size: 26px;
-    }
+  .media-hub-section .typo-title {
+    font-size: 26px;
+  }
 
-    .media-hub-section .row-hero {
-        height: 420px;
-    }
+  .media-hub-section .row-hero {
+    height: 420px;
+  }
 
-    .media-hub-section .row-2 {
-        height: 180px;
-    }
+  .media-hub-section .row-2 {
+    height: 180px;
+  }
 
-    .media-hub-section .row-3,
-    .media-hub-section .row-4,
-    .media-hub-section .row-7 {
-        height: 270px;
-    }
+  .media-hub-section .row-3,
+  .media-hub-section .row-4,
+  .media-hub-section .row-7 {
+    height: 270px;
+  }
 
-    .media-hub-section .row-5,
-    .media-hub-section .row-6 {
-        height: 250px;
-    }
+  .media-hub-section .row-5,
+  .media-hub-section .row-6 {
+    height: 250px;
+  }
 
-    .media-hub-section .row-8 {
-        height: 280px;
-    }
+  .media-hub-section .row-8 {
+    height: 280px;
+  }
 }
 
 @media (max-width: 850px) {
-    .media-hub-section .main-wrapper {
-        padding: 0 16px;
-        gap: 14px;
-    }
+  .media-hub-section .main-wrapper {
+    padding: 0 16px;
+    gap: 14px;
+  }
 
-    .media-hub-section .editorial-row {
-        flex-direction: column;
-        height: auto !important;
-    }
+  .media-hub-section .editorial-row {
+    flex-direction: column;
+    height: auto !important;
+  }
 
-    .media-hub-section .card {
-        width: 100% !important;
-        flex: none !important;
-    }
+  .media-hub-section .card {
+    width: 100% !important;
+    flex: none !important;
+  }
 
-    .media-hub-section .card-video {
-        min-height: 260px;
-    }
+  .media-hub-section .card-video {
+    min-height: 260px;
+  }
 
-    .media-hub-section .card-video.hero-reel-1,
-    .media-hub-section .card-video.hero-reel-2 {
-        min-height: 380px;
-    }
+  .media-hub-section .card-video.hero-reel-1,
+  .media-hub-section .card-video.hero-reel-2 {
+    min-height: 380px;
+  }
 
-    .media-hub-section .hero-text-card {
-        padding: 16px 0 24px 0;
-    }
+  .media-hub-section .hero-text-card {
+    padding: 16px 0 24px 0;
+  }
 
-    .media-hub-section .hero-heading {
-        font-size: 42px;
-    }
+  .media-hub-section .hero-heading {
+    font-size: 42px;
+  }
 
-    .media-hub-section .card-typo {
-        min-height: 180px;
-        padding: 24px;
-    }
+  .media-hub-section .card-typo {
+    min-height: 180px;
+    padding: 24px;
+  }
 
-    .media-hub-section .typo-title {
-        font-size: 30px;
-    }
+  .media-hub-section .typo-title {
+    font-size: 30px;
+  }
 
-    .media-hub-section .card-logo-dark,
-    .media-hub-section .card-icon-light {
-        min-height: 140px;
-    }
+  .media-hub-section .card-logo-dark,
+  .media-hub-section .card-icon-light {
+    min-height: 140px;
+  }
 
-    .media-hub-section .row-8 {
-        height: auto;
-        gap: 14px;
-    }
+  .media-hub-section .row-8 {
+    height: auto;
+    gap: 14px;
+  }
 
-    .media-hub-section .row-8 .card-video {
-        min-height: 180px;
-    }
+  .media-hub-section .row-8 .card-video {
+    min-height: 180px;
+  }
 }
 
 @media (max-width: 480px) {
-    .media-hub-section .hero-heading {
-        font-size: 34px;
-    }
+  .media-hub-section .hero-heading {
+    font-size: 34px;
+  }
 
-    .media-hub-section .typo-title {
-        font-size: 24px;
-    }
+  .media-hub-section .typo-title {
+    font-size: 24px;
+  }
 }
 
 /* ----------------------------------------------------
    ACCESSIBILITY: PREFERS-REDUCED-MOTION
 ---------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-    .media-hub-section .card.is-inactive {
-        filter: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
+  .media-hub-section .card.is-inactive {
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* ====================================================
    POSTER + VIDEO CONTAINER SYSTEM
    Poster stays visible until video is ready.
-   Video crossfades in over poster — never black, never white.
+   Video crossfades in over poster - never black, never white.
 ==================================================== */
 
 /* Card must be a stacking context */
 .media-hub-section .card-video {
-    isolation: isolate !important;
+  isolation: isolate !important;
 }
 
 /* ── Poster layer ── */
 .media-hub-section .video-poster {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1;
-    overflow: hidden !important;
-    border-radius: inherit !important;
-    /* poster fades out when video is active */
-    opacity: 1;
-    transition: opacity 0.65s ease;
-    will-change: opacity;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1;
+  overflow: hidden !important;
+  border-radius: inherit !important;
+  /* poster fades out when video is active */
+  opacity: 1;
+  transition: opacity 0.65s ease;
+  will-change: opacity;
 }
 
 .media-hub-section .video-poster picture,
 .media-hub-section .video-poster img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    border-radius: inherit !important;
-    overflow: hidden !important;
-    /* override site global: img { height: auto } */
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: inherit !important;
+  overflow: hidden !important;
+  /* override site global: img { height: auto } */
 }
 
 /* When video is active AND video is ready, fade poster out.
-   Poster stays visible until mh-vid-ready fires — no black flash, no missing image. */
+   Poster stays visible until mh-vid-ready fires - no black flash, no missing image. */
 .media-hub-section .card-video.mh-video-active .video-poster {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ── Video container layer ── */
 .media-hub-section .video-container {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 2;
-    overflow: hidden !important;
-    border-radius: inherit !important;
-    /* container itself is transparent — the <video> inside fades in */
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2;
+  overflow: hidden !important;
+  border-radius: inherit !important;
+  /* container itself is transparent - the <video> inside fades in */
 }
 
 /* ── Dynamically injected <video> element ── */
 .media-hub-section .video-container video {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    position: absolute !important;
-    inset: 0 !important;
-    /* start transparent — JS adds .mh-vid-ready to crossfade */
-    opacity: 0;
-    transition: opacity 0.65s ease;
-    will-change: opacity;
-    background: transparent;
-    /* hide all native browser controls */
-    pointer-events: none;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  position: absolute !important;
+  inset: 0 !important;
+  /* start transparent - JS adds .mh-vid-ready to crossfade */
+  opacity: 0;
+  transition: opacity 0.65s ease;
+  will-change: opacity;
+  background: transparent;
+  /* hide all native browser controls */
+  pointer-events: none;
 }
 
-/* Video has data and is ready to play — crossfade in */
+/* Video has data and is ready to play - crossfade in */
 .media-hub-section .video-container video.mh-vid-ready {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* ── Dynamically injected YouTube <iframe> element ── */
 .media-hub-section .video-container iframe {
-    display: block !important;
-    width: 400% !important;
-    height: 200% !important;
-    left: -150% !important;
-    top: -50% !important;
-    max-width: none !important;
-    border: 0 !important;
-    position: absolute !important;
-    pointer-events: none !important;
-    opacity: 0;
-    transition: opacity 0.65s ease;
-    border-radius: inherit !important;
+  display: block !important;
+  width: 400% !important;
+  height: 200% !important;
+  left: -150% !important;
+  top: -50% !important;
+  max-width: none !important;
+  border: 0 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  opacity: 0;
+  transition: opacity 0.65s ease;
+  border-radius: inherit !important;
 }
 
 .media-hub-section .video-container iframe.mh-vid-ready {
-    opacity: 1 !important;
+  opacity: 1 !important;
 }
 
 /* Suppress all native browser video controls */
@@ -747,20 +749,27 @@ body.mh-intro-playing .media-hub-section .pinned-story-wrapper {
 .media-hub-section .video-container video::-webkit-media-controls-panel,
 .media-hub-section .video-container video::-webkit-media-controls-play-button,
 .media-hub-section .video-container video::-webkit-media-controls-timeline,
-.media-hub-section .video-container video::-webkit-media-controls-current-time-display,
+.media-hub-section
+  .video-container
+  video::-webkit-media-controls-current-time-display,
 .media-hub-section .video-container video::-webkit-media-controls-volume-slider,
-.media-hub-section .video-container video::-webkit-media-controls-fullscreen-button {
-    display: none !important;
-    -webkit-appearance: none !important;
+.media-hub-section
+  .video-container
+  video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+  -webkit-appearance: none !important;
 }
 
-/* Ken Burns subtle scale on active card (visual polish — purely CSS) */
-.media-hub-section .card-video.mh-video-active .video-container video.mh-vid-ready {
-    transform: scale(1.03);
-    transition:
-        opacity 0.65s ease,
-        transform 9s ease-out;
+/* Ken Burns subtle scale on active card (visual polish - purely CSS) */
+.media-hub-section
+  .card-video.mh-video-active
+  .video-container
+  video.mh-vid-ready {
+  transform: scale(1.03);
+  transition:
+    opacity 0.65s ease,
+    transform 9s ease-out;
 }
 
 /* ── Inactive / active card dimming (existing system) ── */
-/* already defined above in the file — no changes needed */
+/* already defined above in the file - no changes needed */

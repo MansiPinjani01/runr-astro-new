@@ -892,6 +892,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+
+    .theme-content-block p{
+        max-width: 100%;
+    }
     .header-connect-btn {
         padding: 8px 16px;
         font-size: 12px;
@@ -2017,7 +2021,8 @@
     }
 
     .h-eyebrow {
-        top: 24px;
+        top: unset;
+        position: relative;
         left: 5%;
     }
 
@@ -2031,7 +2036,7 @@
 
     .panel .year {
         position: static;
-        font-size: clamp(40px, 15vw, 64px);
+        font-size: clamp(40px, 15vw, 50px);
         margin-bottom: 24px;
     }
 
@@ -2357,7 +2362,7 @@
 
     .team-section .mobile-feed {
         gap: 10px;
-        padding: 0 16px 40px;
+        padding: 0 16px 0;
     }
 
     .section-title .text-md {
@@ -2664,6 +2669,14 @@
         letter-spacing: 1.5px;
     }
 
+    .feed-item .name{
+        font-size: 15px;
+    }
+
+    .panel .year{
+        font-size: 40px;
+    }
+
     .mh-view-more-icon {
         width: 28px !important;
         height: 28px !important;
@@ -2899,7 +2912,7 @@
     .team-section .mobile-feed {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        padding: 0 16px 30px;
+        padding: 0 16px 0;
     }
 
     .team-section .feed-item .frame {
@@ -3697,5 +3710,41 @@
 
     .footer-right .sep {
         margin: 0 6px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .h-viewport {
+        height: auto !important;
+        overflow: visible !important;
+    }
+    .h-track {
+        position: relative !important;
+        flex-direction: column !important;
+        height: auto !important;
+        transform: none !important;
+    }
+    .panel {
+        flex: none !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 30px 5% !important;
+    }
+    .h-rail,
+    .h-marker {
+        display: none !important;
+    }
+    .panel[data-year="today"] .col-images .img,
+    .panel:last-child .col-images .img,
+    .panel .col-images .img:only-child {
+        width: 100% !important;
+        height: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        background-size: cover !important;
+        background-position: center !important;
+        border-radius: 16px !important;
     }
 }

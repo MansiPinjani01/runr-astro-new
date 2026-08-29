@@ -1,250 +1,249 @@
 /* ====================================================================
-   REELS CATEGORY — Parallax Scrolling Wall
+   REELS CATEGORY - Parallax Scrolling Wall
    Matching category-fashion.html prototype exactly.
 ==================================================================== */
 
 .reels-category-page {
-    --rc-bg: #0e0e0e;
-    --rc-card: #1a1a1a;
-    --rc-accent: #ff5b1f;
-    --rc-radius: 16px;
-    --rc-gap: 14px;
+  --rc-bg: #0e0e0e;
+  --rc-card: #1a1a1a;
+  --rc-accent: #ff5b1f;
+  --rc-radius: 16px;
+  --rc-gap: 14px;
 }
 
 /* ---------- PARALLAX PAGE (the tall scrollable section) ---------- */
 .rc-parallax-page {
-    position: relative;
-    height: 420vh;
-    overflow: hidden;
+  position: relative;
+  height: 420vh;
+  overflow: hidden;
 }
 
 .rc-columns-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    gap: var(--rc-gap);
-    padding: 0 var(--rc-gap);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: var(--rc-gap);
+  padding: 0 var(--rc-gap);
 }
 
 .rc-col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--rc-gap);
-    will-change: transform;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rc-gap);
+  will-change: transform;
 }
 
 .rc-reel-thumb {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 9/14;
-    border-radius: var(--rc-radius);
-    overflow: hidden;
-    background: var(--rc-card);
-    flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9/14;
+  border-radius: var(--rc-radius);
+  overflow: hidden;
+  background: var(--rc-card);
+  flex-shrink: 0;
 }
 
 .rc-reel-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
 /* ---------- VIDEO POSTER ---------- */
 .rc-reel-thumb .video-poster {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    overflow: hidden;
-    border-radius: inherit;
-    background: var(--rc-card);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: inherit;
+  background: var(--rc-card);
 }
 
 .rc-reel-thumb .video-poster img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
 }
 
 /* ---------- VIDEO CONTAINER ---------- */
 .rc-reel-thumb .video-container {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    overflow: hidden;
-    border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 .rc-reel-thumb .video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
 /* ---------- YOUTUBE IFRAME ---------- */
 .rc-reel-thumb .video-container iframe {
-    display: block !important;
-    width: 400% !important;
-    height: 200% !important;
-    left: -150% !important;
-    top: -50% !important;
-    max-width: none !important;
-    border: 0 !important;
-    position: absolute !important;
-    pointer-events: none !important;
-    opacity: 0;
-    transition: opacity 0.65s ease;
-    border-radius: inherit !important;
+  display: block !important;
+  width: 400% !important;
+  height: 200% !important;
+  left: -150% !important;
+  top: -50% !important;
+  max-width: none !important;
+  border: 0 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  opacity: 0;
+  transition: opacity 0.65s ease;
+  border-radius: inherit !important;
 }
 
 .rc-reel-thumb .video-container iframe.mh-vid-ready {
-    opacity: 1 !important;
+  opacity: 1 !important;
 }
 
 /* Hide poster when video is active */
 .rc-reel-thumb.mh-video-active .video-poster {
-    opacity: 0;
-    transition: opacity 0.5s ease;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 /* ---------- HERO OVERLAY ---------- */
 .rc-hero-overlay {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 24px;
-    background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.15) 40%,
-            rgba(0, 0, 0, 0.55) 100%);
-    z-index: 5;
-    pointer-events: none;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  z-index: 5;
+  pointer-events: none;
 }
 
 .rc-hero-overlay h1 {
-    font-weight: 800;
-    color: #fff;
-    font-size: clamp(36px, 7vw, 80px);
-    letter-spacing: -0.02em;
-    margin: 0;
-    line-height: 1.05;
-    text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  font-size: clamp(36px, 7vw, 80px);
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.05;
+  text-transform: uppercase;
 }
 
 /* ---------- SCROLL CUE ---------- */
 .rc-scroll-cue {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .rc-scroll-cue .rc-line {
-    width: 1px;
-    height: 24px;
-    background: rgba(255, 255, 255, 0.5);
-    animation: rcPulse 1.6s ease-in-out infinite;
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: rcPulse 1.6s ease-in-out infinite;
 }
 
 @keyframes rcPulse {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
 
-    0%,
-    100% {
-        transform: scaleY(0.4);
-        opacity: 0.4;
-    }
-
-    50% {
-        transform: scaleY(1);
-        opacity: 1;
-    }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 
 /* ---------- RESPONSIVE ---------- */
 
 /* 1216px: hide 5th column, reduce height */
 @media (max-width: 1216px) {
-    .rc-columns-wrap .rc-col:nth-child(5) {
-        display: none;
-    }
+  .rc-columns-wrap .rc-col:nth-child(5) {
+    display: none;
+  }
 
-    .rc-parallax-page {
-        height: 380vh;
-    }
+  .rc-parallax-page {
+    height: 380vh;
+  }
 }
 
 /* 1024px: hide 4th & 5th, 3 columns */
 @media (max-width: 1024px) {
+  .rc-columns-wrap .rc-col:nth-child(4),
+  .rc-columns-wrap .rc-col:nth-child(5) {
+    display: none;
+  }
 
-    .rc-columns-wrap .rc-col:nth-child(4),
-    .rc-columns-wrap .rc-col:nth-child(5) {
-        display: none;
-    }
-
-    .rc-parallax-page {
-        height: 350vh;
-    }
+  .rc-parallax-page {
+    height: 350vh;
+  }
 }
 
 /* 768px: hide 3rd/4th/5th, 2 columns */
 @media (max-width: 768px) {
+  .rc-columns-wrap .rc-col:nth-child(3),
+  .rc-columns-wrap .rc-col:nth-child(4),
+  .rc-columns-wrap .rc-col:nth-child(5) {
+    display: none;
+  }
 
-    .rc-columns-wrap .rc-col:nth-child(3),
-    .rc-columns-wrap .rc-col:nth-child(4),
-    .rc-columns-wrap .rc-col:nth-child(5) {
-        display: none;
-    }
+  .rc-parallax-page {
+    height: 320vh;
+  }
 
-    .rc-parallax-page {
-        height: 320vh;
-    }
+  .rc-columns-wrap .rc-col {
+    margin-top: 0 !important;
+  }
 
-    .rc-columns-wrap .rc-col {
-        margin-top: 0 !important;
-    }
-
-    .rc-columns-wrap .rc-col:nth-child(2) {
-        margin-top: 50px !important;
-    }
+  .rc-columns-wrap .rc-col:nth-child(2) {
+    margin-top: 50px !important;
+  }
 }
 
 /* ---------- REDUCED MOTION ---------- */
 @media (prefers-reduced-motion: reduce) {
-    .rc-col {
-        transform: none !important;
-    }
+  .rc-col {
+    transform: none !important;
+  }
 
-    .rc-scroll-cue .rc-line {
-        animation: none;
-    }
+  .rc-scroll-cue .rc-line {
+    animation: none;
+  }
 
-    .rc-hero-overlay {
-        position: absolute;
-    }
+  .rc-hero-overlay {
+    position: absolute;
+  }
 
-    .rc-parallax-page {
-        height: auto;
-        min-height: 100vh;
-    }
+  .rc-parallax-page {
+    height: auto;
+    min-height: 100vh;
+  }
 }

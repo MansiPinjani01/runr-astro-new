@@ -1,278 +1,300 @@
 /* ============================================================
-   RUNR Feature Work — scroll-driven card flow & stone animation
+   RUNR Feature Work - scroll-driven card flow & stone animation
    Themed: Dark section, #ff5722 accent, Inter font (matches site)
    ============================================================ */
 
 :root {
-    --stone-1: #0e0e0f;
-    --stone-2: #3a3733;
-    --bone: #ffffff;
-    --bone-dim: rgba(255, 255, 255, 0.62);
-    --brass: #ff5722;
-    --brass-soft: rgba(255, 87, 34, 0.30);
-    --card-bg: rgba(18, 18, 18, 0.82);
-    --card-bd: rgba(255, 255, 255, 0.10);
+  --stone-1: #0e0e0f;
+  --stone-2: #3a3733;
+  --bone: #ffffff;
+  --bone-dim: rgba(255, 255, 255, 0.62);
+  --brass: #ff5722;
+  --brass-soft: rgba(255, 87, 34, 0.3);
+  --card-bg: rgba(18, 18, 18, 0.82);
+  --card-bd: rgba(255, 255, 255, 0.1);
 }
 
 /* Header transition during feature work section */
 #header {
-    will-change: transform, opacity;
-    transition: opacity 0.35s ease, transform 0.35s ease;
+  will-change: transform, opacity;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
 .runr-feature-work {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #ffffff;
-    isolation: isolate;
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff;
+  isolation: isolate;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .runr-feature-work .bg-vignette {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 74%, rgba(0, 0, 0, 0.88) 100%);
-    opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.55) 74%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+  opacity: 0;
 }
 
 .runr-feature-work .noise-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 0;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 }
 
 .runr-feature-work #particles-canvas {
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .runr-feature-work .section-heading {
-    position: absolute;
-    top: clamp(28px, 5vh, 64px);
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 6;
-    opacity: 0;
-    pointer-events: none;
+  position: absolute;
+  top: clamp(28px, 5vh, 64px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 6;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .runr-feature-work .section-heading .eyebrow {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--brass);
-    margin-bottom: 10px;
-    font-weight: 500;
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .runr-feature-work .section-heading h2 {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.6rem, 3.2vw, 2.5rem);
-    letter-spacing: -0.02em;
-    color: #ffffff;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 /* ===================== STONE ===================== */
 .runr-feature-work .stone-stage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: clamp(250px, 28vw, 440px);
-    height: clamp(250px, 28vw, 440px);
-    z-index: 5;
-    will-change: transform, opacity;
-    opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(250px, 28vw, 440px);
+  height: clamp(250px, 28vw, 440px);
+  z-index: 5;
+  will-change: transform, opacity;
+  opacity: 0;
 }
 
 .runr-feature-work .stone-svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-    filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.60));
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.6));
 }
 
 .runr-feature-work .engrave-wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 82%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 82%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .runr-feature-work .engrave-text {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(2.4rem, 6vw, 5rem);
-    letter-spacing: 0.10em;
-    font-weight: 800;
-    color: #3a3a3a;
-    text-shadow:
-        1px 1px 0 rgba(255, 255, 255, 0.10),
-        -1px -1px 2px rgba(0, 0, 0, 0.90),
-        0 2px 6px rgba(0, 0, 0, 0.50);
-    clip-path: inset(0 100% 0 0);
-    white-space: nowrap;
-    transition: text-shadow 0.4s ease;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: #3a3a3a;
+  text-shadow:
+    1px 1px 0 rgba(255, 255, 255, 0.1),
+    -1px -1px 2px rgba(0, 0, 0, 0.9),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+  clip-path: inset(0 100% 0 0);
+  white-space: nowrap;
+  transition: text-shadow 0.4s ease;
 }
 
 .runr-feature-work .engrave-text.glow {
-    text-shadow:
-        1px 1px 0 rgba(255, 255, 255, 0.14),
-        -1px -1px 2px rgba(0, 0, 0, 0.90),
-        0 0 18px var(--brass-soft),
-        0 0 34px rgba(255, 87, 34, 0.22);
+  text-shadow:
+    1px 1px 0 rgba(255, 255, 255, 0.14),
+    -1px -1px 2px rgba(0, 0, 0, 0.9),
+    0 0 18px var(--brass-soft),
+    0 0 34px rgba(255, 87, 34, 0.22);
 }
 
 .runr-feature-work .light-sweep {
-    position: absolute;
-    top: -20%;
-    left: -40%;
-    width: 40%;
-    height: 140%;
-    background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 100%);
-    transform: translateX(-40%) skewX(-18deg);
-    opacity: 0;
-    pointer-events: none;
+  position: absolute;
+  top: -20%;
+  left: -40%;
+  width: 40%;
+  height: 140%;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-40%) skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .runr-feature-work .stone-reflection {
-    position: absolute;
-    inset: 0;
-    border-radius: 6%;
-    background: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.12) 32%, rgba(255, 255, 255, 0) 62%);
-    opacity: 0;
-    mix-blend-mode: screen;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: 6%;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.12) 32%,
+    rgba(255, 255, 255, 0) 62%
+  );
+  opacity: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
 /* ===================== TRIONN EDITORIAL SERVICE CARDS ===================== */
 .runr-feature-work .cards-wrapper {
-    position: absolute;
-    inset: 0;
-    z-index: 4;
-    opacity: 0;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .runr-feature-work .cards-wrapper.interactive {
-    pointer-events: auto;
+  pointer-events: auto;
 }
 
 .runr-feature-work .card-track {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: clamp(300px, 26vw, 420px);
-    margin-left: calc(clamp(300px, 26vw, 420px) / -2);
-    margin-top: -100px;
-    will-change: transform, opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(300px, 26vw, 420px);
+  margin-left: calc(clamp(300px, 26vw, 420px) / -2);
+  margin-top: -100px;
+  will-change: transform, opacity;
 }
 
 .runr-feature-work .trionn-service-card {
-    background: rgba(15, 15, 15, 0.88);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 26px 28px 28px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.50);
-    transition: transform 0.4s cubic-bezier(.2, .8, .2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+  background: rgba(15, 15, 15, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 26px 28px 28px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .runr-feature-work .trionn-service-card:hover {
-    transform: scale(1.04);
-    border-color: rgba(255, 87, 34, 0.40);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 22px rgba(255, 87, 34, 0.12);
+  transform: scale(1.04);
+  border-color: rgba(255, 87, 34, 0.4);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.65),
+    0 0 22px rgba(255, 87, 34, 0.12);
 }
 
 .runr-feature-work .service-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
 }
 
 .runr-feature-work .card-icon {
-    width: 32px;
-    height: 32px;
-    color: var(--brass);
+  width: 32px;
+  height: 32px;
+  color: var(--brass);
 }
 
 .runr-feature-work .card-icon svg {
-    width: 100%;
-    height: 100%;
-    display: block;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .runr-feature-work .service-num {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    color: var(--brass);
-    opacity: 0.55;
-    font-weight: 600;
+  font-family: "Inter", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--brass);
+  opacity: 0.55;
+  font-weight: 600;
 }
 
 .runr-feature-work .trionn-service-card h3 {
-    margin: 0 0 10px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
-    letter-spacing: -0.02em;
-    color: #ffffff;
-    line-height: 1.28;
+  margin: 0 0 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  line-height: 1.28;
 }
 
 .runr-feature-work .trionn-service-card p {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(0.82rem, 0.9vw, 0.95rem);
-    line-height: 1.55;
-    letter-spacing: 0.01em;
-    color: rgba(255, 255, 255, 0.50);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.82rem, 0.9vw, 0.95rem);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .runr-feature-work .trionn-line-decor {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--brass) 0%, transparent 100%);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-    border-radius: 0 0 20px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brass) 0%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  border-radius: 0 0 20px 20px;
 }
 
 .runr-feature-work .trionn-service-card:hover .trionn-line-decor {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }

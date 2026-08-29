@@ -145,7 +145,7 @@
     will-change: transform, opacity;
 }
 
-/* Subtle size hierarchy by ring — outer logos read slightly larger,
+/* Subtle size hierarchy by ring - outer logos read slightly larger,
    inner ones slightly smaller, reinforcing depth without a grid feel. */
 .clo-logo[data-ring="0"] {
     --clo-logo-scale: 1;

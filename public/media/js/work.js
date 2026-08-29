@@ -70,11 +70,11 @@ function initWorkTimeline() {
 
     // 2. Setup Category Reveals using containerAnimation
 
-    // Clip-path Reveal — each panel individually
-    document.querySelectorAll(".panel .clip-path-reveal").forEach(function(el, index) {
+    // Clip-path Reveal - each panel individually
+    document.querySelectorAll(".panel .clip-path-reveal").forEach(function (el, index) {
         var parentPanel = el.closest(".panel");
         if (index === 0) {
-            // First panel — reveal immediately when section enters
+            // First panel - reveal immediately when section enters
             gsap.to(el, {
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
                 ease: "power2.inOut",
@@ -100,8 +100,8 @@ function initWorkTimeline() {
         }
     });
 
-    // Mask Reveal — each panel individually
-    document.querySelectorAll(".panel .mask-reveal img").forEach(function(el) {
+    // Mask Reveal - each panel individually
+    document.querySelectorAll(".panel .mask-reveal img").forEach(function (el) {
         var parentPanel = el.closest(".panel");
         gsap.to(el, {
             maskPosition: "left",
@@ -116,8 +116,8 @@ function initWorkTimeline() {
         });
     });
 
-    // Depth Zoom — each panel individually
-    document.querySelectorAll(".panel .depth-zoom").forEach(function(el) {
+    // Depth Zoom - each panel individually
+    document.querySelectorAll(".panel .depth-zoom").forEach(function (el) {
         var parentPanel = el.closest(".panel");
         gsap.to(el, {
             scale: 1,
@@ -134,8 +134,8 @@ function initWorkTimeline() {
         });
     });
 
-    // Soft Rotation — each panel individually
-    document.querySelectorAll(".panel .soft-rotation").forEach(function(el) {
+    // Soft Rotation - each panel individually
+    document.querySelectorAll(".panel .soft-rotation").forEach(function (el) {
         var parentPanel = el.closest(".panel");
         gsap.to(el, {
             rotationY: 0,
@@ -152,8 +152,8 @@ function initWorkTimeline() {
         });
     });
 
-    // Split Reveal — each panel individually
-    document.querySelectorAll(".panel .split-inner").forEach(function(el) {
+    // Split Reveal - each panel individually
+    document.querySelectorAll(".panel .split-inner").forEach(function (el) {
         var parentPanel = el.closest(".panel");
         gsap.to(el, {
             clipPath: "inset(0 0 0 0)",
@@ -168,8 +168,8 @@ function initWorkTimeline() {
         });
     });
 
-    // Editorial Slide — each panel individually
-    document.querySelectorAll(".panel .editorial-slide").forEach(function(el) {
+    // Editorial Slide - each panel individually
+    document.querySelectorAll(".panel .editorial-slide").forEach(function (el) {
         var parentPanel = el.closest(".panel");
         gsap.to(el, {
             y: 0,

@@ -1,7 +1,7 @@
 /**
- * RUNR Shots — Cylinder Coverflow + Thumbs Sync + Counter + Progress
+ * RUNR Shots - Cylinder Coverflow + Thumbs Sync + Counter + Progress
  */
-(function() {
+(function () {
     'use strict';
     if (typeof Swiper === 'undefined') return;
 
@@ -106,7 +106,7 @@
     }
 
     /* Thumb click → main slide */
-    section.querySelector('#thumbs-slider .swiper-wrapper').addEventListener('click', function(e) {
+    section.querySelector('#thumbs-slider .swiper-wrapper').addEventListener('click', function (e) {
         var slide = e.target.closest('.swiper-slide');
         if (!slide) return;
         var idx = parseInt(slide.dataset.index, 10);
@@ -115,7 +115,7 @@
 
     /* Side nav prev button */
     var prevBtn = document.getElementById('mainPrev');
-    if (prevBtn) prevBtn.addEventListener('click', function() {
+    if (prevBtn) prevBtn.addEventListener('click', function () {
         mainSwiper.slidePrev();
     });
 

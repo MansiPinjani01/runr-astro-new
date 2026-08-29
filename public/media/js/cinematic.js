@@ -1,12 +1,12 @@
 /**
- * RUNR Stories — Cinematic Engine v2 (Media Hub Adapted)
- * GSAP Premium Grid Intro — works alongside existing site Lenis instance
+ * RUNR Stories - Cinematic Engine v2 (Media Hub Adapted)
+ * GSAP Premium Grid Intro - works alongside existing site Lenis instance
  *
  * Scoped to .media-hub-section to avoid conflicts with the main site.
  *
  * Timeline:
  *  0.00s  overlay visible (white bg)
- *  0.05s  cards stream in, row by row — stagger 0.05s each   (~1.1s)
+ *  0.05s  cards stream in, row by row - stagger 0.05s each   (~1.1s)
  *  1.15s  grid sits fully formed for 0.6s
  *  1.75s  cards scale + blur out simultaneously              (0.45s)
  *  2.20s  overlay fades → page fades in underneath           (0.5s)
@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Do NOT init Lenis here — site already has its own Lenis instance
+  // Do NOT init Lenis here - site already has its own Lenis instance
   initCharacterTypographySplit();
-  initVideoManager();         // lazy video loader — runs immediately, safe before intro
+  initVideoManager();         // lazy video loader - runs immediately, safe before intro
 
   if (!prefersReducedMotion) {
-    // double rAF — let browser paint real layout so getBoundingClientRect is accurate
+    // double rAF - let browser paint real layout so getBoundingClientRect is accurate
     requestAnimationFrame(() => requestAnimationFrame(initGridIntro));
   } else {
     const overlay = document.getElementById('mhIntroOverlay');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
    GRID INTRO
 ==================================================== */
 function initGridIntro() {
-  const overlay  = document.getElementById('mhIntroOverlay');
+  const overlay = document.getElementById('mhIntroOverlay');
   const allCards = Array.from(document.querySelectorAll('.media-hub-section .editorial-row .card'));
   if (!overlay || !allCards.length) return;
 
@@ -58,7 +58,7 @@ function initGridIntro() {
   /* ── build 3-row grid ── */
   const VW = window.innerWidth;
   const VH = window.innerHeight;
-  const N  = imgCards.length;
+  const N = imgCards.length;
   const PAD = 18, GAP = 10;
 
   const r0 = Math.ceil(N / 3);
@@ -72,9 +72,9 @@ function initGridIntro() {
 
   const introRects = [];
   for (let row = 0; row < 3; row++) {
-    const cnt   = rowCounts[row];
+    const cnt = rowCounts[row];
     const cardW = Math.floor((VW - PAD * 2 - GAP * (cnt - 1)) / cnt);
-    const rowY  = startY + row * (CARD_H + GAP);
+    const rowY = startY + row * (CARD_H + GAP);
     for (let col = 0; col < cnt; col++) {
       introRects.push({ left: PAD + col * (cardW + GAP), top: rowY, w: cardW, h: CARD_H });
     }
@@ -101,7 +101,7 @@ function initGridIntro() {
   overlay.style.display = 'block';
 
   /* ────────────────────────────────────────────────
-     PHASE 1 — cards pop in row-by-row
+     PHASE 1 - cards pop in row-by-row
   ──────────────────────────────────────────────── */
   const phase1 = gsap.timeline({ defaults: { ease: 'expo.out' } });
 
@@ -124,7 +124,7 @@ function initGridIntro() {
   phase1.call(() => gsap.delayedCall(0.55, beginExit));
 
   /* ────────────────────────────────────────────────
-     PHASE 2 — smooth exit
+     PHASE 2 - smooth exit
   ──────────────────────────────────────────────── */
   function beginExit() {
     /* reveal real page invisibly */
@@ -133,20 +133,20 @@ function initGridIntro() {
 
     /* clones scale-up + fade out */
     gsap.to(clones, {
-      scale:   1.08,
+      scale: 1.08,
       opacity: 0,
-      filter:  'blur(8px)',
+      filter: 'blur(8px)',
       duration: 0.55,
-      ease:    'power2.inOut',
+      ease: 'power2.inOut',
       stagger: 0.012,
     });
 
     /* overlay fades to transparent */
     gsap.to(overlay, {
-      opacity:  0,
+      opacity: 0,
       duration: 0.6,
-      ease:     'power2.inOut',
-      delay:    0.15,
+      ease: 'power2.inOut',
+      delay: 0.15,
       onComplete: () => {
         overlay.style.display = 'none';
         overlay.innerHTML = '';
@@ -155,11 +155,11 @@ function initGridIntro() {
 
     /* real page fades in */
     gsap.to(allCards, {
-      opacity:  1,
+      opacity: 1,
       duration: 0.55,
-      ease:     'power2.out',
-      delay:    0.2,
-      stagger:  0.012,
+      ease: 'power2.out',
+      delay: 0.2,
+      stagger: 0.012,
     });
 
     /* hero text after page is visible */
@@ -172,7 +172,7 @@ function initGridIntro() {
 ==================================================== */
 function runPostIntroAnimations() {
   gsap.timeline({ defaults: { ease: 'power4.out' }, delay: 0.05 })
-    .from('.media-hub-section .hero-tag',  { opacity: 0, y: 14, duration: 0.4 })
+    .from('.media-hub-section .hero-tag', { opacity: 0, y: 14, duration: 0.4 })
     .from('.media-hub-section .hero-heading .char-inner', {
       y: '100%', opacity: 0, rotateX: -90,
       stagger: 0.013, duration: 0.72,
@@ -270,9 +270,9 @@ function initActiveCenterFocusEngine() {
     ScrollTrigger.create({
       trigger: card, start: 'top 65%', end: 'bottom 35%',
       invalidateOnRefresh: true,
-      onEnter:     () => activate(card),
+      onEnter: () => activate(card),
       onEnterBack: () => activate(card),
-      onLeave:     () => deactivate(card),
+      onLeave: () => deactivate(card),
       onLeaveBack: () => deactivate(card),
     });
   });
@@ -297,13 +297,13 @@ function initActiveCenterFocusEngine() {
 ==================================================== */
 
 const VM = (() => {
-  const MAX_SLOTS   = 3;
+  const MAX_SLOTS = 3;
   const activeSlots = [];
 
   const observer = new IntersectionObserver(onIntersect, {
-    root:       null,
+    root: null,
     rootMargin: '400px 0px 400px 0px',
-    threshold:  0,
+    threshold: 0,
   });
 
   function onIntersect(entries) {
@@ -355,19 +355,19 @@ const VM = (() => {
 
     const reveal = () => {
       video.classList.add('v-ready');
-      video.removeEventListener('canplay',       reveal);
+      video.removeEventListener('canplay', reveal);
       video.removeEventListener('canplaythrough', reveal);
     };
 
     if (video.readyState >= 3) {
       reveal();
     } else {
-      video.addEventListener('canplay',        reveal, { passive: true });
+      video.addEventListener('canplay', reveal, { passive: true });
       video.addEventListener('canplaythrough', reveal, { passive: true });
     }
 
     const p = video.play();
-    if (p instanceof Promise) p.catch(() => {});
+    if (p instanceof Promise) p.catch(() => { });
   }
 
   function unload(card) {
@@ -381,12 +381,12 @@ const VM = (() => {
       s.removeAttribute('src');
     });
 
-    try { video.load(); } catch (_) {}
+    try { video.load(); } catch (_) { }
   }
 
   return {
     observe(card) { observer.observe(card); },
-    disconnect()  { observer.disconnect(); },
+    disconnect() { observer.disconnect(); },
   };
 })();
 
