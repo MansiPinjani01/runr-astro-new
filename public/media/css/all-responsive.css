@@ -2669,6 +2669,11 @@
         letter-spacing: 1.5px;
     }
 
+    .music-slider-wrapper::before,
+    .music-slider-wrapper::after{
+        display: none;
+    }
+
     .feed-item .name{
         font-size: 15px;
     }

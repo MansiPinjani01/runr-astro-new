@@ -2622,6 +2622,9 @@ const influencers = [
         <span class="sub-title">Runr</span>
         <h2 class="text-xl theme-text text-uppercase">Music</h2>
       </div>
+      <div class="music-desc has-text-centered mb-5">
+        <p>Real vocalists, real recordings, real emotion - the <br> kind that's genuinely difficult to fake or automate.</p>
+     </div>
       <div class="music-container">
         <div class="columns is-multiline is-vcentered m-0">
           <!-- Left Disk Column -->
@@ -2854,8 +2857,17 @@ const influencers = [
           pagination: false,
 
           breakpoints: {
-            1216: {
+            0: {
               slidesPerView: 1,
+            },
+            576: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1216: {
+              slidesPerView: 2,
             },
             1408: {
               slidesPerView: 2,
