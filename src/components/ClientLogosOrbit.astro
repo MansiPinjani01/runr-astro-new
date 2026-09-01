@@ -5,23 +5,29 @@
   Uses Astro loops to generate logo data and orbit slots.
 */
 
-// Build logo data arrays (same logic as PHP)
-const logoBasePath = '/media/images/home/brand-icone/';
+// Dynamically find all brand logo images in public/media/images/home/brand-icone/
+const allLogosMap = import.meta.glob('/public/media/images/home/brand-icone/*/*.*');
 
-const group1 = Array.from({ length: 23 }, (_, i) => ({
-  src: `${logoBasePath}ind/logo${i + 1}.webp`,
-  alt: `Client G1 #${i + 1} logo`,
-}));
+function getGroupLogos(folder: string, groupLabel: string) {
+  const prefix = `/public/media/images/home/brand-icone/${folder}/`;
+  const paths = Object.keys(allLogosMap).filter((p) => p.startsWith(prefix));
 
-const group2 = Array.from({ length: 23 }, (_, i) => ({
-  src: `${logoBasePath}guj/logo${i + 1}.webp`,
-  alt: `Client G2 #${i + 1} logo`,
-}));
+  // Sort paths naturally by numerical index (e.g. logo1.webp, logo2.png ... logo264.webp)
+  paths.sort((a, b) => {
+    const numA = parseInt(a.match(/logo(\d+)\./i)?.[1] || '0', 10);
+    const numB = parseInt(b.match(/logo(\d+)\./i)?.[1] || '0', 10);
+    return numA - numB;
+  });
 
-const group3 = Array.from({ length: 304 }, (_, i) => ({
-  src: `${logoBasePath}bvn/logo${i + 1}.webp`,
-  alt: `Client G3 #${i + 1} logo`,
-}));
+  return paths.map((p, i) => ({
+    src: p.replace('/public', ''),
+    alt: `Client ${groupLabel} #${i + 1} logo`,
+  }));
+}
+
+const group1 = getGroupLogos('ind', 'G1');
+const group2 = getGroupLogos('guj', 'G2');
+const group3 = getGroupLogos('bvn', 'G3');
 
 const logoData = [...group1, ...group2, ...group3];
 const totalLogos = logoData.length;
