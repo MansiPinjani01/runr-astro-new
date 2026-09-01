@@ -259,10 +259,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section id="section-awards" class="section-awards theme-padding">
     <div class="theme-color-shadow"></div>
 
-    <div class="section-title title-animate">
-      <span class="sub-title">Our Awards & Recognition</span>
-      <span class="title-tagline">Trust isn't only built online - it's built by showing up. </span>
+    <div class="section-title title-animate mb-2">
+      <span class="sub-title">Our <span class="theme-text">Awards</span> & <span class="theme-text">Recognition</span> </span>
     </div>
+    <div class="awards-desc mb-5">
+      <p>Trust isn't only built online - it's built by showing up. </p>
+</div>
     <div class="op-new js-scroll fade-in-bottom scrolled">
       <div class="op-new-img-group" aria-hidden="true">
         <div class="op-new-img-group-track">
@@ -719,14 +721,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
        
         ];
 
-        /* 6 slots - 3 left, 3 right - pulled inward to avoid edge cuts */
+        /* 6 slots - 3 left, 3 right - balanced spacing */
         var slotPositions = [
-          { cx: 10, cy: 14, dir: "left", w: 190, h: 240 },
-          { cx: 25, cy: 50, dir: "left", w: 180, h: 210 },
-          { cx: 10, cy: 74, dir: "left", w: 175, h: 200 },
-          { cx: 90, cy: 14, dir: "right", w: 190, h: 240 },
-          { cx: 75, cy: 50, dir: "right", w: 180, h: 210 },
-          { cx: 90, cy: 74, dir: "right", w: 175, h: 200 },
+          { cx: 9, cy: 23, dir: "left", w: 190, h: 240 },
+          { cx: 23, cy: 50, dir: "left", w: 180, h: 210 },
+          { cx: 9, cy: 77, dir: "left", w: 175, h: 200 },
+          { cx: 91, cy: 23, dir: "right", w: 190, h: 240 },
+          { cx: 77, cy: 50, dir: "right", w: 180, h: 210 },
+          { cx: 91, cy: 77, dir: "right", w: 175, h: 200 },
         ];
 
         var SLOT_COUNT = slotPositions.length;
@@ -751,7 +753,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         var slotsEl = document.getElementById("slots");
         var linesSvg = document.getElementById("lines");
         var FX = 50,
-          FY = 12;
+          FY = 16;
 
         slotPositions.forEach(function (pos, i) {
           var slot = document.createElement("div");
@@ -865,8 +867,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           gsap.set(".slot .cap", { opacity: 0 });
           gsap.set(".center-copy", { opacity: 0, y: 16 });
           gsap.set(".tally", { opacity: 0, y: 10 });
-          gsap.set("#founderAnchor", { scale: 1.5 });
-          gsap.set("#founderRing", { opacity: 0, scale: 1.15 });
+          gsap.set("#founderAnchor", { scale: 1.15 });
+          gsap.set("#founderRing", { opacity: 0, scale: 1.1 });
 
           var dirOffset = { left: { x: -40, y: 0 }, right: { x: 40, y: 0 } };
           document.querySelectorAll(".slot").forEach(function (slot) {
