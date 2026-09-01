@@ -51,7 +51,7 @@ const rawTestimonials = [
     name: "Scaling SaaS Operations with <span>AI Automation</span>",
     thumbnail: "/media/images/testimonials/testimonials-img2.webp",
     videoSrc: "/media/images/testimonials/testimonials-img2.webp",
-    caption: "Scaling SaaS Operations with AI Automation",
+    caption: "Bhagyashree Mehta",
   },
   {
     type: "text",
@@ -109,7 +109,7 @@ const rawTestimonials = [
     name: "Scaling SaaS Operations with <span>AI Automation</span>",
     thumbnail: "/media/images/testimonials/testimonials-img2.webp",
     videoSrc: "/media/images/testimonials/testimonials-img2.webp",
-    caption: "Scaling SaaS Operations with AI Automation",
+    caption: "Bhagyashree Mehta",
   },
   {
     type: "text",
@@ -176,7 +176,7 @@ const rawTestimonials = [
     name: "Scaling SaaS Operations with <span>AI Automation</span>",
     thumbnail: "/media/images/testimonials/testimonials-img2.webp",
     videoSrc: "/media/images/testimonials/testimonials-img2.webp",
-    caption: "Scaling SaaS Operations with AI Automation",
+    caption: "Bhagyashree Mehta",
   },
   {
     type: "text",
@@ -200,7 +200,7 @@ const rawTestimonials = [
     name: "Scaling SaaS Operations with <span>AI Automation</span>",
     thumbnail: "/media/images/testimonials/testimonials-img2.webp",
     videoSrc: "/media/images/testimonials/testimonials-img2.webp",
-    caption: "Scaling SaaS Operations with AI Automation",
+    caption: "Bhagyashree Mehta",
   },
   {
     type: "text",
@@ -584,6 +584,8 @@ const getInitials = (name: string) => {
       {
         testimonials.map((item) =>
           item.type === "video" ? (
+            /* Video testimonial block commented out as per request */
+            /*
             <div class="testimonials-card testimonials-video">
               <a
                 href={item.videoSrc}
@@ -613,6 +615,8 @@ const getInitials = (name: string) => {
                 <h3 set:html={item.name} />
               </div>
             </div>
+            */
+            null
           ) : (
             <div class="testimonials-card">
               <div class="testimonials-person">

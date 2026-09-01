@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 100 900;
@@ -8042,6 +8042,23 @@ html.lenis body {
   transform: translateY(0) scale(1) rotate(0deg);
 }
 
+.panel .img.logo-card {
+  background-color: #ffffff;
+  background-size: 72% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.panel .img.story-card {
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: top center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
 @media (max-width: 1024px) {
   .panel .col-images {
     width: 50%;
@@ -9821,3 +9838,171 @@ html.lenis body {
 .media-hub-section .section-title .theme-point::before{
   top:15px;
 }
+
+/* ================================================================
+   SECTION: BEYOND OUR TRIBE (COMPACT SLEEK DESIGN)
+================================================================ */
+.section-beyond-tribe {
+  position: relative;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  z-index: 11;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 50px 0;
+}
+
+.beyond-tribe-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.beyond-compact-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(20, 20, 20, 0.7) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 35px 40px;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.beyond-compact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff5722 0%, transparent 100%);
+}
+
+.beyond-header-content .sub-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ff5722 !important;
+  display: inline-block;
+}
+
+.beyond-title {
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem) !important;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.beyond-title .theme-text {
+  color: #ff5722 !important;
+}
+
+.beyond-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* Category Chips */
+.beyond-chips {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.beyond-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 87, 34, 0.1);
+  border: 1px solid rgba(255, 87, 34, 0.25);
+  color: #ff6b2c;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.beyond-chip svg {
+  color: #ff5722;
+}
+
+/* Integrated Right CTA */
+.beyond-cta-compact {
+  background: rgba(255, 87, 34, 0.08);
+  border: 1px solid rgba(255, 87, 34, 0.25);
+  border-radius: 18px;
+  padding: 25px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.cta-mini-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ff5722;
+}
+
+.cta-mini-text {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+}
+
+.beyond-btn-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #ff5722;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.35);
+}
+
+.beyond-btn-sm svg {
+  transition: transform 0.3s ease;
+}
+
+.beyond-btn-sm:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+}
+
+.beyond-btn-sm:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .beyond-compact-card {
+    padding: 25px 20px;
+  }
+}
+

@@ -6,7 +6,7 @@
 */
 
 // Dynamically find all brand logo images in public/media/images/home/brand-icone/
-const allLogosMap = import.meta.glob('/public/media/images/home/brand-icone/*/*.*');
+const allLogosMap = import.meta.glob('/public/media/images/home/brand-icone/*/*.webp');
 
 function getGroupLogos(folder: string, groupLabel: string) {
   const prefix = `/public/media/images/home/brand-icone/${folder}/`;

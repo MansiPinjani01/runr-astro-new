@@ -44,14 +44,15 @@ export const POST: APIRoute = async (context) => {
     }
 
     // SMTP Credentials & Env variables
-    const SMTP_HOST = process.env.SMTP_HOST || import.meta.env.SMTP_HOST || "send.smtp.com";
-    const SMTP_PORT = Number(process.env.SMTP_PORT || import.meta.env.SMTP_PORT) || 587;
-    const SMTP_USER = process.env.SMTP_USER || import.meta.env.SMTP_USER || "noreply@micrositeidpl.in";
-    const SMTP_PASS = process.env.SMTP_PASS || import.meta.env.SMTP_PASS || "634'=DTmWW80";
+    const SMTP_HOST = process.env.MAIL_HOST || process.env.SMTP_HOST || import.meta.env.MAIL_HOST || import.meta.env.SMTP_HOST || "send.smtp.com";
+    const SMTP_PORT = Number(process.env.MAIL_PORT || process.env.SMTP_PORT || import.meta.env.MAIL_PORT || import.meta.env.SMTP_PORT) || 587;
+    const SMTP_USER = process.env.MAIL_USERNAME || process.env.SMTP_USER || import.meta.env.MAIL_USERNAME || import.meta.env.SMTP_USER || "no_reply@runr.in";
+    const SMTP_PASS = process.env.MAIL_PASSWORD || process.env.SMTP_PASS || import.meta.env.MAIL_PASSWORD || import.meta.env.SMTP_PASS || "Antarang@!-><";
 
-    const EMAIL_TO = "sagar@runr.in";
-    const EMAIL_CC_1 = "suhas@runr.in";
-    const EMAIL_CC_2 = "gurmeetsingh@runr.in";
+    const EMAIL_TO = process.env.EMAIL_TO || import.meta.env.EMAIL_TO || "sagar@runr.in";
+    const EMAIL_CC_1 = process.env.EMAIL_CC_1 || import.meta.env.EMAIL_CC_1 || "suhas@runr.in";
+    const EMAIL_CC_2 = process.env.EMAIL_CC_2 || import.meta.env.EMAIL_CC_2 || "gurmeetsingh@runr.in";
+    const EMAIL_CC_3 = process.env.EMAIL_CC_3 || import.meta.env.EMAIL_CC_3 || "kinal@insomniacs.in";
     const EMAIL_FROM = process.env.EMAIL_FROM || import.meta.env.EMAIL_FROM || `RUNR <${SMTP_USER}>`;
 
     // Build email template content
@@ -67,10 +68,11 @@ export const POST: APIRoute = async (context) => {
     const htmlContent = buildEmailHtml(emailData);
     const subject = buildEmailSubject(emailData);
 
-    // Build CC list
+    // Build CC list (3 CC recipients)
     const ccList: string[] = [];
     if (EMAIL_CC_1) ccList.push(EMAIL_CC_1);
     if (EMAIL_CC_2) ccList.push(EMAIL_CC_2);
+    if (EMAIL_CC_3) ccList.push(EMAIL_CC_3);
 
     // Create Nodemailer Transporter
     const transporter = nodemailer.createTransport({
