@@ -49,10 +49,10 @@ export const POST: APIRoute = async (context) => {
     const SMTP_USER = process.env.SMTP_USER || import.meta.env.SMTP_USER || "noreply@micrositeidpl.in";
     const SMTP_PASS = process.env.SMTP_PASS || import.meta.env.SMTP_PASS || "634'=DTmWW80";
 
-    const EMAIL_TO = process.env.EMAIL_TO || "sagar@runr.in";
-    const EMAIL_CC_1 = process.env.EMAIL_CC_1 || "suhas@runr.in";
-    const EMAIL_CC_2 = process.env.EMAIL_CC_2 || "gurmeetsingh@runr.in";
-    const EMAIL_FROM = process.env.EMAIL_FROM || `RUNR <${SMTP_USER}>`;
+    const EMAIL_TO = "sagar@runr.in";
+    const EMAIL_CC_1 = "suhas@runr.in";
+    const EMAIL_CC_2 = "gurmeetsingh@runr.in";
+    const EMAIL_FROM = process.env.EMAIL_FROM || import.meta.env.EMAIL_FROM || `RUNR <${SMTP_USER}>`;
 
     // Build email template content
     const emailData = {
