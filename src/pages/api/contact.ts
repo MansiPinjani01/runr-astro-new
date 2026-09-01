@@ -44,15 +44,15 @@ export const POST: APIRoute = async (context) => {
     }
 
     // SMTP Credentials & Env variables
-    const SMTP_HOST = import.meta.env.SMTP_HOST || "send.smtp.com";
-    const SMTP_PORT = Number(import.meta.env.SMTP_PORT) || 587;
-    const SMTP_USER = import.meta.env.SMTP_USER || "noreply@micrositeidpl.in";
-    const SMTP_PASS = import.meta.env.SMTP_PASS || "634'=DTmWW80";
+    const SMTP_HOST = process.env.SMTP_HOST || import.meta.env.SMTP_HOST || "send.smtp.com";
+    const SMTP_PORT = Number(process.env.SMTP_PORT || import.meta.env.SMTP_PORT) || 587;
+    const SMTP_USER = process.env.SMTP_USER || import.meta.env.SMTP_USER || "noreply@micrositeidpl.in";
+    const SMTP_PASS = process.env.SMTP_PASS || import.meta.env.SMTP_PASS || "634'=DTmWW80";
 
-    const EMAIL_TO = import.meta.env.EMAIL_TO || "sagar@runr.in";
-    const EMAIL_CC_1 = import.meta.env.EMAIL_CC_1 || "suhas@runr.in";
-    const EMAIL_CC_2 = import.meta.env.EMAIL_CC_2 || "gurmeetsingh@runr.in";
-    const EMAIL_FROM = import.meta.env.EMAIL_FROM || `RUNR <${SMTP_USER}>`;
+    const EMAIL_TO = process.env.EMAIL_TO || "sagar@runr.in";
+    const EMAIL_CC_1 = process.env.EMAIL_CC_1 || "suhas@runr.in";
+    const EMAIL_CC_2 = process.env.EMAIL_CC_2 || "gurmeetsingh@runr.in";
+    const EMAIL_FROM = process.env.EMAIL_FROM || `RUNR <${SMTP_USER}>`;
 
     // Build email template content
     const emailData = {
