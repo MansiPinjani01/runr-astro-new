@@ -110,8 +110,8 @@ export function buildEmailHtml(data: EmailData): string {
 </html>`;
 }
 
-export function buildEmailSubject(data: { name: string; source: string }): string {
-  return `New Enquiry from ${data.name} (${data.source})`;
+export function buildEmailSubject(data?: { name?: string; source?: string }): string {
+  return "RUNR — Contact Enquiry";
 }
 
 function escapeHtml(str: string): string {
