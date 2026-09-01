@@ -1223,9 +1223,12 @@ header {
   padding-right: 150px;
 }
 
-.section-contact-team {
+/* .section-contact-team {
   padding-left: 100px;
   padding-right: 100px;
+} */
+.section-contact-team .dark .theme-text span {
+  color: #ff5722 !important;
 }
 
 .scrolled.fade-in {

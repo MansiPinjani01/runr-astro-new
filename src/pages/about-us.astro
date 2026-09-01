@@ -524,32 +524,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <section
     id="section-contact-team"
-    class="section-contact-team pb-0 black-bg theme-padding"
+    class="section-contact-team pb-0 black-bg theme-padding pt-6"
   >
     <div class="columns is-mobile is-multiline is-vcentered contact-team-cols gap-1">
       <div
-        class="column is-12-mobile is-12-tablet is-3-desktop is-3-widescreen contact-team-col"
+        class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen contact-team-col"
       >
         <div class="section-title dark title-animate">
-          <h2>Ready to Create <br /> Something <br />Extraordinary</h2>
+          <h2>Ready to Create <br /> Something <br /> <span class="theme-text">Extraordinary</span></h2>
         </div>
-      </div>
-      <div
-        class="column is-12-mobile is-12-tablet is-5-desktop is-5-widescreen contact-team-col"
-      >
-        <div class="runr-team-img">
-          <picture>
-            <img src="/media/images/about-us/runr-team.webp" alt="Runr Team" />
-          </picture>
-        </div>
-      </div>
-      <div
-        class="column is-12-mobile is-12-tablet is-4-desktop is-4-widescreen contact-team-col"
-      >
-        <div class="team-contact-desc dark">
+
+           <div class="team-contact-desc dark">
           <p>Let's build something iconic together - starting with a conversation, not a proposal. </p>
-          <a href="/contact-us/" class="theme-arrow-btn theme-btn btn-primary"
-            >Let's Connect
+          <button
+            type="button"
+            onclick="openContactSidebar()"
+            class="theme-arrow-btn theme-btn btn-primary"
+            style="cursor: pointer; border: none;"
+          >Let's Connect
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -567,7 +559,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <path d="M15 16l4 -4"></path>
               <path d="M15 8l4 4"></path>
             </svg>
-          </a>
+          </button>
+        </div>
+      </div>
+      <div
+        class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen contact-team-col"
+      >
+        <div class="runr-team-img">
+          <picture>
+            <img src="/media/images/about-us/runr-team.webp" alt="Runr Team" />
+          </picture>
         </div>
       </div>
     </div>

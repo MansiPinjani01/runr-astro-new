@@ -1,4 +1,4 @@
-﻿---
+---
 /*
   team-and-culture.astro - Team and Culture Page
   Converted from PHP: index.php
@@ -149,31 +149,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section id="section-contact-team" class="section-contact-team pb-0 black-bg theme-padding">
-    <div class="columns is-multiline is-vcentered">
-      <div class="column is-12-mobile is-12-tablet is-4-desktop is-4-widescreen">
+  <section id="section-contact-team" class="section-contact-team pb-0 black-bg theme-padding pt-6">
+    <div class="columns is-mobile is-multiline is-vcentered contact-team-cols gap-1">
+      <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen contact-team-col">
         <div class="section-title dark title-animate">
-          <h2>Redy to Create <br> Something <br>Extraordinary</h2>
+          <h2>Redy to Create <br> Something <br><span class="theme-text">Extraordinary</span></h2>
         </div>
-      </div>
-      <div class="column is-12-mobile is-12-tablet is-5-desktop is-5-widescreen">
-        <div class="runr-team-img">
-          <picture>
-            <img src="/media/images/team-culture/runr-team.webp" alt="Runr Team">
-          </picture>
-        </div>
-      </div>
-      <div class="column is-12-mobile is-12-tablet is-3-desktop is-3-widescreen">
         <div class="team-contact-desc dark">
           <p>Let's build Something Iconic Togather</p>
-          <a href="../contact-us/" class="theme-arrow-btn theme-btn btn-primary">Let's Connect
+          <button
+            type="button"
+            onclick="openContactSidebar()"
+            class="theme-arrow-btn theme-btn btn-primary"
+            style="cursor: pointer; border: none;"
+          >Let's Connect
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M5 12l14 0" />
               <path d="M15 16l4 -4" />
               <path d="M15 8l4 4" />
             </svg>
-          </a>
+          </button>
+        </div>
+      </div>
+      <div class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen contact-team-col">
+        <div class="runr-team-img">
+          <picture>
+            <img src="/media/images/team-culture/runr-team.webp" alt="Runr Team">
+          </picture>
         </div>
       </div>
     </div>
