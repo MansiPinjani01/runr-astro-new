@@ -49,7 +49,7 @@ export const POST: APIRoute = async (context) => {
     const SMTP_USER = process.env.MAIL_USERNAME || process.env.SMTP_USER || import.meta.env.MAIL_USERNAME || import.meta.env.SMTP_USER || "no_reply@runr.in";
     const SMTP_PASS = process.env.MAIL_PASSWORD || process.env.SMTP_PASS || import.meta.env.MAIL_PASSWORD || import.meta.env.SMTP_PASS || "Antarang@!-><";
 
-    const EMAIL_TO = process.env.EMAIL_TO || import.meta.env.EMAIL_TO || "sagar@runr.in";
+    const EMAIL_TO = process.env.EMAIL_TO || import.meta.env.EMAIL_TO || "sagar@themidnight.in";
     const EMAIL_CC_1 = process.env.EMAIL_CC_1 || import.meta.env.EMAIL_CC_1 || "suhas@runr.in";
     const EMAIL_CC_2 = process.env.EMAIL_CC_2 || import.meta.env.EMAIL_CC_2 || "gurmeetsingh@runr.in";
     const EMAIL_CC_3 = process.env.EMAIL_CC_3 || import.meta.env.EMAIL_CC_3 || "kinal@insomniacs.in";
