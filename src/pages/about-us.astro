@@ -532,42 +532,44 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div
         class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen contact-team-col"
       >
-        <div class="section-title dark title-animate">
-          <h2>Ready to Create <br /> Something <br /> <span class="theme-text">Extraordinary</span></h2>
-        </div>
+        <div class="contact-team-left-content">
+          <div class="section-title dark title-animate">
+            <h2>Ready to Create <br /> Something <br /> <span class="theme-text">Extraordinary</span></h2>
+          </div>
 
-           <div class="team-contact-desc dark">
-          <p>Let's build something iconic together - starting with a conversation, not a proposal. </p>
-          <button
-            type="button"
-            onclick="openContactSidebar()"
-            class="theme-arrow-btn theme-btn btn-primary"
-            style="cursor: pointer; border: none;"
-          >Let's Connect
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M5 12l14 0"></path>
-              <path d="M15 16l4 -4"></path>
-              <path d="M15 8l4 4"></path>
-            </svg>
-          </button>
+          <div class="team-contact-desc dark js-scroll fade-in-bottom scrolled">
+            <p>Let's build something iconic together - starting with a conversation, not a proposal. </p>
+            <button
+              type="button"
+              onclick="openContactSidebar()"
+              class="theme-arrow-btn theme-btn btn-primary"
+              style="cursor: pointer; border: none;"
+            >Let's Connect
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l14 0"></path>
+                <path d="M15 16l4 -4"></path>
+                <path d="M15 8l4 4"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
       <div
         class="column is-12-mobile is-12-tablet is-6-desktop is-6-widescreen contact-team-col"
       >
-        <div class="runr-team-img">
+        <div class="runr-team-img js-scroll fade-in-right scrolled">
           <picture>
             <img src="/media/images/about-us/runr-team.webp" alt="Runr Team" />
           </picture>
@@ -1142,14 +1144,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 left: "0%",
                 width: "47%",
                 height: "50%",
-                src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600",
+                src: "/media/images/about-us/story/1.webp",
+                isStory: true,
               },
               {
                 top: "10%",
                 left: "52%",
                 width: "40%",
                 height: "52%",
-                src: "https://images.unsplash.com/photo-1495707902641-75cac588d2e9?w=600",
+                src: "/media/images/about-us/story/2.webp",
+                isStory: true,
               },
               {
                 top: "55%",
@@ -1157,6 +1161,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 width: "45%",
                 height: "44%",
                 src: "/media/images/about-us/story/3.webp",
+                isStory: true,
               },
             ],
           },
@@ -1182,16 +1187,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               },
               {
                 top: "0%",
-                left: "54%",
-                width: "27%",
-                height: "36%",
+                left: "48%",
+                width: "36%",
+                height: "26%",
                 src: "/media/images/about-us/story/navyug-3.webp",
               },
               {
-                top: "31%",
-                left: "78%",
-                width: "20%",
-                height: "27%",
+                top: "22%",
+                left: "68%",
+                width: "25%",
+                height: "28%",
                 src: "/media/images/about-us/story/navyug-4.webp",
               },
               {
@@ -1253,7 +1258,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 left: "3%",
                 width: "25%",
                 height: "30%",
-                src: "/media/images/home/brand-icone/ind/logo1.webp",
+                src: "/media/images/about-us/story/logo-1.webp",
                 isLogo: true,
               },
               {
@@ -1261,7 +1266,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 left: "23%",
                 width: "20%",
                 height: "26%",
-                src: "/media/images/home/brand-icone/ind/logo2.webp",
+                src: "/media/images/about-us/story/logo-2.webp",
                 isLogo: true,
               },
               {
@@ -1269,15 +1274,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 left: "54%",
                 width: "27%",
                 height: "36%",
-                src: "/media/images/home/brand-icone/ind/logo6.webp",
+                src: "/media/images/about-us/story/logo-3.webp",
                 isLogo: true,
               },
               {
-                top: "31%",
-                left: "78%",
-                width: "20%",
-                height: "27%",
-                src: "/media/images/home/brand-icone/ind/logo7.webp",
+                top: "22%",
+                left: "68%",
+                width: "25%",
+                height: "25%",
+                src: "/media/images/about-us/story/logo-4.webp",
                 isLogo: true,
               },
               {
@@ -1285,7 +1290,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 left: "39%",
                 width: "24%",
                 height: "36%",
-                src: "/media/images/home/brand-icone/ind/logo8.webp",
+                src: "/media/images/about-us/story/logo-5.webp",
                 isLogo: true,
               },
               {
@@ -1293,7 +1298,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 left: "61%",
                 width: "18%",
                 height: "26%",
-                src: "/media/images/home/brand-icone/ind/logo5.webp",
+                src: "/media/images/about-us/story/logo-6.webp",
                 isLogo: true,
               },
             ],

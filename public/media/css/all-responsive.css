@@ -901,6 +901,10 @@
         max-width: 100%;
     }
 
+    .contact-team-left-content {
+  padding-bottom: 0;
+}
+
         .media-hub-section .section-title .title-xs {
         font-size: 18px;
         line-height: 30px;

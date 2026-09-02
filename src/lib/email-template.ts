@@ -111,7 +111,7 @@ export function buildEmailHtml(data: EmailData): string {
 }
 
 export function buildEmailSubject(data?: { name?: string; source?: string }): string {
-  return "RUNR — Contact Enquiry";
+  return "RUNR - Contact Enquiry";
 }
 
 function escapeHtml(str: string): string {
