@@ -14,15 +14,16 @@
 /* ---------- PARALLAX PAGE (the tall scrollable section) ---------- */
 .rc-parallax-page {
   position: relative;
-  height: 420vh;
+  width: 100%;
   overflow: hidden;
+  padding-bottom: 60px;
 }
 
 .rc-columns-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   display: flex;
   gap: var(--rc-gap);
   padding: 0 var(--rc-gap);
@@ -184,14 +185,10 @@
 
 /* ---------- RESPONSIVE ---------- */
 
-/* 1216px: hide 5th column, reduce height */
+/* 1216px: hide 5th column */
 @media (max-width: 1216px) {
   .rc-columns-wrap .rc-col:nth-child(5) {
     display: none;
-  }
-
-  .rc-parallax-page {
-    height: 380vh;
   }
 }
 
@@ -201,10 +198,6 @@
   .rc-columns-wrap .rc-col:nth-child(5) {
     display: none;
   }
-
-  .rc-parallax-page {
-    height: 350vh;
-  }
 }
 
 /* 768px: hide 3rd/4th/5th, 2 columns */
@@ -213,10 +206,6 @@
   .rc-columns-wrap .rc-col:nth-child(4),
   .rc-columns-wrap .rc-col:nth-child(5) {
     display: none;
-  }
-
-  .rc-parallax-page {
-    height: 320vh;
   }
 
   .rc-columns-wrap .rc-col {
